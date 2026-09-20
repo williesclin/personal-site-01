@@ -1,7 +1,13 @@
+import {membershipView,validateResearchState} from '../app/membership.mjs';
+import equities from '../data/equities.json';
+import lotto from '../data/lotto649.json';
+import power from '../data/superlotto638.json';
+import daily from '../data/daily539.json';
 import {GAMES,validateReport,emptyWorkspace,type Game,type Workspace,type Plan,type RecordItem,type Article} from '../app/domain';
 type Env={ASSETS:{fetch:(r:Request)=>Promise<Response>};SUPABASE_URL?:string;SUPABASE_ANON_KEY?:string;LAB_SUPABASE_URL?:string;LAB_SUPABASE_SERVICE_KEY?:string;SITE_URL?:string};
 type User={id:string;email:string;email_confirmed_at?:string};
 class HttpError extends Error{constructor(public status:number,message:string){super(message)}}
+async function membership(e:Env,token:string,uid:string){const rows=await request(e,`/rest/v1/memberships?user_id=eq.${uid}&select=plan,status,period_start,period_end`,token);return membershipView(rows[0]);}
 const tokenName='__Host-qpl_session';
 function cookie(token:string,maxAge=3600){return `${tokenName}=${encodeURIComponent(token)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`;}
 function json(body:unknown,status=200,extra:Record<string,string>={}){return Response.json(body,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff',...extra}})}
@@ -22,6 +28,9 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   if(!getToken(r))return json({configured:true,user:null});
   try{const {u,token,profile}=await user(e,r);return json({configured:true,user:{email:u.email,role:profile.role},workspace:await loadWorkspace(e,token,u.id,profile)});}catch(err){if(err instanceof HttpError&&(err.status===401||err.status===403))return json({configured:true,user:null},200,{'Set-Cookie':cookie('',0)});throw err;}
  }
+ if(path==='data-status'&&r.method==='GET')return json({equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
+ if(path==='research-preview'&&r.method==='GET')return json({...equities,preview:true,companies:equities.companies.slice(0,1).map(c=>({...c,years:c.years.slice(0,3)}))});
+ if(path==='checkout'&&r.method==='POST')throw new HttpError(503,'Subscriptions are not open yet / 訂閱尚未開放，不會扣款。');
  if(!configured(e))throw new HttpError(503,'會員服務尚未連接；請先使用示範工作台。');
  if(path==='logout'&&r.method==='POST'){const token=getToken(r);if(token)await request(e,'/auth/v1/logout',token,'POST');return json({ok:true},200,{'Set-Cookie':cookie('',0)});}
  if(['login','signup','reset'].includes(path)&&r.method==='POST'){
@@ -38,6 +47,17 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   await request(e,'/auth/v1/user',b.access_token as string,'PUT',{password:b.password});return json({ok:true},200,{'Set-Cookie':cookie('',0)});
  }
  const {u,token,profile}=await user(e,r);
+ if(path==='membership'&&r.method==='GET')return json(await membership(e,token,u.id));
+ if(path.startsWith('lottery/')&&r.method==='GET'){const datasets:Record<string,unknown>={lotto649:lotto,superlotto638:power,daily539:daily};const d=datasets[path.slice(8)];if(!d)throw new HttpError(404,'找不到此彩種。');return json(d);}
+ if(['research-data','research-state','pro-tools'].includes(path)){
+  const access=await membership(e,token,u.id);
+  if(access.plan==='free')throw new HttpError(403,'Research membership required / 此功能需 Research 會員。');
+  if(path==='pro-tools'){if(access.plan!=='pro')throw new HttpError(403,'Pro membership required / 此功能需 Pro 會員。');throw new HttpError(503,'Pro tools are not released / 進階工具尚未發布。');}
+  if(path==='research-data'&&r.method==='GET')return json(equities);
+  if(path==='research-state'&&r.method==='GET'){const rows=await request(e,`/rest/v1/research_state?user_id=eq.${u.id}&select=payload`,token);return json({state:rows[0]?.payload||{watchlist:[],saved:[]},access});}
+  if(path==='research-state'&&r.method==='POST'){let value;try{value=validateResearchState(await body(r),access.plan);}catch{throw new HttpError(400,'Invalid research state or plan limit / 條件格式不正確或超過方案上限。');}await request(e,'/rest/v1/research_state',token,'POST',{user_id:u.id,payload:value});return json({state:value,access});}
+  throw new HttpError(405,'不支援此方法。');
+ }
  if(path==='members'&&r.method==='GET'){if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');const members=await request(e,'/rest/v1/profiles?select=email,role,verified',token) as {email:string;role:string;verified:boolean}[];return json({members});}
  if(!path.startsWith('workspace/')||r.method!=='POST')throw new HttpError(404,'找不到此功能。');
  const action=path.slice(10),b=await body(r);
@@ -61,5 +81,5 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  }else throw new HttpError(404,'找不到此操作。');
  return json({workspace:await loadWorkspace(e,token,u.id,profile)});
  }catch(err){return json({error:err instanceof HttpError?err.message:'服務暫時無法完成操作。'},err instanceof HttpError?err.status:500);}}
-export default {async fetch(r:Request,e:Env){if(new URL(r.url).pathname.startsWith('/api/'))return handleApi(r,e);const res=await e.ASSETS.fetch(r);const h=new Headers(res.headers);h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');h.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");return new Response(res.body,{status:res.status,headers:h});}};
+export default {async fetch(r:Request,e:Env){const pathname=new URL(r.url).pathname;if(pathname.startsWith('/data/'))return json({error:'Use the authenticated API / 請使用會員工具。'},404);if(pathname.startsWith('/api/'))return handleApi(r,e);const res=await e.ASSETS.fetch(r);const h=new Headers(res.headers);h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');h.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");return new Response(res.body,{status:res.status,headers:h});}};
 

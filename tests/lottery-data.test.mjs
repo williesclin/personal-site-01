@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {normalize,validateDraws} from '../scripts/sync-lottery.mjs';
-const data=JSON.parse(await readFile(new URL('../public/data/lotto649.json',import.meta.url),'utf8'));
+const data=JSON.parse(await readFile(new URL('../data/lotto649.json',import.meta.url),'utf8'));
 test('published history has at least 500 unique complete draws, ordered newest first',()=>{assert.ok(data.count>=500);assert.equal(data.count,data.draws.length);assert.deepEqual(validateDraws(data.draws),data.draws);assert.equal(createHash('sha256').update(JSON.stringify(data.draws)).digest('hex'),data.sha256);for(const d of data.draws){assert.equal(new Set([...d.numbers,d.special]).size,7);assert.ok([...d.numbers,d.special].every(n=>Number.isInteger(n)&&n>=1&&n<=49));assert.equal(d.prizes.length,8);assert.ok(d.prizes.flat().every(n=>Number.isSafeInteger(n)&&n>=0));}assert.equal(data.coverageEnd,data.draws[0].date);assert.equal(data.coverageStart,data.draws.at(-1).date)});
 test('every analysis window counts only six main numbers per draw',()=>{for(const n of [30,60,100,300,500]){const rows=data.draws.slice(0,n);const freq=Array.from({length:49},(_,i)=>rows.filter(d=>d.numbers.includes(i+1)).length);assert.equal(freq.reduce((a,b)=>a+b,0),6*n)}});
 test('duplicate and missing periods cannot overwrite published history',()=>{assert.throws(()=>validateDraws([data.draws[0],data.draws[0]]),/Duplicate/);assert.throws(()=>validateDraws([{id:'115000001',date:'2026-01-01'},{id:'115000003',date:'2026-01-09'}]),/Missing/)});
@@ -11,7 +11,7 @@ test('normalizer rejects malformed numbers and prize fields',()=>{const row={per
 
 import {GAMES,validDraw,analyze,shape,matches,generate} from '../app/lottery-engine.mjs';
 for(const [key,g] of Object.entries(GAMES)){
- const d=JSON.parse(await readFile(new URL('../public/data/'+g.file+'.json',import.meta.url),'utf8'));
+ const d=JSON.parse(await readFile(new URL('../data/'+g.file+'.json',import.meta.url),'utf8'));
  test(key+': official history is complete and rule-correct',()=>{assert.equal(d.game,key);assert.ok(d.count>=500);assert.equal(d.count,d.draws.length);assert.deepEqual(validateDraws(d.draws),d.draws);assert.ok(d.draws.every(x=>validDraw(x,g)));assert.equal(createHash('sha256').update(JSON.stringify(d.draws)).digest('hex'),d.sha256);const a=analyze(d.draws.slice(0,500),g,19);assert.equal(a.frequency.reduce((a,b)=>a+b,0),500*g.pick);assert.equal(a.extra.reduce((a,b)=>a+b,0),g.extra?500:0);});
 }
 const conditions={include:[1,2],exclude:[3,4],odd:'3',low:'',min:'80',max:'180',consecutive:'yes',second:'7'};

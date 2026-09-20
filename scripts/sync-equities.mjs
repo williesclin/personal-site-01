@@ -11,9 +11,9 @@ for(const c of COMPANIES){
 }
 const data={schemaVersion:1,asOf,retrievedAt,method:'annual-us-gaap-v1',companies,hash:createHash('sha256').update(JSON.stringify(companies)).digest('hex')};
 validateEquities(data);
-const path=new URL('../public/data/equities.json',import.meta.url);
+const path=new URL('../data/equities.json',import.meta.url);
 let old;try{old=JSON.parse(await readFile(path,'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;}
 if(old)for(const c of old.companies){const next=companies.find(n=>n.symbol===c.symbol);if(next.years[0].end<c.years[0].end)throw Error('Annual coverage regressed');}
-await writeFile(new URL('../public/data/equities.json.tmp',import.meta.url),JSON.stringify(data,null,2)+'\n');
-await rename(new URL('../public/data/equities.json.tmp',import.meta.url),path);
+await writeFile(new URL('../data/equities.json.tmp',import.meta.url),JSON.stringify(data,null,2)+'\n');
+await rename(new URL('../data/equities.json.tmp',import.meta.url),path);
 console.log(companies.map(c=>`${c.symbol}: ${c.years.length} annual periods through ${c.years[0].end}`).join('\n'));

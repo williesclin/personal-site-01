@@ -1,3 +1,7 @@
+# Membership release update
+
+The membership implementation in `docs/MEMBERSHIP_PLANS.md` supersedes earlier public-data and browser-only watchlist descriptions below. Source snapshots are now under `data/`, outside static assets. Original facts remain in this public repository; they are not proprietary or secret. Lottery website access requires verified sign-in; complete stock research requires an active Research/Pro entitlement. Public research is a limited preview.
+
 # Stocks & ETF research — release and 30-day execution
 
 Decision approved 2026-09-20: make factual stock/ETF research the primary product. Preserve three-game lottery data and existing accounts. Pause sports expansion. No short-term price-prediction product, trading, advice subscription, gambling referrals or new paid connector. A notice is not worldwide legal clearance; review applicable regulation and data rights before adding regulated or commercial capabilities.
