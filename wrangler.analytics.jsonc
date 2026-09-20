@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "quantpath-analytics",
+  "main": "cloudflare/analytics-collector.mjs",
+  "compatibility_date": "2026-09-01",
+  "triggers": {"crons": ["15 23 * * *"]},
+  "vars": {
+    "ANALYTICS_ENABLED": "false",
+    "GA4_PROPERTY_ID": "",
+    "GA4_TIMEZONE": "Asia/Taipei",
+    "GSC_SITE_URL": "sc-domain:quantpathlabs.com"
+  },
+  "r2_buckets": [{"binding": "REPORTS", "bucket_name": "quantpath-analytics-private"}]
+}
