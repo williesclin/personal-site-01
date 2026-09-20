@@ -1,8 +1,19 @@
 {
-  "$schema":"node_modules/wrangler/config-schema.json",
-  "name":"personal-site-01",
-  "main":"cloudflare-dist/server/worker.js",
-  "compatibility_date":"2026-09-01",
-  "assets":{"directory":"./cloudflare-dist/client","binding":"ASSETS","not_found_handling":"single-page-application","run_worker_first":["/api/*"]},
-  "vars":{"SITE_URL":"https://quantpathlabs.com"}
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "personal-site-01",
+  "main": "cloudflare-dist/server/worker.js",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./cloudflare-dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "vars": {
+    "SITE_URL": "https://quantpathlabs.com",
+    "SUPABASE_URL": "https://ngmhqadvnjbhtlrrcxsb.supabase.co",
+    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5nbWhxYWR2bmpiaHRscnJjeHNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk5MDA0NzEsImV4cCI6MjEwNTQ3NjQ3MX0.pdiNcnIThVcWcN2glw-sOjsiz6CQIIBbil0Qkif8c9U"
+  }
 }
