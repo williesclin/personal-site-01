@@ -1,0 +1,14 @@
+# Official Taiwan Lotto 6/49 history
+
+Source: https://www.taiwanlottery.com/lotto/result/lotto649/
+The official site's public client uses https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Lotto649Result with month, endMonth, pageNum and pageSize. This is an observed website endpoint, not a guaranteed supported developer API. No account, API key or paid intermediary is used. Source schema changes must fail closed.
+
+Initial retrieval: 555 draws, 2022-01-04 through 2026-09-18. All retained, not truncated at 500. Public factual records only; no member or analytics data. No new hosted database required. `public/data/lotto649.json` is a versioned snapshot with coverage, retrieval time, request URLs and SHA-256. The member analysis UI reads this first-party snapshot; it never calls the third party on each visit. The same official history is visible within the demo; demo personal records and model results remain synthetic.
+
+Each draw stores the original period identifier as a string, date, six sorted main numbers, separate special number, and eight [winnerCount, perPrizeTWD] pairs: jackpot, second, third, fourth, fifth, sixth, seventh, normal. Awards are official per-ticket values, not personal after-tax proceeds. Zero winners displays as no winners, not a promised jackpot payout. Seasonal promotional awards are not included.
+
+`node scripts/sync-lottery.mjs` fetches all pages from 2022 to the current Taipei month, validates the complete result and writes atomically. It rejects duplicate IDs, gaps inside a year, invalid dates/numbers/prizes, pagination changes and disappearance of previously published draws. Corrections replace the affected facts and remain in Git history. Errors retain the last good snapshot. Endpoint totals and continuity checks do not constitute independent audit of the lottery itself.
+
+GitHub Actions workflow requests refresh daily at 13:45 and 23:45 UTC (21:45 and 07:45 Taipei), plus manual dispatch and changes to the ingestion workflow. Only the validated public snapshot is committed; existing Cloudflare Git integration must then deploy that commit. Scheduled runs may be delayed. No promise of immediate post-draw publication. Verify an actual Actions run and resulting Cloudflare deployment before declaring end-to-end automation verified. Failure appears in Actions; UI warns when successful retrieval is over 48 hours old. No emails are sent by this code.
+
+The analysis default is 100 draws with 30/60/100/300/500 choices. History search covers the full stored dataset regardless of the analysis window; filter by period and date, 20 draws per page. Every period exposes award details. Loading/unavailable and valid zero search results are separate states. No automatic personal ticket matching, model training or other game ingestion is included in this release.
