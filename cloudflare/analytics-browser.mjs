@@ -47,7 +47,7 @@ export function installAnalytics(id) {
   button.onclick=()=>dialog.showModal();document.body.append(button,dialog);
   window.addEventListener('hashchange',()=>{
     if(!safeView(location.hash)) {window['ga-disable-'+id]=true;previous=null;return;}
-    window['ga-disable-'+id]=!consent;view();
+    window['ga-disable-'+id]=!consent;start();
   });
   // Auth/recovery/admin routes are not measured.
   if(safeView(location.hash)) start();

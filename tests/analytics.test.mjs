@@ -41,3 +41,23 @@ test('auth failure never leaves yesterday success as latest',async()=>{
  await assert.rejects(pending,/Analytics collection failed/);
  assert.equal(JSON.parse(saved.get('latest.json')).status,'failed');
 });
+test('consent defers Google script and sanitized pageview until allowed route',()=>{
+ const original=Object.fromEntries(['window','document','location','localStorage'].map(k=>[k,globalThis[k]]));
+ try {
+  const listeners={},scripts=[],nodes=[],storage=new Map();
+  const element=tag=>({tag,style:{},children:[],append(...items){this.children.push(...items);},showModal(){this.open=true;},close(){this.open=false;}});
+  globalThis.window={addEventListener:(k,fn)=>listeners[k]=fn};
+  globalThis.location={hostname:'quantpathlabs.com',origin:'https://quantpathlabs.com',hash:'#login',reload(){}};
+  globalThis.localStorage={getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)};
+  globalThis.document={createElement:element,head:{appendChild:x=>scripts.push(x)},body:{append:(...items)=>nodes.push(...items)}};
+  installAnalytics('G-TEST');assert.equal(scripts.length,0);
+  nodes[1].children[1].onclick(); // explicit opt-in while on login
+  assert.equal(window.dataLayer.filter(x=>x[1]==='page_view').length,0);
+  location.hash='#analysis';listeners.hashchange();
+  assert.equal(scripts.length,1);
+  const views=window.dataLayer.filter(x=>x[1]==='page_view');assert.equal(views.length,1);
+  assert.equal(views[0][2].page_location,'https://quantpathlabs.com/analytics-view/analysis');
+  listeners.hashchange();assert.equal(window.dataLayer.filter(x=>x[1]==='page_view').length,1);
+  nodes[1].children[2].onclick();assert.equal(window['ga-disable-G-TEST'],true);
+ } finally {for(const [k,v] of Object.entries(original)){if(v===undefined)delete globalThis[k];else globalThis[k]=v;}}
+});
