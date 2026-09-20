@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {footballScenario,SPORTS_STATUS} from '../app/sports-engine.mjs';
+test('symmetric scenarios and zero goals obey probability identities',()=>{const z=footballScenario(0,0);assert.equal(z.draw,1);assert.equal(z.win,0);for(const n of [0.1,1,3,6]){const r=footballScenario(n,n);assert.ok(Math.abs(r.win-r.loss)<1e-12);assert.ok(Math.abs(r.win+r.draw+r.loss-1)<1e-12);assert.ok(r.coverage>1-1e-12)}});
+test('swapping sides swaps outcomes; zero-goal team cannot win',()=>{const a=footballScenario(1,2),b=footballScenario(2,1);assert.ok(Math.abs(a.win-b.loss)<1e-12);assert.equal(footballScenario(0,2).win,0)});
+test('invalid rates rejected; live and betting features unavailable',()=>{for(const n of [-1,7,NaN,Infinity,'1'])assert.throws(()=>footballScenario(n,1));assert.deepEqual(SPORTS_STATUS,{mode:'education',liveData:false,odds:false,trainedModel:false})});
