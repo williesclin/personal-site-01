@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {normalize,validateDraws} from '../scripts/sync-lottery.mjs';
+const data=JSON.parse(await readFile(new URL('../public/data/lotto649.json',import.meta.url),'utf8'));
+test('published history has at least 500 unique complete draws, ordered newest first',()=>{assert.ok(data.count>=500);assert.equal(data.count,data.draws.length);assert.deepEqual(validateDraws(data.draws),data.draws);assert.equal(createHash('sha256').update(JSON.stringify(data.draws)).digest('hex'),data.sha256);for(const d of data.draws){assert.equal(new Set([...d.numbers,d.special]).size,7);assert.ok([...d.numbers,d.special].every(n=>Number.isInteger(n)&&n>=1&&n<=49));assert.equal(d.prizes.length,8);assert.ok(d.prizes.flat().every(n=>Number.isSafeInteger(n)&&n>=0));}assert.equal(data.coverageEnd,data.draws[0].date);assert.equal(data.coverageStart,data.draws.at(-1).date)});
+test('every analysis window counts only six main numbers per draw',()=>{for(const n of [30,60,100,300,500]){const rows=data.draws.slice(0,n);const freq=Array.from({length:49},(_,i)=>rows.filter(d=>d.numbers.includes(i+1)).length);assert.equal(freq.reduce((a,b)=>a+b,0),6*n)}});
+test('duplicate and missing periods cannot overwrite published history',()=>{assert.throws(()=>validateDraws([data.draws[0],data.draws[0]]),/Duplicate/);assert.throws(()=>validateDraws([{id:'115000001',date:'2026-01-01'},{id:'115000003',date:'2026-01-09'}]),/Missing/)});
+test('normalizer rejects malformed numbers and prize fields',()=>{const row={period:115000001,lotteryDate:'2026-01-01T00:00:00',drawNumberSize:[1,2,3,4,5,6,6]};assert.throws(()=>normalize(row),/Invalid draw/);row.drawNumberSize=[1,2,3,4,5,6,7];assert.throws(()=>normalize(row),/Invalid prize/)});
