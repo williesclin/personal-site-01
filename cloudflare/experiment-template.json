@@ -1,0 +1,1 @@
+{"name":"My model","version":"0.1.0","task":"lotto","dataset":"DEMO-60-v1","protocol":"equal-budget-v1","budget":500,"cost":30000,"prize":14000,"trials":60,"latency":12}
