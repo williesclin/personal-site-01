@@ -10,6 +10,15 @@ Status: implementation prepared; real Google credentials, deployed collector, pr
 - `wrangler.analytics.jsonc`: daily 23:15 UTC (07:15 Taipei) collection, disabled by default. This does not deploy with the website's existing config.
 - `tests/analytics.test.mjs`: `node --test tests/analytics.test.mjs`.
 
+## Confirmed web stream (owner screenshot, 2026-09-20)
+
+- Stream: QuantPath Labs Web, https://quantpathlabs.com
+- Measurement ID: `G-N7Q9DKGRPL`
+- Stream ID: `15811469112` (NOT the numeric Property ID)
+- Enhanced measurement shown disabled; no received data shown. This does not verify deployment.
+- Website build setting: `VITE_GA4_MEASUREMENT_ID=G-N7Q9DKGRPL`.
+- Numeric Property ID and authenticated reporting access remain unverified. Do not use Stream ID as GA4_PROPERTY_ID.
+
 ## One-time account setup
 
 1. Create or select the GA4 property for quantpathlabs.com. Record the numeric Property ID and the web stream Measurement ID (`G-...`); these are different. Set/confirm the property's reporting timezone; configure `GA4_TIMEZONE` to exactly match it.
