@@ -1,0 +1,13 @@
+# Sports research release and compliance scope
+
+Release 1: separate #sports member/demo view, Chinese/English scenario interface and a paired public guide. Independent Poisson calculation with hypothetical user inputs; no source access, real events, odds, fitted model, financial advice, bets, payments, referrals, or personal sports-record storage. No third-party data or logos are redistributed. Existing account permissions are unchanged.
+
+Legal source reviewed 2026-09-20: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0120050 (amended 2025-07-02). Articles 4 and 11 regulate issuance and sales channels; Article 13 restricts sales/prizes to minors and participation by specified insiders. These provisions do not by themselves establish blanket permission for this research website. Notices are not a legal opinion, licence or liability waiver. International access does not establish worldwide compliance. Qualified local review is still needed before commercial expansion, wagering-related functions or referrals.
+
+Visible notices: independent/nonofficial status; education-only and explicitly hypothetical outputs; no guaranteed results/profits; no borrowing, loss-chasing or essential-funds gambling; no minors purchasing/redeeming Taiwan sports lottery tickets; help-seeking advice; local-rule caveat; statutory source/date. No disruptive entry popup or collection of birthdate/identity documents for an educational tool.
+
+Engine football-poisson-education-v1: user rates 0..6, independent fixed-mean Poisson goal counts 0..40; aggregate regulation-time home/draw/away and top6 score cells. Computation tail mass checked in tests. No extra time, shootout, cancellation or settlement. No empirical calibration/backtest claim.
+
+Next gates for real sports data: provider-specific use, retention and display licence evidence; credentials stored server-side; event/team IDs and UTC event/as-of/retrieval timestamps; immutable odds snapshots keyed by provider/market/line/selection/time; non-public storage for restricted raw feeds; source quality checks and stale-state handling; model artifacts and chronological holdout evaluation; no in-sample estimates marketed as predictive accuracy. Do not put licensed raw feeds in this public repository.
+
+Suggested 30-day milestones after data rights/access confirmed: D1–7 provider and one-league schema; D8–14 history validation and baseline; D15–21 frozen pre-match shadow predictions; D22–30 calibration/report review. Not a profitability promise or already-active feed. Existing daily operations should check notices and keep real feeds disabled until rights/access verified; 3-day usability/data review and 10-day evidence/cost review, not automatic model replacement.
