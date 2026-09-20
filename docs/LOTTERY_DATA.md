@@ -1,3 +1,7 @@
+# Membership release update
+
+The membership implementation in `docs/MEMBERSHIP_PLANS.md` supersedes earlier public-data and browser-only watchlist descriptions below. Source snapshots are now under `data/`, outside static assets. Original facts remain in this public repository; they are not proprietary or secret. Lottery website access requires verified sign-in; complete stock research requires an active Research/Pro entitlement. Public research is a limited preview.
+
 # Official lottery history and analysis
 
 Three independent public snapshots: `lotto649.json` (555 draws from 2022-01-04), `superlotto638.json` (596 from 2021-01-04), `daily539.json` (1483 from 2022-01-01), as first retrieved 2026-09-20. Counts grow; do not hardcode them in operations. Each retains all fetched history, source URL, request URLs, retrieval time, coverage and SHA-256.

@@ -24,10 +24,10 @@ export async function sync(game='lotto'){
  for(let page=1;page<=50;page++){const u=new URL(endpoint);for(const [k,v] of Object.entries({month:g.start,endMonth:end,pageNum:String(page),pageSize:'200'}))u.searchParams.set(k,v);const c=await get(u,g.key);requests.push(u.href);if(total===null)total=c.totalSize;if(total!==c.totalSize)throw Error('Source changed during pagination; retry next run');all.push(...c[g.key].map(row=>normalize(row,game)));if(all.length>=total)break;if(!c[g.key].length)throw Error('Incomplete source pagination');await new Promise(r=>setTimeout(r,800));}
  if(all.length!==total||all.length<500)throw Error('Incomplete backfill');
  const draws=validateDraws(all);if(draws.some(d=>d.date>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei'}).format(now)))throw Error('Future draw');
- const path='public/data/'+g.file+'.json';let old;try{old=JSON.parse(await readFile(path,'utf8'))}catch(e){if(e.code!=='ENOENT')throw e;}
+ const path='data/'+g.file+'.json';let old;try{old=JSON.parse(await readFile(path,'utf8'))}catch(e){if(e.code!=='ENOENT')throw e;}
  const ids=new Set(draws.map(d=>d.id));if(old?.draws.some(d=>!ids.has(d.id)))throw Error('Source lost previously published periods');
  const hash=createHash('sha256').update(JSON.stringify(draws)).digest('hex');
  const output={schemaVersion:1,game,source:'Taiwan Lottery',sourceUrl:'https://www.taiwanlottery.com/lotto/result/'+g.file+'/',retrievedAt:now.toISOString(),coverageStart:draws.at(-1).date,coverageEnd:draws[0].date,count:draws.length,sha256:hash,requests,draws};
- await mkdir('public/data',{recursive:true});await writeFile(path+'.tmp',JSON.stringify(output));await rename(path+'.tmp',path);console.log(JSON.stringify({game,count:draws.length,start:output.coverageStart,end:output.coverageEnd,sha256:hash}));
+ await mkdir('data',{recursive:true});await writeFile(path+'.tmp',JSON.stringify(output));await rename(path+'.tmp',path);console.log(JSON.stringify({game,count:draws.length,start:output.coverageStart,end:output.coverageEnd,sha256:hash}));
 }
 if(process.argv[1]?.endsWith('sync-lottery.mjs')){let failed=false;for(const game of Object.keys(GAMES)){try{await sync(game)}catch(e){failed=true;console.error(game+': '+e.message)}}if(failed)process.exitCode=1;}

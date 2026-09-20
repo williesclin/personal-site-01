@@ -33,9 +33,11 @@ export function ratios(row,previous){
  return {margin:Number.isFinite(net)&&rev>0?net/rev*100:null,growth:adjacent&&rev>=0&&prev>0?(rev/prev-1)*100:null};
 }
 export function annualFee(amount,expensePercent){return typeof amount==='number'&&Number.isFinite(amount)&&amount>=0&&amount<=1e9&&typeof expensePercent==='number'&&Number.isFinite(expensePercent)&&expensePercent>=0&&expensePercent<=100?amount*expensePercent/100:null;}
-export function validateEquities(data){
- if(data?.schemaVersion!==1||!day(data.asOf)||!Number.isFinite(Date.parse(data.retrievedAt))||!Array.isArray(data.companies)||data.companies.length!==COMPANIES.length)throw Error('Invalid equity snapshot');
- for(const definition of COMPANIES){const c=data.companies.find(c=>c.symbol===definition.symbol);if(!c||c.cik!==definition.cik||c.source!==`https://data.sec.gov/api/xbrl/companyfacts/CIK${definition.cik}.json`||!Array.isArray(c.years)||c.years.length<3)throw Error('Incomplete company');
+export function validateEquities(data,{preview=false}={}){
+ const definitions=preview?COMPANIES.slice(0,1):COMPANIES;
+ if(preview&&data?.preview!==true)throw Error("Invalid preview");
+ if(data?.schemaVersion!==1||!day(data.asOf)||!Number.isFinite(Date.parse(data.retrievedAt))||!Array.isArray(data.companies)||data.companies.length!==definitions.length)throw Error('Invalid equity snapshot');
+ for(const definition of definitions){const c=data.companies.find(c=>c.symbol===definition.symbol);if(!c||c.cik!==definition.cik||c.source!==`https://data.sec.gov/api/xbrl/companyfacts/CIK${definition.cik}.json`||!Array.isArray(c.years)||c.years.length<3)throw Error('Incomplete company');
  const ends=new Set();for(const r of c.years){if(!day(r.start)||!day(r.end)||r.end>data.asOf||ends.has(r.end)||!r.revenue)throw Error('Invalid period');ends.add(r.end);for(const k of Object.keys(METRICS)){const f=r[k];if(f!==null&&(!f||!Number.isFinite(f.value)||f.start!==r.start||f.end!==r.end||!day(f.filed)||f.filed>data.asOf||!METRICS[k].includes(f.tag)||!/^\d{10}-\d{2}-\d{6}$/.test(f.accession)))throw Error('Invalid metric');}}
  }
  return data;

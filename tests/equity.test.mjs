@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {normalizeCompany,validateEquities,ratios,annualFee} from '../app/equity-engine.mjs';
-const snapshot=JSON.parse(readFileSync(new URL('../public/data/equities.json',import.meta.url)));
+const snapshot=JSON.parse(readFileSync(new URL('../data/equities.json',import.meta.url)));
 test('Real snapshot has three companies, distinct annual periods and a reproducible hash',()=>{
  validateEquities(snapshot);assert.equal(snapshot.hash,createHash('sha256').update(JSON.stringify(snapshot.companies)).digest('hex'));
  for(const c of snapshot.companies){assert.equal(c.years.length,8);for(let i=0;i<c.years.length;i++){const r=c.years[i];assert.ok(r.revenue.value>0);assert.ok(r.start<r.end);if(i)assert.ok(c.years[i-1].end>r.end);for(const k of ['revenue','netIncome','operatingCashFlow'])if(r[k])assert.ok(r[k].filed>=r.end);}}
