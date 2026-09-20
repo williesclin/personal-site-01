@@ -51,13 +51,13 @@ test('consent defers Google script and sanitized pageview until allowed route',(
   globalThis.localStorage={getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)};
   globalThis.document={createElement:element,head:{appendChild:x=>scripts.push(x)},body:{append:(...items)=>nodes.push(...items)}};
   installAnalytics('G-TEST');assert.equal(scripts.length,0);
-  nodes[1].children[1].onclick(); // explicit opt-in while on login
+  nodes[1].children.find(x=>x.textContent==='Allow / 同意').onclick(); // explicit opt-in while on login
   assert.equal(window.dataLayer.filter(x=>x[1]==='page_view').length,0);
   location.hash='#analysis';listeners.hashchange();
   assert.equal(scripts.length,1);
   const views=window.dataLayer.filter(x=>x[1]==='page_view');assert.equal(views.length,1);
   assert.equal(views[0][2].page_location,'https://quantpathlabs.com/analytics-view/analysis');
   listeners.hashchange();assert.equal(window.dataLayer.filter(x=>x[1]==='page_view').length,1);
-  nodes[1].children[2].onclick();assert.equal(window['ga-disable-G-TEST'],true);
+  nodes[1].children.find(x=>x.textContent==='Decline or withdraw / 拒絕或撤回').onclick();assert.equal(window['ga-disable-G-TEST'],true);
  } finally {for(const [k,v] of Object.entries(original)){if(v===undefined)delete globalThis[k];else globalThis[k]=v;}}
 });
