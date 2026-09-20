@@ -61,5 +61,5 @@ export function installAnalytics(id) {
   });
   // Auth/recovery/admin routes are not measured.
   if(safeView(location.hash)) start();
-  try{if(!localStorage.getItem(key))dialog.showModal();}catch{}
+  // Browsing never requires a consent decision. Open preferences only on request.
 }
