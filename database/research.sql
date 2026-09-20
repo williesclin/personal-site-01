@@ -5,7 +5,7 @@ create table public.lab_state(id integer primary key check(id=1),state jsonb not
 insert into public.lab_state values(1,'{"runs":[],"audit":[],"activeRun":null,"previousRun":null}');
 alter table public.lab_state enable row level security;
 revoke all on public.lab_state from public,anon,authenticated;
-create function public.mutate_lab(action text,payload jsonb,actor text) returns jsonb language plpgsql security definer set search_path='' as $$
+create function public.mutate_lab(action text,payload jsonb,actor text) returns jsonb language plpgsql security invoker set search_path='' as $$
 declare s jsonb; r jsonb; target text; next_runs jsonb; log_text text;
 begin
  select state into s from public.lab_state where id=1 for update;
