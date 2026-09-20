@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-09-20",
+  "retrievedAt": "2026-09-20T23:05:52.463Z",
+  "method": "annual-us-gaap-v1",
+  "companies": [
+    {
+      "symbol": "NVDA",
+      "cik": "0001045810",
+      "name": "NVIDIA",
+      "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+      "years": [
+        {
+          "start": "2025-01-27",
+          "end": "2026-01-25",
+          "revenue": {
+            "start": "2025-01-27",
+            "end": "2026-01-25",
+            "value": 215938000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "Revenues",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2025-01-27",
+            "end": "2026-01-25",
+            "value": 120067000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2025-01-27",
+            "end": "2026-01-25",
+            "value": 102718000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2024-01-29",
+          "end": "2025-01-26",
+          "revenue": {
+            "start": "2024-01-29",
+            "end": "2025-01-26",
+            "value": 130497000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "Revenues",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2024-01-29",
+            "end": "2025-01-26",
+            "value": 72880000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2024-01-29",
+            "end": "2025-01-26",
+            "value": 64089000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "revenue": {
+            "start": "2023-01-30",
+            "end": "2024-01-28",
+            "value": 60922000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "Revenues",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2023-01-30",
+            "end": "2024-01-28",
+            "value": 29760000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2023-01-30",
+            "end": "2024-01-28",
+            "value": 28090000000,
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "revenue": {
+            "start": "2022-01-31",
+            "end": "2023-01-29",
+            "value": 26974000000,
+            "filed": "2025-02-26",
+            "accession": "0001045810-25-000023",
+            "tag": "Revenues",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2022-01-31",
+            "end": "2023-01-29",
+            "value": 4368000000,
+            "filed": "2025-02-26",
+            "accession": "0001045810-25-000023",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2022-01-31",
+            "end": "2023-01-29",
+            "value": 5641000000,
+            "filed": "2025-02-26",
+            "accession": "0001045810-25-000023",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "revenue": {
+            "start": "2021-02-01",
+            "end": "2022-01-30",
+            "value": 26914000000,
+            "filed": "2024-02-21",
+            "accession": "0001045810-24-000029",
+            "tag": "Revenues",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2021-02-01",
+            "end": "2022-01-30",
+            "value": 9752000000,
+            "filed": "2024-02-21",
+            "accession": "0001045810-24-000029",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2021-02-01",
+            "end": "2022-01-30",
+            "value": 9108000000,
+            "filed": "2024-02-21",
+            "accession": "0001045810-24-000029",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2020-01-27",
+          "end": "2021-01-31",
+          "revenue": {
+            "start": "2020-01-27",
+            "end": "2021-01-31",
+            "value": 16675000000,
+            "filed": "2023-02-24",
+            "accession": "0001045810-23-000017",
+            "tag": "Revenues",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2020-01-27",
+            "end": "2021-01-31",
+            "value": 4332000000,
+            "filed": "2023-02-24",
+            "accession": "0001045810-23-000017",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2020-01-27",
+            "end": "2021-01-31",
+            "value": 5822000000,
+            "filed": "2023-02-24",
+            "accession": "0001045810-23-000017",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2019-01-28",
+          "end": "2020-01-26",
+          "revenue": {
+            "start": "2019-01-28",
+            "end": "2020-01-26",
+            "value": 10918000000,
+            "filed": "2022-03-18",
+            "accession": "0001045810-22-000036",
+            "tag": "Revenues",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2019-01-28",
+            "end": "2020-01-26",
+            "value": 2796000000,
+            "filed": "2022-03-18",
+            "accession": "0001045810-22-000036",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2019-01-28",
+            "end": "2020-01-26",
+            "value": 4761000000,
+            "filed": "2022-03-18",
+            "accession": "0001045810-22-000036",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2018-01-29",
+          "end": "2019-01-27",
+          "revenue": {
+            "start": "2018-01-29",
+            "end": "2019-01-27",
+            "value": 11716000000,
+            "filed": "2021-02-26",
+            "accession": "0001045810-21-000010",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2018-01-29",
+            "end": "2019-01-27",
+            "value": 4141000000,
+            "filed": "2021-02-26",
+            "accession": "0001045810-21-000010",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2018-01-29",
+            "end": "2019-01-27",
+            "value": 3743000000,
+            "filed": "2021-02-26",
+            "accession": "0001045810-21-000010",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "cik": "0000789019",
+      "name": "Microsoft",
+      "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+      "years": [
+        {
+          "start": "2025-07-01",
+          "end": "2026-06-30",
+          "revenue": {
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "value": 331839000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "value": 133749000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "value": 182935000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2024-07-01",
+          "end": "2025-06-30",
+          "revenue": {
+            "start": "2024-07-01",
+            "end": "2025-06-30",
+            "value": 281724000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2024-07-01",
+            "end": "2025-06-30",
+            "value": 101832000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2024-07-01",
+            "end": "2025-06-30",
+            "value": 136162000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "revenue": {
+            "start": "2023-07-01",
+            "end": "2024-06-30",
+            "value": 245122000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2023-07-01",
+            "end": "2024-06-30",
+            "value": 88136000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2023-07-01",
+            "end": "2024-06-30",
+            "value": 118548000000,
+            "filed": "2026-07-29",
+            "accession": "0001193125-26-323660",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "revenue": {
+            "start": "2022-07-01",
+            "end": "2023-06-30",
+            "value": 211915000000,
+            "filed": "2025-07-30",
+            "accession": "0000950170-25-100235",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2022-07-01",
+            "end": "2023-06-30",
+            "value": 72361000000,
+            "filed": "2025-07-30",
+            "accession": "0000950170-25-100235",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2022-07-01",
+            "end": "2023-06-30",
+            "value": 87582000000,
+            "filed": "2025-07-30",
+            "accession": "0000950170-25-100235",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "revenue": {
+            "start": "2021-07-01",
+            "end": "2022-06-30",
+            "value": 198270000000,
+            "filed": "2024-07-30",
+            "accession": "0000950170-24-087843",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2021-07-01",
+            "end": "2022-06-30",
+            "value": 72738000000,
+            "filed": "2024-07-30",
+            "accession": "0000950170-24-087843",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2021-07-01",
+            "end": "2022-06-30",
+            "value": 89035000000,
+            "filed": "2024-07-30",
+            "accession": "0000950170-24-087843",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2020-07-01",
+          "end": "2021-06-30",
+          "revenue": {
+            "start": "2020-07-01",
+            "end": "2021-06-30",
+            "value": 168088000000,
+            "filed": "2023-07-27",
+            "accession": "0000950170-23-035122",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2020-07-01",
+            "end": "2021-06-30",
+            "value": 61271000000,
+            "filed": "2023-07-27",
+            "accession": "0000950170-23-035122",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2020-07-01",
+            "end": "2021-06-30",
+            "value": 76740000000,
+            "filed": "2023-07-27",
+            "accession": "0000950170-23-035122",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2019-07-01",
+          "end": "2020-06-30",
+          "revenue": {
+            "start": "2019-07-01",
+            "end": "2020-06-30",
+            "value": 143015000000,
+            "filed": "2022-07-28",
+            "accession": "0001564590-22-026876",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2019-07-01",
+            "end": "2020-06-30",
+            "value": 44281000000,
+            "filed": "2022-07-28",
+            "accession": "0001564590-22-026876",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2019-07-01",
+            "end": "2020-06-30",
+            "value": 60675000000,
+            "filed": "2022-07-28",
+            "accession": "0001564590-22-026876",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2018-07-01",
+          "end": "2019-06-30",
+          "revenue": {
+            "start": "2018-07-01",
+            "end": "2019-06-30",
+            "value": 125843000000,
+            "filed": "2021-07-29",
+            "accession": "0001564590-21-039151",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2018-07-01",
+            "end": "2019-06-30",
+            "value": 39240000000,
+            "filed": "2021-07-29",
+            "accession": "0001564590-21-039151",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2018-07-01",
+            "end": "2019-06-30",
+            "value": 52185000000,
+            "filed": "2021-07-29",
+            "accession": "0001564590-21-039151",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "cik": "0000002488",
+      "name": "Advanced Micro Devices",
+      "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000002488.json",
+      "years": [
+        {
+          "start": "2024-12-29",
+          "end": "2025-12-27",
+          "revenue": {
+            "start": "2024-12-29",
+            "end": "2025-12-27",
+            "value": 34639000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2024-12-29",
+            "end": "2025-12-27",
+            "value": 4335000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2024-12-29",
+            "end": "2025-12-27",
+            "value": 7709000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2023-12-31",
+          "end": "2024-12-28",
+          "revenue": {
+            "start": "2023-12-31",
+            "end": "2024-12-28",
+            "value": 25785000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2023-12-31",
+            "end": "2024-12-28",
+            "value": 1641000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2023-12-31",
+            "end": "2024-12-28",
+            "value": 3041000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2023-01-01",
+          "end": "2023-12-30",
+          "revenue": {
+            "start": "2023-01-01",
+            "end": "2023-12-30",
+            "value": 22680000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2023-01-01",
+            "end": "2023-12-30",
+            "value": 854000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2023-01-01",
+            "end": "2023-12-30",
+            "value": 1667000000,
+            "filed": "2026-02-04",
+            "accession": "0000002488-26-000018",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2021-12-26",
+          "end": "2022-12-31",
+          "revenue": {
+            "start": "2021-12-26",
+            "end": "2022-12-31",
+            "value": 23601000000,
+            "filed": "2025-02-05",
+            "accession": "0000002488-25-000012",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2021-12-26",
+            "end": "2022-12-31",
+            "value": 1320000000,
+            "filed": "2025-02-05",
+            "accession": "0000002488-25-000012",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2021-12-26",
+            "end": "2022-12-31",
+            "value": 3565000000,
+            "filed": "2025-02-05",
+            "accession": "0000002488-25-000012",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2020-12-27",
+          "end": "2021-12-25",
+          "revenue": {
+            "start": "2020-12-27",
+            "end": "2021-12-25",
+            "value": 16434000000,
+            "filed": "2024-01-31",
+            "accession": "0000002488-24-000012",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2020-12-27",
+            "end": "2021-12-25",
+            "value": 3162000000,
+            "filed": "2024-01-31",
+            "accession": "0000002488-24-000012",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2020-12-27",
+            "end": "2021-12-25",
+            "value": 3521000000,
+            "filed": "2024-01-31",
+            "accession": "0000002488-24-000012",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2019-12-29",
+          "end": "2020-12-26",
+          "revenue": {
+            "start": "2019-12-29",
+            "end": "2020-12-26",
+            "value": 9763000000,
+            "filed": "2023-02-27",
+            "accession": "0000002488-23-000047",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2019-12-29",
+            "end": "2020-12-26",
+            "value": 2490000000,
+            "filed": "2023-02-27",
+            "accession": "0000002488-23-000047",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2019-12-29",
+            "end": "2020-12-26",
+            "value": 1071000000,
+            "filed": "2023-02-27",
+            "accession": "0000002488-23-000047",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2018-12-30",
+          "end": "2019-12-28",
+          "revenue": {
+            "start": "2018-12-30",
+            "end": "2019-12-28",
+            "value": 6731000000,
+            "filed": "2022-02-03",
+            "accession": "0000002488-22-000016",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2018-12-30",
+            "end": "2019-12-28",
+            "value": 341000000,
+            "filed": "2022-02-03",
+            "accession": "0000002488-22-000016",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2018-12-30",
+            "end": "2019-12-28",
+            "value": 493000000,
+            "filed": "2022-02-03",
+            "accession": "0000002488-22-000016",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        },
+        {
+          "start": "2017-12-31",
+          "end": "2018-12-29",
+          "revenue": {
+            "start": "2017-12-31",
+            "end": "2018-12-29",
+            "value": 6475000000,
+            "filed": "2021-01-29",
+            "accession": "0001628280-21-001185",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2017-12-31",
+            "end": "2018-12-29",
+            "value": 337000000,
+            "filed": "2021-01-29",
+            "accession": "0001628280-21-001185",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2017-12-31",
+            "end": "2018-12-29",
+            "value": 34000000,
+            "filed": "2021-01-29",
+            "accession": "0001628280-21-001185",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          }
+        }
+      ]
+    }
+  ],
+  "hash": "bcac88f32bc25ea169ba38406bd1707139f6851927875cb7682a6d2c3274d3a5"
+}
