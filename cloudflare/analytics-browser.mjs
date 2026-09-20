@@ -6,7 +6,7 @@ export function safeView(hash, pathname = "/") {
     const page = publicRoute(pathname);
     return page ? `public/${page.locale}/${page.page || "home"}` : null;
   }
-  const value = hash.replace(/^#/, '') || 'home';
+  const value = hash === '#content' ? 'home' : hash.replace(/^#/, '') || 'home';
   return routes.has(value) ? value : null;
 }
 export function installAnalytics(id) {
