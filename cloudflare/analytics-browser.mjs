@@ -1,7 +1,12 @@
+import {publicRoute} from '../app/public-content.mjs';
 // Optional GA4 measurement. No Google request until explicit opt-in.
 const routes = new Set(['home','dashboard','analysis','planner','records']);
-export function safeView(hash) {
-  const value = hash.replace(/^#/, '') || 'home';
+export function safeView(hash, pathname = "/") {
+  if ((!hash || hash === "#home" || hash === "#content") && pathname !== "/") {
+    const page = publicRoute(pathname);
+    return page ? `public/${page.locale}/${page.page || "home"}` : null;
+  }
+  const value = hash === '#content' ? 'home' : hash.replace(/^#/, '') || 'home';
   return routes.has(value) ? value : null;
 }
 export function installAnalytics(id) {
@@ -12,7 +17,7 @@ export function installAnalytics(id) {
   window.dataLayer = window.dataLayer || [];
   function tag() { window.dataLayer.push(arguments); }
   function view() {
-    const route = safeView(location.hash);
+    const route = safeView(location.hash, location.pathname);
     if (!consent || !route || route === previous) return;
     previous = route;
     tag('config', id, {send_page_view:false, page_location:location.origin+'/analytics-view/'+route,
@@ -56,10 +61,10 @@ export function installAnalytics(id) {
   }
   button.onclick=()=>dialog.showModal();document.body.append(button,dialog);
   window.addEventListener('hashchange',()=>{
-    if(!safeView(location.hash)) {window['ga-disable-'+id]=true;previous=null;return;}
+    if(!safeView(location.hash, location.pathname)) {window['ga-disable-'+id]=true;previous=null;return;}
     window['ga-disable-'+id]=!consent;start();
   });
   // Auth/recovery/admin routes are not measured.
-  if(safeView(location.hash)) start();
+  if(safeView(location.hash, location.pathname)) start();
   // Browsing never requires a consent decision. Open preferences only on request.
 }
