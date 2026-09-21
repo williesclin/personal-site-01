@@ -19,7 +19,76 @@ export const catalog = [
 catalog.push({id:'sports-research',category:'models',market:'global',updated:'2026-09-20',status:'published',version:1,
 en:{title:'Sports research: assumptions, evidence and responsible use',summary:'Explore a football scenario calculator, its limits and the safeguards needed before live data.',sections:[['Available now','The sports workspace offers a Poisson football scenario calculator using user-entered hypothetical expected goals. It is not trained on real matches and does not provide validated forecasts, real fixtures or odds. Open the tools page to enter the workspace.'],['Scope and limits','QuantPath Labs is an independent education and research website, not an official lottery partner or betting operator. It does not accept bets or money, sell or purchase tickets, pay prizes or refer users to gambling platforms. Scenario probabilities are not betting advice and do not guarantee outcomes or profits.'],['Responsible use','Do not borrow, chase losses or use essential living funds to gamble. Minors must not purchase or redeem Taiwan sports lottery tickets. If gambling affects your finances or wellbeing, stop and seek qualified support. Local restrictions vary; this notice is not an operating licence or a worldwide legal clearance.'],['Data before forecasts','Live data remains disabled until source use and display rights are verified. Real predictions require timestamped features, chronological evaluation, calibration and reproducible evidence. Historical results alone do not establish future profitability.']]},
 'zh-hant':{title:'運動分析：假設、證據與責任使用',summary:'了解足球情境計算器的用途、限制與接入真實資料前的要求。',sections:[['目前可用功能','運動工作台提供 Poisson 足球情境計算器，使用自行輸入的假設預期進球。模型尚未以真實比賽訓練，不提供已驗證預測、真實賽程或賠率。可從工具頁進入工作台。'],['服務範圍與限制','QuantPath Labs 為獨立教育與研究網站，非運彩官方合作平台或投注業者。不收受投注與款項、不銷售或代購彩券、不兌獎，也不導流至博彩平台。情境機率不是投注建議，不保證賽果或獲利。'],['責任使用','勿借貸、追損或挪用生活費投注。未成年人不得購買或兌領台灣運動彩券。若投注影響財務或身心，請停止並尋求合格專業協助。各地規範不同；本警語不是營運許可，也不是全球合法性的保證。'],['先有資料，再談預測','來源使用與公開展示權未確認前，不啟用真實資料。正式預測需要帶時間的特徵、時間順序驗證、機率校準及可重現證據。歷史結果不能單獨證明未來獲利。']]},sources:[{label:'運動彩券發行條例 / Taiwan Sports Lottery Issuance Act',url:'https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0120050'}]});
-catalog.unshift({"id": "stock-etf-research", "category": "investing", "market": "global", "updated": "2026-09-20", "status": "published", "version": 1, "en": {"title": "Compare company financials and ETF costs", "summary": "Use the research tool to compare annual reports, fund exposure and fees with traceable sources.", "sections": [["Start with the actual figures", "Open Stocks & ETF research for NVIDIA, Microsoft and AMD annual revenue, net income and operating cash flow. Each figure links to its SEC filing. The initial universe is deliberately small and is not a recommendation or a market-wide ranking."], ["Compare dates before growth", "Select a period-ending year and inspect the exact annual start and end dates. A fiscal year ending in January differs from one ending in June. Growth requires adjacent annual periods; missing data is not zero. Later restatements can change historical figures, so this snapshot cannot establish what an investor knew at an earlier date."], ["Compare fund exposure as well as fees", "IVV tracks the S&P 500; ITOT covers the total U.S. equity market; IXUS covers developed and emerging-market equities outside the U.S. The tool shows the issuer expense ratios checked on September 20, 2026 and a simple cost estimate for a constant hypothetical holding. These funds have different exposures, and lower fees alone do not establish suitability."], ["Save research without confusing it with a trade", "The public preview is limited to NVIDIA and IVV. Full research and account saving require an active paid membership; sales have not opened. There is no automated message, trade execution or price forecast. Investments can lose value. Verify the current issuer prospectus and original financial reports before making a decision."]]}, "zh-hant": {"title": "比較公司財報與 ETF 費用", "summary": "以可回查的來源，比較年度財報、基金投資範圍與費用。", "sections": [["先看實際數據", "開啟股票與 ETF 研究，即可查看 NVIDIA、Microsoft、AMD 的年度營收、淨利與營業現金流，每個數字均可回查 SEC 申報。初始範圍刻意保持精簡，並非投資推薦或全市場排名。"], ["比較成長率之前先比較日期", "選擇財報期末所在年份，核對完整年度起訖日。一月結束的會計年度與六月結束的年度不同。年增率須使用相鄰年度，缺值不是零。後續重編可能改變歷史數字，因此本快照不能證明投資人在過去某日已知哪些資訊。"], ["同時比較基金範圍與費用", "IVV 追蹤 S&P 500；ITOT 涵蓋美國整體股票市場；IXUS 涵蓋美國以外已開發及新興市場股票。工具列出 2026-09-20 核對的發行機構費率，並以假設固定持有市值估算費用。三者投資範圍不同，費用較低不等於適合每位使用者。"], ["區分研究清單與實際交易", "公開預覽限 NVIDIA 與 IVV；完整研究與帳號儲存需有效付費會員，訂閱尚未開放。不會寄送通知、執行交易或預測股價。投資可能虧損，決策前應核對最新公開說明書與原始財報。"]]}, "sources": [{"label": "SEC · Company Facts API", "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"}, {"label": "iShares · IVV", "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf"}, {"label": "iShares · ITOT", "url": "https://www.ishares.com/us/products/239724/ishares-core-sp-total-us-stock-market-etf"}, {"label": "iShares · IXUS", "url": "https://www.ishares.com/us/products/244048/ishares-core-msci-total-international-stock-etf"}]});
+catalog.unshift({
+  "id": "stock-etf-research",
+  "category": "investing",
+  "market": "US-listed",
+  "updated": "2026-09-21",
+  "status": "published",
+  "version": 2,
+  "en": {
+    "title": "Read the stock research preview: dates first, fees second",
+    "summary": "Separate the public preview from paid-plan goals, distinguish financial periods from refresh dates, and interpret an ETF fee estimate without treating it as a return forecast.",
+    "sections": [
+      [
+        "Know what is available before comparing",
+        "QuantPath’s public stock research preview currently contains three annual periods for NVIDIA and one ETF, IVV. It is a limited way to inspect the research workflow, not the complete Research or Pro service. The underlying initial research universe includes NVIDIA, Microsoft and AMD, plus IVV, ITOT and IXUS; that wider universe is not fully available to anonymous visitors. Complete tools and account saving require an eligible paid membership. Research and Pro subscriptions are not on sale, and viewing this page does not enroll or charge you."
+      ],
+      [
+        "Read the period, filing and retrieval dates separately",
+        "A financial statement describes a reporting period. Its filing date tells you when that document was submitted; QuantPath’s retrieval timestamp records when the dataset was fetched. A fresh retrieval does not turn an annual figure into quarterly or trailing-twelve-month data. Before comparing growth, inspect the exact start and end dates. Companies can have different financial calendars, so matching the displayed year alone is insufficient. SEC’s data documentation specifically cautions users about differing reporting dates. \n\nThe preview labels financial amounts in USD billions. A dash means unavailable, not zero. Its historical figures can include later restatements. They therefore support examination of the currently available reporting history, not proof of information available to investors on a past trading date. This distinction matters before using any historical dataset in a backtest."
+      ],
+      [
+        "Interpret the fee estimate as a limited calculation",
+        "The issuer lists IVV as an S&P 500 fund with a 0.03% expense ratio, checked on September 21, 2026. For an illustrative, constant USD 10,000 holding, the tool’s calculation is 10,000 × 0.0003 = USD 3 per year. This is a simplified estimate, not a separate invoice, all-in ownership cost or expected return. Fund expenses affect net asset value; the estimate excludes trading spreads, commissions, taxes, currency effects and changing investment values. \n\nA low fee also does not make different exposures interchangeable. IVV’s large-cap U.S. exposure differs from ITOT’s broad U.S. market and IXUS’s developed and emerging markets outside the United States. This is a scope distinction, not a ranking or recommendation."
+      ],
+      [
+        "Finish one useful research check",
+        "Open the preview, inspect NVIDIA’s annual dates and original filing links, then change the hypothetical IVV holding value to see how the fee estimate responds. If a search returns nothing, reset the filters; searching an unsupported symbol does not activate coverage. Review the membership page for the boundary between available features and planned services. No trade, live-price alert or automatic member message is created. Investment values can fall, and these factual tools do not guarantee returns."
+      ]
+    ]
+  },
+  "zh-hant": {
+    "title": "讀懂股票研究預覽：先看日期，再看費用",
+    "summary": "分清公開預覽與付費方案目標、財報期間與擷取日期，正確解讀 ETF 費用估算，不把它當成報酬預測。",
+    "sections": [
+      [
+        "比較之前，先知道目前能用什麼",
+        "QuantPath 的股票公開預覽目前提供 NVIDIA 三個完整年度，以及一檔 ETF：IVV。這是有限範圍的研究流程展示，不是完整 Research 或 Pro 服務。底層初始研究範圍包含 NVIDIA、Microsoft、AMD，以及 IVV、ITOT、IXUS；匿名訪客並不能完整使用這個較大的範圍。完整工具與帳號儲存需要有效的付費會員資格。Research 與 Pro 尚未開放訂閱，瀏覽頁面不會建立訂閱或扣款。"
+      ],
+      [
+        "分別看待財報期間、申報日與擷取日",
+        "財務報表描述一段報告期間；申報日表示文件提交的時間；QuantPath 的擷取時間則記錄何時取得資料。剛更新的擷取時間，不會把年度數字變成季度或近十二個月資料。比較成長率之前，先核對完整起訖日。各公司的會計年度可能不同，不能只看畫面上的年份是否相同。SEC 的資料說明也特別提醒使用者留意不同的報告日期。\n\n預覽中的財務金額以十億美元表示。「—」代表無法取得，而不是零。歷史數字可能包含後來的重編，因此可用於檢視目前可取得的財報歷史，卻不能證明投資人在過去某個交易日已知哪些資訊。將歷史資料用於回測前，必須先分清這件事。"
+      ],
+      [
+        "費用估算只是一項有範圍限制的計算",
+        "依 2026 年 9 月 21 日核對的發行機構資料，IVV 為追蹤 S&P 500 的基金，費用率為 0.03%。若以全年固定持有 10,000 美元作為示例，工具的計算為 10,000 × 0.0003＝每年 3 美元。這是簡化估算，不是另行帳單、全部持有成本或預期報酬。基金費用反映於淨值；此估算不包含買賣價差、佣金、稅、匯率影響及投資市值變化。\n\n費用低，也不代表不同投資範圍可以互相取代。IVV 的美國大型股範圍，與 ITOT 的美國整體股票市場、IXUS 的美國以外已開發及新興市場不同。這是範圍說明，不是排名或投資推薦。"
+      ],
+      [
+        "完成一次有用的研究核對",
+        "開啟預覽，檢查 NVIDIA 的年度起訖日及原始申報連結，再調整 IVV 的假設持有金額，觀察費用估算如何改變。若搜尋沒有結果，先重設篩選；搜尋尚未支援的代號不會自動接入資料。再查看會員方案頁，分清已可使用的功能與規劃中的服務。這些操作不會建立交易、即時價格提醒或會員自動訊息。投資可能虧損，事實研究工具也不保證報酬。"
+      ]
+    ]
+  },
+  "sources": [
+    {
+      "label": "SEC · Company Facts API",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "label": "iShares · IVV",
+      "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf"
+    },
+    {
+      "label": "iShares · ITOT",
+      "url": "https://www.ishares.com/us/products/239724/ishares-core-sp-total-us-stock-market-etf"
+    },
+    {
+      "label": "iShares · IXUS",
+      "url": "https://www.ishares.com/us/products/244048/ishares-core-msci-total-international-stock-etf"
+    }
+  ]
+});
 export const articles=catalog.filter(a=>a.status==='published');
 export const pages=['','research','pricing','library','tools','methodology','about',...articles.map(a=>'library/'+a.id)];
 export function publicRoute(path){const m=path.match(/^\/(en|zh-hant)(?:\/(.*?))?\/?$/);return m&&pages.includes(m[2]||'')?{locale:m[1],page:m[2]||''}:path==='/'?{locale:'en',page:''}:null;}
