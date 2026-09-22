@@ -1,0 +1,6 @@
+.auth-links{display:flex;flex-wrap:wrap;gap:10px}
+.auth-links .btn{flex:1 1 140px}
+.auth-form .success-message .btn{margin-top:16px}
+.auth-form,.auth-form-wrap{min-width:0}
+.auth-form .btn,.auth-form .auth-note{white-space:normal;overflow-wrap:anywhere}
+.auth-form .auth-back{min-height:44px;text-align:left}
