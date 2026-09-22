@@ -17,7 +17,7 @@
 - NVIDIA/AMD RSS transport reads succeeded, but commercial storage/display rights were not established. NVIDIA terms: https://www.nvidia.com/en-eu/about-nvidia/terms-of-service/ . Automatic issuer-news ingestion remains disabled; no full text copied.
 - Bluesky public search returned HTTP 403. Social attention and sentiment remain unconnected, not zero.
 - Research/Pro sales stay disabled; no emails/push/social messages are sent.
-- Readiness gates: >=100 independently reviewed labels, >=30 chronological holdout documents with >=5/class, >=3 classes, grouped duplicates/events; majority and form-rule baselines; macro-F1 >=0.70 and >=baseline+0.05, ECE<=0.10 for probabilistic candidates. These are acceptance targets, not measured results. At least20% double-reviewed. Seven-day shadow alerts before release.
+- Readiness gates: >=100 independently reviewed labels, >=30 chronological holdout documents with >=5/class, >=3 classes, grouped duplicates/events; majority and form-rule baselines; macro-F1 >=0.75 and >=baseline+0.05, ECE<=0.10 for probabilistic candidates. These are acceptance targets, not measured results. At least20% double-reviewed. Seven-day shadow alerts before release.
 
 ## Operations / 維運
 
