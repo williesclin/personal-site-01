@@ -21,6 +21,8 @@
 
 ## Operations / 維運
 
-After successful first import and unchanged replay, enable one private hourly `cron` reconciliation job. Check `quantpath_ops.sync_runs`, `quantpath_ops.feed_runs`, `cron.job_run_details`, latest GitHub Actions and production data status separately. Failures preserve previous complete snapshot. Rollback UI via GitHub revert; pause sync with `cron.unschedule` only, retain facts/history. New migrations match remote applied versions.
+After successful first import and unchanged replay, enable one private 15-minute `cron` reconciliation job. Check `quantpath_ops.sync_runs`, `quantpath_ops.feed_runs`, `cron.job_run_details`, latest GitHub Actions and production data status separately. Failures preserve previous complete snapshot. Rollback UI via GitHub revert; pause sync with `cron.unschedule` only, retain facts/history. New migrations match remote applied versions.
 
 中英操作摘要：研究總覽、導覽與樂透收支已改版；SQL 同步只接受固定 GitHub 快照並核對雜湊，讀取失敗保留前版。申報事件分類是規則，不是已驗證 AI。新聞商業展示權、社群來源與人工標註仍未完成，因此不啟用情緒或 AI 警示。部署與操作驗收結果另記營運紀錄，不把此文件當成部署成功證據。
+
+Browser verification: bilingual overview and route-preserving language switch passed on the branch preview. Demo protected-tool denial passed. A local 375/390 component fixture was built, but the cloud browser disallows file URLs; it has NOT been visually or interactively validated. No alternative browser mechanism was used.

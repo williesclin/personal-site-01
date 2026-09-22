@@ -12,7 +12,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: research-feed
+  group: research-data
   cancel-in-progress: false
 jobs:
   refresh:
@@ -32,8 +32,12 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/research-feed.json
           git diff --cached --quiet || git commit -m 'Refresh official SEC filing observations'
-          git pull --rebase origin main
-          node scripts/build-research-sync.mjs
-          git add data/research-sync.json
-          git diff --cached --quiet || git commit -m 'Prepare verified database synchronization envelope'
-          git push origin HEAD:main
+          pushed=false
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            node scripts/build-research-sync.mjs
+            git add data/research-sync.json
+            git diff --cached --quiet || git commit -m 'Prepare verified database synchronization manifest'
+            if git push origin HEAD:main; then pushed=true; break; fi
+          done
+          test "$pushed" = true

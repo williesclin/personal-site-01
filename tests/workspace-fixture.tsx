@@ -1,0 +1,4 @@
+// Local-only responsive fixture. No session, membership or backend writes.
+import React,{useState} from 'react';import {createRoot} from 'react-dom/client';
+import {Records,RecordDialog} from '../app/page';
+function Fixture(){const [locale,setLocale]=useState('en'),[month,setMonth]=useState('all'),[open,setOpen]=useState(false),[rows,setRows]=useState<any[]>([]);return <><p style={{padding:12,background:'#fff0c5'}}>LOCAL TEST · SYNTHETIC RECORDS · NO ACCOUNT</p><button className="btn" onClick={()=>setLocale(locale==='en'?'zh-hant':'en')}>English / 繁中</button><main className="workspace"><Records locale={locale} records={rows} month={month} setMonth={setMonth} months={['2026-09','2026-08']} add={()=>setOpen(true)} remove={()=>{}}/><RecordDialog locale={locale} open={open} setOpen={setOpen} busy={false} save={async r=>{setRows([...rows,r]);setOpen(false)}}/></main></>};createRoot(document.getElementById('root')!).render(<Fixture/>);

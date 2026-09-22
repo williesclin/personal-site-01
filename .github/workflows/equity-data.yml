@@ -13,7 +13,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: equity-data
+  group: research-data
   cancel-in-progress: false
 jobs:
   refresh:
@@ -35,8 +35,12 @@ jobs:
           git add data/equities.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Refresh validated SEC annual financial facts'
-          git pull --rebase origin main
-          node scripts/build-research-sync.mjs
-          git add data/research-sync.json
-          git diff --cached --quiet || git commit -m 'Prepare financial database synchronization envelope'
-          git push origin HEAD:main
+          pushed=false
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            node scripts/build-research-sync.mjs
+            git add data/research-sync.json
+            git diff --cached --quiet || git commit -m 'Prepare verified database synchronization manifest'
+            if git push origin HEAD:main; then pushed=true; break; fi
+          done
+          test "$pushed" = true
