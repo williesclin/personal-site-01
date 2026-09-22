@@ -1,0 +1,1757 @@
+{
+  "schemaVersion": 1,
+  "issuers": [
+    {
+      "symbol": "NVDA",
+      "cik": "0001045810",
+      "name": "NVIDIA",
+      "sector": "chips",
+      "aiRole": {
+        "en": "GPU computing",
+        "zh-hant": "GPU運算"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+    },
+    {
+      "symbol": "MSFT",
+      "cik": "0000789019",
+      "name": "Microsoft",
+      "sector": "cloud",
+      "aiRole": {
+        "en": "Azure and Copilot",
+        "zh-hant": "Azure與Copilot"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+    },
+    {
+      "symbol": "AMD",
+      "cik": "0000002488",
+      "name": "Advanced Micro Devices",
+      "sector": "chips",
+      "aiRole": {
+        "en": "Accelerators and processors",
+        "zh-hant": "加速器與處理器"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm"
+    },
+    {
+      "symbol": "INTC",
+      "cik": "0000050863",
+      "name": "Intel",
+      "sector": "chips",
+      "aiRole": {
+        "en": "AI processors and edge computing",
+        "zh-hant": "AI處理器與邊緣運算"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm"
+    },
+    {
+      "symbol": "AVGO",
+      "cik": "0001730168",
+      "name": "Broadcom",
+      "sector": "chips",
+      "aiRole": {
+        "en": "Custom accelerators and networking",
+        "zh-hant": "客製加速器與網路晶片"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm"
+    },
+    {
+      "symbol": "MRVL",
+      "cik": "0001835632",
+      "name": "Marvell Technology",
+      "sector": "chips",
+      "aiRole": {
+        "en": "Data-center silicon",
+        "zh-hant": "資料中心晶片"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm"
+    },
+    {
+      "symbol": "QCOM",
+      "cik": "0000804328",
+      "name": "Qualcomm",
+      "sector": "chips",
+      "aiRole": {
+        "en": "On-device AI",
+        "zh-hant": "裝置端AI"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm"
+    },
+    {
+      "symbol": "MU",
+      "cik": "0000723125",
+      "name": "Micron Technology",
+      "sector": "chips",
+      "aiRole": {
+        "en": "Memory for AI workloads",
+        "zh-hant": "AI工作負載記憶體"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm"
+    },
+    {
+      "symbol": "AMAT",
+      "cik": "0000006951",
+      "name": "Applied Materials",
+      "sector": "equipment",
+      "aiRole": {
+        "en": "Semiconductor manufacturing equipment",
+        "zh-hant": "半導體製造設備"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm"
+    },
+    {
+      "symbol": "LRCX",
+      "cik": "0000707549",
+      "name": "Lam Research",
+      "sector": "equipment",
+      "aiRole": {
+        "en": "Wafer fabrication equipment",
+        "zh-hant": "晶圓製造設備"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm"
+    },
+    {
+      "symbol": "KLAC",
+      "cik": "0000319201",
+      "name": "KLA",
+      "sector": "equipment",
+      "aiRole": {
+        "en": "Process control and inspection",
+        "zh-hant": "製程控制與檢測"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm"
+    },
+    {
+      "symbol": "TER",
+      "cik": "0000097210",
+      "name": "Teradyne",
+      "sector": "equipment",
+      "aiRole": {
+        "en": "Semiconductor test",
+        "zh-hant": "半導體測試"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/97210/000119312526059002/ter-20251231.htm"
+    },
+    {
+      "symbol": "ON",
+      "cik": "0001097864",
+      "name": "onsemi",
+      "sector": "chips",
+      "aiRole": {
+        "en": "Power and sensing",
+        "zh-hant": "電源與感測"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1097864/000109786426000006/on-20251231.htm"
+    },
+    {
+      "symbol": "MPWR",
+      "cik": "0001280452",
+      "name": "Monolithic Power Systems",
+      "sector": "chips",
+      "aiRole": {
+        "en": "Power management",
+        "zh-hant": "電源管理"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1280452/000143774926006113/mpwr20251231_10k.htm"
+    },
+    {
+      "symbol": "ADI",
+      "cik": "0000006281",
+      "name": "Analog Devices",
+      "sector": "chips",
+      "aiRole": {
+        "en": "Intelligent edge and signal processing",
+        "zh-hant": "智慧邊緣與訊號處理"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000153/adi-20251101.htm"
+    },
+    {
+      "symbol": "MCHP",
+      "cik": "0000827054",
+      "name": "Microchip Technology",
+      "sector": "chips",
+      "aiRole": {
+        "en": "Embedded machine learning",
+        "zh-hant": "嵌入式機器學習"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/827054/000082705426000016/mchp-20260331.htm"
+    },
+    {
+      "symbol": "AMZN",
+      "cik": "0001018724",
+      "name": "Amazon",
+      "sector": "cloud",
+      "aiRole": {
+        "en": "AWS AI services",
+        "zh-hant": "AWS AI服務"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm"
+    },
+    {
+      "symbol": "GOOGL",
+      "cik": "0001652044",
+      "name": "Alphabet",
+      "sector": "cloud",
+      "aiRole": {
+        "en": "Google Cloud and AI models",
+        "zh-hant": "Google Cloud與AI模型"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+    },
+    {
+      "symbol": "META",
+      "cik": "0001326801",
+      "name": "Meta Platforms",
+      "sector": "cloud",
+      "aiRole": {
+        "en": "AI models and applications",
+        "zh-hant": "AI模型與應用"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "symbol": "ORCL",
+      "cik": "0001341439",
+      "name": "Oracle",
+      "sector": "cloud",
+      "aiRole": {
+        "en": "Cloud AI infrastructure",
+        "zh-hant": "雲端AI基礎設施"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+    },
+    {
+      "symbol": "IBM",
+      "cik": "0000051143",
+      "name": "IBM",
+      "sector": "cloud",
+      "aiRole": {
+        "en": "Enterprise AI platforms",
+        "zh-hant": "企業AI平台"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/ibm-20251231.htm"
+    },
+    {
+      "symbol": "DELL",
+      "cik": "0001571996",
+      "name": "Dell Technologies",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "AI servers",
+        "zh-hant": "AI伺服器"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm"
+    },
+    {
+      "symbol": "HPE",
+      "cik": "0001645590",
+      "name": "Hewlett Packard Enterprise",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "AI systems and networking",
+        "zh-hant": "AI系統與網路"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm"
+    },
+    {
+      "symbol": "SMCI",
+      "cik": "0001375365",
+      "name": "Super Micro Computer",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "AI servers and rack systems",
+        "zh-hant": "AI伺服器與機櫃系統"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+    },
+    {
+      "symbol": "ANET",
+      "cik": "0001596532",
+      "name": "Arista Networks",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "Data-center networking",
+        "zh-hant": "資料中心網路"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm"
+    },
+    {
+      "symbol": "CSCO",
+      "cik": "0000858877",
+      "name": "Cisco Systems",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "AI networking infrastructure",
+        "zh-hant": "AI網路基礎設施"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/csco-20260725.htm"
+    },
+    {
+      "symbol": "VRT",
+      "cik": "0001674101",
+      "name": "Vertiv",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "Power and cooling",
+        "zh-hant": "電力與散熱"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm"
+    },
+    {
+      "symbol": "ETN",
+      "cik": "0001551182",
+      "name": "Eaton",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "Data-center power infrastructure",
+        "zh-hant": "資料中心電力基礎設施"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm"
+    },
+    {
+      "symbol": "NTAP",
+      "cik": "0001002047",
+      "name": "NetApp",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "AI data infrastructure",
+        "zh-hant": "AI資料基礎設施"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1002047/000119312526259683/ntap-20260424.htm"
+    },
+    {
+      "symbol": "CDNS",
+      "cik": "0000813672",
+      "name": "Cadence Design Systems",
+      "sector": "equipment",
+      "aiRole": {
+        "en": "AI-assisted electronic design",
+        "zh-hant": "AI輔助電子設計"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000016/cdns-20251231.htm"
+    },
+    {
+      "symbol": "SNPS",
+      "cik": "0000883241",
+      "name": "Synopsys",
+      "sector": "equipment",
+      "aiRole": {
+        "en": "AI-assisted chip design",
+        "zh-hant": "AI輔助晶片設計"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/883241/000088324125000028/snps-20251031.htm"
+    },
+    {
+      "symbol": "ADSK",
+      "cik": "0000769397",
+      "name": "Autodesk",
+      "sector": "software",
+      "aiRole": {
+        "en": "AI-assisted design",
+        "zh-hant": "AI輔助設計"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/769397/000076939726000015/adsk-20260131.htm"
+    },
+    {
+      "symbol": "PTC",
+      "cik": "0000857005",
+      "name": "PTC",
+      "sector": "software",
+      "aiRole": {
+        "en": "Industrial engineering software",
+        "zh-hant": "工業工程軟體"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/857005/000119312525291326/ptc-20250930.htm"
+    },
+    {
+      "symbol": "CRM",
+      "cik": "0001108524",
+      "name": "Salesforce",
+      "sector": "software",
+      "aiRole": {
+        "en": "Enterprise AI agents",
+        "zh-hant": "企業AI代理"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm"
+    },
+    {
+      "symbol": "NOW",
+      "cik": "0001373715",
+      "name": "ServiceNow",
+      "sector": "software",
+      "aiRole": {
+        "en": "AI workflow automation",
+        "zh-hant": "AI流程自動化"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm"
+    },
+    {
+      "symbol": "PLTR",
+      "cik": "0001321655",
+      "name": "Palantir Technologies",
+      "sector": "software",
+      "aiRole": {
+        "en": "AI decision platforms",
+        "zh-hant": "AI決策平台"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm"
+    },
+    {
+      "symbol": "SNOW",
+      "cik": "0001640147",
+      "name": "Snowflake",
+      "sector": "software",
+      "aiRole": {
+        "en": "AI data platforms",
+        "zh-hant": "AI資料平台"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm"
+    },
+    {
+      "symbol": "ADBE",
+      "cik": "0000796343",
+      "name": "Adobe",
+      "sector": "software",
+      "aiRole": {
+        "en": "Generative creative AI",
+        "zh-hant": "生成式創意AI"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/adbe-20251128.htm"
+    },
+    {
+      "symbol": "MDB",
+      "cik": "0001441816",
+      "name": "MongoDB",
+      "sector": "software",
+      "aiRole": {
+        "en": "Databases for AI applications",
+        "zh-hant": "AI應用資料庫"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026016799/mdb-20260131.htm"
+    },
+    {
+      "symbol": "DDOG",
+      "cik": "0001561550",
+      "name": "Datadog",
+      "sector": "security",
+      "aiRole": {
+        "en": "AI application observability",
+        "zh-hant": "AI應用可觀測性"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026008819/ddog-20251231.htm"
+    },
+    {
+      "symbol": "PATH",
+      "cik": "0001734722",
+      "name": "UiPath",
+      "sector": "software",
+      "aiRole": {
+        "en": "Agentic automation",
+        "zh-hant": "代理式自動化"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000012/path-20260131.htm"
+    },
+    {
+      "symbol": "AI",
+      "cik": "0001577526",
+      "name": "C3.ai",
+      "sector": "software",
+      "aiRole": {
+        "en": "Enterprise AI applications",
+        "zh-hant": "企業AI應用"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1577526/000157752626000078/ai-20260430.htm"
+    },
+    {
+      "symbol": "SOUN",
+      "cik": "0001840856",
+      "name": "SoundHound AI",
+      "sector": "software",
+      "aiRole": {
+        "en": "Voice AI",
+        "zh-hant": "語音AI"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1840856/000184085626000006/soun-20251231.htm"
+    },
+    {
+      "symbol": "CRWD",
+      "cik": "0001535527",
+      "name": "CrowdStrike",
+      "sector": "security",
+      "aiRole": {
+        "en": "AI-assisted security",
+        "zh-hant": "AI輔助資安"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000010/crwd-20260131.htm"
+    },
+    {
+      "symbol": "PANW",
+      "cik": "0001327567",
+      "name": "Palo Alto Networks",
+      "sector": "security",
+      "aiRole": {
+        "en": "AI security platforms",
+        "zh-hant": "AI資安平台"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm"
+    },
+    {
+      "symbol": "ZS",
+      "cik": "0001713683",
+      "name": "Zscaler",
+      "sector": "security",
+      "aiRole": {
+        "en": "AI and zero-trust security",
+        "zh-hant": "AI與零信任資安"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000157/zs-20260731.htm"
+    },
+    {
+      "symbol": "FTNT",
+      "cik": "0001262039",
+      "name": "Fortinet",
+      "sector": "security",
+      "aiRole": {
+        "en": "AI-assisted threat detection",
+        "zh-hant": "AI輔助威脅偵測"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1262039/000126203926000007/ftnt-20251231.htm"
+    },
+    {
+      "symbol": "EQIX",
+      "cik": "0001101239",
+      "name": "Equinix",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "Data centers and interconnection",
+        "zh-hant": "資料中心與互連"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm"
+    },
+    {
+      "symbol": "DLR",
+      "cik": "0001297996",
+      "name": "Digital Realty",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "Data-center infrastructure",
+        "zh-hant": "資料中心基礎設施"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm"
+    },
+    {
+      "symbol": "P",
+      "cik": "0001474432",
+      "name": "Everpure",
+      "sector": "infrastructure",
+      "aiRole": {
+        "en": "AI data storage; formerly Pure Storage",
+        "zh-hant": "AI資料儲存；原Pure Storage"
+      },
+      "market": "US-listed",
+      "reviewedAt": "2026-09-22",
+      "evidenceURL": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000027/pstg-20260201.htm"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sec-edgar",
+      "name": "SEC EDGAR",
+      "kind": "filing",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "status": "connected",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "checkedAt": "2026-09-22T14:35:38.153Z",
+      "coverageNote": {
+        "en": "Latest annual filing metadata for the 50-company research universe; historical backfill, not live market news coverage.",
+        "zh-hant": "50 家公司的最近年度申報資料；歷史回補，非即時全市場新聞。"
+      }
+    },
+    {
+      "id": "nvidia-blog",
+      "name": "NVIDIA Blog",
+      "kind": "news",
+      "url": "https://blogs.nvidia.com/",
+      "status": "manual_verified",
+      "rightsScope": "Canonical link, bibliographic metadata and original short summary only; no full-text republication or automated feed authorization",
+      "checkedAt": "2026-09-22T14:35:38.153Z",
+      "coverageNote": {
+        "en": "One manually verified issuer announcement. No continuous feed is enabled.",
+        "zh-hant": "一則人工核實的發行人公告；尚未啟用連續新聞來源。"
+      }
+    }
+  ],
+  "documents": [
+    {
+      "id": "f516b383fa89468111636765bf58b4a46dde9731e54bbaa6b3094713a233f3f0",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "title": "NVIDIA CORP — annual filing 2026-02-25",
+      "summary": {
+        "en": "Annual SEC filing for NVDA. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "NVDA 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-25",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "cb1afccc336d17b661156cd1f3aa60846d18bc2286d2a5eb782989d9f939c63c",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "NVDA"
+      ]
+    },
+    {
+      "id": "f6fe718fc495159d5a9bdf556327731413597f72f78927e52879c622fbe88e99",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "title": "MICROSOFT CORP — annual filing 2026-07-29",
+      "summary": {
+        "en": "Annual SEC filing for MSFT. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "MSFT 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-07-29",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "c492148e93df1f1a942b8028de1a576e9cb35d0dcfeefbf17896fddeefafbabc",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "MSFT"
+      ]
+    },
+    {
+      "id": "ddcff05dd8738d0121871573740e598a3595f5a3cefc97047cb4ebfd863b5f80",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+      "title": "ADVANCED MICRO DEVICES INC — annual filing 2026-02-04",
+      "summary": {
+        "en": "Annual SEC filing for AMD. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "AMD 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-04",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "0ab425123f83ee61cdbf9c322ca720df5db4e66283267560b61a8b46cb4a0bc7",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "AMD"
+      ]
+    },
+    {
+      "id": "3bf39fdeefbadbeab825fcbdbe4b8c12a7ddea190e937f2fe42632d1a25c38a9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "title": "INTEL CORP — annual filing 2026-01-23",
+      "summary": {
+        "en": "Annual SEC filing for INTC. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "INTC 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-01-23",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "9b7a3c2d5cba468b748dab3453a38ea195ff71935ed3f5ae23c25af4be6d0223",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "INTC"
+      ]
+    },
+    {
+      "id": "9ec697cb946a36328aabdc1346115efb3fef9fdefe1cc7a0fa45131a6f359c17",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+      "title": "Broadcom Inc. — annual filing 2025-12-18",
+      "summary": {
+        "en": "Annual SEC filing for AVGO. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "AVGO 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2025-12-18",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "a2f06fab0b53741589226f3775332eec3745bdd1a232af69266bba3c1aebd164",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "AVGO"
+      ]
+    },
+    {
+      "id": "3c6794d26bb64f117eb14f779b65c9a13555182e5f72926173a4dcda45830bfc",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+      "title": "Marvell Technology, Inc. — annual filing 2026-03-11",
+      "summary": {
+        "en": "Annual SEC filing for MRVL. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "MRVL 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-11",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "fdf8b78fd989afb038c7a6fb931662a53bd49b06a743945871c7feadc2cd7e9a",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "MRVL"
+      ]
+    },
+    {
+      "id": "87633d85292b1892fc796dce29b940f8e940b8a5d676b24699944eaad26b13db",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+      "title": "QUALCOMM INC/DE — annual filing 2025-11-05",
+      "summary": {
+        "en": "Annual SEC filing for QCOM. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "QCOM 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2025-11-05",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "fb14fba000db2ed35a487ae18eee55e8d882c441e78fbf589fc8b259231f9f77",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "QCOM"
+      ]
+    },
+    {
+      "id": "7d1e7056aefc48a38de696e9568385e22553bd4fbff2233252ba92b744ddcb0e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+      "title": "MICRON TECHNOLOGY INC — annual filing 2025-10-03",
+      "summary": {
+        "en": "Annual SEC filing for MU. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "MU 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2025-10-03",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "05671078ecf0bb6af2e5fab5ddb45cbf93700a09be0b54e5d9cb949db89b9cb1",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "MU"
+      ]
+    },
+    {
+      "id": "d98ced0f18e5e031f6990e2a0f6a0cfe096b156cbd080544499c76dbbe3ef488",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm",
+      "title": "APPLIED MATERIALS INC /DE — annual filing 2025-12-12",
+      "summary": {
+        "en": "Annual SEC filing for AMAT. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "AMAT 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2025-12-12",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "6f7bad470b93e39e76290728df49780c65a16a00cd2b19728a7d1b82634fc14b",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "AMAT"
+      ]
+    },
+    {
+      "id": "6cc7c974eab84a76ef68831129f474e39f5d97f22e782b1d6bc06edeca8f5e6e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+      "title": "LAM RESEARCH CORP — annual filing 2026-08-07",
+      "summary": {
+        "en": "Annual SEC filing for LRCX. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "LRCX 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-07",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "ae08a4f49ce4be7385fb393a8d878c8c2281c5c0fb427c7401c5612626918951",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "LRCX"
+      ]
+    },
+    {
+      "id": "693490e4efb153b87ce25d76219911131d9c4d7c04ed370bd96ab58247cf0548",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+      "title": "KLA CORP — annual filing 2026-08-06",
+      "summary": {
+        "en": "Annual SEC filing for KLAC. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "KLAC 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-06",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "420a31abd90e013973ed59837cf9d52101801a45960ca3ff9a0ef6867c0eb6a8",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "KLAC"
+      ]
+    },
+    {
+      "id": "47c5191d1a1fd985fa96930625eeeebcbc2f50ea51bedd721117ae75cb9626cf",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/97210/000119312526059002/ter-20251231.htm",
+      "title": "TERADYNE, INC — annual filing 2026-02-19",
+      "summary": {
+        "en": "Annual SEC filing for TER. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "TER 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-19",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "72c3ab676ad7968b35959077eb62342ef7fde2f3c6815ae1c4fbe617513f125c",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "TER"
+      ]
+    },
+    {
+      "id": "7f20811e78f7df79f0a0b66e20e88264be5bc1b5372d5fab265dd7901d623fe6",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000109786426000006/on-20251231.htm",
+      "title": "ON SEMICONDUCTOR CORP — annual filing 2026-02-09",
+      "summary": {
+        "en": "Annual SEC filing for ON. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "ON 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-09",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "616fe397e01389f0b05c6a6024fdd4a2a2726119a81a5e5bc5cd9d7524ebcf36",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "ON"
+      ]
+    },
+    {
+      "id": "be750babfbb9bf470eb006d8b461f77c33e72078b0804326772329ca125c6078",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1280452/000143774926006113/mpwr20251231_10k.htm",
+      "title": "MONOLITHIC POWER SYSTEMS, INC. — annual filing 2026-02-27",
+      "summary": {
+        "en": "Annual SEC filing for MPWR. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "MPWR 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-27",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "94a49f666a56fbb6ceb799990943e67c86b8bbac203e4e1ad632f7de3ef23d3e",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "MPWR"
+      ]
+    },
+    {
+      "id": "6dbf344817260b620ea87a6f9025deaf9595e8e8ac3ef35f822e2f0b33e68253",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000153/adi-20251101.htm",
+      "title": "ANALOG DEVICES INC — annual filing 2025-11-25",
+      "summary": {
+        "en": "Annual SEC filing for ADI. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "ADI 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2025-11-25",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "d73a5c2fb6226dd01e6afafea42062e134250eba08b3695171f9c551b678950a",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "ADI"
+      ]
+    },
+    {
+      "id": "a85fcc8b792e338ccd5b8a819f4424f0b13f41abe1d14fe4f4754e7ea9e865cf",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/827054/000082705426000016/mchp-20260331.htm",
+      "title": "MICROCHIP TECHNOLOGY INC — annual filing 2026-05-21",
+      "summary": {
+        "en": "Annual SEC filing for MCHP. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "MCHP 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-05-21",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "f80efedfc07c5707cafcab57a3d3a786d9e146fce0590a0ea333379f5e03ffe2",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "MCHP"
+      ]
+    },
+    {
+      "id": "3357ec0457405f25f0cdff61badf5743702884fe9a3ec417cae38ff741814544",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "title": "AMAZON COM INC — annual filing 2026-02-06",
+      "summary": {
+        "en": "Annual SEC filing for AMZN. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "AMZN 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-06",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "4011fbc6d12865ee3ccdcc5b29f6e494ec6ac779a8daa10a5f0d1c3343e65712",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "AMZN"
+      ]
+    },
+    {
+      "id": "f335a54fcb27f67422804902f6b592ed9f488450823a046912a1101b6bf7a406",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "title": "Alphabet Inc. — annual filing 2026-02-05",
+      "summary": {
+        "en": "Annual SEC filing for GOOGL. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "GOOGL 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-05",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "576768adfbcdbc5c5d0ee5dc339cc807f5065af8185af192ecc9357f251b8b26",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "GOOGL"
+      ]
+    },
+    {
+      "id": "97c9cd237dafa7848c9f5f289f7fdfa336e9d92e029f9466709f56ea9cc07c2d",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "title": "Meta Platforms, Inc. — annual filing 2026-01-29",
+      "summary": {
+        "en": "Annual SEC filing for META. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "META 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-01-29",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "8b2e98280b542033e8c5b79f5f956342a03ae229f825f26c71779156440027bf",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "META"
+      ]
+    },
+    {
+      "id": "3fc9afc29cf46cd72d3628f22770fb88468263017ecc80288c9be13e22c9a77a",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+      "title": "ORACLE CORP — annual filing 2026-06-22",
+      "summary": {
+        "en": "Annual SEC filing for ORCL. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "ORCL 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-06-22",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "dab4484d9886bac1a4183ed09b7a780f219500aee9592d13488ca4c6bb6d47ed",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "ORCL"
+      ]
+    },
+    {
+      "id": "3d2f9513663341eb8f1bcd8f1eb6a36035150ddb845ed0863581e951089b4470",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/ibm-20251231.htm",
+      "title": "INTERNATIONAL BUSINESS MACHINES CORP — annual filing 2026-02-24",
+      "summary": {
+        "en": "Annual SEC filing for IBM. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "IBM 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-24",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "373206a62fc038abd1bba5b1cd2522e208799a3dcebc645fe7ab1844ad455f34",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "IBM"
+      ]
+    },
+    {
+      "id": "8fa3bd8c444f8a2d4c56fa4a3b783597b8887ac4168596869213dd615f8fe401",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+      "title": "Dell Technologies Inc. — annual filing 2026-03-16",
+      "summary": {
+        "en": "Annual SEC filing for DELL. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "DELL 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-16",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "4028fab2d6436435b48b12c9fb2577736047bae3caf60b76776cadb4ef2c19d9",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "DELL"
+      ]
+    },
+    {
+      "id": "1283aa5a2db23c7be621630f0003ff1187c6da8470d347222d702ecefe1402b7",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+      "title": "Hewlett Packard Enterprise Co — annual filing 2025-12-18",
+      "summary": {
+        "en": "Annual SEC filing for HPE. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "HPE 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2025-12-18",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "9fea8180caeee523dc310a2135848a51985c7d9473a9b4c451cec167e8b60aaf",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "HPE"
+      ]
+    },
+    {
+      "id": "44b887748df76e92e512e3ecd069a8c472af714306a3e1d40aa0bbbd097c6b23",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm",
+      "title": "Super Micro Computer, Inc. — annual filing 2026-08-31",
+      "summary": {
+        "en": "Annual SEC filing for SMCI. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "SMCI 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-31",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "90b287db9abb0f1fbdff59e1463cd4741ad831329f47ca814d9ea7765035add8",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "SMCI"
+      ]
+    },
+    {
+      "id": "5b835d20c1f6d028952e2b421c3e6b409f8032ed301a07746c14cbf2a096f861",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+      "title": "Arista Networks, Inc. — annual filing 2026-02-17",
+      "summary": {
+        "en": "Annual SEC filing for ANET. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "ANET 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-17",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "504a885470a8784306e204ffce302d41bbc2d8ea53b96e72a9562825548d2a06",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "ANET"
+      ]
+    },
+    {
+      "id": "a0def52d8fe8c152cbefdf35c19183942cd0e3677bf9cb8822fd96d4b77c514a",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/csco-20260725.htm",
+      "title": "CISCO SYSTEMS, INC. — annual filing 2026-09-02",
+      "summary": {
+        "en": "Annual SEC filing for CSCO. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "CSCO 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "af9328889dbb0787afc4d2c33bbaf1b284cb18669c6669fe901b6df48e372594",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "CSCO"
+      ]
+    },
+    {
+      "id": "61f372d349dea04bef99fb81b94280373e6080a79e3e3eb268fbc8fd99a06609",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+      "title": "Vertiv Holdings Co — annual filing 2026-02-13",
+      "summary": {
+        "en": "Annual SEC filing for VRT. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "VRT 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-13",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "e2e9bfc5c09d1861eec86fbf5d82105ef0ed6d9f08aacbbb50501b87d103e5b7",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "VRT"
+      ]
+    },
+    {
+      "id": "2ce935b921ad1459ca9ba03dffea8f10261d8191b60bba650e423b0952289253",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+      "title": "Eaton Corp plc — annual filing 2026-02-26",
+      "summary": {
+        "en": "Annual SEC filing for ETN. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "ETN 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-26",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "aa976cbcf7cea9b66e208684a2b557930d9c69f9d25d101359e54dad279f849d",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "ETN"
+      ]
+    },
+    {
+      "id": "0de68a8c5754ecf39f6c40d4f89f97ca8d6976d5dfc95f7bb3694b52bbdc0d85",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1002047/000119312526259683/ntap-20260424.htm",
+      "title": "NetApp, Inc. — annual filing 2026-06-05",
+      "summary": {
+        "en": "Annual SEC filing for NTAP. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "NTAP 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-06-05",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "79eb07cbe5021b9692757cf215fb553cb503cf72e169064bb124c0dc1f290988",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "NTAP"
+      ]
+    },
+    {
+      "id": "42791308004d74373e73da3db11ffdca57e3963081b4ceac9291f9ca5fad2eff",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000016/cdns-20251231.htm",
+      "title": "CADENCE DESIGN SYSTEMS INC — annual filing 2026-02-19",
+      "summary": {
+        "en": "Annual SEC filing for CDNS. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "CDNS 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-19",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "3b0295df39ebc77572838e8ac71118443148e14f22b4e22d66dc6278d94a0fe3",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "CDNS"
+      ]
+    },
+    {
+      "id": "8d4362ecd3b71f0148352d65f463ff11bc34e7cad6dc0c7c0e6960279c62a69b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324125000028/snps-20251031.htm",
+      "title": "SYNOPSYS INC — annual filing 2025-12-22",
+      "summary": {
+        "en": "Annual SEC filing for SNPS. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "SNPS 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2025-12-22",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "630f9e96324ec48363a5591e803df6a968d29047d2021f961a503163b5919b87",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "SNPS"
+      ]
+    },
+    {
+      "id": "d1835d12afc5696fa67e54a4e57d3b530d8d8a5b2fba1b2b5fa928893d1276b2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/769397/000076939726000015/adsk-20260131.htm",
+      "title": "Autodesk, Inc. — annual filing 2026-03-03",
+      "summary": {
+        "en": "Annual SEC filing for ADSK. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "ADSK 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-03",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "9d613247f87a45c54246fe1e8ce97a063506ecf3bfa2c14058695d70189642ca",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "ADSK"
+      ]
+    },
+    {
+      "id": "e8d7aedc618c820ae89746cd406f943e18ff2fece5b5a93c4368e3a3a2745f62",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/857005/000119312525291326/ptc-20250930.htm",
+      "title": "PTC INC. — annual filing 2025-11-21",
+      "summary": {
+        "en": "Annual SEC filing for PTC. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "PTC 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2025-11-21",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "8abd3589d8480ed7d8c92cad6715b9a3f0625a94e7ec1e02749d0fe97070fe71",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "PTC"
+      ]
+    },
+    {
+      "id": "b9ca44b4cb0e1b584b5e14886fedfee56a3240b05650fe034fc564a23e586b3c",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+      "title": "Salesforce, Inc. — annual filing 2026-03-02",
+      "summary": {
+        "en": "Annual SEC filing for CRM. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "CRM 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-02",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "f08829f708ce048701db47cbf960bb2471f72dbe4d0e376f5eef7a6c8a370230",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "CRM"
+      ]
+    },
+    {
+      "id": "a09ef40c1fa566b57ec21b162a4f6a47f7ab2baf3ec2881a95af1f9bcbb29b13",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm",
+      "title": "ServiceNow, Inc. — annual filing 2026-01-29",
+      "summary": {
+        "en": "Annual SEC filing for NOW. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "NOW 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-01-29",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "0b0356e12ae66008ba401d02e8ef4e992cea8d21387b73d96e57ad5e484fa3eb",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "NOW"
+      ]
+    },
+    {
+      "id": "7557614d4dd678d64edab89f68f16b1f3564cd24719996b2d20143b7827b3829",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+      "title": "Palantir Technologies Inc. — annual filing 2026-02-17",
+      "summary": {
+        "en": "Annual SEC filing for PLTR. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "PLTR 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-17",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "6fb0f45b90a65eb2328a83a46ffb238e02b53037d3419e750c0399ada23365c2",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "PLTR"
+      ]
+    },
+    {
+      "id": "8387fcd61613e12b4cac3975f4ec50bb60289d57d42aed0ffd3e3b66bdf1d753",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+      "title": "Snowflake Inc. — annual filing 2026-03-20",
+      "summary": {
+        "en": "Annual SEC filing for SNOW. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "SNOW 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-20",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "21d18623dfcd97c91b3d152c4b6b28c0b811b7246a6d493bf42a7e85fa794e70",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "SNOW"
+      ]
+    },
+    {
+      "id": "f31e0836af7bc24022da8ba788b253cff10fcd82a3963dc065a8dcf10bbfbd69",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/adbe-20251128.htm",
+      "title": "ADOBE INC. — annual filing 2026-01-15",
+      "summary": {
+        "en": "Annual SEC filing for ADBE. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "ADBE 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-01-15",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "ce571bc25a9e62e4425de7c070b6b432112c51fad5cd4c89bbdf6306cdad93e5",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "ADBE"
+      ]
+    },
+    {
+      "id": "c73bbe86736862698cefffea5f6d15917cc12875cd2fc704a7d065140d785cf9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026016799/mdb-20260131.htm",
+      "title": "MongoDB, Inc. — annual filing 2026-03-11",
+      "summary": {
+        "en": "Annual SEC filing for MDB. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "MDB 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-11",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "f71b41949643c6a8a982bc7c821b0f7e870001c6f667536d9fc53958161d7214",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "MDB"
+      ]
+    },
+    {
+      "id": "75a95b1b29cbb2a97d14a595ac1b8ba8b2df6b6ddf21605b02cbe24316a11358",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026008819/ddog-20251231.htm",
+      "title": "Datadog, Inc. — annual filing 2026-02-18",
+      "summary": {
+        "en": "Annual SEC filing for DDOG. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "DDOG 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-18",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "435ed77d53318be05ec1979c2736f0a234f7679b263c39c13f83cc5162bbb54b",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "DDOG"
+      ]
+    },
+    {
+      "id": "7016a663da0315290e95f3397fab8e8d005e8966cbbb1dfac9e7f8ec78a4e269",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000012/path-20260131.htm",
+      "title": "UiPath, Inc. — annual filing 2026-03-25",
+      "summary": {
+        "en": "Annual SEC filing for PATH. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "PATH 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-25",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "1682ea4ea3092f5f7ad06b00d664ff1d008cb5f79ca83e54ed51d4bad78c8f56",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "PATH"
+      ]
+    },
+    {
+      "id": "b7d9511fa59ef2794c0df732f453c5fbc5bcf3d19b7e4faa32f7c37f9368c57f",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1577526/000157752626000078/ai-20260430.htm",
+      "title": "C3.ai, Inc. — annual filing 2026-06-24",
+      "summary": {
+        "en": "Annual SEC filing for AI. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "AI 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-06-24",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "647bf4598ec53da37ab895f68bed1a6f88264ddfed81728865ff88a80bcaadbd",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "AI"
+      ]
+    },
+    {
+      "id": "36afb392f92c8820c35e31741a33c208106ddbf6a07ea6b4014ab7e86f815a43",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840856/000184085626000006/soun-20251231.htm",
+      "title": "SOUNDHOUND AI, INC. — annual filing 2026-03-02",
+      "summary": {
+        "en": "Annual SEC filing for SOUN. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "SOUN 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-02",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "50f0210de27cb208bf354785e01c5312b62526852df699bf49192a5442a9fd8a",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "SOUN"
+      ]
+    },
+    {
+      "id": "4e8d0f079e69d5d52838191cfdf8c32f2e6609da654928d93a5b4e0b25159559",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000010/crwd-20260131.htm",
+      "title": "CrowdStrike Holdings, Inc. — annual filing 2026-03-05",
+      "summary": {
+        "en": "Annual SEC filing for CRWD. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "CRWD 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-05",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "40065af20a95cea1148e206c7f3378afac5ec996b576687275b36b2302a95af4",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "CRWD"
+      ]
+    },
+    {
+      "id": "c3a030f68f9b058057cbcaff4479ead14ce72ef41cb6eff5a40c140e788ebb98",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+      "title": "Palo Alto Networks Inc — annual filing 2026-09-10",
+      "summary": {
+        "en": "Annual SEC filing for PANW. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "PANW 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-10",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "d191b41af649ddb305fee5acc5b232c10e1bffed0b0d0ab02472349f6b6a59b9",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "PANW"
+      ]
+    },
+    {
+      "id": "f328c29bb2552227835544e68e3b834231e968a97f3fbe185e8b5aafcd11a169",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000157/zs-20260731.htm",
+      "title": "Zscaler, Inc. — annual filing 2026-09-03",
+      "summary": {
+        "en": "Annual SEC filing for ZS. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "ZS 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-03",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "99eaa1522bff1f812fd5c7fffa10a7319db91a6f35c7c935f04560a1ea4abad2",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "ZS"
+      ]
+    },
+    {
+      "id": "039f60ff68b81166dc3fade3ddac0d6181f13427495973cfb4c437d3e3fcef0f",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1262039/000126203926000007/ftnt-20251231.htm",
+      "title": "Fortinet, Inc. — annual filing 2026-02-25",
+      "summary": {
+        "en": "Annual SEC filing for FTNT. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "FTNT 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-25",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "3c6bf15f2ca5436e86444346486b53ead3710b0342a496df40d20c7e46a266ff",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "FTNT"
+      ]
+    },
+    {
+      "id": "d3866ec7feb0a3d07e204c6e597379af48e2d67f37d9ac870734fa385b02eb3a",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+      "title": "EQUINIX INC — annual filing 2026-02-11",
+      "summary": {
+        "en": "Annual SEC filing for EQIX. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "EQIX 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-11",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "f118d5720c0d87a518ed5fcb86d0494f6f1088d8a1b3d73041aaca56182f95a5",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "EQIX"
+      ]
+    },
+    {
+      "id": "c816910d36701a711de2c91817e73b3569af4b1188b7a24d82a76f575be8cda6",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+      "title": "DIGITAL REALTY TRUST, INC. — annual filing 2026-02-13",
+      "summary": {
+        "en": "Annual SEC filing for DLR. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "DLR 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-02-13",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "ed9017eae51bf068e7fe6afc9dca103e5d8c8d80a87dd49636e32c3bf84f6937",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "DLR"
+      ]
+    },
+    {
+      "id": "ee279b4721c6fc565dfffa41e648de6863e377b398096b8ed74b853d4cf7d226",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000027/pstg-20260201.htm",
+      "title": "Everpure, Inc. — annual filing 2026-03-25",
+      "summary": {
+        "en": "Annual SEC filing for P. Historical financial statements may include restatements. Verify the fiscal dates and original disclosures.",
+        "zh-hant": "P 的 SEC 年度申報。歷史財報可能包含重編，請核對會計期間與原始揭露。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-03-25",
+      "publishedAt": null,
+      "eventOn": null,
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "9069c1bc8619bdacb1ad1d88897302af97bbd6e6e977ff9a2e4fafeb22a25810",
+      "rightsScope": "Public filing metadata and factual XBRL values; no full issuer-document republication",
+      "symbols": [
+        "P"
+      ]
+    },
+    {
+      "id": "9d552a651ead7d3a495ef4a48e180b1714c3b6e1973c7ecfd375941d801d2cb8",
+      "sourceId": "nvidia-blog",
+      "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+      "title": "NVIDIA introduces DSX Ready power and cooling qualification",
+      "summary": {
+        "en": "NVIDIA announced qualification categories for battery energy storage and cooling distribution products. Vertiv is named among initial cooling participants. Qualification does not establish company revenue, investment returns or site-level suitability.",
+        "zh-hant": "NVIDIA 公布儲能與冷卻分配產品的資格類別，Vertiv 列於首批冷卻參與者。取得資格不代表公司營收、投資報酬或特定場址適用性。"
+      },
+      "kind": "news",
+      "publishedOn": "2026-09-21",
+      "publishedAt": null,
+      "eventOn": "2026-09-21",
+      "retrievedAt": "2026-09-22T14:35:38.153Z",
+      "language": "en",
+      "contentHash": "ef66130bdd0b43014d9ef8348ff6ffc6df6bf6b1d9f25419979506ccbc23edc1",
+      "rightsScope": "Canonical link, bibliographic metadata and original short summary only; no full-text republication or automated feed authorization",
+      "symbols": [
+        "NVDA",
+        "VRT"
+      ]
+    }
+  ]
+}
