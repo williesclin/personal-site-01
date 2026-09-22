@@ -8,6 +8,7 @@ on:
     paths:
       - 'scripts/sync-equities.mjs'
       - 'app/equity-engine.mjs'
+      - 'app/ai-universe.mjs'
       - '.github/workflows/equity-data.yml'
 permissions:
   contents: write
@@ -17,7 +18,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:

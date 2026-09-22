@@ -1,9 +1,6 @@
-export const COMPANIES = [
- {symbol:'NVDA',cik:'0001045810',name:'NVIDIA'},
- {symbol:'MSFT',cik:'0000789019',name:'Microsoft'},
- {symbol:'AMD',cik:'0000002488',name:'Advanced Micro Devices'}
-];
-export const METRICS={revenue:['Revenues','RevenueFromContractWithCustomerExcludingAssessedTax','SalesRevenueNet'],netIncome:['NetIncomeLoss'],operatingCashFlow:['NetCashProvidedByUsedInOperatingActivities']};
+import {AI_COMPANIES} from './ai-universe.mjs';
+export const COMPANIES=AI_COMPANIES;
+export const METRICS={revenue:['Revenues','RevenueFromContractWithCustomerExcludingAssessedTax','SalesRevenueNet','RevenueFromContractWithCustomerIncludingAssessedTax'],netIncome:['NetIncomeLoss'],operatingCashFlow:['NetCashProvidedByUsedInOperatingActivities'],grossProfit:['GrossProfit'],operatingIncome:['OperatingIncomeLoss'],researchDevelopment:['ResearchAndDevelopmentExpense'],capitalExpenditure:['PaymentsToAcquirePropertyPlantAndEquipment']};
 const day=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&!Number.isNaN(Date.parse(d))&&new Date(d).toISOString().slice(0,10)===d;
 export function normalizeCompany(raw,company,asOf){
  if(Number(raw.cik)!==Number(company.cik)||!day(asOf))throw Error('Invalid company or cutoff');
@@ -17,12 +14,21 @@ export function normalizeCompany(raw,company,asOf){
     if(!Number.isFinite(f.val)||!/^\d{10}-\d{2}-\d{6}$/.test(f.accn))throw Error('Invalid annual fact');
     const key=f.start+'/'+f.end,prior=periods.get(key);
     if(prior&&prior.filed===f.filed&&prior.tag===tag&&prior.value!==f.val)throw Error('Conflicting annual facts');
-    if(!prior||f.filed>prior.filed)periods.set(key,{start:f.start,end:f.end,value:f.val,filed:f.filed,accession:f.accn,tag,form:f.form});
+ if(!prior||f.filed>prior.filed)periods.set(key,{start:f.start,end:f.end,value:f.val,filed:f.filed,accession:f.accn,tag,form:f.form});
    }
   }
   series[metric]=periods;
  }
- const periods=[...series.revenue.values()].sort((a,b)=>b.end.localeCompare(a.end)).slice(0,8);
+ const revenues=[...series.revenue.values()],byEnd=new Map();
+ for(const fact of revenues){const prior=byEnd.get(fact.end);if(!prior){byEnd.set(fact.end,fact);continue;}
+  // Some submissions repeat an annual amount with a calendarized start date.
+  // Resolve only identical amounts against the previous disclosed fiscal year-end.
+  if(prior.value!==fact.value)throw Error('Ambiguous annual revenue periods');
+  const contiguous=f=>revenues.some(p=>Math.abs((Date.parse(f.start)-Date.parse(p.end))/86400000-1)<0.1);
+  if(contiguous(fact)&&!contiguous(prior))byEnd.set(fact.end,fact);
+  else if(contiguous(fact)===contiguous(prior))throw Error('Ambiguous annual fiscal start');
+ }
+ const periods=[...byEnd.values()].sort((a,b)=>b.end.localeCompare(a.end)).slice(0,8);
  if(periods.length<3)throw Error('Insufficient annual revenue history');
  const years=periods.map(f=>({start:f.start,end:f.end,...Object.fromEntries(Object.keys(METRICS).map(k=>[k,series[k].get(f.start+'/'+f.end)||null]))}));
  return {...company,source:`https://data.sec.gov/api/xbrl/companyfacts/CIK${company.cik}.json`,years};

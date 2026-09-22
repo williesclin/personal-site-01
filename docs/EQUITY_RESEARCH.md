@@ -1,3 +1,7 @@
+# 2026-09-22 approved expansion
+
+Current scope: 50 AI-related US-listed companies, 14 financial dimensions, descriptive charts and a versioned evidence database. See [RESEARCH_DIMENSIONS_AND_AI.md](RESEARCH_DIMENSIONS_AND_AI.md) for actual coverage, membership visibility, ingestion limitations and next-week AI gates. This section supersedes older three-company and browser-only descriptions below; billing remains disabled.
+
 # Membership release update
 
 The membership implementation in `docs/MEMBERSHIP_PLANS.md` supersedes earlier public-data and browser-only watchlist descriptions below. Source snapshots are now under `data/`, outside static assets. Original facts remain in this public repository; they are not proprietary or secret. Lottery website access requires verified sign-in; complete stock research requires an active Research/Pro entitlement. Public research is a limited preview.

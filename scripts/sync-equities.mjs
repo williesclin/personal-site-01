@@ -9,7 +9,7 @@ for(const c of COMPANIES){
  companies.push(normalizeCompany(await r.json(),c,asOf));
  await new Promise(resolve=>setTimeout(resolve,1100));
 }
-const data={schemaVersion:1,asOf,retrievedAt,method:'annual-us-gaap-v1',companies,hash:createHash('sha256').update(JSON.stringify(companies)).digest('hex')};
+const data={schemaVersion:1,asOf,retrievedAt,method:'annual-us-gaap-v2',companies,hash:createHash('sha256').update(JSON.stringify(companies)).digest('hex')};
 validateEquities(data);
 const path=new URL('../data/equities.json',import.meta.url);
 let old;try{old=JSON.parse(await readFile(path,'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;}

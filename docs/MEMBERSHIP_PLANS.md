@@ -1,3 +1,7 @@
+# 2026-09-22 approved expansion
+
+Current scope: 50 AI-related US-listed companies, 14 financial dimensions, descriptive charts and a versioned evidence database. See [RESEARCH_DIMENSIONS_AND_AI.md](RESEARCH_DIMENSIONS_AND_AI.md) for actual coverage, membership visibility, ingestion limitations and next-week AI gates. This section supersedes older three-company and browser-only descriptions below; billing remains disabled.
+
 # QuantPath membership decision and release
 
 Approved: 2026-09-20. Three tiers only. No separate charge by game, model or market.
