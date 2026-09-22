@@ -1,0 +1,29 @@
+{
+  "evaluatedAt": "2026-09-22T21:39:08.872Z",
+  "task": "filing_topic_and_sentiment",
+  "status": "blocked",
+  "releaseAllowed": false,
+  "observedDocuments": 66,
+  "reviewedLabels": 0,
+  "macroF1": null,
+  "calibrationError": null,
+  "baselineComparison": null,
+  "reason": "Need at least 100 independently reviewed, source-linked labels before temporal model evaluation.",
+  "requiredGates": {
+    "minimumReviewed": 100,
+    "minimumTemporalHoldout": 30,
+    "minimumClasses": 3,
+    "minimumPerClassHoldout": 5,
+    "groupByIssuerAndEvent": true,
+    "split": "time-ordered; no future observations; duplicate events stay together",
+    "baseline": "majority and SEC form/item rule",
+    "quality": "macro-F1 >= 0.75 and >= baseline + 0.05; report class precision/recall; ECE <= 0.10 for probabilistic outputs",
+    "humanReview": "At least 20% independently double reviewed; record disagreements",
+    "alerts": "source-linked; >=20 distinct events; >=90% independent relevance review; zero duplicates; 7-day shadow observation; no trading recommendations"
+  },
+  "limitations": [
+    "SEC form classification is a deterministic metadata rule, not AI sentiment.",
+    "Official company announcements and social opinions have different source biases.",
+    "No social API, sentiment ground truth or paid model service connected."
+  ]
+}

@@ -1,15 +1,14 @@
-name: Refresh SEC annual financials
+name: Refresh research filing observations
 on:
   schedule:
-    - cron: '15 22 * * *'
+    - cron: '25 */6 * * *'
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - 'scripts/sync-equities.mjs'
-      - 'app/equity-engine.mjs'
-      - 'app/ai-universe.mjs'
-      - '.github/workflows/equity-data.yml'
+      - 'scripts/sync-research-feed.mjs'
+      - 'scripts/build-research-sync.mjs'
+      - '.github/workflows/research-feed.yml'
 permissions:
   contents: write
 concurrency:
@@ -26,15 +25,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: node scripts/sync-equities.mjs
-      - run: node --test tests/equity.test.mjs
-      - name: Commit validated public financial facts only
+      - run: node scripts/sync-research-feed.mjs
+      - name: Commit validated metadata and synchronization envelope
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/equities.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Refresh validated SEC annual financial facts'
+          git add data/research-feed.json
+          git diff --cached --quiet || git commit -m 'Refresh official SEC filing observations'
           pushed=false
           for attempt in 1 2 3; do
             git pull --rebase origin main

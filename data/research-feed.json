@@ -1,0 +1,1801 @@
+{
+  "version": 1,
+  "startedAt": "2026-09-22T21:21:27.278Z",
+  "retrievedAt": "2026-09-22T21:21:27.278Z",
+  "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
+  "socialStatus": "not_connected",
+  "newsStatus": "rights_review",
+  "documents": [
+    {
+      "id": "3e95e3a3cd5c7eea151a1c5315dddd3bb59d8461e35983f131d0a12d9791eb29",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000156/0000796343-26-000156-index.html",
+      "title": "Adobe · 10-Q · 2026-09-22",
+      "summary": {
+        "en": "SEC 10-Q filing by Adobe. Read the original filing before drawing conclusions.",
+        "zh-hant": "Adobe 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-22",
+      "publishedAt": null,
+      "eventOn": "2026-08-28",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "c092499c6d342da7df51698991ab1d85906fc06f3fe887d3d96098c1f36de47b",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADBE"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000796343-26-000156",
+      "acceptedAt": "2026-09-22T16:04:02.000Z"
+    },
+    {
+      "id": "e7f98ceb88c75d76947536538982ff1ae44348c555720be7bfc480255263a1a6",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000119312526394361/0001193125-26-394361-index.html",
+      "title": "Analog Devices · 8-K · 2026-09-17",
+      "summary": {
+        "en": "SEC 8-K filing by Analog Devices. Read the original filing before drawing conclusions.",
+        "zh-hant": "Analog Devices 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-17",
+      "publishedAt": null,
+      "eventOn": "2026-09-15",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "7c70e92a917943d25683f5c8ccc9fe69f07b497259d207db2f03956077bf6e7d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADI"
+      ],
+      "form": "8-K",
+      "items": "1.01,9.01",
+      "accession": "0001193125-26-394361",
+      "acceptedAt": "2026-09-17T20:15:18.000Z"
+    },
+    {
+      "id": "331676046903f0b8d1b139088437af9120675517d1f3ba6f1a92690cc32f8081",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/0001108524-26-000210-index.html",
+      "title": "Salesforce · 8-K · 2026-09-17",
+      "summary": {
+        "en": "SEC 8-K filing by Salesforce. Read the original filing before drawing conclusions.",
+        "zh-hant": "Salesforce 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-17",
+      "publishedAt": null,
+      "eventOn": "2026-09-16",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "da80143a2dec04224976a1d4db9e615f819d28c1d04733065940513c20b8aa55",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRM"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001108524-26-000210",
+      "acceptedAt": "2026-09-17T01:02:48.000Z"
+    },
+    {
+      "id": "cd9dfc50bd21ba83f61650477887950b7fc36cb9ed10f823b89f44817374b901",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000119312526391976/0001193125-26-391976-index.html",
+      "title": "Dell Technologies · 8-K · 2026-09-15",
+      "summary": {
+        "en": "SEC 8-K filing by Dell Technologies. Read the original filing before drawing conclusions.",
+        "zh-hant": "Dell Technologies 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-15",
+      "publishedAt": null,
+      "eventOn": "2026-09-15",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "9f8e58baf0fcb063056425183855dff70bf8e73a3a3f4b44ece65f1b314630d6",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DELL"
+      ],
+      "form": "8-K",
+      "items": "1.01,2.03,9.01",
+      "accession": "0001193125-26-391976",
+      "acceptedAt": "2026-09-15T20:26:45.000Z"
+    },
+    {
+      "id": "614b9a9200f5367c7d61d16c76950b35f3f381292eda11858270c3d67934fc61",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/0001104659-26-107526-index.html",
+      "title": "Amazon · 8-K · 2026-09-14",
+      "summary": {
+        "en": "SEC 8-K filing by Amazon. Read the original filing before drawing conclusions.",
+        "zh-hant": "Amazon 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-14",
+      "publishedAt": null,
+      "eventOn": "2026-09-14",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "4515d5279b0ed5af8806bfe3e6a6d20e543ffbd06719e7c2c5a071567f724089",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMZN"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001104659-26-107526",
+      "acceptedAt": "2026-09-14T20:45:41.000Z"
+    },
+    {
+      "id": "df84466f24684b7d696a5cb37c6f1a4d5b01e150e54b04aa6172733611ec2687",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389753/0001193125-26-389753-index.html",
+      "title": "Oracle · 8-K · 2026-09-14",
+      "summary": {
+        "en": "SEC 8-K filing by Oracle. Read the original filing before drawing conclusions.",
+        "zh-hant": "Oracle 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-14",
+      "publishedAt": null,
+      "eventOn": "2026-09-12",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "0a86363294106a2b257b0eeeb48874a790eb0a33220991fd434beb6f106ffb26",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ORCL"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-389753",
+      "acceptedAt": "2026-09-14T10:01:59.000Z"
+    },
+    {
+      "id": "847d280b5c70ae6cfeef09025be9dbcae4ce2e2542bc9ec5123370e93d040934",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/0001193125-26-389274-index.html",
+      "title": "Oracle · 10-Q · 2026-09-11",
+      "summary": {
+        "en": "SEC 10-Q filing by Oracle. Read the original filing before drawing conclusions.",
+        "zh-hant": "Oracle 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-11",
+      "publishedAt": null,
+      "eventOn": "2026-08-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "e572301520938fb2b9ca46b6cc759c3dd55ac2f382b97052a57fcb5ca44bf0c9",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ORCL"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001193125-26-389274",
+      "acceptedAt": "2026-09-11T20:10:12.000Z"
+    },
+    {
+      "id": "ea5c934f6e767d8e417253e6076e058d15ca9e6c4ad0655a93851d24a0617611",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1002047/000119312526389273/0001193125-26-389273-index.html",
+      "title": "NetApp · 8-K · 2026-09-11",
+      "summary": {
+        "en": "SEC 8-K filing by NetApp. Read the original filing before drawing conclusions.",
+        "zh-hant": "NetApp 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-11",
+      "publishedAt": null,
+      "eventOn": "2026-09-09",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "641312177baf02ffb738b4c95646afdff7dc072d02119898ad2306ac1c5e217e",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NTAP"
+      ],
+      "form": "8-K",
+      "items": "3.03,5.03,5.07",
+      "accession": "0001193125-26-389273",
+      "acceptedAt": "2026-09-11T20:09:33.000Z"
+    },
+    {
+      "id": "07067a5057b3010285b3cba6f1f70879e8650e3804a492a4267d93be3a98b897",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/0001730168-26-000080-index.html",
+      "title": "Broadcom · 10-Q · 2026-09-10",
+      "summary": {
+        "en": "SEC 10-Q filing by Broadcom. Read the original filing before drawing conclusions.",
+        "zh-hant": "Broadcom 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-10",
+      "publishedAt": null,
+      "eventOn": "2026-08-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "dc4ba9aeb80beb344873a5cc56202b352b3e57a79deb23b975836148e2f22450",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AVGO"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001730168-26-000080",
+      "acceptedAt": "2026-09-09T21:56:42.000Z"
+    },
+    {
+      "id": "50ad8f4b91f4ad71b800198feb965da7cc5184482ae7eb8650a14a91789397cf",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1280452/000162828026061318/0001628280-26-061318-index.html",
+      "title": "Monolithic Power Systems · 8-K · 2026-09-10",
+      "summary": {
+        "en": "SEC 8-K filing by Monolithic Power Systems. Read the original filing before drawing conclusions.",
+        "zh-hant": "Monolithic Power Systems 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-10",
+      "publishedAt": null,
+      "eventOn": "2026-09-10",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "2cacd803d17b4de88fc965acef88629704eee184fbb65b8ad792a48f97de5569",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MPWR"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001628280-26-061318",
+      "acceptedAt": "2026-09-10T20:01:44.000Z"
+    },
+    {
+      "id": "4d3d332f8e295edbd2d22b4485181e975143652991d14482ef09b75aaf3c6c41",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526387905/0001193125-26-387905-index.html",
+      "title": "Oracle · 8-K · 2026-09-10",
+      "summary": {
+        "en": "SEC 8-K filing by Oracle. Read the original filing before drawing conclusions.",
+        "zh-hant": "Oracle 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-10",
+      "publishedAt": null,
+      "eventOn": "2026-09-10",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "386dadedf0ad3573f04b0b287104225588c366e00c075064e9ca4e56d8d77abe",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ORCL"
+      ],
+      "form": "8-K",
+      "items": "2.02,8.01,9.01",
+      "accession": "0001193125-26-387905",
+      "acceptedAt": "2026-09-10T20:16:50.000Z"
+    },
+    {
+      "id": "9fb74161d969bf5426ee83db4a998f0fbb92d43a497301a1a1b5d7907949db83",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000119312526387958/0001193125-26-387958-index.html",
+      "title": "Dell Technologies · 8-K · 2026-09-10",
+      "summary": {
+        "en": "SEC 8-K filing by Dell Technologies. Read the original filing before drawing conclusions.",
+        "zh-hant": "Dell Technologies 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-10",
+      "publishedAt": null,
+      "eventOn": "2026-09-09",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "fb18a9b1bb066ca037b61774e075c717791eaa060cb1cf5b221d83b519a6a2d9",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DELL"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-387958",
+      "acceptedAt": "2026-09-10T20:39:27.000Z"
+    },
+    {
+      "id": "6cea267e84432eb63578d7d1443e4783bb31be8827c351dcca4ecdd830fe9230",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/769397/000119312526387877/0001193125-26-387877-index.html",
+      "title": "Autodesk · 8-K · 2026-09-10",
+      "summary": {
+        "en": "SEC 8-K filing by Autodesk. Read the original filing before drawing conclusions.",
+        "zh-hant": "Autodesk 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-10",
+      "publishedAt": null,
+      "eventOn": "2026-09-08",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "5e399adc9c4fe6d0cc6e3351d0d9db09593c6ba6b7a126a6bce774c4ed5a9799",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADSK"
+      ],
+      "form": "8-K",
+      "items": "1.01,2.03,8.01,9.01",
+      "accession": "0001193125-26-387877",
+      "acceptedAt": "2026-09-10T20:09:46.000Z"
+    },
+    {
+      "id": "7201cccd0d9511a12d37cb1628a88dc2be8cb0e5f6d9e5858108b59f78e4897b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000147/0000796343-26-000147-index.html",
+      "title": "Adobe · 8-K · 2026-09-10",
+      "summary": {
+        "en": "SEC 8-K filing by Adobe. Read the original filing before drawing conclusions.",
+        "zh-hant": "Adobe 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-10",
+      "publishedAt": null,
+      "eventOn": "2026-09-10",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "533a2dcf123ef6ceb63e826d77996d40559ed19c59c4e543ef2e6ccc6e1295c9",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADBE"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000796343-26-000147",
+      "acceptedAt": "2026-09-10T20:06:14.000Z"
+    },
+    {
+      "id": "d348370e554448518d0762f6557d696183e532eaccec3805ecb04d59239a8f44",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/0001327567-26-000023-index.html",
+      "title": "Palo Alto Networks · 10-K · 2026-09-10",
+      "summary": {
+        "en": "SEC 10-K filing by Palo Alto Networks. Read the original filing before drawing conclusions.",
+        "zh-hant": "Palo Alto Networks 向 SEC 提交 10-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-10",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "b45c814788da6de06d928a310e4259c935f2e856b3130e128eb1eea1ff91592d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PANW"
+      ],
+      "form": "10-K",
+      "items": "",
+      "accession": "0001327567-26-000023",
+      "acceptedAt": "2026-09-10T20:19:53.000Z"
+    },
+    {
+      "id": "341eafa5e91fc692700f468ca49867f6be5ec7b7c7581509bd8777a551310abe",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000119312526385938/0001193125-26-385938-index.html",
+      "title": "Analog Devices · 8-K · 2026-09-09",
+      "summary": {
+        "en": "SEC 8-K filing by Analog Devices. Read the original filing before drawing conclusions.",
+        "zh-hant": "Analog Devices 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-09",
+      "publishedAt": null,
+      "eventOn": "2026-09-09",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "02789c4375e6f2ac422139e911c86dde06778e1959c93d76674c1d4e20705d5a",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADI"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001193125-26-385938",
+      "acceptedAt": "2026-09-09T12:19:11.000Z"
+    },
+    {
+      "id": "9c4cf91658708acc39adafbf0f6fa1179182bcc7ea6a72b641277983988ad0fc",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/0001018724-26-000036-index.html",
+      "title": "Amazon · 8-K · 2026-09-09",
+      "summary": {
+        "en": "SEC 8-K filing by Amazon. Read the original filing before drawing conclusions.",
+        "zh-hant": "Amazon 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-09",
+      "publishedAt": null,
+      "eventOn": "2026-09-08",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "290ab07dd419485d02b929bdc2250506f0f4a3095859e8dac2f6c3ac5149bd2c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMZN"
+      ],
+      "form": "8-K",
+      "items": "5.02",
+      "accession": "0001018724-26-000036",
+      "acceptedAt": "2026-09-09T20:28:21.000Z"
+    },
+    {
+      "id": "ec2704025fdee2afe95cf95e5f1aa6ad36858a549519092cf2d7a1f43b816087",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1577526/000157752626000126/0001577526-26-000126-index.html",
+      "title": "C3.ai · 10-Q · 2026-09-09",
+      "summary": {
+        "en": "SEC 10-Q filing by C3.ai. Read the original filing before drawing conclusions.",
+        "zh-hant": "C3.ai 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-09",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "451eff9480117f45322f35be6baeb6f59185e73b02508facf8245f1255efc8cb",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AI"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001577526-26-000126",
+      "acceptedAt": "2026-09-09T00:24:36.000Z"
+    },
+    {
+      "id": "a8a2f2b390c4759938ce58bd2e8d0dc03fa760c20d7d326f9c8e0f7fed3818bf",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/804328/000110465926105718/0001104659-26-105718-index.html",
+      "title": "Qualcomm · 8-K · 2026-09-08",
+      "summary": {
+        "en": "SEC 8-K filing by Qualcomm. Read the original filing before drawing conclusions.",
+        "zh-hant": "Qualcomm 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-08",
+      "publishedAt": null,
+      "eventOn": "2026-09-03",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "35455242063868b22f13360696d16ad942586ea71b5e79845299fd6af4338121",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "QCOM"
+      ],
+      "form": "8-K",
+      "items": "3.02",
+      "accession": "0001104659-26-105718",
+      "acceptedAt": "2026-09-08T13:00:20.000Z"
+    },
+    {
+      "id": "18d5536111db4fcf15ca884dbb98581d2ed7d1f5fe702925b43de867b4fbf819",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/0001571996-26-000046-index.html",
+      "title": "Dell Technologies · 10-Q · 2026-09-08",
+      "summary": {
+        "en": "SEC 10-Q filing by Dell Technologies. Read the original filing before drawing conclusions.",
+        "zh-hant": "Dell Technologies 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-08",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "2e4d21cada0be869954f6ad3fcf557d295a8e4e0662ab557400569b3c0582d33",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DELL"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001571996-26-000046",
+      "acceptedAt": "2026-09-08T20:08:29.000Z"
+    },
+    {
+      "id": "6673b5ff11d9ce151ca0bf1ffa7c2a54686e396c35ebc190cd24e341fae5dfdc",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000144/0000796343-26-000144-index.html",
+      "title": "Adobe · 8-K · 2026-09-08",
+      "summary": {
+        "en": "SEC 8-K filing by Adobe. Read the original filing before drawing conclusions.",
+        "zh-hant": "Adobe 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-08",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "387044eefc3113b9a91fecd6e9ae536d5ceec9f685692252445a8b546fa6cf4b",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADBE"
+      ],
+      "form": "8-K",
+      "items": "5.02,7.01,9.01",
+      "accession": "0000796343-26-000144",
+      "acceptedAt": "2026-09-08T20:38:46.000Z"
+    },
+    {
+      "id": "36bfcd765dfa3bf8dad9eb09268b3825d1e2581b181b3a91ad9d39d0ab008d6b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000050/0001734722-26-000050-index.html",
+      "title": "UiPath · 10-Q · 2026-09-08",
+      "summary": {
+        "en": "SEC 10-Q filing by UiPath. Read the original filing before drawing conclusions.",
+        "zh-hant": "UiPath 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-08",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "930098432ec7fe571cb5e0756554869bde43e8b8494e3654f6a7230bf501f042",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PATH"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001734722-26-000050",
+      "acceptedAt": "2026-09-08T21:22:17.000Z"
+    },
+    {
+      "id": "585d560a4abe555f96b19062e3b34f1a52b07772ff658c5c0930d65aa7082367",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000197/0001108524-26-000197-index.html",
+      "title": "Salesforce · 8-K · 2026-09-04",
+      "summary": {
+        "en": "SEC 8-K filing by Salesforce. Read the original filing before drawing conclusions.",
+        "zh-hant": "Salesforce 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-04",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "d53ede164d68c3140d2e9c7ee6f827a9c39ea3338f85a7d0e4953014ce2ed0e8",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRM"
+      ],
+      "form": "8-K",
+      "items": "5.02",
+      "accession": "0001108524-26-000197",
+      "acceptedAt": "2026-09-04T20:05:24.000Z"
+    },
+    {
+      "id": "79048d81e049acd15679f1094169dd78df8436021b93a772637d94d1757f5117",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000037/0001640147-26-000037-index.html",
+      "title": "Snowflake · 10-Q · 2026-09-04",
+      "summary": {
+        "en": "SEC 10-Q filing by Snowflake. Read the original filing before drawing conclusions.",
+        "zh-hant": "Snowflake 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-04",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "c6ddbf7f6b83d64d77426f8efd018ed4440921dfb6a3cd67f69f1eea3262e40c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SNOW"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001640147-26-000037",
+      "acceptedAt": "2026-09-04T20:06:23.000Z"
+    },
+    {
+      "id": "b49a224efda981202e01aae30fb4b52d170624f354a4bf78663a36f65bec9c17",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840856/000121390026097712/0001213900-26-097712-index.html",
+      "title": "SoundHound AI · 8-K · 2026-09-04",
+      "summary": {
+        "en": "SEC 8-K filing by SoundHound AI. Read the original filing before drawing conclusions.",
+        "zh-hant": "SoundHound AI 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-04",
+      "publishedAt": null,
+      "eventOn": "2026-09-04",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "7847b86666c8c5d79f9ae816a089a21ea153b87400d1d9109bfdf634eda0f84a",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SOUN"
+      ],
+      "form": "8-K",
+      "items": "1.01,2.01,3.02,5.02,7.01,8.01,9.01",
+      "accession": "0001213900-26-097712",
+      "acceptedAt": "2026-09-04T20:41:14.000Z"
+    },
+    {
+      "id": "23f0ca51d55f582469da257d67ab6e13c5d2872c53943c3375af5c0db62909db",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840856/000121390026097477/0001213900-26-097477-index.html",
+      "title": "SoundHound AI · 8-K · 2026-09-04",
+      "summary": {
+        "en": "SEC 8-K filing by SoundHound AI. Read the original filing before drawing conclusions.",
+        "zh-hant": "SoundHound AI 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-04",
+      "publishedAt": null,
+      "eventOn": "2026-09-04",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "637fd6d24fe1dce698f8e0b7e110deedfaa148b0e57867f2be289042680df0c9",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SOUN"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001213900-26-097477",
+      "acceptedAt": "2026-09-04T14:14:53.000Z"
+    },
+    {
+      "id": "3d749ea43086ca59f5edd69adeb13d9e2e78ca5d58df9ff4b6da9f0077ae6563",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000088/0001474432-26-000088-index.html",
+      "title": "Everpure · 10-Q · 2026-09-04",
+      "summary": {
+        "en": "SEC 10-Q filing by Everpure. Read the original filing before drawing conclusions.",
+        "zh-hant": "Everpure 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-04",
+      "publishedAt": null,
+      "eventOn": "2026-08-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "d25324447e269f6792b4e1417b6f3fa5f45fa51577f829c473da436b15741cde",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "P"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001474432-26-000088",
+      "acceptedAt": "2026-09-04T20:03:31.000Z"
+    },
+    {
+      "id": "cda3abd51b3af92409c055b148244f3bb662ec483228e9bc72f16c2a829a8aa2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/0001045810-26-000078-index.html",
+      "title": "NVIDIA · 8-K · 2026-09-03",
+      "summary": {
+        "en": "SEC 8-K filing by NVIDIA. Read the original filing before drawing conclusions.",
+        "zh-hant": "NVIDIA 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-03",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "5e2b592b44832a9d3645ff4437ece35d85d0a49bab7ca1c134d810c49d8d9417",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NVDA"
+      ],
+      "form": "8-K",
+      "items": "8.01",
+      "accession": "0001045810-26-000078",
+      "acceptedAt": "2026-09-03T12:03:56.000Z"
+    },
+    {
+      "id": "53b87b963963f0105e5b4665abfdc4a7d82edbfe731543ca94a9b861961d840e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/0001645590-26-000080-index.html",
+      "title": "Hewlett Packard Enterprise · 10-Q · 2026-09-03",
+      "summary": {
+        "en": "SEC 10-Q filing by Hewlett Packard Enterprise. Read the original filing before drawing conclusions.",
+        "zh-hant": "Hewlett Packard Enterprise 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-03",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "b9e45e253553f07ddc1f52c1b61176737a2a8a2a278b71c4a473c536cfaa9a49",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "HPE"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001645590-26-000080",
+      "acceptedAt": "2026-09-03T12:20:50.000Z"
+    },
+    {
+      "id": "0273ba2fdb3b7f479b5b96f28cec344e9df3fc132a24e05a42dad9ff9940ae8e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000047/0001734722-26-000047-index.html",
+      "title": "UiPath · 8-K · 2026-09-03",
+      "summary": {
+        "en": "SEC 8-K filing by UiPath. Read the original filing before drawing conclusions.",
+        "zh-hant": "UiPath 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-03",
+      "publishedAt": null,
+      "eventOn": "2026-09-01",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "04e6088f18499eeec60360de193b42cb332ba95129fb42c5926f1c0528e8d059",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PATH"
+      ],
+      "form": "8-K",
+      "items": "2.02,5.02,7.01,8.01,9.01",
+      "accession": "0001734722-26-000047",
+      "acceptedAt": "2026-09-03T20:23:47.000Z"
+    },
+    {
+      "id": "f59f1641ed640a610bd8e7e762874734e4204e74cabfc2f682a303f8e01acbe9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000157/0001713683-26-000157-index.html",
+      "title": "Zscaler · 10-K · 2026-09-03",
+      "summary": {
+        "en": "SEC 10-K filing by Zscaler. Read the original filing before drawing conclusions.",
+        "zh-hant": "Zscaler 向 SEC 提交 10-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-03",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "bdd6e49188cdbc7725b17ffec38ca286c6df4fe505b283517d3c67396b3d8b08",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ZS"
+      ],
+      "form": "10-K",
+      "items": "",
+      "accession": "0001713683-26-000157",
+      "acceptedAt": "2026-09-03T20:22:02.000Z"
+    },
+    {
+      "id": "af4662966739975ff26785c837638b231b8bfdb652ee1fc6a83e0851715c74d9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000156/0001713683-26-000156-index.html",
+      "title": "Zscaler · 8-K · 2026-09-03",
+      "summary": {
+        "en": "SEC 8-K filing by Zscaler. Read the original filing before drawing conclusions.",
+        "zh-hant": "Zscaler 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-03",
+      "publishedAt": null,
+      "eventOn": "2026-09-01",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "f8e57a23a216977f88ea8c9883a9f7443f1d149ea112d35565bf3ea640d04d62",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ZS"
+      ],
+      "form": "8-K",
+      "items": "2.02,2.05,9.01",
+      "accession": "0001713683-26-000156",
+      "acceptedAt": "2026-09-03T20:08:39.000Z"
+    },
+    {
+      "id": "74d1984a2507a6272e8848a5be778fddf3d62bcc6d4eeedbe564a691271daca7",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/0001193125-26-380280-index.html",
+      "title": "Microsoft · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by Microsoft. Read the original filing before drawing conclusions.",
+        "zh-hant": "Microsoft 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "5bdb024ac25010183f264ec6c403b9b5ea28d05f2e35ad6d9c72b948a12cb73c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MSFT"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001193125-26-380280",
+      "acceptedAt": "2026-09-02T20:30:24.000Z"
+    },
+    {
+      "id": "48f286ae780e9e047d3ac5f36f733f102a141274645ba65c1b88411e3df27e55",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/0001730168-26-000076-index.html",
+      "title": "Broadcom · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by Broadcom. Read the original filing before drawing conclusions.",
+        "zh-hant": "Broadcom 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "56b689399fff68ac80c5b2e2059a19885aaa762737f76beb6144123c11d5e294",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AVGO"
+      ],
+      "form": "8-K",
+      "items": "2.02,8.01,9.01",
+      "accession": "0001730168-26-000076",
+      "acceptedAt": "2026-09-02T20:26:04.000Z"
+    },
+    {
+      "id": "c3ef89ad1743156cdff106638f0ae13c22806a262270faf3ea495d71c4a9187c",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000078/0001645590-26-000078-index.html",
+      "title": "Hewlett Packard Enterprise · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by Hewlett Packard Enterprise. Read the original filing before drawing conclusions.",
+        "zh-hant": "Hewlett Packard Enterprise 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "0ccc9c68844a4a01637ce7bf3eb45e9631662abea83b9ab0cb712f58604f18c7",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "HPE"
+      ],
+      "form": "8-K",
+      "items": "2.02,7.01",
+      "accession": "0001645590-26-000078",
+      "acceptedAt": "2026-09-02T20:06:52.000Z"
+    },
+    {
+      "id": "0f60d706c9175c2dc7a266637f6e57ff6d308e5a6ed22d7821af0c8e45806d9c",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/0000858877-26-000132-index.html",
+      "title": "Cisco Systems · 10-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 10-K filing by Cisco Systems. Read the original filing before drawing conclusions.",
+        "zh-hant": "Cisco Systems 向 SEC 提交 10-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-07-25",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "5a7085a092d1c4acfbeb4db6e68318b38f7df7685aa8fadb3be793234c034da1",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CSCO"
+      ],
+      "form": "10-K",
+      "items": "",
+      "accession": "0000858877-26-000132",
+      "acceptedAt": "2026-09-02T20:36:56.000Z"
+    },
+    {
+      "id": "6f67f41d990096b1ecfc6a3981f630a4e6dc88fc987a14b1f02ee94952f911ed",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000119312526379306/0001193125-26-379306-index.html",
+      "title": "Vertiv · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by Vertiv. Read the original filing before drawing conclusions.",
+        "zh-hant": "Vertiv 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-01",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "1f60758c2e3abf94b2121a8e006130cf6d58fe149393caada67d118818aa3a7c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "VRT"
+      ],
+      "form": "8-K",
+      "items": "1.01,7.01,9.01",
+      "accession": "0001193125-26-379306",
+      "acceptedAt": "2026-09-02T10:42:34.000Z"
+    },
+    {
+      "id": "2105063496e8bb38d321a07b1b616ee31c5cf45917739057cabe5eb01721ff71",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026059961/0001628280-26-059961-index.html",
+      "title": "Vertiv · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by Vertiv. Read the original filing before drawing conclusions.",
+        "zh-hant": "Vertiv 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "c9d321e3860bc2c7191753589fa8f71fc0fcdd90caeb295accc701d3b477bc5c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "VRT"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001628280-26-059961",
+      "acceptedAt": "2026-09-02T10:04:11.000Z"
+    },
+    {
+      "id": "b7908a71fe9b99f97c146faa22c7c11e75252a39c6479fb7fe59b587de974c1b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1002047/000119312526380207/0001193125-26-380207-index.html",
+      "title": "NetApp · 10-Q · 2026-09-02",
+      "summary": {
+        "en": "SEC 10-Q filing by NetApp. Read the original filing before drawing conclusions.",
+        "zh-hant": "NetApp 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "4367ca7edb286eddc8a2bbab26182568bc94a95c120c10f3d155f1fae52c3b85",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NTAP"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001193125-26-380207",
+      "acceptedAt": "2026-09-02T20:15:38.000Z"
+    },
+    {
+      "id": "c4b531adcc3c5dd273cd7df3b5cacba98d0394a4191f4f029d669a378d7605be",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1002047/000100204726000003/0001002047-26-000003-index.html",
+      "title": "NetApp · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by NetApp. Read the original filing before drawing conclusions.",
+        "zh-hant": "NetApp 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "73cdcca77bf73435a2e87a97d4994dec127beba6169ffee717217e25bc69a8b6",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NTAP"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001002047-26-000003",
+      "acceptedAt": "2026-09-02T20:05:16.000Z"
+    },
+    {
+      "id": "742abe79581eaff77295d40ca3c14a2e7217c9dce1f8deaaed8f5279b7a7ca39",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000033/0001640147-26-000033-index.html",
+      "title": "Snowflake · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by Snowflake. Read the original filing before drawing conclusions.",
+        "zh-hant": "Snowflake 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "5884f3c3a1943928a724a3d948fafa18c58e3067a16284d99ac954b64708b9a0",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SNOW"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001640147-26-000033",
+      "acceptedAt": "2026-09-02T20:08:29.000Z"
+    },
+    {
+      "id": "63deb7a57aabf712686fa4b75a68d3984f83b5098e2273ff6e040d29467b3771",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1577526/000157752626000119/0001577526-26-000119-index.html",
+      "title": "C3.ai · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by C3.ai. Read the original filing before drawing conclusions.",
+        "zh-hant": "C3.ai 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "3f4f69c1ed641416caa34d35690796199e73a09e459725157e1aaf1f41e61835",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AI"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001577526-26-000119",
+      "acceptedAt": "2026-09-02T20:10:42.000Z"
+    },
+    {
+      "id": "20903dc0565c71ae26e1b1591329a499d4b97954849e6825ab2bb729ec31c518",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840856/000121390026096796/0001213900-26-096796-index.html",
+      "title": "SoundHound AI · 8-K · 2026-09-02",
+      "summary": {
+        "en": "SEC 8-K filing by SoundHound AI. Read the original filing before drawing conclusions.",
+        "zh-hant": "SoundHound AI 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-02",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "b158a8aa3420ab8679c4d75968e87e8348234f8116269aca07df9e5c7bad90ae",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SOUN"
+      ],
+      "form": "8-K",
+      "items": "3.02",
+      "accession": "0001213900-26-096796",
+      "acceptedAt": "2026-09-02T21:19:59.000Z"
+    },
+    {
+      "id": "1856300cc2515c20cf13a4a150cb92e948300b3d7781b3223bad1de4ece93a2c",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000039/0001571996-26-000039-index.html",
+      "title": "Dell Technologies · 8-K · 2026-09-01",
+      "summary": {
+        "en": "SEC 8-K filing by Dell Technologies. Read the original filing before drawing conclusions.",
+        "zh-hant": "Dell Technologies 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-01",
+      "publishedAt": null,
+      "eventOn": "2026-09-01",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "590f7afa5567b50bd0e563a0f06dc86f763cc4098af2c81aad839ed19727dd85",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DELL"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001571996-26-000039",
+      "acceptedAt": "2026-09-01T20:10:14.000Z"
+    },
+    {
+      "id": "d6a00fe218257aa378e78e4ba30693956e07ec2ccccce5a8b719f4bdccf3a03a",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026059830/0001628280-26-059830-index.html",
+      "title": "MongoDB · 10-Q · 2026-09-01",
+      "summary": {
+        "en": "SEC 10-Q filing by MongoDB. Read the original filing before drawing conclusions.",
+        "zh-hant": "MongoDB 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-01",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "97aabd08da2f554f549d630888f7531d873b130fb99e451d9576d6def1e6ef25",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MDB"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001628280-26-059830",
+      "acceptedAt": "2026-09-01T20:14:50.000Z"
+    },
+    {
+      "id": "7762c6fdf378bb1e2529f48032470287e78caba4548bea22b0924777e5a09bd6",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026059794/0001628280-26-059794-index.html",
+      "title": "MongoDB · 8-K · 2026-09-01",
+      "summary": {
+        "en": "SEC 8-K filing by MongoDB. Read the original filing before drawing conclusions.",
+        "zh-hant": "MongoDB 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-01",
+      "publishedAt": null,
+      "eventOn": "2026-09-01",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "29606b5f846572b0db50701cb79313cdd34eb9ff1070ab629b740973dcc75fbb",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MDB"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001628280-26-059794",
+      "acceptedAt": "2026-09-01T20:07:56.000Z"
+    },
+    {
+      "id": "444e06a33220a4e0d0a12bae3756edb5524e2a644e557033b54bf138ccf6afe2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000019/0001327567-26-000019-index.html",
+      "title": "Palo Alto Networks · 8-K · 2026-09-01",
+      "summary": {
+        "en": "SEC 8-K filing by Palo Alto Networks. Read the original filing before drawing conclusions.",
+        "zh-hant": "Palo Alto Networks 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-01",
+      "publishedAt": null,
+      "eventOn": "2026-09-01",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "5f842bcfaf628ff6c2fd2b25d4764a6c755f5ac2da3432568bd092b380b758b6",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PANW"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001327567-26-000019",
+      "acceptedAt": "2026-09-01T20:32:15.000Z"
+    },
+    {
+      "id": "d278026303a2c5412e707b4e0d55cb616a532c92db7933aa4fd79c0e4c1e6661",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/0001375365-26-000022-index.html",
+      "title": "Super Micro Computer · 10-K · 2026-08-31",
+      "summary": {
+        "en": "SEC 10-K filing by Super Micro Computer. Read the original filing before drawing conclusions.",
+        "zh-hant": "Super Micro Computer 向 SEC 提交 10-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-31",
+      "publishedAt": null,
+      "eventOn": "2026-06-30",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "9032d45d189009d766633d48da02ca6dbf04e4184a68def2d45041a9a07d3165",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SMCI"
+      ],
+      "form": "10-K",
+      "items": "",
+      "accession": "0001375365-26-000022",
+      "acceptedAt": "2026-08-31T18:21:23.000Z"
+    },
+    {
+      "id": "616d3de1de29eea96db2e7a8151c043f6a3c9c697f3499964d15156d42ca8385",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/0001835632-26-000025-index.html",
+      "title": "Marvell Technology · 10-Q · 2026-08-28",
+      "summary": {
+        "en": "SEC 10-Q filing by Marvell Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Marvell Technology 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-28",
+      "publishedAt": null,
+      "eventOn": "2026-08-01",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "bbef87d4fc80a17ac4c0c00f91c8b8204ee37490b42bb5a77a3c3efe12bc5d9f",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MRVL"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001835632-26-000025",
+      "acceptedAt": "2026-08-28T20:04:02.000Z"
+    },
+    {
+      "id": "ed3d78cd42b62fc6a9ed4435381362ef40d42a783d4f34ba48577a99dd2d9e1a",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/769397/000076939726000061/0000769397-26-000061-index.html",
+      "title": "Autodesk · 10-Q · 2026-08-28",
+      "summary": {
+        "en": "SEC 10-Q filing by Autodesk. Read the original filing before drawing conclusions.",
+        "zh-hant": "Autodesk 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-28",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "efb53388f32cad1e1e2f0b42b11af6308ffb4e146b18bc487527d669b2136c6d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADSK"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000769397-26-000061",
+      "acceptedAt": "2026-08-28T20:03:04.000Z"
+    },
+    {
+      "id": "1d6900e55b53b210a5949be82ceaafd8d4db75428db5a2e3b9d4fdcdc992231c",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/0001835632-26-000022-index.html",
+      "title": "Marvell Technology · 8-K · 2026-08-27",
+      "summary": {
+        "en": "SEC 8-K filing by Marvell Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Marvell Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-27",
+      "publishedAt": null,
+      "eventOn": "2026-08-27",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "e78c9d2a746d65ceb3bc829de9067761038651fd9685184e0366849e8d590f8e",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MRVL"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001835632-26-000022",
+      "acceptedAt": "2026-08-27T20:05:59.000Z"
+    },
+    {
+      "id": "55b1d15726a93bd17068d93237ed78cc1a4bc965f8aef48cabedb4de1ef7fe65",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026059257/0001628280-26-059257-index.html",
+      "title": "Applied Materials · 8-K · 2026-08-27",
+      "summary": {
+        "en": "SEC 8-K filing by Applied Materials. Read the original filing before drawing conclusions.",
+        "zh-hant": "Applied Materials 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-27",
+      "publishedAt": null,
+      "eventOn": "2026-08-27",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "3e00485163e90760a70701b91a58e6d739f7da8da48d7336a58ad040de23bd10",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMAT"
+      ],
+      "form": "8-K",
+      "items": "5.02,7.01,9.01",
+      "accession": "0001628280-26-059257",
+      "acceptedAt": "2026-08-27T20:12:40.000Z"
+    },
+    {
+      "id": "c0cd507d479c7888954941399e90c45eadf22bdb4e17e77d91dc07ba59cd964c",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000043/0000707549-26-000043-index.html",
+      "title": "Lam Research · 8-K · 2026-08-27",
+      "summary": {
+        "en": "SEC 8-K filing by Lam Research. Read the original filing before drawing conclusions.",
+        "zh-hant": "Lam Research 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-27",
+      "publishedAt": null,
+      "eventOn": "2026-08-24",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "6338ac5c68fe1c3e0d6386d75cd8bf4a7899665eb9878f6c6aa94d13075a9fa1",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "LRCX"
+      ],
+      "form": "8-K",
+      "items": "5.02",
+      "accession": "0000707549-26-000043",
+      "acceptedAt": "2026-08-27T21:20:05.000Z"
+    },
+    {
+      "id": "eb96d9ecd78f56211eddbf73bac30961d4bf608b9caffe53b4d0b7d653639489",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/769397/000076939726000059/0000769397-26-000059-index.html",
+      "title": "Autodesk · 8-K · 2026-08-27",
+      "summary": {
+        "en": "SEC 8-K filing by Autodesk. Read the original filing before drawing conclusions.",
+        "zh-hant": "Autodesk 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-27",
+      "publishedAt": null,
+      "eventOn": "2026-08-27",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "baa0ec4950a61fc4ac6bb4d927371f9ca5d381fbca64ebb3f1696f48d06c952e",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADSK"
+      ],
+      "form": "8-K",
+      "items": "2.02,7.01,9.01",
+      "accession": "0000769397-26-000059",
+      "acceptedAt": "2026-08-27T20:05:06.000Z"
+    },
+    {
+      "id": "892eab90103c19b16734340a1ca2359c5527f304d72b978bee4a52da36229f63",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/0001108524-26-000190-index.html",
+      "title": "Salesforce · 10-Q · 2026-08-27",
+      "summary": {
+        "en": "SEC 10-Q filing by Salesforce. Read the original filing before drawing conclusions.",
+        "zh-hant": "Salesforce 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-27",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "969c7ef1a87fafa94f274c740705f1e08f9bcd3180e02924a5a069ce56c285ef",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRM"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001108524-26-000190",
+      "acceptedAt": "2026-08-26T22:54:46.000Z"
+    },
+    {
+      "id": "2cdf032dce6a7b581d6ba72598b82624954c1eef5a14f54c10654ae93d37c7a6",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1577526/000157752626000103/0001577526-26-000103-index.html",
+      "title": "C3.ai · 8-K · 2026-08-27",
+      "summary": {
+        "en": "SEC 8-K filing by C3.ai. Read the original filing before drawing conclusions.",
+        "zh-hant": "C3.ai 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-27",
+      "publishedAt": null,
+      "eventOn": "2026-08-25",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "abc466125abd2cc7ec02b2503469228d3ca16e3f47b0dfae60cb1e0501331ebb",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AI"
+      ],
+      "form": "8-K",
+      "items": "5.02",
+      "accession": "0001577526-26-000103",
+      "acceptedAt": "2026-08-27T20:06:56.000Z"
+    },
+    {
+      "id": "d34e78fe19ff0f7dab5aa7e275e2401ac8d26c71625e3ff48cf1f7641688d4bc",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000031/0001535527-26-000031-index.html",
+      "title": "CrowdStrike · 10-Q · 2026-08-27",
+      "summary": {
+        "en": "SEC 10-Q filing by CrowdStrike. Read the original filing before drawing conclusions.",
+        "zh-hant": "CrowdStrike 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-27",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "5b703fdb5fdac64682f4f258cb46080e7d482313ce6b14516d170501e3be4f61",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRWD"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001535527-26-000031",
+      "acceptedAt": "2026-08-27T01:03:35.000Z"
+    },
+    {
+      "id": "0aa8543084012ef59b8c305385121518e40d0287ef30d41b1ae67049139ddbf1",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/0001045810-26-000075-index.html",
+      "title": "NVIDIA · 10-Q · 2026-08-26",
+      "summary": {
+        "en": "SEC 10-Q filing by NVIDIA. Read the original filing before drawing conclusions.",
+        "zh-hant": "NVIDIA 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2026-07-26",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "69ff127300be44cfd78b8bc7fdd587b9d1bbf8fac216451f9f25b3dc91cdaf6a",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NVDA"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001045810-26-000075",
+      "acceptedAt": "2026-08-26T20:36:00.000Z"
+    },
+    {
+      "id": "6c1f636b3e0518bcbcba1b8516619e666a49ca4f2c11fa944331e47c05d9ef2c",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/0001045810-26-000073-index.html",
+      "title": "NVIDIA · 8-K · 2026-08-26",
+      "summary": {
+        "en": "SEC 8-K filing by NVIDIA. Read the original filing before drawing conclusions.",
+        "zh-hant": "NVIDIA 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2026-08-26",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "12f891f8a1d2d623d7733d42176e4ebdc34e0c7be9cc796d03e085009dd45dcd",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NVDA"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001045810-26-000073",
+      "acceptedAt": "2026-08-26T20:21:19.000Z"
+    },
+    {
+      "id": "b27b5fae8dc4e19c09204404da2ceebf883e2f61c5a5bb7ccec03518a93c38ac",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926101067/0001104659-26-101067-index.html",
+      "title": "Micron Technology · 8-K · 2026-08-26",
+      "summary": {
+        "en": "SEC 8-K filing by Micron Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Micron Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2026-08-24",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "62e089575e5e205fb9c657a240e8839d3bc78ebb06b1fe74d76794ed28e4fd64",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MU"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001104659-26-101067",
+      "acceptedAt": "2026-08-26T12:06:55.000Z"
+    },
+    {
+      "id": "aa426d9cdc235223eebbb62459f6a44cdc02438c1a70cafa4c9c0c61a6addd08",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/0000883241-26-000025-index.html",
+      "title": "Synopsys · 10-Q · 2026-08-26",
+      "summary": {
+        "en": "SEC 10-Q filing by Synopsys. Read the original filing before drawing conclusions.",
+        "zh-hant": "Synopsys 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2026-07-31",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "f582a181f5265c3d2c9eded9b2f3826685acfd86c9a11d3f943422ce90d0c159",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SNPS"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000883241-26-000025",
+      "acceptedAt": "2026-08-26T21:02:25.000Z"
+    },
+    {
+      "id": "f1dd2b54386748f493c3f329689d0efb343d4efa1f388204d5750e557555a03f",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/883241/000119312526368858/0001193125-26-368858-index.html",
+      "title": "Synopsys · 8-K/A · 2026-08-26",
+      "summary": {
+        "en": "SEC 8-K/A filing by Synopsys. Read the original filing before drawing conclusions.",
+        "zh-hant": "Synopsys 向 SEC 提交 8-K/A 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2025-11-09",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "610bbe543701da573162d6c2b833a905ee0f63cbc5aceff9f6154419eeadf212",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SNPS"
+      ],
+      "form": "8-K/A",
+      "items": "2.05",
+      "accession": "0001193125-26-368858",
+      "acceptedAt": "2026-08-26T21:00:08.000Z"
+    },
+    {
+      "id": "94bea37255df9c5984df3d354b0a6ab0e0ae638bf8d3228390767a2864998dc9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/883241/000119312526368620/0001193125-26-368620-index.html",
+      "title": "Synopsys · 8-K · 2026-08-26",
+      "summary": {
+        "en": "SEC 8-K filing by Synopsys. Read the original filing before drawing conclusions.",
+        "zh-hant": "Synopsys 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2026-08-26",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "38ed0370d9615915d6ac4052a6d628831c316e8d1b15c0ef87809e0e48e85122",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SNPS"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001193125-26-368620",
+      "acceptedAt": "2026-08-26T20:21:49.000Z"
+    },
+    {
+      "id": "e3f9d43a9347c4e37b83813323749111a792593a018d9800087c06b4fc75959f",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000187/0001108524-26-000187-index.html",
+      "title": "Salesforce · 8-K · 2026-08-26",
+      "summary": {
+        "en": "SEC 8-K filing by Salesforce. Read the original filing before drawing conclusions.",
+        "zh-hant": "Salesforce 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2026-08-26",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "54a3ba2b77cc7c63ce6423e29aa5b440ad7a8af9e4cba711262b763ac39a935b",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRM"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001108524-26-000187",
+      "acceptedAt": "2026-08-26T20:03:53.000Z"
+    },
+    {
+      "id": "490560d3b6de1dca93641fcea9f7d008248251a801b096609a1bb59a8229843a",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000029/0001535527-26-000029-index.html",
+      "title": "CrowdStrike · 8-K · 2026-08-26",
+      "summary": {
+        "en": "SEC 8-K filing by CrowdStrike. Read the original filing before drawing conclusions.",
+        "zh-hant": "CrowdStrike 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2026-08-26",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "cf142d420d71b952debb78386868309cbd453b1b4212eb403899be477d52f06b",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRWD"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001535527-26-000029",
+      "acceptedAt": "2026-08-26T20:07:02.000Z"
+    },
+    {
+      "id": "fe6d56d99cd1b7080032fd3e0e31a87a7fc56f243e5e27e5d9a867c897994ff4",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000084/0001474432-26-000084-index.html",
+      "title": "Everpure · 8-K · 2026-08-26",
+      "summary": {
+        "en": "SEC 8-K filing by Everpure. Read the original filing before drawing conclusions.",
+        "zh-hant": "Everpure 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-08-26",
+      "publishedAt": null,
+      "eventOn": "2026-08-26",
+      "retrievedAt": "2026-09-22T21:21:27.278Z",
+      "firstObservedAt": "2026-09-22T21:21:27.278Z",
+      "backfill": true,
+      "language": "en",
+      "contentHash": "27263a8417555d501f9e301c470f336df26588ab7dc87fb1a9384f1aa55385db",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "P"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001474432-26-000084",
+      "acceptedAt": "2026-08-26T20:06:26.000Z"
+    }
+  ],
+  "runs": [
+    {
+      "at": "2026-09-22T21:21:27.278Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    }
+  ]
+}
