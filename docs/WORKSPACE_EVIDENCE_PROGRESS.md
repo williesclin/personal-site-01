@@ -33,3 +33,7 @@ Stable display keys now cover lottery historical analysis, multidimensional tool
 Reset page defaults to English, supports zh-hant, removes recovery token from URL, rejects missing/non-recovery links, suppresses provider details and guards duplicate submits. No real password reset was sent during testing.
 
 Private human review table deployed with RLS, no anon/member access; actual human review count remains zero. Blank66-document queue is not labelled ground truth.47 behavioral/domain tests and build passed. No tsconfig exists; tsc help output is not a successful typecheck.
+
+Preview b66fb27 / de61ef24 acceptance: real browser with synthetic 375/390 CSS-pixel frames; scrollbar-adjusted layout widths360/375, scrollWidth equals clientWidth after record entry, language switch and planner generation. Record dialog fits frame (left16/right359), main generate button45.09px high. Bilingual notes preserved. Test changes are in component memory only, not account storage. No real-device or authenticated-session claim. Temporary preview assets removed before merge.
+
+Follow-up close control translated and enlarged to44px; generic save failure now says outcome cannot be confirmed (a lost response does not prove no server write). Final suite48/48, build24 public pages.
