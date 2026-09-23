@@ -1,4 +1,6 @@
 # Human evidence workflow / 人工標註流程
+
+> Owner update 2026-09-24: build News & events; articles authored in conversation, no administrator review console. See [NEWS_AND_EVENTS.md](NEWS_AND_EVENTS.md). Existing model-evaluation evidence requirements remain separate from publishing.
 Updated: 2026-09-23
 
 The private `quantpath_ops.document_reviews` table stores human-reviewed source versions. It is not an AI prediction table. No labels have been invented or imported. Members have no read/write policies. Existing memberships and research_state remain unchanged.

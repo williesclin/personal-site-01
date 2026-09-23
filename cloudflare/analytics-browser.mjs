@@ -1,6 +1,6 @@
 import {publicRoute} from '../app/public-content.mjs';
 // Optional GA4 measurement. No Google request until explicit opt-in.
-const routes = new Set(['home','dashboard','equities','analysis','planner','records']);
+const routes = new Set(['home','dashboard','equities','news','analysis','planner','records']);
 export function safeView(hash, pathname = "/") {
   if ((!hash || hash === "#home" || hash === "#content") && pathname !== "/") {
     const page = publicRoute(pathname);
