@@ -3,6 +3,9 @@ import equities from '../data/equities.json';
 import lotto from '../data/lotto649.json';
 import power from '../data/superlotto638.json';
 import daily from '../data/daily539.json';
+import researchFeed from '../data/research-feed.json';
+import researchReadiness from '../data/research-model-readiness.json';
+import {researchPublicStatus} from '../app/research-public-status.mjs';
 import {GAMES,validateReport,emptyWorkspace,type Game,type Workspace,type Plan,type RecordItem,type Article} from '../app/domain';
 type Env={ASSETS:{fetch:(r:Request)=>Promise<Response>};SUPABASE_URL?:string;SUPABASE_ANON_KEY?:string;LAB_SUPABASE_URL?:string;LAB_SUPABASE_SERVICE_KEY?:string;SITE_URL?:string};
 type User={id:string;email:string;email_confirmed_at?:string};
@@ -28,7 +31,7 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   if(!getToken(r))return json({configured:true,user:null});
   try{const {u,token,profile}=await user(e,r);return json({configured:true,user:{email:u.email,role:profile.role},workspace:await loadWorkspace(e,token,u.id,profile)});}catch(err){if(err instanceof HttpError&&(err.status===401||err.status===403))return json({configured:true,user:null},200,{'Set-Cookie':cookie('',0)});throw err;}
  }
- if(path==='data-status'&&r.method==='GET')return json({equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
+ if(path==='data-status'&&r.method==='GET')return json({equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
  if(path==='research-preview'&&r.method==='GET')return json({...equities,preview:true,companies:equities.companies.slice(0,1).map(c=>({...c,years:c.years.slice(0,3)}))});
  if(path==='checkout'&&r.method==='POST')throw new HttpError(503,'Subscriptions are not open yet / 訂閱尚未開放，不會扣款。');
  if(!configured(e))throw new HttpError(503,'會員服務尚未連接；請先使用示範工作台。');
@@ -83,4 +86,3 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  return json({workspace:await loadWorkspace(e,token,u.id,profile)});
  }catch(err){return json({error:err instanceof HttpError?err.message:'服務暫時無法完成操作。'},err instanceof HttpError?err.status:500);}}
 export default {async fetch(r:Request,e:Env){const pathname=new URL(r.url).pathname;if(pathname.startsWith('/data/'))return json({error:'Use the authenticated API / 請使用會員工具。'},404);if(pathname.startsWith('/api/'))return handleApi(r,e);const res=await e.ASSETS.fetch(r);const h=new Headers(res.headers);h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');h.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");return new Response(res.body,{status:res.status,headers:h});}};
-
