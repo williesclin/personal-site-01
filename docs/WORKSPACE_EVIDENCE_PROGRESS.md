@@ -26,3 +26,10 @@ After successful first import and unchanged replay, enable one private 15-minute
 中英操作摘要：研究總覽、導覽與樂透收支已改版；SQL 同步只接受固定 GitHub 快照並核對雜湊，讀取失敗保留前版。申報事件分類是規則，不是已驗證 AI。新聞商業展示權、社群來源與人工標註仍未完成，因此不啟用情緒或 AI 警示。部署與操作驗收結果另記營運紀錄，不把此文件當成部署成功證據。
 
 Browser verification: bilingual overview and route-preserving language switch passed on the branch preview. Demo protected-tool denial passed. A local 375/390 component fixture was built, but the cloud browser disallows file URLs; it has NOT been visually or interactively validated. No alternative browser mechanism was used.
+
+## 2026-09-23 follow-up (PR #17)
+Stable display keys now cover lottery historical analysis, multidimensional tools, planner, budget, model-review/admin labels and standalone password reset. Saved game/status enums, user notes, source names and historical audit text are retained. No role, subscription or data model was translated into different persisted values.
+
+Reset page defaults to English, supports zh-hant, removes recovery token from URL, rejects missing/non-recovery links, suppresses provider details and guards duplicate submits. No real password reset was sent during testing.
+
+Private human review table deployed with RLS, no anon/member access; actual human review count remains zero. Blank66-document queue is not labelled ground truth.47 behavioral/domain tests and build passed. No tsconfig exists; tsc help output is not a successful typecheck.

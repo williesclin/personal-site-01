@@ -7,12 +7,11 @@ import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 type Draw={id:string;date:string;numbers:number[];special:number|null;prizes:[number,number][]};
 type Dataset={game:string;schemaVersion:number;source:string;sourceUrl:string;retrievedAt:string;coverageStart:string;coverageEnd:string;count:number;draws:Draw[]};
 
-const money=(n:number)=>'NT$ '+n.toLocaleString(memberFormat(locale));
 export function HistoricalAnalysis({locale='en'}:{locale?:string}){const t=(k:string,v:any={})=>memberText(locale,k,v);const money=(n:number)=>new Intl.NumberFormat(memberFormat(locale),{style:'currency',currency:'TWD',maximumFractionDigits:0}).format(n);
  const [game,setGame]=useState('lotto');const g=GAMES[game],tiers=g.tiers;
  const [data,setData]=useState<Dataset|null>(null),[error,setError]=useState(''),[loading,setLoading]=useState(true),[attempt,setAttempt]=useState(0);
  const [count,setCount]=useState(100),[query,setQuery]=useState(''),[from,setFrom]=useState(''),[to,setTo]=useState(''),[page,setPage]=useState(0),[tab,setTab]=useState('distribution');
- useEffect(()=>{const controller=new AbortController();setLoading(true);setData(null);setError('');fetch('/api/lottery/'+g.file,{signal:controller.signal,cache:'no-cache'}).then(async r=>{if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json() as Dataset;if(d.schemaVersion!==1||!Array.isArray(d.draws)||d.count!==d.draws.length||!d.count||!Number.isFinite(Date.parse(d.retrievedAt))||d.game!==game||d.draws.some(x=>!validDraw(x,g)))throw Error('Invalid dataset');setData(d);}).catch(e=>{if(e.name!=='AbortError')setError('history.error');}).finally(()=>{if(!controller.signal.aborted)setLoading(false)});return()=>controller.abort()},[attempt,game]);
+ useEffect(()=>{const controller=new AbortController();setLoading(true);setData(null);setError('');fetch('/api/lottery/'+g.file,{signal:controller.signal,cache:'no-cache'}).then(async r=>{if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json() as Dataset;if(d.schemaVersion!==1||!Array.isArray(d.draws)||d.count!==d.draws.length||!d.count||!Number.isFinite(Date.parse(d.retrievedAt))||d.game!==game||d.draws.some(x=>!validDraw(x,g)))throw Error('Invalid dataset');if(!controller.signal.aborted)setData(d);}).catch(e=>{if(e.name!=='AbortError')setError('history.error');}).finally(()=>{if(!controller.signal.aborted)setLoading(false)});return()=>controller.abort()},[attempt,game]);
  const draws=data?.draws.slice(0,count)||[];
  const filtered=(data?.draws||[]).filter(d=>(!query||d.id.includes(query.trim()))&&(!from||d.date>=from)&&(!to||d.date<=to));
  const totalPages=Math.max(1,Math.ceil(filtered.length/20));
