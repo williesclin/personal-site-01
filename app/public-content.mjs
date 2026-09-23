@@ -1,3 +1,4 @@
+import {publishedNews} from './news-articles.mjs';
 // Public editorial catalog. Never store member records or private analytics here.
 export const categories = {
  investing: {en:'Stocks & ETF', 'zh-hant':'股票與 ETF'},
@@ -90,5 +91,5 @@ catalog.unshift({
   ]
 });
 export const articles=catalog.filter(a=>a.status==='published');
-export const pages=['','research','pricing','library','tools','methodology','about',...articles.map(a=>'library/'+a.id)];
+export const pages=['','research','news','pricing','library','tools','methodology','about',...articles.map(a=>'library/'+a.id),...publishedNews.map(a=>'news/'+a.id)];
 export function publicRoute(path){const m=path.match(/^\/(en|zh-hant)(?:\/(.*?))?\/?$/);return m&&pages.includes(m[2]||'')?{locale:m[1],page:m[2]||''}:path==='/'?{locale:'en',page:''}:null;}

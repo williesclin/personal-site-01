@@ -1,5 +1,7 @@
 # Research dimensions, evidence database and AI preparation
 
+> Owner update 2026-09-24: build News & events; articles authored in conversation, no administrator review console. See [NEWS_AND_EVENTS.md](NEWS_AND_EVENTS.md). Existing model-evaluation evidence requirements remain separate from publishing.
+
 Approved expansion: 2026-09-22. Supersedes the earlier three-company coverage description. The universe has **50 distinct US-listed issuers (47 additions)**, one share class per issuer, identified by SEC CIK. AI categories are editorial supply-chain/application groupings, not recommendations, AI revenue estimates or rankings. Full bilingual definitions are in `app/ai-universe.mjs`; filing evidence is in `data/research-evidence.json`. Everpure uses current SEC ticker P, not historical PSTG. The first snapshot contains 395 company-years; unavailable older years are not fabricated.
 
 ## Membership visibility

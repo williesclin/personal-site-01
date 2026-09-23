@@ -1,4 +1,6 @@
 # Source decision / 新聞來源決策
+
+> Owner update 2026-09-24: build News & events; articles authored in conversation, no administrator review console. See [NEWS_AND_EVENTS.md](NEWS_AND_EVENTS.md). Existing model-evaluation evidence requirements remain separate from publishing.
 Checked: 2026-09-23. This is an implementation gate, not a global legal opinion.
 查核日：2026-09-23。此為實作接入門檻，不是全球法律意見。
 

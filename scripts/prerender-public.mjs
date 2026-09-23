@@ -1,3 +1,4 @@
+import {publishedNews} from '../app/news-articles.mjs';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
@@ -9,10 +10,10 @@ const esc=s=>s.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','
 const urls=[];
 for(const locale of ['en','zh-hant'])for(const page of pages){
  const path=`/${locale}/${page}${page?'/':''}`,zh=locale==='zh-hant';
- const item=articles.find(a=>'library/'+a.id===page);
- const names=zh?{pricing:'會員方案',research:'股票與 ETF 研究',library:'知識庫',tools:'工具',methodology:'研究方法',about:'關於'}:{pricing:'Membership plans',research:'Stocks & ETF research',library:'Library',tools:'Tools',methodology:'Methodology',about:'About'};
+ const item=articles.find(a=>'library/'+a.id===page)||publishedNews.find(a=>'news/'+a.id===page);
+ const names=zh?{news:'新聞與事件',pricing:'會員方案',research:'股票與 ETF 研究',library:'知識庫',tools:'工具',methodology:'研究方法',about:'關於'}:{news:'News & events',pricing:'Membership plans',research:'Stocks & ETF research',library:'Library',tools:'Tools',methodology:'Methodology',about:'About'};
  const title=(item?.[locale].title||names[page]||(zh?'股票、ETF 與財報研究':'Stocks, ETFs and financial research'))+' | QuantPath Labs';
- const description=item?.[locale].summary||(zh?'比較公司年度財報、基金範圍與費用，建立觀察清單。完整中英研究工具，附來源與資料日期。':'Compare annual company financials, fund scope and expenses. Bilingual research tools with membership plans, sources and reporting dates.');
+ const description=item?.[locale].summary||(page==='news'?(zh?'原創文章與 SEC 官方公司申報事件，附來源、申報日期與觀測紀錄。':'Original articles and official SEC filing events with source links, filing dates and observation records.'):null)||(zh?'比較公司年度財報、基金範圍與費用，建立觀察清單。完整中英研究工具，附來源與資料日期。':'Compare annual company financials, fund scope and expenses. Bilingual research tools with membership plans, sources and reporting dates.');
  const alternates=['en','zh-hant'].map(l=>`<link rel="alternate" hreflang="${l==='en'?'en':'zh-Hant'}" href="https://quantpathlabs.com/${l}/${page}${page?'/':''}">`).join('');
  let html=template.replace(/<html lang="[^"]*">/,`<html lang="${zh?'zh-Hant':'en'}">`).replace(/<title>.*?<\/title>/,`<title>${esc(title)}</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${esc(description)}">`).replace('</head>',`<link rel="canonical" href="https://quantpathlabs.com${path}">${alternates}<link rel="alternate" hreflang="x-default" href="https://quantpathlabs.com/en/${page}${page?'/':''}"></head>`).replace('<div id="root"></div>',`<div id="root">${renderToString(React.createElement(PublicSite,{path}))}</div>`);
  await mkdir(root+path,{recursive:true});await writeFile(root+path+'index.html',html);urls.push(path);
