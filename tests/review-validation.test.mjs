@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validateReviews} from '../scripts/review-validation.mjs';
+const d={id:'d',contentHash:'h',url:'https://www.sec.gov/a',firstObservedAt:'2026-09-20T00:00:00Z'};
+const r={documentId:'d',contentHash:'h',sourceUrl:d.url,reviewerCode:'human_a',taxonomyVersion:'filing-topic-v1',method:'human',topic:'financial_results',sentiment:'not_assessable',evidenceNote:'Synthetic test evidence only; never imported.',reviewedAt:'2026-09-21T00:00:00Z'};
+test('independent reviews count one document; disagreements remain visible',()=>{const x=validateReviews([r,{...r,reviewerCode:'human_b',topic:'other'}],[d]);assert.equal(x.uniqueDocuments,1);assert.equal(x.doubleReviewed,1);assert.equal(x.disagreements,1)});
+test('rejects duplicate, stale, automated and future reviews',()=>{assert.throws(()=>validateReviews([r,r],[d]));for(const changes of [{contentHash:'stale'},{method:'model'},{reviewedAt:'2099-01-01'},{sourceUrl:'https://other.test'}])assert.throws(()=>validateReviews([{...r,...changes}],[d]));});
