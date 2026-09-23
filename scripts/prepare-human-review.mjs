@@ -1,0 +1,7 @@
+// Produces private review queue or reviewed SQL; never connects or sends records.
+import {readFile,writeFile} from 'node:fs/promises';import {validateReviews,taxonomyVersion} from './review-validation.mjs';
+const feed=JSON.parse(await readFile(new URL('../data/research-feed.json',import.meta.url),'utf8'));
+const [mode,input,output]=process.argv.slice(2);
+if(mode==='queue'&&input){await writeFile(input,JSON.stringify(feed.documents.map(d=>({documentId:d.id,contentHash:d.contentHash,sourceUrl:d.url,taxonomyVersion,method:'human',reviewerCode:'',topic:'',sentiment:'not_assessable',evidenceNote:'',reviewedAt:''})),null,2)+'\n',{flag:'wx',mode:0o600});console.log(`Prepared ${feed.documents.length} unlabelled documents; none reviewed.`)}
+else if(mode==='sql'&&input&&output){const rows=JSON.parse(await readFile(input,'utf8'));console.log(validateReviews(rows,feed.documents));const q=v=>"'"+String(v).replaceAll("'","''")+"'";const fields=['documentId','contentHash','sourceUrl','reviewerCode','taxonomyVersion','method','topic','sentiment','evidenceNote','reviewedAt'];const sql='begin;\n'+rows.map(r=>'insert into quantpath_ops.document_reviews (document_id,content_hash,source_url,reviewer_code,taxonomy_version,method,topic,sentiment,evidence_note,reviewed_at) values ('+fields.map(f=>q(r[f])).join(',')+');').join('\n')+'\ncommit;\n';await writeFile(output,sql,{flag:'wx',mode:0o600});console.log('SQL prepared for trusted operator review; not executed.')}
+else throw Error('Usage: queue PRIVATE_OUTPUT.json | sql PRIVATE_LABELS.json PRIVATE_OUTPUT.sql');
