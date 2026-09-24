@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-09-24T05:07:21.006Z",
+  "retrievedAt": "2026-09-24T12:02:06.440Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "1a7c7810e00742b1b5212f137a00b87024c8b2cebb80bedbaf0375503cbd8526",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026063311/0001628280-26-063311-index.html",
+      "title": "Vertiv · 8-K · 2026-09-24",
+      "summary": {
+        "en": "SEC 8-K filing by Vertiv. Read the original filing before drawing conclusions.",
+        "zh-hant": "Vertiv 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-24",
+      "publishedAt": null,
+      "eventOn": "2026-09-24",
+      "retrievedAt": "2026-09-24T12:02:06.440Z",
+      "firstObservedAt": "2026-09-24T12:02:06.440Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "4087e3e8a7d12955411d3b0dbd1f5b254a76b659631d9f3666ee893a3a1e944c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "VRT"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001628280-26-063311",
+      "acceptedAt": "2026-09-24T06:38:08.000Z"
+    },
     {
       "id": "3e95e3a3cd5c7eea151a1c5315dddd3bb59d8461e35983f131d0a12d9791eb29",
       "sourceId": "sec-edgar",
@@ -1790,6 +1817,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-09-24T12:02:06.440Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-09-24T05:07:21.006Z",
       "succeeded": 50,
