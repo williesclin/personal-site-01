@@ -21,3 +21,11 @@ export function dimensionValue(row,key,previous){
 export function chartRows(companies,key,year='latest'){
  return companies.map(c=>{const i=year==='latest'?0:c.years.findIndex(r=>r.end.startsWith(year)),r=c.years[i];return {symbol:c.symbol,start:r?.start||null,end:r?.end||null,value:dimensionValue(r,key,c.years[i+1])};});
 }
+
+// A scatter observation exists only when both values refer to the same row.
+// Keep missing rows in the accessible table, but never let them set either axis.
+export function scatterRows(companies,primary,secondary,year='latest'){
+ const vertical=chartRows(companies,secondary,year);
+ const rows=chartRows(companies,primary,year).map((r,i)=>({...r,other:vertical[i].value}));
+ return {rows,valid:rows.filter(r=>Number.isFinite(r.value)&&Number.isFinite(r.other))};
+}
