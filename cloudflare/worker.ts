@@ -35,8 +35,8 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  if(path==='data-status'&&r.method==='GET')return json({equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
  if(path==='research-preview'&&r.method==='GET')return json({...equities,preview:true,companies:equities.companies.slice(0,1).map(c=>({...c,years:c.years.slice(0,3)}))});
  if(path==='checkout'&&r.method==='POST')throw new HttpError(503,'Subscriptions are not open yet / 訂閱尚未開放，不會扣款。');
+ if(path==='logout'&&r.method==='POST'){let revoked=true;try{const token=getToken(r);if(token)await request(e,'/auth/v1/logout',token,'POST');}catch{revoked=false;}return json({ok:true,scope:'this_browser',upstreamRevoked:revoked},200,{'Set-Cookie':cookie('',0)});}
  if(!configured(e))throw new HttpError(503,'會員服務尚未連接；請先使用示範工作台。');
- if(path==='logout'&&r.method==='POST'){const token=getToken(r);if(token)await request(e,'/auth/v1/logout',token,'POST');return json({ok:true},200,{'Set-Cookie':cookie('',0)});}
  if(['login','signup','reset'].includes(path)&&r.method==='POST'){
   const b=await body(r);if(!text(b.email,254)||!/^\S+@\S+\.\S+$/.test(b.email as string))throw new HttpError(400,'請輸入有效信箱。');
   if(path==='reset'){await request(e,`/auth/v1/recover?redirect_to=${encodeURIComponent(e.SITE_URL+'/reset-password.html')}`,undefined,'POST',{email:b.email});return json({ok:true});}

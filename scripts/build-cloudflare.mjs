@@ -5,3 +5,5 @@ for(const config of ['vite.cloudflare-client.ts','vite.cloudflare-worker.ts','vi
 }
 
 const pages=spawnSync(process.execPath,['scripts/prerender-public.mjs'],{stdio:'inherit'});if(pages.status!==0)process.exit(pages.status??1);
+
+const qa=spawnSync(process.execPath,['scripts/build-membership-preview.mjs'],{stdio:'inherit'});if(qa.status!==0)process.exit(qa.status??1);
