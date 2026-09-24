@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-09-24T17:24:56.567Z",
+  "retrievedAt": "2026-09-24T21:39:11.014Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -32,6 +32,33 @@
       "items": "7.01,9.01",
       "accession": "0001628280-26-063311",
       "acceptedAt": "2026-09-24T06:38:08.000Z"
+    },
+    {
+      "id": "5262bc35e1a5c14e0546dafe47fee06ceff2b3d189bccb7232419acd8ec86d04",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000193/0001713683-26-000193-index.html",
+      "title": "Zscaler · 8-K · 2026-09-24",
+      "summary": {
+        "en": "SEC 8-K filing by Zscaler. Read the original filing before drawing conclusions.",
+        "zh-hant": "Zscaler 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-24",
+      "publishedAt": null,
+      "eventOn": "2026-09-24",
+      "retrievedAt": "2026-09-24T21:39:11.014Z",
+      "firstObservedAt": "2026-09-24T21:39:11.014Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "6a36153abe84bea01013d7f56ce14859d20f0737eaa6ec93678358fe15aeba37",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ZS"
+      ],
+      "form": "8-K",
+      "items": "5.02",
+      "accession": "0001713683-26-000193",
+      "acceptedAt": "2026-09-24T16:07:41.000Z"
     },
     {
       "id": "3e95e3a3cd5c7eea151a1c5315dddd3bb59d8461e35983f131d0a12d9791eb29",
@@ -1817,6 +1844,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-09-24T21:39:11.014Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-09-24T17:24:56.567Z",
       "succeeded": 50,
