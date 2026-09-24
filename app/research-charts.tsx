@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {DIMENSIONS,dimensionValue,chartRows} from './research-dimensions.mjs';
+import {DIMENSIONS,dimensionValue,chartRows,scatterRows} from './research-dimensions.mjs';
 import {AI_SECTORS} from './ai-universe.mjs';
 const colors=['#08775f','#2364aa','#a74715','#773a98','#525e10'];
 export function ResearchCharts({companies,locale,full,year}:{companies:any[];locale:string;full:boolean;year:string}){
@@ -12,13 +12,14 @@ export function ResearchCharts({companies,locale,full,year}:{companies:any[];loc
  const fmt=(v:number|null,k:string)=>v==null?'—':new Intl.NumberFormat(zh?'zh-TW':'en-US',{maximumFractionDigits:2}).format(scale(v,k));
  const rows=chartRows(chosen,metric,year),ys=rows.filter(r=>r.value!==null).map(r=>scale(r.value,metric));
  const histories=chosen.map(c=>({symbol:c.symbol,rows:[...c.years].reverse().map((r:any)=>({end:r.end,start:r.start,value:dimensionValue(r,metric,c.years[c.years.indexOf(r)+1])}))}));
- const values=mode==='trend'?histories.flatMap(c=>c.rows.filter((r:any)=>r.value!==null).map((r:any)=>scale(r.value,metric))):ys;
+ const scatter=scatterRows(chosen,metric,second,year);
+ const values=mode==='trend'?histories.flatMap(c=>c.rows.filter((r:any)=>r.value!==null).map((r:any)=>scale(r.value,metric))):mode==='scatter'?scatter.valid.map(r=>scale(r.value,metric)):ys;
  const lo=Math.min(0,...values),hi=Math.max(0,...values),span=hi-lo||1;
  const y=(v:number)=>250-(v-lo)/span*210;
  const dates=histories.flatMap(c=>c.rows.map((r:any)=>Date.parse(r.end))),dlo=Math.min(...dates),dhi=Math.max(...dates);
  const x=(date:string)=>70+(Date.parse(date)-dlo)/(dhi-dlo||1)*590;
- const points=rows.map((r,i)=>({...r,other:chartRows(chosen,second,year)[i]?.value}));
- const otherValues=points.filter(r=>r.other!==null).map(r=>scale(r.other,second));
+ const points=scatter.rows;
+ const otherValues=scatter.valid.map(r=>scale(r.other,second));
  const olo=Math.min(0,...otherValues),ohi=Math.max(0,...otherValues),oy=(v:number)=>250-(v-olo)/(ohi-olo||1)*210;
  const exportCsv=()=>{const lines=[['symbol','period_start','period_end',metric,DIMENSIONS[metric].unit],...rows.map(r=>[r.symbol,r.start,r.end,r.value??'',DIMENSIONS[metric].unit])];const csv=lines.map(r=>r.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='quantpath-financial-comparison.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
  return <section className="eq-section"><h2>{t('Build a financial chart','建立多維財報圖表')}</h2><p>{t('Choose up to five companies, a dimension and a chart. Values are company-wide annual facts, not AI-only revenue.','選擇最多五家公司、分析維度與圖表。數字是公司整體年度財報，不是 AI 專屬營收。')}</p>
@@ -30,6 +31,7 @@ export function ResearchCharts({companies,locale,full,year}:{companies:any[];loc
  <fieldset className="eq-metrics"><legend>{t('Companies (maximum 5)','比較公司（最多 5 家）')}</legend>{eligible.map(c=><label key={c.symbol}><input type="checkbox" checked={selected.includes(c.symbol)} disabled={!selected.includes(c.symbol)&&selected.length>=5} onChange={()=>setSelected(s=>s.includes(c.symbol)?s.filter(v=>v!==c.symbol):[...s,c.symbol])}/>{c.symbol}</label>)}<button className="btn" onClick={()=>setSelected([])}>{t('Clear selection','清除選取')}</button></fieldset>
  {chosen.length===0?<p role="status">{t('Select a company in this category.','請選擇此分類中的公司。')}</p>:<>
  <p className="eq-meta">{mode==='trend'?t('All available annual periods; exact fiscal dates on the horizontal axis.','全部可用年度；橫軸使用實際會計期末日。'):t('Uses the financial-period filter above. Fiscal periods can differ across companies.','使用上方年度篩選；各公司會計期間可能不同。')} {mode==='scatter'?`${label(metric)} (${unit(metric)}) × ${label(second)} (${unit(second)})`:`${label(metric)} (${unit(metric)})`}</p>
+ <p role="status" className="eq-meta">{mode==='trend'?t('Available annual observations','可用年度觀測'):mode==='scatter'?t('Companies with both dimensions','兩個維度均有資料的公司'):t('Companies with this dimension','此維度有資料的公司')}：{values.length} / {mode==='trend'?histories.reduce((n,c)=>n+c.rows.length,0):chosen.length} · {t('Missing values are excluded, not replaced with zero. Clear the selection or change dimensions to recover.','缺值排除，不補零。可清除選取或切換維度重新比較。')}</p>
  {values.length===0?<p role="status">{t('This dimension is unavailable for the selection. No zero substitutes.','所選範圍沒有此維度資料，不以零替代。')}</p>:<svg viewBox="0 0 720 300" role="img" aria-label={t('Financial chart; exact values in the table below.','財報圖表；精確數值請見下方表格。')} style={{width:'100%',minHeight:180,background:'#fff'}}>
  <line x1="70" y1="40" x2="70" y2="250" stroke="#8ba9a2"/><line x1="70" y1="250" x2="680" y2="250" stroke="#8ba9a2"/>
  <text x="8" y="48" fontSize="12">{(mode==='scatter'?ohi:hi).toFixed(1)}</text><text x="8" y="250" fontSize="12">{(mode==='scatter'?olo:lo).toFixed(1)}</text>

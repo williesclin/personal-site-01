@@ -1,6 +1,16 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {DIMENSIONS,dimensionValue,chartRows} from '../app/research-dimensions.mjs';
+import {DIMENSIONS,dimensionValue,chartRows,scatterRows} from '../app/research-dimensions.mjs';
 import {normalizeCompany} from '../app/equity-engine.mjs';
+test('Scatter eligibility uses finite paired values, retaining zero and negative values but not missing axes',()=>{
+ const c=(symbol,revenue,net)=>({symbol,years:[{start:'2025-01-01',end:'2025-12-31',revenue:revenue===null?null:{value:revenue},netIncome:net===null?null:{value:net}}]});
+ const companies=[c('X_ONLY',999999,null),c('Y_ONLY',null,888888),c('ZERO',0,0),c('LOSS',100,-10)];
+ const s=scatterRows(companies,'revenue','netIncome');
+ assert.equal(s.rows.length,4);assert.deepEqual(s.valid.map(r=>r.symbol),['ZERO','LOSS']);
+ assert.deepEqual(s.valid.map(r=>r.value),[0,100]);assert.deepEqual(s.valid.map(r=>r.other),[0,-10]);
+ assert.equal(scatterRows(companies.slice(0,2),'revenue','netIncome').valid.length,0);
+ assert.equal(scatterRows(companies,'revenue','netIncome','2024').valid.length,0);
+ assert.equal(scatterRows([c('BAD',Infinity,1)],'revenue','netIncome').valid.length,0);
+});
 test('Fourteen dimensions retain null, real zero, negative profit and exact fiscal adjacency',()=>{
  assert.equal(Object.keys(DIMENSIONS).length,14);
  const row={start:'2025-01-01',end:'2025-12-31',revenue:{value:100},netIncome:{value:-10},operatingCashFlow:{value:0},capitalExpenditure:{value:5},grossProfit:null};
