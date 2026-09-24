@@ -9,7 +9,7 @@ export function Pricing({locale='en'}:{locale?:string}){
  [t('NVIDIA / IVV preview','NVIDIA／IVV 預覽'),t('Public','公開'),t('Available now','目前可用')],
  [t('50 companies · 14 financial dimensions · 3 ETFs','50 公司・14 財務維度・3 ETF'),'Research / Pro',t('Built; effective membership required; not on sale','已建置；需有效資格；尚未銷售')],
  [t('Account watchlist and conditions','帳號觀察清單與條件'),'Research / Pro',t('30 / 5 or 200 / 30; chart layouts not yet saved','30／5 或 200／30；尚未保存圖表版面')],
- [t('SEC filing events','SEC 申報事件'),t('Limited public preview; Research / Pro for full records','有限公開預覽；完整紀錄需 Research／Pro'),t('Source observations; not a general news feed','来源觀測；不是一般新聞來源')],
+ [t('SEC filing events','SEC 申報事件'),t('Limited public preview; Research / Pro for full records','有限公開預覽；完整紀錄需 Research／Pro'),t('Source observations; not a general news feed','來源觀測；不是一般新聞來源')],
  [t('General news, social sentiment and AI alerts','一般新聞、社群情緒與 AI 警示'),t('Not available','尚未開放'),t('Source access and model validation pending','待來源接入與模型驗證')],
  [t('Advanced models, portfolio risk and backtests','進階模型、投資組合風險與回測'),'Pro',t('Not released','尚未發布')]
  ].map(([feature,access,status])=><tr key={feature}><th>{feature}</th><td>{access}</td><td>{status}</td></tr>)}</tbody></table></div></section>

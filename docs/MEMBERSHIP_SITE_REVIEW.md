@@ -21,3 +21,10 @@ Scope: public bilingual pages, account entry, member workspace, pricing, researc
 
 ## Remaining release requirements
 General news/social ingestion, model validation, 10 verified ETFs, full screening, payment/refund/cancellation acceptance and source/legal/retention review remain paid-launch gates. Real account saving/readback and full subscriber browsing need an eligible authorized session; no account is upgraded for this purpose. The current saved-condition format does not save chart layouts.
+
+## Preview evidence
+- PR #20 preview commit: a79718144576d9dee3eb4fccd0c1e55821389ca3. Cloudflare personal-site-01 build 7f043de7-0f3c-4d6b-ad6b-48af171a13c3 succeeded; preview https://5ab44748-personal-site-01.willie-sc-lin.workers.dev .
+- Browser: English pricing renders 3 tiers with disabled purchase buttons and feature status. Sign-in opens the English auth form; demo opens research overview and My membership; language change preserves #account and changes the URL to /zh-hant/.
+- Synthetic 375/390px iframe presentation: Research paid-through cancellation, Free limited preview, Pro 200/30 quotas and unknown/error retry shown correctly. 375px body width and scroll width both 360px (scrollbar excluded); tested account action buttons measured 45px high. Chinese pricing table scrolls within its container without page overflow. These are presentation tests, not paid-account or physical-mobile proof.
+- Remove the temporary fixture build step before merge. Test component remains under tests/ and is not imported by production.
+- Production deployment still requires final commit build success and live page verification.
