@@ -5,3 +5,6 @@ for(const config of ['vite.cloudflare-client.ts','vite.cloudflare-worker.ts','vi
 }
 
 const pages=spawnSync(process.execPath,['scripts/prerender-public.mjs'],{stdio:'inherit'});if(pages.status!==0)process.exit(pages.status??1);
+
+// Temporary preview-only synthetic acceptance; remove before merge.
+const qa=spawnSync(process.execPath,['scripts/build-phase1-fixture.mjs'],{stdio:'inherit',env:{...process.env,QP_FIXTURE_OUTPUT:'cloudflare-dist/client/_phase1-qa'}});if(qa.status!==0)process.exit(qa.status??1);
