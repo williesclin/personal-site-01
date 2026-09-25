@@ -1,0 +1,40 @@
+name: Refresh official macro news and currency observations
+on:
+  schedule:
+    - cron: '45 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main, feat/phase2-connected-research]
+    paths:
+      - 'scripts/sync-market-context.py'
+      - '.github/workflows/market-context.yml'
+permissions:
+  contents: write
+concurrency:
+  group: research-data
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/sync-market-context.py
+      - name: Commit official-source observations
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/market-context.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Refresh official news and currency reference observations'
+          pushed=false
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${{ github.ref_name }}"
+            if git push origin "HEAD:${{ github.ref_name }}"; then pushed=true; break; fi
+          done
+          test "$pushed" = true

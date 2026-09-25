@@ -1,3 +1,4 @@
+import quarterly from '../data/quarterly.json';
 import {newsQuery,safeSECLink} from '../app/news-engine.mjs';
 import {membershipView,validateResearchState} from '../app/membership.mjs';
 import equities from '../data/equities.json';
@@ -32,7 +33,8 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   if(!getToken(r))return json({configured:true,user:null});
   try{const {u,token,profile}=await user(e,r);return json({configured:true,user:{email:u.email,role:profile.role},workspace:await loadWorkspace(e,token,u.id,profile)});}catch(err){if(err instanceof HttpError&&(err.status===401||err.status===403))return json({configured:true,user:null},200,{'Set-Cookie':cookie('',0)});throw err;}
  }
- if(path==='data-status'&&r.method==='GET')return json({equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
+ if(path==='data-status'&&r.method==='GET')return json({quarterly:{retrievedAt:quarterly.retrievedAt,companies:quarterly.companies.length,periods:quarterly.companies.reduce((n,c)=>n+c.quarters.length,0)},equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
+ if(path==='quarterly-preview'&&r.method==='GET')return json({...quarterly,preview:true,companies:quarterly.companies.filter(c=>c.symbol==='NVDA').map(c=>({...c,quarters:c.quarters.slice(0,4)}))});
  if(path==='research-preview'&&r.method==='GET')return json({...equities,preview:true,companies:equities.companies.slice(0,1).map(c=>({...c,years:c.years.slice(0,3)}))});
  if(path==='checkout'&&r.method==='POST')throw new HttpError(503,'Subscriptions are not open yet / 訂閱尚未開放，不會扣款。');
  if(path==='logout'&&r.method==='POST'){let revoked=true;try{const token=getToken(r);if(token)await request(e,'/auth/v1/logout',token,'POST');}catch{revoked=false;}return json({ok:true,scope:'this_browser',upstreamRevoked:revoked},200,{'Set-Cookie':cookie('',0)});}
@@ -53,7 +55,7 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  const {u,token,profile}=await user(e,r);
  if(path==='membership'&&r.method==='GET')return json(await membership(e,token,u.id));
  if(path.startsWith('lottery/')&&r.method==='GET'){const datasets:Record<string,unknown>={lotto649:lotto,superlotto638:power,daily539:daily};const d=datasets[path.slice(8)];if(!d)throw new HttpError(404,'找不到此彩種。');return json(d);}
- if(['research-data','research-state','research-evidence','news-events','pro-tools'].includes(path)){
+ if(['quarterly-data','research-data','research-state','research-evidence','news-events','pro-tools'].includes(path)){
   const access=await membership(e,token,u.id);
   if(access.plan==='free')throw new HttpError(403,'Research membership required / 此功能需 Research 會員。');
   if(path==='pro-tools'){if(access.plan!=='pro')throw new HttpError(403,'Pro membership required / 此功能需 Pro 會員。');throw new HttpError(503,'Pro tools are not released / 進階工具尚未發布。');}
@@ -66,6 +68,7 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
    return json({documents:docs.map((d:any)=>({id:d.id,url:safeSECLink(d.canonical_url),title:d.title,summary:d.summary,publishedOn:d.published_on,eventOn:d.event_on,firstSeenAt:d.first_seen_at,retrievedAt:d.retrieved_at,symbols:links.filter((x:any)=>x.document_id===d.id).map((x:any)=>x.symbol)})),hasMore:rows.length>20,page:q.page});
   }
   if(path==='research-evidence'&&r.method==='GET'){const [documents,ingestions,observations]=await Promise.all([request(e,'/rest/v1/research_documents?select=id,canonical_url,title,summary,kind,published_on,first_seen_at&order=published_on.desc&limit=12',token),request(e,'/rest/v1/research_ingestions?select=recorded_at,retrieved_at,company_count&order=recorded_at.desc&limit=1',token),request(e,'/rest/v1/research_filing_observations?select=document_id,symbol,form,category,first_observed_at,backfill&order=first_observed_at.desc&limit=30',token)]);return json({documents,observations,ingestion:ingestions[0]||null,socialStatus:'not_connected',sentimentStatus:'not_validated'});}
+  if(path==='quarterly-data'&&r.method==='GET')return json(quarterly);
   if(path==='research-data'&&r.method==='GET')return json(equities);
   if(path==='research-state'&&r.method==='GET'){const rows=await request(e,`/rest/v1/research_state?user_id=eq.${u.id}&select=payload`,token);return json({state:rows[0]?.payload||{watchlist:[],saved:[]},access});}
   if(path==='research-state'&&r.method==='POST'){let value;try{value=validateResearchState(await body(r),access.plan);}catch{throw new HttpError(400,'Invalid research state or plan limit / 條件格式不正確或超過方案上限。');}await request(e,'/rest/v1/research_state',token,'POST',{user_id:u.id,payload:value});return json({state:value,access});}
