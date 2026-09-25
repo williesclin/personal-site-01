@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "attemptedAt": "2026-09-25T17:32:03.583083Z",
+  "attemptedAt": "2026-09-25T21:49:18.898904Z",
   "sources": {
     "ecb": {
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
       "status": "available",
-      "retrievedAt": "2026-09-25T17:32:03.583083Z",
-      "lastAttemptAt": "2026-09-25T17:32:03.583083Z",
+      "retrievedAt": "2026-09-25T21:49:18.898904Z",
+      "lastAttemptAt": "2026-09-25T21:49:18.898904Z",
       "rows": [
         {
           "date": "2026-06-29",
@@ -338,8 +338,8 @@
     "h10": {
       "url": "https://www.federalreserve.gov/releases/h10/current/",
       "status": "available",
-      "retrievedAt": "2026-09-25T17:32:03.583083Z",
-      "lastAttemptAt": "2026-09-25T17:32:03.583083Z",
+      "retrievedAt": "2026-09-25T21:49:18.898904Z",
+      "lastAttemptAt": "2026-09-25T21:49:18.898904Z",
       "rows": [
         {
           "date": "2026-09-14",
@@ -376,8 +376,8 @@
     "bls-news": {
       "url": "https://www.bls.gov/feed/bls_latest.rss",
       "status": "available",
-      "retrievedAt": "2026-09-25T17:32:03.583083Z",
-      "lastAttemptAt": "2026-09-25T17:32:03.583083Z",
+      "retrievedAt": "2026-09-25T21:49:18.898904Z",
+      "lastAttemptAt": "2026-09-25T21:49:18.898904Z",
       "rows": [
         {
           "id": "26b80e574d3dcb3e571d923a",
@@ -388,16 +388,27 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         }
       ]
     },
     "fed-news": {
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "status": "available",
-      "retrievedAt": "2026-09-25T17:32:03.583083Z",
-      "lastAttemptAt": "2026-09-25T17:32:03.583083Z",
+      "retrievedAt": "2026-09-25T21:49:18.898904Z",
+      "lastAttemptAt": "2026-09-25T21:49:18.898904Z",
       "rows": [
+        {
+          "id": "421593941bcd210840f685fc",
+          "source": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260925a.htm",
+          "title": "Federal Reserve Board announces approval of application by Peoples Bancorp Inc.",
+          "publishedAt": "2026-09-25T20:30:00Z",
+          "topic": null,
+          "symbols": [],
+          "association": "topic-only",
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
+        },
         {
           "id": "e3d0f340738d8b442d5164da",
           "source": "Federal Reserve",
@@ -407,7 +418,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "a3c66db57688cd99760d1973",
@@ -418,7 +429,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "c752665596824774fab7f006",
@@ -429,7 +440,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "dcf8db524f3733545fb22349",
@@ -440,7 +451,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "1079b55bdcb2016893db67aa",
@@ -451,7 +462,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "20ecc6299cf18d9212f091ee",
@@ -462,7 +473,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "17a452dae997f2ec73b88e31",
@@ -473,7 +484,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "4d1a9c6afdd362f13821625a",
@@ -484,7 +495,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "f2082212c894d2ae9bf8dcf9",
@@ -495,7 +506,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "dc6734c1308341f2a9fa712f",
@@ -506,7 +517,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "12dc0236b9ec88cbdc181823",
@@ -517,7 +528,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "97e1c00d4c642c8ebedd5585",
@@ -528,7 +539,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "feb27cd2512502fa086af237",
@@ -539,7 +550,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "5833e5f3e46c6f8743d2e440",
@@ -550,7 +561,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "17531ff0db53f7d3e6b57ef0",
@@ -561,7 +572,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "00506232aa9374a54c1f0380",
@@ -572,7 +583,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "bb67ca24d2783cd3673df635",
@@ -583,7 +594,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "29700a01ee0f810ea878c345",
@@ -594,7 +605,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         },
         {
           "id": "d1181bb8751b264823f52b37",
@@ -605,18 +616,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
-        },
-        {
-          "id": "17be029487e2578dbc3b2641",
-          "source": "Federal Reserve",
-          "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260804a.htm",
-          "title": "Federal Reserve Board announces approval of the application by Banco Santander, S.A. and Santander Holdings USA, Inc.",
-          "publishedAt": "2026-08-04T20:30:00Z",
-          "topic": null,
-          "symbols": [],
-          "association": "topic-only",
-          "retrievedAt": "2026-09-25T17:32:03.583083Z"
+          "retrievedAt": "2026-09-25T21:49:18.898904Z"
         }
       ]
     }
