@@ -4,7 +4,7 @@ const routes = new Set(['home','dashboard','equities','news','analysis','planner
 export function safeView(hash, pathname = "/") {
   if ((!hash || hash === "#home" || hash === "#content") && pathname !== "/") {
     const page = publicRoute(pathname);
-    return page ? `public/${page.locale}/${page.page || "home"}` : null;
+    return page ? `public/${page.locale}/${page.page.startsWith("assets/")?"asset-profile":page.page || "home"}` : null;
   }
   const value = hash === '#content' ? 'home' : hash.replace(/^#/, '') || 'home';
   return routes.has(value) ? value : null;

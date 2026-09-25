@@ -1,3 +1,4 @@
+import {loginHref} from './return-path.mjs';
 import {useEffect,useState} from 'react';
 import {readMemberAccess} from './member-access.mjs';
 export function useMemberAccess(enabled=true){
@@ -9,6 +10,7 @@ export function useMemberAccess(enabled=true){
  },[enabled,attempt]);return {...state,retry:()=>setAttempt(n=>n+1)};
 }
 export function PublicMemberAccess({locale,path}:{locale:string;path:string}){
- const m=useMemberAccess(),zh=locale==='zh-hant';
- return <div className="actions public-member-access" aria-label={zh?'會員入口':'Member access'}>{m.status==='ready'?<><a className="btn" href={path+'#dashboard'}>{zh?'會員工作台':'My workspace'} ↗</a><a href={path+'#account'}>{m.access.plan==='free'?'Free':m.access.plan==='pro'?'Pro':'Research'} · {zh?'我的方案':'My membership'}</a></>:m.status==='error'?<><a className="btn" href={path+'#account'}>{zh?'查看會員狀態':'Check membership'}</a><button className="text-link" onClick={m.retry}>{zh?'重試':'Retry'}</button></>:<><a href={path+'#login'}>{zh?'會員登入':'Sign in'}</a><a className="btn" href={path+'#signup'}>{zh?'免費建立帳號':'Free account'} ↗</a></>}</div>;
+ const m=useMemberAccess(),zh=locale==='zh-hant',[search,setSearch]=useState('');
+ useEffect(()=>{const read=()=>setSearch(window.location.search);read();window.addEventListener('qpl-search-change',read);return()=>window.removeEventListener('qpl-search-change',read)},[]);
+ return <div className="actions public-member-access" aria-label={zh?'會員入口':'Member access'}>{m.status==='ready'?<><a className="btn" href={`/${locale}/research/?focus=saved#equities`}>{zh?'我的研究':'My research'} ↗</a><a href={path+'#account'}>{m.access.plan==='free'?'Free':m.access.plan==='pro'?'Pro':'Research'} · {zh?'我的方案':'My membership'}</a></>:m.status==='error'?<><a className="btn" href={path+'#account'}>{zh?'查看會員狀態':'Check membership'}</a><button className="text-link" onClick={m.retry}>{zh?'重試':'Retry'}</button></>:<><a href={loginHref(locale,path,search)}>{zh?'會員登入':'Sign in'}</a><a className="btn" href={loginHref(locale,path,search,'signup')}>{zh?'免費建立帳號':'Free account'} ↗</a></>}</div>;
 }
