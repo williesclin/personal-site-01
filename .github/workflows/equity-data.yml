@@ -1,4 +1,4 @@
-name: Refresh SEC annual financials
+name: Refresh SEC annual and quarterly financials
 on:
   schedule:
     - cron: '15 22 * * *'
@@ -8,6 +8,7 @@ on:
     paths:
       - 'scripts/sync-equities.mjs'
       - 'app/equity-engine.mjs'
+      - 'app/quarterly-engine.mjs'
       - 'app/ai-universe.mjs'
       - '.github/workflows/equity-data.yml'
 permissions:
@@ -22,25 +23,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
       - run: node scripts/sync-equities.mjs
-      - run: node --test tests/equity.test.mjs
+      - run: node --test tests/equity.test.mjs tests/quarterly.test.mjs
       - name: Commit validated public financial facts only
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/equities.json
+          git add data/equities.json data/quarterly.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Refresh validated SEC annual financial facts'
           pushed=false
           for attempt in 1 2 3; do
-            git pull --rebase origin main
+            git pull --rebase origin "${{ github.ref_name }}"
             node scripts/build-research-sync.mjs
             git add data/research-sync.json
             git diff --cached --quiet || git commit -m 'Prepare verified database synchronization manifest'
-            if git push origin HEAD:main; then pushed=true; break; fi
+            if git push origin "HEAD:${{ github.ref_name }}"; then pushed=true; break; fi
           done
           test "$pushed" = true
