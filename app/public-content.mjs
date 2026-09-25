@@ -91,6 +91,12 @@ catalog.unshift({
     }
   ]
 });
+const investingGuide=catalog.find(a=>a.id==='stock-etf-research');
+investingGuide.version=3;investingGuide.updated='2026-09-25';
+investingGuide.en.sections[0][1]='The research universe contains 50 U.S.-listed companies and 14 ETF / trust profiles. The annual public preview shows three NVIDIA years and IVV costs. The connected research page adds a NVIDIA quarterly / TTM preview and public fund profiles for U.S., Taiwan, Japan and European exposures. Other company figures and account saving require effective Research or Pro access. Browser drafts and research exports are available without a paid plan. Subscriptions are not on sale.';
+investingGuide['zh-hant'].sections[0][1]='研究範圍包含 50 家美國上市公司與 14 檔 ETF／信託資料。年度公開預覽提供 NVIDIA 三年度及 IVV 費用；完整研究路徑另提供 NVIDIA 季度／TTM 預覽，以及涵蓋美國、台灣、日本及歐洲曝險的公開基金資料。其他公司數字與帳號儲存需有效 Research 或 Pro；瀏覽器草稿及研究匯出不需付費方案。訂閱尚未開放銷售。';
+investingGuide.en.sections.push(['Continue into quarterly research','Use the connected research page to choose a macro event, review its possible transmission mechanism, compare company periods and fund exposure, and save notes. TTM requires four consecutive quarters; derived quarters retain their filing inputs. Licensed prices, valuation and total-return comparisons remain unavailable. Related funds are thematic research routes, not verified holdings or buy recommendations.']);
+investingGuide['zh-hant'].sections.push(['接續季度研究','在完整研究路徑選擇總經事件、檢視可能的影響機制、比較公司期間與基金曝險，最後保存筆記。TTM 需要四個連續季度；推算季度保留原始申報依據。具授權行情、估值及總報酬比較仍未提供。相關基金是主題研究入口，不是已核實的持股或買進推薦。']);
 export const articles=catalog.filter(a=>a.status==='published');
 export const pages=['','macro','study','markets','digital','lottery','search','coverage',...instrumentPaths,'research','news','pricing','library','tools','methodology','about',...articles.map(a=>'library/'+a.id),...publishedNews.map(a=>'news/'+a.id)];
 export function publicRoute(path){const m=path.match(/^\/(en|zh-hant)(?:\/(.*?))?\/?$/);return m&&pages.includes(m[2]||'')?{locale:m[1],page:m[2]||''}:path==='/'?{locale:'en',page:''}:null;}
