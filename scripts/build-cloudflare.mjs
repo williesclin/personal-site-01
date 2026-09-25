@@ -5,6 +5,3 @@ for(const config of ['vite.cloudflare-client.ts','vite.cloudflare-worker.ts','vi
 }
 
 const pages=spawnSync(process.execPath,['scripts/prerender-public.mjs'],{stdio:'inherit'});if(pages.status!==0)process.exit(pages.status??1);
-
-// Temporary branch acceptance harness; removed before production release.
-const qa=spawnSync(process.execPath,['scripts/build-phase2-fixture.mjs'],{stdio:'inherit',env:{...process.env,QP_FIXTURE_OUTPUT:'cloudflare-dist/client/_phase2-qa'}});if(qa.status!==0)process.exit(qa.status??1);

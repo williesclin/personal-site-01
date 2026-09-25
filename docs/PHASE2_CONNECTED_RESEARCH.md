@@ -36,3 +36,5 @@ The connected research workflow can be completed using available fundamental/exp
 ## Validation
 
 70 domain, worker API/security and bilingual prerender tests passed before preview QA. Tests cover four-quarter arithmetic, gaps, original filing inputs, null handling, FX direction, comparison guards, guest/member boundaries, journey preservation and legacy state compatibility. Both ingestion workflows ran successfully on the branch. Browser acceptance and final production checks are recorded in PR #23; synthetic mobile fixtures are never enabled in the production build. A prior real-account sign-in attempt failed; this release does not claim a successful live-account browser round trip.
+
+Browser preview checks passed: public NVDA quarter/TTM values and member-only missing states; six-symbol URL context; annual/quarter selection and baseline retention across EN/zh-Hant; notes preserved across language navigation; explicit browser draft save/restore. Synthetic 360px content viewport retained 360px scroll width while exercising member journey save. Production build excludes the temporary QA output. Final release checks continue in PR #23.

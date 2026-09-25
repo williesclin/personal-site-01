@@ -4,7 +4,7 @@ on:
     - cron: '45 */6 * * *'
   workflow_dispatch:
   push:
-    branches: [main, feat/phase2-connected-research]
+    branches: [main]
     paths:
       - 'scripts/sync-market-context.py'
       - '.github/workflows/market-context.yml'

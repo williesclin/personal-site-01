@@ -253,7 +253,7 @@ export const ETFS=[
   },
   {
     "symbol": "VTI",
-    "name": "Vanguard Total Stock Market ETF",
+    "name": "Vanguard Morningstar Total Stock Market ETF",
     "expense": 0.03,
     "benchmark": "See current issuer index methodology",
     "scope": {
