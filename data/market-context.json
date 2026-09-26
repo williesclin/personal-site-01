@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "attemptedAt": "2026-09-26T11:45:53.035280Z",
+  "attemptedAt": "2026-09-26T16:44:59.045809Z",
   "sources": {
     "ecb": {
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
       "status": "available",
-      "retrievedAt": "2026-09-26T11:45:53.035280Z",
-      "lastAttemptAt": "2026-09-26T11:45:53.035280Z",
+      "retrievedAt": "2026-09-26T16:44:59.045809Z",
+      "lastAttemptAt": "2026-09-26T16:44:59.045809Z",
       "rows": [
         {
           "date": "2026-06-29",
@@ -338,8 +338,8 @@
     "h10": {
       "url": "https://www.federalreserve.gov/releases/h10/current/",
       "status": "available",
-      "retrievedAt": "2026-09-26T11:45:53.035280Z",
-      "lastAttemptAt": "2026-09-26T11:45:53.035280Z",
+      "retrievedAt": "2026-09-26T16:44:59.045809Z",
+      "lastAttemptAt": "2026-09-26T16:44:59.045809Z",
       "rows": [
         {
           "date": "2026-09-14",
@@ -376,8 +376,8 @@
     "bls-news": {
       "url": "https://www.bls.gov/feed/bls_latest.rss",
       "status": "available",
-      "retrievedAt": "2026-09-26T11:45:53.035280Z",
-      "lastAttemptAt": "2026-09-26T11:45:53.035280Z",
+      "retrievedAt": "2026-09-26T16:44:59.045809Z",
+      "lastAttemptAt": "2026-09-26T16:44:59.045809Z",
       "rows": [
         {
           "id": "26b80e574d3dcb3e571d923a",
@@ -388,15 +388,15 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-09-26T11:45:53.035280Z"
+          "retrievedAt": "2026-09-26T16:44:59.045809Z"
         }
       ]
     },
     "fed-news": {
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
-      "status": "available",
+      "status": "stale",
       "retrievedAt": "2026-09-26T11:45:53.035280Z",
-      "lastAttemptAt": "2026-09-26T11:45:53.035280Z",
+      "lastAttemptAt": "2026-09-26T16:44:59.045809Z",
       "rows": [
         {
           "id": "421593941bcd210840f685fc",
@@ -618,7 +618,8 @@
           "association": "topic-only",
           "retrievedAt": "2026-09-26T11:45:53.035280Z"
         }
-      ]
+      ],
+      "error": "HTTPError"
     }
   }
 }
