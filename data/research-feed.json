@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-09-27T12:16:04.767Z",
+  "retrievedAt": "2026-09-27T17:06:57.976Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -1871,6 +1871,18 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-09-27T17:06:57.976Z",
+      "succeeded": 49,
+      "expected": 50,
+      "status": "partial",
+      "failures": [
+        {
+          "symbol": "NTAP",
+          "error": "The operation was aborted due to timeout"
+        }
+      ]
+    },
     {
       "at": "2026-09-27T12:16:04.767Z",
       "succeeded": 50,
