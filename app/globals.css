@@ -74,3 +74,16 @@
  .dashboard-template-picker{padding:16px}
  .template-option{min-height:0}
 }
+
+
+/* Lottery results hubs */
+.tw-latest-draw{margin-bottom:20px;border-top:4px solid #08795e}.tw-latest-draw .panel-head{align-items:flex-start}.latest-winning-numbers{padding:8px 0 10px}
+.us-lottery-results{display:flex;flex-direction:column;gap:20px}.us-lottery-results .page-heading{margin-bottom:0}
+.us-game-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.us-game-meta span{background:#f7faf9;border:1px solid #dfe8e5;border-radius:10px;padding:14px 16px;font-size:13px;color:#5e7377}.us-game-meta strong{display:block;color:#24464b;margin-bottom:5px;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.us-latest-draw{border-top:4px solid #08795e}.us-latest-draw .panel-head{align-items:flex-start}.us-latest-body{padding-top:2px}.us-number-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.us-number-row.compact{gap:6px}
+.us-main-ball{background:#f3f7f6}.us-special-ball.powerball{background:#8e2634;color:white;border-color:#8e2634}.us-special-ball.megamillions{background:#d1a02a;color:#173139;border-color:#d1a02a}
+.us-lottery-filters{display:grid;grid-template-columns:minmax(180px,1fr) repeat(2,minmax(145px,.65fr)) auto;gap:12px;align-items:end}.us-result-count{margin:18px 0 4px}
+.us-draw-list{display:flex;flex-direction:column}.us-draw-row{display:grid;grid-template-columns:125px minmax(300px,1fr) 130px;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid #edf0f0}.us-draw-row time{font-weight:600;color:#314d52}.us-draw-extra{font-size:12px;color:#74868b;text-align:right}
+.us-source-note{margin-bottom:10px}.us-source-note .actions{flex-wrap:wrap}
+@media(max-width:800px){.us-game-meta{grid-template-columns:1fr}.us-lottery-filters{grid-template-columns:1fr 1fr}.us-lottery-filters .field:first-child{grid-column:1 / -1}.us-draw-row{grid-template-columns:105px minmax(0,1fr)}.us-draw-extra{grid-column:2;text-align:left}}
+@media(max-width:560px){.us-lottery-filters{grid-template-columns:1fr}.us-lottery-filters .field:first-child{grid-column:auto}.us-draw-row{grid-template-columns:1fr;gap:8px}.us-draw-extra{grid-column:auto}.us-lottery-results .ball{width:34px;height:34px}.us-lottery-results .ball.small{width:29px;height:29px}}
