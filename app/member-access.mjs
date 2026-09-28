@@ -8,7 +8,7 @@ export async function readMemberAccess(response, now=Date.now()) {
  if(data.plan!=='free'&&(!Number.isFinite(Date.parse(data.periodEnd))||Date.parse(data.periodEnd)<=now))throw Error('Membership needs refresh');
  return {status:'ready',access:{...data,limits:PLANS[data.plan]}};
 }
-export const WORKSPACE_VIEWS=['dashboard','account','analysis','equities','news','sports','planner','records','lab','admin'];
+export const WORKSPACE_VIEWS=['dashboard','account','analysis','powerball','megamillions','equities','news','sports','planner','records','lab','admin'];
 export const AUTH_VIEWS=['login','signup','reset'];
 export const workspaceDestination=(hash,fallback='dashboard')=>WORKSPACE_VIEWS.includes(hash)?hash:fallback;
 export const isWorkspaceHash=hash=>[...WORKSPACE_VIEWS,...AUTH_VIEWS].includes(hash.replace(/^#/,''));
