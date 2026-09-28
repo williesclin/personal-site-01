@@ -9,7 +9,7 @@ test('A failed, malformed or expired membership read never grants or silently do
  assert.equal((await readMemberAccess(Response.json({plan:'free',billingEnabled:false}))).access.plan,'free');
 });
 test('Tool destinations survive authentication while content anchors stay on public pages',()=>{
- for(const h of ['analysis','equities','news','records','account']){assert.equal(workspaceDestination(h),h);assert.equal(isWorkspaceHash('#'+h),true)}
+ for(const h of ['analysis','powerball','megamillions','equities','news','records','account']){assert.equal(workspaceDestination(h),h);assert.equal(isWorkspaceHash('#'+h),true)}
  for(const h of ['content','lottery','events-heading','unknown']){assert.equal(isWorkspaceHash('#'+h),false);assert.equal(workspaceDestination(h),'dashboard')}
 });
 test('Sign out clears this browser after expiry or an upstream failure while retaining CSRF protection',async()=>{
