@@ -37,3 +37,40 @@
 .lottery-secondary-card{background:#fbfcfc}
 @media(max-width:1000px){.investment-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.investment-dashboard-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.investment-summary{grid-template-columns:1fr}.investment-lower{grid-template-columns:1fr}.investment-row{grid-template-columns:72px minmax(0,1fr);gap:10px}.investment-row .badge,.investment-row .text-link,.investment-unavailable{grid-column:2}.investment-heading .actions{width:100%;justify-content:flex-start}.investment-heading .actions .btn{flex:1}.investment-table{padding:0 18px 18px}.dashboard-empty{margin:0 18px 18px}}
+
+
+/* Dashboard templates v1 */
+.dashboard-template-picker{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:18px 20px;margin-bottom:20px;background:#f8fbfa;border:1px solid #dce7e3;border-radius:12px}
+.template-picker-copy{display:flex;flex-direction:column;gap:4px;min-width:210px}.template-picker-copy strong{font-size:15px}.template-picker-copy small{font-size:12px;color:#72858a}
+.template-options{display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));gap:10px;flex:1;max-width:830px}
+.template-option{appearance:none;border:1px solid #d7e2df;background:#fff;border-radius:10px;padding:12px 14px;text-align:left;min-height:68px;color:#344d52;transition:border-color .15s ease,box-shadow .15s ease,background .15s ease}
+.template-option strong,.template-option small{display:block}.template-option strong{font-size:13px;margin-bottom:5px}.template-option small{font-size:11px;line-height:1.35;color:#75878c}
+.template-option:hover{border-color:#8eb8aa}.template-option.active{border-color:#0d7b61;background:#eef7f3;box-shadow:inset 0 0 0 1px #0d7b61}
+.dashboard-layout-grid{display:grid;gap:24px;margin-bottom:24px;align-items:stretch}
+.overview-main-grid,.portfolio-main-grid{grid-template-columns:minmax(0,1.65fr) minmax(300px,.85fr)}
+.overview-secondary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.portfolio-secondary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.research-main-grid{grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr)}
+.research-secondary-grid{grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr)}
+.research-secondary-grid .dashboard-card-investments{grid-row:span 2}
+.research-secondary-grid .dashboard-card-portfolio{grid-column:2}
+.research-secondary-grid .dashboard-card-lottery{grid-column:1 / -1}
+.template-portfolio .dashboard-card-investments{border-top:4px solid #08795e}
+.template-portfolio .dashboard-card-portfolio{background:#f7fbf9}
+.template-research .dashboard-card-saved{border-top:4px solid #08795e}
+.template-research .dashboard-card-data{background:#f7fbf9}
+.template-research .investment-summary .stat-card.highlight{background:#173f48;border-color:#173f48}
+.investment-dashboard .panel{height:100%}
+.investment-dashboard .panel-body>h2{margin-top:8px}
+@media(max-width:1000px){
+ .dashboard-template-picker{align-items:flex-start;flex-direction:column}
+ .template-options{max-width:none;width:100%}
+ .overview-main-grid,.portfolio-main-grid,.research-main-grid,.research-secondary-grid{grid-template-columns:1fr}
+ .research-secondary-grid .dashboard-card-investments,.research-secondary-grid .dashboard-card-portfolio,.research-secondary-grid .dashboard-card-lottery{grid-column:auto;grid-row:auto}
+}
+@media(max-width:720px){
+ .template-options{grid-template-columns:1fr}
+ .overview-secondary-grid,.portfolio-secondary-grid{grid-template-columns:1fr}
+ .dashboard-template-picker{padding:16px}
+ .template-option{min-height:0}
+}
