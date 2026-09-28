@@ -87,3 +87,16 @@
 .us-source-note{margin-bottom:10px}.us-source-note .actions{flex-wrap:wrap}
 @media(max-width:800px){.us-game-meta{grid-template-columns:1fr}.us-lottery-filters{grid-template-columns:1fr 1fr}.us-lottery-filters .field:first-child{grid-column:1 / -1}.us-draw-row{grid-template-columns:105px minmax(0,1fr)}.us-draw-extra{grid-column:2;text-align:left}}
 @media(max-width:560px){.us-lottery-filters{grid-template-columns:1fr}.us-lottery-filters .field:first-child{grid-column:auto}.us-draw-row{grid-template-columns:1fr;gap:8px}.us-draw-extra{grid-column:auto}.us-lottery-results .ball{width:34px;height:34px}.us-lottery-results .ball.small{width:29px;height:29px}}
+
+
+/* Compact accordion sidebar groups */
+.side-group{margin-top:4px}
+.side-group-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;background:transparent;border:0;text-align:left;cursor:pointer;min-height:40px;transition:color .15s ease,background .15s ease}
+.side-group-toggle:hover{color:#d5e5e5;background:#17383c}
+.side-group-toggle svg{width:16px;height:16px;transition:transform .18s ease;color:#78989a;flex-shrink:0}
+.side-group.open .side-group-toggle svg{transform:rotate(90deg);color:#9fc1bc}
+.side-group.open .side-group-toggle{color:#a9c3c1}
+.side-group-items{padding-bottom:8px}
+.side-group-items .side-item{animation:sidebar-group-in .12s ease-out}
+@keyframes sidebar-group-in{from{opacity:.45;transform:translateY(-3px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.side-group-toggle svg,.side-group-items .side-item{transition:none;animation:none}}
