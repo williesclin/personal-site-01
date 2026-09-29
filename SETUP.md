@@ -67,3 +67,16 @@
 `node --experimental-strip-types tests/domain.test.mjs`；`node tests/security.test.mjs`（先 build:cloudflare）。
 
 WebMCP 導覽工具已採功能偵測註冊；本次瀏覽器未提供 modelContext，因此未驗證該工具。一般點選操作不受影響。
+
+
+## Action Intelligence / AI Model Studio (2026-09-29)
+
+- 會員投資 Dashboard 已改為 Action-first：登入後先看到「今天的決策佇列」，再進入財報、ETF、新聞與證據工具。
+- Action 狀態採研究語意（Add review / Hold review / Trim review / Watch / No released action），不直接下交易指令。
+- 模型層已預留 Fundamental、Valuation、Momentum、Event、Macro、Risk 六個維度；每個模型都有 enabled、weight、draft/shadow/validated 狀態。
+- 管理員可在 AI Model Studio 修改模型權重、驗證狀態、最低模型數、最低信心門檻與 Shadow/Released 模式。每次儲存建立新版本，不覆寫舊版本。
+- 發布採 fail-closed：Released mode 只有在最低數量的 enabled models 全部標記 validated 後才允許；Action Review 也只有 validated model output 會進入 consensus。
+- RESEARCH Supabase 已建立 action_model_configs、action_outcomes、action_model_evaluations。這三張表只允許 service role，保留未來的 7/30/90/180 天 outcome tracking、模型比較與動態權重學習。
+- 目前仍維持 Shadow mode。Fundamental scaffold 可由已驗證財報計算研究訊號；Valuation、Momentum、Event、Macro、Risk 的正式模型輸出尚未接線，因此系統刻意顯示 No released action，而不是捏造買賣訊號。
+- 真正的「每天學習」需先接入可回溯、含 corporate actions/total return 的行情資料，以及明確的 benchmark / transaction-cost 規則。接入前不得用未驗證結果自動調權重或宣稱模型優化。
+- 後續學習迴圈固定為：Signal → Shadow Action → Outcome → 7/30/90/180d Evaluation → Model comparison → versioned weight update → holdout verification → release gate。任何新版本皆可回到先前版本，不直接覆寫正式版本。
