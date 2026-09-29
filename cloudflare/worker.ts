@@ -36,7 +36,6 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   try{const {u,token,profile}=await user(e,r);return json({configured:true,user:{email:u.email,role:profile.role},workspace:await loadWorkspace(e,token,u.id,profile)});}catch(err){if(err instanceof HttpError&&(err.status===401||err.status===403))return json({configured:true,user:null},200,{'Set-Cookie':cookie('',0)});throw err;}
  }
  if(path==='data-status'&&r.method==='GET')return json({quarterly:{retrievedAt:quarterly.retrievedAt,companies:quarterly.companies.length,periods:quarterly.companies.reduce((n,c)=>n+c.quarters.length,0)},equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
- if(path.startsWith('us-lottery/')&&r.method==='GET'){const datasets:Record<string,unknown>={powerball:usPowerball,megamillions:usMegaMillions};const d=datasets[path.slice(11)];if(!d)throw new HttpError(404,'找不到此美國彩種。');return json(d);}
  if(path==='quarterly-preview'&&r.method==='GET')return json({...quarterly,preview:true,companies:quarterly.companies.filter(c=>c.symbol==='NVDA').map(c=>({...c,quarters:c.quarters.slice(0,4)}))});
  if(path==='research-preview'&&r.method==='GET')return json({...equities,preview:true,companies:equities.companies.slice(0,1).map(c=>({...c,years:c.years.slice(0,3)}))});
  if(path==='checkout'&&r.method==='POST')throw new HttpError(503,'Subscriptions are not open yet / 訂閱尚未開放，不會扣款。');
@@ -57,6 +56,7 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  }
  const {u,token,profile}=await user(e,r);
  if(path==='membership'&&r.method==='GET')return json(await membership(e,token,u.id));
+ if(path.startsWith('us-lottery/')&&r.method==='GET'){const datasets:Record<string,unknown>={powerball:usPowerball,megamillions:usMegaMillions};const d=datasets[path.slice(11)];if(!d)throw new HttpError(404,'找不到此美國彩種。');return json(d);}
  if(path.startsWith('lottery/')&&r.method==='GET'){const datasets:Record<string,unknown>={lotto649:lotto,superlotto638:power,daily539:daily};const d=datasets[path.slice(8)];if(!d)throw new HttpError(404,'找不到此彩種。');return json(d);}
  if(['quarterly-data','research-data','research-state','research-evidence','news-events','pro-tools'].includes(path)){
   const access=await membership(e,token,u.id);
