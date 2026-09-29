@@ -20,3 +20,14 @@ test('Sign out clears this browser after expiry or an upstream failure while ret
  assert.match((await handleApi(req(),{})).headers.get('set-cookie'),/Max-Age=0/);
  }finally{globalThis.fetch=orig}
 });
+test('U.S. lottery history requires a verified sign-in but no paid entitlement',async()=>{
+ const original=globalThis.fetch,env={SUPABASE_URL:'https://example.supabase.co',SUPABASE_ANON_KEY:'fake',SITE_URL:'https://quantpathlabs.com'};
+ const request=(cookie='')=>new Request('https://quantpathlabs.com/api/us-lottery/powerball',{headers:cookie?{Cookie:cookie}:{}});
+ try{
+  assert.equal((await handleApi(request(),env)).status,401);
+  globalThis.fetch=async input=>{const url=String(input);if(url.endsWith('/auth/v1/user'))return Response.json({id:'aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa',email:'member@example.com',email_confirmed_at:'2026-01-01'});if(url.includes('/profiles?'))return Response.json([{role:'member',monthly_budget:0}]);throw Error('Unexpected request');};
+  const response=await handleApi(request('__Host-qpl_session=valid'),env);assert.equal(response.status,200);const data=await response.json();assert.equal(data.game,'powerball');assert.ok(data.count>0);
+  globalThis.fetch=async input=>String(input).endsWith('/auth/v1/user')?Response.json({}, {status:401}):Response.json([]);
+  assert.equal((await handleApi(request('__Host-qpl_session=expired'),env)).status,401);
+ }finally{globalThis.fetch=original}
+});
