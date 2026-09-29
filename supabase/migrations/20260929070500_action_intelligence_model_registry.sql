@@ -52,7 +52,7 @@ values (
    "updatedAt":"2026-09-29T00:00:00Z",
    "note":"Initial action-intelligence architecture. Shadow only until multi-model evidence and outcome validation are connected.",
    "thresholds":{"minimumModels":4,"minimumConfidence":70,"addReview":72,"trimReview":38},
-   "evaluation":{"horizonsDays":[7,30,90,180],"benchmark":"asset-appropriate","transactionCosts":false},
+   "evaluation":{"horizonsDays":[7,30,90,180],"benchmark":"VTI","benchmarkSymbol":"VTI","transactionCosts":false},
    "models":[
      {"id":"fundamental","weight":22,"enabled":true,"status":"shadow"},
      {"id":"valuation","weight":16,"enabled":true,"status":"draft"},
