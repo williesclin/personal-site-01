@@ -10,6 +10,7 @@ import usMegaMillions from '../data/us-megamillions.json';
 import researchFeed from '../data/research-feed.json';
 import researchReadiness from '../data/research-model-readiness.json';
 import {researchPublicStatus} from '../app/research-public-status.mjs';
+import {buildActionReview,DEFAULT_ACTION_CONFIG,normalizeActionConfig} from '../app/action-engine.mjs';
 import {GAMES,validateReport,emptyWorkspace,type Game,type Workspace,type Plan,type RecordItem,type Article} from '../app/domain';
 type Env={ASSETS:{fetch:(r:Request)=>Promise<Response>};SUPABASE_URL?:string;SUPABASE_ANON_KEY?:string;LAB_SUPABASE_URL?:string;LAB_SUPABASE_SERVICE_KEY?:string;SITE_URL?:string};
 type User={id:string;email:string;email_confirmed_at?:string};
@@ -27,6 +28,7 @@ function getToken(r:Request){const val=r.headers.get('cookie')?.split(';').map(s
 async function user(e:Env,r:Request){const token=getToken(r);if(!token)throw new HttpError(401,'請先登入。');const u=await request(e,'/auth/v1/user',token) as User;if(!u.id||!u.email_confirmed_at)throw new HttpError(403,'請先完成 Email 驗證。');const profiles=await request(e,`/rest/v1/profiles?id=eq.${u.id}&select=id,email,role,monthly_budget`,token) as {role:string;monthly_budget:number}[];if(!profiles[0])throw new HttpError(403,'會員資料尚未建立。');return {u,token,profile:profiles[0]};}
 async function loadWorkspace(e:Env,token:string,uid:string,profile:{role:string;monthly_budget:number}):Promise<Workspace>{const [plans,records,articles]=await Promise.all([request(e,`/rest/v1/plans?user_id=eq.${uid}&select=payload&order=created_at.desc`,token),request(e,`/rest/v1/records?user_id=eq.${uid}&select=payload&order=created_at.desc`,token),request(e,'/rest/v1/articles?select=payload',token)]) as {payload:never}[][];let lab={runs:[],audit:[],activeRun:null,previousRun:null};if(profile.role==='admin'&&e.LAB_SUPABASE_URL&&e.LAB_SUPABASE_SERVICE_KEY){const result=await request(e,'/rest/v1/lab_state?id=eq.1&select=state',undefined,'GET',undefined,true) as {state:typeof lab}[];lab=result[0]?.state||lab;}return {...emptyWorkspace,plans:plans.map(p=>p.payload),records:records.map(p=>p.payload),articles:articles.map(p=>p.payload),monthlyBudget:profile.monthly_budget,...lab};}
 async function body(r:Request){if(Number(r.headers.get('content-length')||0)>1048576)throw new HttpError(413,'內容超過 1 MB。');const raw=await r.text();if(raw.length>1048576)throw new HttpError(413,'內容超過 1 MB。');try{return JSON.parse(raw) as Record<string,unknown>}catch{throw new HttpError(400,'無效的 JSON。')}}
+async function actionConfig(e:Env){if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)return DEFAULT_ACTION_CONFIG;try{const rows=await request(e,'/rest/v1/action_model_configs?select=config&order=version.desc&limit=1',undefined,'GET',undefined,true);return normalizeActionConfig(rows[0]?.config||DEFAULT_ACTION_CONFIG);}catch{return DEFAULT_ACTION_CONFIG;}}
 export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new URL(r.url),path=url.pathname.slice(5);try{
  if(r.method!=='GET'&&r.method!=='POST')throw new HttpError(405,'不支援此方法。');
  if(r.method==='POST'&&r.headers.get('Origin')!==url.origin)throw new HttpError(403,'不允許跨來源操作。');
@@ -56,6 +58,24 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  }
  const {u,token,profile}=await user(e,r);
  if(path==='membership'&&r.method==='GET')return json(await membership(e,token,u.id));
+ if(path==='action-review'&&r.method==='GET'){
+  const access=await membership(e,token,u.id);if(access.plan==='free')throw new HttpError(403,'Research membership required / 此功能需 Research 會員。');
+  const rows=await request(e,`/rest/v1/research_state?user_id=eq.${u.id}&select=payload`,token);
+  const state=rows[0]?.payload||{watchlist:[],saved:[]},config=await actionConfig(e);
+  return json(buildActionReview({watchlist:state.watchlist||[],companies:equities.companies,config,retrievedAt:equities.retrievedAt}));
+ }
+ if(path==='action-models'){
+  if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
+  if(r.method==='GET')return json({config:await actionConfig(e)});
+  if(r.method==='POST'){
+   if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)throw new HttpError(503,'AI 模型研究資料庫尚未連接。');
+   let config;try{config=normalizeActionConfig(await body(r));}catch(err){throw new HttpError(400,err instanceof Error?err.message:'Invalid model configuration');}
+   const current=await request(e,'/rest/v1/action_model_configs?select=version&order=version.desc&limit=1',undefined,'GET',undefined,true);
+   const nextVersion=Math.max(Number(current[0]?.version)||0,Number(config.version)||0)+1;config={...config,version:nextVersion,updatedAt:new Date().toISOString()};
+   await request(e,'/rest/v1/action_model_configs',undefined,'POST',{version:nextVersion,mode:config.mode,config,created_by:u.id},true);
+   return json({config});
+  }
+ }
  if(path.startsWith('us-lottery/')&&r.method==='GET'){const datasets:Record<string,unknown>={powerball:usPowerball,megamillions:usMegaMillions};const d=datasets[path.slice(11)];if(!d)throw new HttpError(404,'找不到此美國彩種。');return json(d);}
  if(path.startsWith('lottery/')&&r.method==='GET'){const datasets:Record<string,unknown>={lotto649:lotto,superlotto638:power,daily539:daily};const d=datasets[path.slice(8)];if(!d)throw new HttpError(404,'找不到此彩種。');return json(d);}
  if(['quarterly-data','research-data','research-state','research-evidence','news-events','pro-tools'].includes(path)){
