@@ -22,7 +22,7 @@ export function ActionDecisionCenter({locale,go}:{locale:string;go:(v:any)=>void
  async function save(){
   if(!config||saving)return;setSaving(true);setNotice('');
   try{
-   const next=normalizeActionConfig({...config,version:(config.version||1)+1,updatedAt:new Date().toISOString()});
+   const next=normalizeActionConfig({...config,updatedAt:new Date().toISOString()});
    const r=await fetch('/api/action-models',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(next)});
    const d=await r.json();if(!r.ok)throw Error(d.error||'Save failed');setConfig(d.config);setNotice(t('Model configuration saved. Action review will use the new version on the next refresh.','模型設定已儲存；下一次重新整理 Action Review 時會使用新版本。'));setAttempt(x=>x+1);
   }catch(e:any){setNotice(e.message||t('Could not save model configuration.','模型設定無法儲存。'))}finally{setSaving(false)}
