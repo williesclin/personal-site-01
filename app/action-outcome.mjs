@@ -30,8 +30,9 @@ export function evaluateSnapshot(snapshot,marketRows,today){
  const decisionDate=snapshot.decision_date;
  if(!validDate(decisionDate)||!validDate(today))throw new Error('Invalid evaluation date');
  const horizons=(snapshot.evidence?.evaluation?.horizonsDays||[7,30,90,180]).filter(x=>Number.isInteger(x)&&x>0);
- const rows=(marketRows||[]).filter(r=>r&&r.symbol===snapshot.symbol&&validDate(r.session_date)&&Number(r.adjusted_close)>0&&r.quality_status==='verified'&&r.rights_status==='approved').sort((a,b)=>a.session_date.localeCompare(b.session_date));
- const entry=rows.find(r=>r.session_date>decisionDate);
+ const allRows=(marketRows||[]).filter(r=>r&&validDate(r.session_date)&&Number(r.adjusted_close)>0&&r.quality_status==='verified'&&r.rights_status==='approved').sort((a,b)=>a.session_date.localeCompare(b.session_date));
+ const rows=allRows.filter(r=>r.symbol===snapshot.symbol),benchmarkSymbol=snapshot.evidence?.evaluation?.benchmarkSymbol||null,benchmarkRows=benchmarkSymbol?allRows.filter(r=>r.symbol===benchmarkSymbol):[];
+ const entry=rows.find(r=>r.session_date>decisionDate),benchmarkEntry=benchmarkRows.find(r=>r.session_date>decisionDate);
  const existing=snapshot.outcome?.horizons&&typeof snapshot.outcome.horizons==='object'?snapshot.outcome.horizons:{};
  const outcome={...(snapshot.outcome||{}),method:'next-session-adjusted-close-v1',horizons:{...existing}};
  let evaluated=0;
@@ -43,7 +44,9 @@ export function evaluateSnapshot(snapshot,marketRows,today){
    const end=rows.find(r=>r.session_date>=targetDate);
    if(!end)continue;
    const rawReturn=Number(end.adjusted_close)/Number(entry.adjusted_close)-1;
-   outcome.horizons[key]={targetDate,endDate:end.session_date,endAdjustedClose:Number(end.adjusted_close),return:Number(rawReturn.toFixed(8)),benchmarkReturn:null,excessReturn:null};
+   const benchmarkEnd=benchmarkEntry?benchmarkRows.find(r=>r.session_date>=targetDate):null,benchmarkReturn=benchmarkEntry&&benchmarkEnd?Number(benchmarkEnd.adjusted_close)/Number(benchmarkEntry.adjusted_close)-1:null;
+   const excessReturn=benchmarkReturn==null?null:rawReturn-benchmarkReturn;
+   outcome.horizons[key]={targetDate,endDate:end.session_date,endAdjustedClose:Number(end.adjusted_close),return:Number(rawReturn.toFixed(8)),benchmarkSymbol,benchmarkEntryDate:benchmarkEntry?.session_date||null,benchmarkEndDate:benchmarkEnd?.session_date||null,benchmarkReturn:benchmarkReturn==null?null:Number(benchmarkReturn.toFixed(8)),excessReturn:excessReturn==null?null:Number(excessReturn.toFixed(8))};
    evaluated++;
   }
  }
@@ -64,14 +67,14 @@ export function summarizeEvaluations(snapshots,modelIds,horizons){
  for(const modelId of modelIds)for(const horizon of horizons){
   const samples=[],dates=new Set(),symbols=new Set();
   for(const row of snapshots||[]){
-   const result=row.outcome?.horizons?.[String(horizon)];if(!result||!Number.isFinite(Number(result.return)))continue;
+   const result=row.outcome?.horizons?.[String(horizon)];if(!result||!Number.isFinite(Number(result.return))||!Number.isFinite(Number(result.excessReturn)))continue;
    const signal=(row.evidence?.signals||[]).find(s=>s.id===modelId&&s.available&&Number.isFinite(Number(s.score))&&['shadow','validated'].includes(s.status));
    if(!signal)continue;const direction=signalDirection(signal.score);if(!direction)continue;
-   const directional=Number(result.return)*direction;samples.push(directional);dates.add(row.decision_date);symbols.add(row.symbol);
+   const directional=Number(result.excessReturn)*direction;samples.push(directional);dates.add(row.decision_date);symbols.add(row.symbol);
   }
   if(!samples.length)continue;
   const hit=samples.filter(v=>v>0).length/samples.length,avg=samples.reduce((a,b)=>a+b,0)/samples.length;
-  out.push({modelId,horizonDays:horizon,sampleCount:samples.length,hitRate:Number(hit.toFixed(6)),avgDirectionalReturn:Number(avg.toFixed(8)),distinctDates:dates.size,distinctSymbols:symbols.size,benchmarkReady:false});
+  out.push({modelId,horizonDays:horizon,sampleCount:samples.length,hitRate:Number(hit.toFixed(6)),avgExcessReturn:Number(avg.toFixed(8)),distinctDates:dates.size,distinctSymbols:symbols.size,benchmarkReady:true});
  }
  return out;
 }
