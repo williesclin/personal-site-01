@@ -71,7 +71,7 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
    if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)throw new HttpError(503,'AI 模型研究資料庫尚未連接。');
    let config;try{config=normalizeActionConfig(await body(r));}catch(err){throw new HttpError(400,err instanceof Error?err.message:'Invalid model configuration');}
    const current=await request(e,'/rest/v1/action_model_configs?select=version&order=version.desc&limit=1',undefined,'GET',undefined,true);
-   const nextVersion=Math.max(Number(current[0]?.version)||0,Number(config.version)||0)+1;config={...config,version:nextVersion,updatedAt:new Date().toISOString()};
+   const nextVersion=(Number(current[0]?.version)||0)+1;config={...config,version:nextVersion,updatedAt:new Date().toISOString()};
    await request(e,'/rest/v1/action_model_configs',undefined,'POST',{version:nextVersion,mode:config.mode,config,created_by:u.id},true);
    return json({config});
   }
