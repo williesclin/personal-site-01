@@ -58,8 +58,12 @@ export async function runDailyActionLearning(e:Env,now=new Date()){
  }
  const pending=await request(e,`/rest/v1/action_outcomes?select=id,symbol,decision_date,generated_at,action,score,confidence,config_version,evidence,outcome,evaluation_complete,next_evaluation_date&evaluation_complete=eq.false&decision_date=lte.${runDate}&order=decision_date.asc&limit=1000`,undefined,'GET',undefined,true);
  for(const snapshot of pending){
-  const market=await request(e,`/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,quality_status,rights_status&symbol=eq.${encodeURIComponent(snapshot.symbol)}&quality_status=eq.verified&rights_status=eq.approved&session_date=gt.${snapshot.decision_date}&order=session_date.asc&limit=500`,undefined,'GET',undefined,true);
-  const result=evaluateSnapshot(snapshot,market,runDate);
+  const benchmarkSymbol=snapshot.evidence?.evaluation?.benchmarkSymbol||'VTI';
+  const [assetMarket,benchmarkMarket]=await Promise.all([
+   request(e,`/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,quality_status,rights_status&symbol=eq.${encodeURIComponent(snapshot.symbol)}&quality_status=eq.verified&rights_status=eq.approved&session_date=gt.${snapshot.decision_date}&order=session_date.asc&limit=500`,undefined,'GET',undefined,true),
+   snapshot.symbol===benchmarkSymbol?Promise.resolve([]):request(e,`/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,quality_status,rights_status&symbol=eq.${encodeURIComponent(benchmarkSymbol)}&quality_status=eq.verified&rights_status=eq.approved&session_date=gt.${snapshot.decision_date}&order=session_date.asc&limit=500`,undefined,'GET',undefined,true)
+  ]);
+  const result=evaluateSnapshot(snapshot,[...assetMarket,...benchmarkMarket],runDate);
   if(result.evaluated||result.complete){
    await request(e,`/rest/v1/action_outcomes?id=eq.${snapshot.id}`,undefined,'PATCH',{outcome:result.outcome,evaluated_at:new Date().toISOString(),evaluation_complete:result.complete,next_evaluation_date:result.nextEvaluationDate},true);
    evaluatedCount+=result.evaluated;
@@ -69,7 +73,7 @@ export async function runDailyActionLearning(e:Env,now=new Date()){
  const modelIds=config.models.filter((m:any)=>m.enabled).map((m:any)=>m.id),summaries=summarizeEvaluations(evaluated,modelIds,config.evaluation.horizonsDays);
  for(const s of summaries){
   const existing=await request(e,`/rest/v1/action_model_evaluations?select=id&model_id=eq.${encodeURIComponent(s.modelId)}&config_version=eq.${config.version}&horizon_days=eq.${s.horizonDays}&limit=1`,undefined,'GET',undefined,true);
-  const payload={model_id:s.modelId,config_version:config.version,horizon_days:s.horizonDays,sample_count:s.sampleCount,hit_rate:s.hitRate,avg_excess_return:null,max_drawdown:null,details:s,evaluated_at:new Date().toISOString()};
+  const payload={model_id:s.modelId,config_version:config.version,horizon_days:s.horizonDays,sample_count:s.sampleCount,hit_rate:s.hitRate,avg_excess_return:s.avgExcessReturn,max_drawdown:null,details:s,evaluated_at:new Date().toISOString()};
   if(existing[0]?.id)await request(e,`/rest/v1/action_model_evaluations?id=eq.${existing[0].id}`,undefined,'PATCH',payload,true);else await request(e,'/rest/v1/action_model_evaluations',undefined,'POST',payload,true);
  }
  const gate=candidateReadiness(summaries,{minimumModels:config.thresholds.minimumModels,horizonDays:90});
