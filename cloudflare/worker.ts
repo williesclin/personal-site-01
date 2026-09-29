@@ -1,6 +1,7 @@
 import quarterly from '../data/quarterly.json';
 import {newsQuery,safeSECLink} from '../app/news-engine.mjs';
 import {membershipView,validateResearchState} from '../app/membership.mjs';
+import {ETFS} from '../app/etf-catalog.mjs';
 import equities from '../data/equities.json';
 import lotto from '../data/lotto649.json';
 import power from '../data/superlotto638.json';
@@ -123,6 +124,16 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   const rows=await request(e,`/rest/v1/research_state?user_id=eq.${u.id}&select=payload`,token);
   const state=rows[0]?.payload||{watchlist:[],saved:[]},config=await actionConfig(e),review=buildActionReview({watchlist:state.watchlist||[],companies:equities.companies,config,retrievedAt:equities.retrievedAt});
   return json({...review,outcomeTracking:await actionLearningStatus(e)});
+ }
+ if(path==='research-benchmark'&&r.method==='GET'){
+  const access=await membership(e,token,u.id);if(access.plan==='free')throw new HttpError(403,'Research membership required / 此功能需 Research 會員。');
+  const symbols=(url.searchParams.get('symbols')||'').split(',').map(s=>s.trim().toUpperCase()).filter(Boolean),allowed=new Set([...equities.companies.map((x:any)=>x.symbol),...ETFS.map(x=>x.symbol)]);
+  if(symbols.length<1||symbols.length>9||new Set(symbols).size!==symbols.length||symbols.some(s=>!allowed.has(s)))throw new HttpError(400,'Invalid benchmark comparison scope / 大盤比較範圍無效。');
+  if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)return json({connected:false,rows:[],reason:'approved_market_history_not_connected'});
+  try{
+   const rows=await request(e,'/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,source_url,retrieved_at,quality_status,rights_status&quality_status=eq.verified&rights_status=eq.approved&order=session_date.asc&limit=5000',undefined,'GET',undefined,true);
+   return json({connected:true,rows:rows.filter((x:any)=>symbols.includes(x.symbol)),symbols});
+  }catch{return json({connected:false,rows:[],reason:'approved_market_history_unavailable'});}
  }
  if(path==='action-learning-status'&&r.method==='GET'){
   if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
