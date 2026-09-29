@@ -11,6 +11,7 @@ import researchFeed from '../data/research-feed.json';
 import researchReadiness from '../data/research-model-readiness.json';
 import {researchPublicStatus} from '../app/research-public-status.mjs';
 import {buildActionReview,DEFAULT_ACTION_CONFIG,normalizeActionConfig} from '../app/action-engine.mjs';
+import {validateMarketImport,evaluateSnapshot,summarizeEvaluations,candidateReadiness} from '../app/action-outcome.mjs';
 import {GAMES,validateReport,emptyWorkspace,type Game,type Workspace,type Plan,type RecordItem,type Article} from '../app/domain';
 type Env={ASSETS:{fetch:(r:Request)=>Promise<Response>};SUPABASE_URL?:string;SUPABASE_ANON_KEY?:string;LAB_SUPABASE_URL?:string;LAB_SUPABASE_SERVICE_KEY?:string;SITE_URL?:string};
 type User={id:string;email:string;email_confirmed_at?:string};
@@ -29,6 +30,61 @@ async function user(e:Env,r:Request){const token=getToken(r);if(!token)throw new
 async function loadWorkspace(e:Env,token:string,uid:string,profile:{role:string;monthly_budget:number}):Promise<Workspace>{const [plans,records,articles]=await Promise.all([request(e,`/rest/v1/plans?user_id=eq.${uid}&select=payload&order=created_at.desc`,token),request(e,`/rest/v1/records?user_id=eq.${uid}&select=payload&order=created_at.desc`,token),request(e,'/rest/v1/articles?select=payload',token)]) as {payload:never}[][];let lab={runs:[],audit:[],activeRun:null,previousRun:null};if(profile.role==='admin'&&e.LAB_SUPABASE_URL&&e.LAB_SUPABASE_SERVICE_KEY){const result=await request(e,'/rest/v1/lab_state?id=eq.1&select=state',undefined,'GET',undefined,true) as {state:typeof lab}[];lab=result[0]?.state||lab;}return {...emptyWorkspace,plans:plans.map(p=>p.payload),records:records.map(p=>p.payload),articles:articles.map(p=>p.payload),monthlyBudget:profile.monthly_budget,...lab};}
 async function body(r:Request){if(Number(r.headers.get('content-length')||0)>1048576)throw new HttpError(413,'內容超過 1 MB。');const raw=await r.text();if(raw.length>1048576)throw new HttpError(413,'內容超過 1 MB。');try{return JSON.parse(raw) as Record<string,unknown>}catch{throw new HttpError(400,'無效的 JSON。')}}
 async function actionConfig(e:Env){if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)return DEFAULT_ACTION_CONFIG;try{const rows=await request(e,'/rest/v1/action_model_configs?select=config&order=version.desc&limit=1',undefined,'GET',undefined,true);return normalizeActionConfig(rows[0]?.config||DEFAULT_ACTION_CONFIG);}catch{return DEFAULT_ACTION_CONFIG;}}
+function utcDate(d=new Date()){return d.toISOString().slice(0,10)}
+async function actionLearningStatus(e:Env){
+ if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)return {ready:false,status:'blocked',reason:'Research model database is not connected.',marketObservations:0,approvedMarketObservations:0,snapshots:0,evaluatedSnapshots:0,lastRun:null,candidates:0};
+ try{
+  const [market,approved,snapshots,evaluated,runs,candidates]=await Promise.all([
+   request(e,'/rest/v1/action_market_observations?select=symbol&limit=5000',undefined,'GET',undefined,true),
+   request(e,'/rest/v1/action_market_observations?select=symbol&quality_status=eq.verified&rights_status=eq.approved&limit=5000',undefined,'GET',undefined,true),
+   request(e,'/rest/v1/action_outcomes?select=id&limit=5000',undefined,'GET',undefined,true),
+   request(e,'/rest/v1/action_outcomes?select=id&evaluation_complete=eq.true&limit=5000',undefined,'GET',undefined,true),
+   request(e,'/rest/v1/action_daily_runs?select=run_date,run_at,snapshot_count,evaluated_count,candidate_count,status,details&order=run_date.desc&limit=1',undefined,'GET',undefined,true),
+   request(e,'/rest/v1/action_model_candidates?select=id&status=eq.pending&limit=5000',undefined,'GET',undefined,true)
+  ]);
+  const ready=approved.length>0&&snapshots.length>0;
+  return {ready,status:ready?'learning':'blocked',reason:ready?'Verified and rights-approved market observations are available for outcome evaluation.':'Outcome learning remains blocked until approved market observations and shadow snapshots are both available.',marketObservations:market.length,approvedMarketObservations:approved.length,snapshots:snapshots.length,evaluatedSnapshots:evaluated.length,lastRun:runs[0]||null,candidates:candidates.length};
+ }catch{return {ready:false,status:'blocked',reason:'Learning status could not be verified.',marketObservations:0,approvedMarketObservations:0,snapshots:0,evaluatedSnapshots:0,lastRun:null,candidates:0};}
+}
+export async function runDailyActionLearning(e:Env,now=new Date()){
+ if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)throw new HttpError(503,'AI model research database is not connected.');
+ const runDate=utcDate(now),config=await actionConfig(e),review=buildActionReview({watchlist:equities.companies.map((x:any)=>x.symbol),companies:equities.companies,config,retrievedAt:equities.retrievedAt});
+ let snapshotCount=0,evaluatedCount=0,candidateCount=0;
+ for(const row of review.rows){
+  const evidence={signals:row.signals,evaluation:config.evaluation,thresholds:config.thresholds,mode:config.mode,retrievedAt:equities.retrievedAt,source:'QuantPath verified financial snapshot'};
+  await request(e,'/rest/v1/action_outcomes?on_conflict=symbol,decision_date,config_version',undefined,'POST',{
+   symbol:row.symbol,generated_at:review.generatedAt,decision_date:runDate,action:row.action,score:row.score,confidence:row.confidence,config_version:config.version,evidence,outcome:{},evaluation_complete:false,next_evaluation_date:runDate
+  },true);snapshotCount++;
+ }
+ const pending=await request(e,`/rest/v1/action_outcomes?select=id,symbol,decision_date,generated_at,action,score,confidence,config_version,evidence,outcome,evaluation_complete,next_evaluation_date&evaluation_complete=eq.false&decision_date=lte.${runDate}&order=decision_date.asc&limit=1000`,undefined,'GET',undefined,true);
+ for(const snapshot of pending){
+  const market=await request(e,`/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,quality_status,rights_status&symbol=eq.${encodeURIComponent(snapshot.symbol)}&quality_status=eq.verified&rights_status=eq.approved&session_date=gt.${snapshot.decision_date}&order=session_date.asc&limit=500`,undefined,'GET',undefined,true);
+  const result=evaluateSnapshot(snapshot,market,runDate);
+  if(result.evaluated||result.complete){
+   await request(e,`/rest/v1/action_outcomes?id=eq.${snapshot.id}`,undefined,'PATCH',{outcome:result.outcome,evaluated_at:new Date().toISOString(),evaluation_complete:result.complete,next_evaluation_date:result.nextEvaluationDate},true);
+   evaluatedCount+=result.evaluated;
+  }
+ }
+ const evaluated=await request(e,'/rest/v1/action_outcomes?select=symbol,decision_date,config_version,evidence,outcome&evaluated_at=not.is.null&limit=5000',undefined,'GET',undefined,true);
+ const modelIds=config.models.filter((m:any)=>m.enabled).map((m:any)=>m.id),summaries=summarizeEvaluations(evaluated,modelIds,config.evaluation.horizonsDays);
+ for(const s of summaries){
+  const existing=await request(e,`/rest/v1/action_model_evaluations?select=id&model_id=eq.${encodeURIComponent(s.modelId)}&config_version=eq.${config.version}&horizon_days=eq.${s.horizonDays}&limit=1`,undefined,'GET',undefined,true);
+  const payload={model_id:s.modelId,config_version:config.version,horizon_days:s.horizonDays,sample_count:s.sampleCount,hit_rate:s.hitRate,avg_excess_return:null,max_drawdown:null,details:s,evaluated_at:new Date().toISOString()};
+  if(existing[0]?.id)await request(e,`/rest/v1/action_model_evaluations?id=eq.${existing[0].id}`,undefined,'PATCH',payload,true);else await request(e,'/rest/v1/action_model_evaluations',undefined,'POST',payload,true);
+ }
+ const gate=candidateReadiness(summaries,{minimumModels:config.thresholds.minimumModels,horizonDays:90});
+ if(gate.ready){
+  const pendingCandidates=await request(e,`/rest/v1/action_model_candidates?select=id&base_config_version=eq.${config.version}&status=eq.pending&limit=1`,undefined,'GET',undefined,true);
+  if(!pendingCandidates.length){
+   const weights=Object.fromEntries(gate.eligible.map((s:any)=>[s.modelId,Math.max(1,s.hitRate)])),sum=Object.values(weights).reduce((a:any,b:any)=>a+b,0) as number;
+   const proposal={...config,mode:'shadow',note:'Automatically proposed from benchmark-adjusted evaluation; requires administrator review.',models:config.models.map((m:any)=>weights[m.id]?{...m,weight:Math.round(weights[m.id]/sum*100)}:m)};
+   await request(e,'/rest/v1/action_model_candidates',undefined,'POST',{base_config_version:config.version,proposed_config:proposal,metrics:{gate,summaries},status:'pending'},true);candidateCount=1;
+  }
+ }
+ const status=gate.ready?'success':snapshotCount?'partial':'blocked';
+ await request(e,'/rest/v1/action_daily_runs?on_conflict=run_date',undefined,'POST',{run_date:runDate,run_at:new Date().toISOString(),snapshot_count:snapshotCount,evaluated_count:evaluatedCount,candidate_count:candidateCount,status,details:{configVersion:config.version,marketGate:gate.reason}},true);
+ return {runDate,snapshotCount,evaluatedCount,candidateCount,status,gate};
+}
 export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new URL(r.url),path=url.pathname.slice(5);try{
  if(r.method!=='GET'&&r.method!=='POST')throw new HttpError(405,'不支援此方法。');
  if(r.method==='POST'&&r.headers.get('Origin')!==url.origin)throw new HttpError(403,'不允許跨來源操作。');
@@ -61,8 +117,23 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  if(path==='action-review'&&r.method==='GET'){
   const access=await membership(e,token,u.id);if(access.plan==='free')throw new HttpError(403,'Research membership required / 此功能需 Research 會員。');
   const rows=await request(e,`/rest/v1/research_state?user_id=eq.${u.id}&select=payload`,token);
-  const state=rows[0]?.payload||{watchlist:[],saved:[]},config=await actionConfig(e);
-  return json(buildActionReview({watchlist:state.watchlist||[],companies:equities.companies,config,retrievedAt:equities.retrievedAt}));
+  const state=rows[0]?.payload||{watchlist:[],saved:[]},config=await actionConfig(e),review=buildActionReview({watchlist:state.watchlist||[],companies:equities.companies,config,retrievedAt:equities.retrievedAt});
+  return json({...review,outcomeTracking:await actionLearningStatus(e)});
+ }
+ if(path==='action-learning-status'&&r.method==='GET'){
+  if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
+  return json(await actionLearningStatus(e));
+ }
+ if(path==='action-market-import'&&r.method==='POST'){
+  if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
+  if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)throw new HttpError(503,'AI 模型研究資料庫尚未連接。');
+  let imported;try{imported=validateMarketImport(await body(r));}catch(err){throw new HttpError(400,err instanceof Error?err.message:'Invalid market observations');}
+  await request(e,'/rest/v1/action_market_observations?on_conflict=symbol,session_date,source',undefined,'POST',imported.records,true);
+  return json({ok:true,count:imported.records.length,rightsStatus:imported.rightsStatus,qualityStatus:imported.qualityStatus});
+ }
+ if(path==='action-learning-run'&&r.method==='POST'){
+  if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
+  return json(await runDailyActionLearning(e));
  }
  if(path==='action-models'){
   if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
@@ -120,4 +191,4 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  }else throw new HttpError(404,'找不到此操作。');
  return json({workspace:await loadWorkspace(e,token,u.id,profile)});
  }catch(err){return json({error:err instanceof HttpError?err.message:'服務暫時無法完成操作。'},err instanceof HttpError?err.status:500);}}
-export default {async fetch(r:Request,e:Env){const pathname=new URL(r.url).pathname;if(pathname.startsWith('/data/'))return json({error:'Use the authenticated API / 請使用會員工具。'},404);if(pathname.startsWith('/api/'))return handleApi(r,e);const res=await e.ASSETS.fetch(r);const h=new Headers(res.headers);h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');h.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");return new Response(res.body,{status:res.status,headers:h});}};
+export default {async scheduled(_controller:any,e:Env,ctx:any){ctx.waitUntil(runDailyActionLearning(e).catch(()=>undefined));},async fetch(r:Request,e:Env){const pathname=new URL(r.url).pathname;if(pathname.startsWith('/data/'))return json({error:'Use the authenticated API / 請使用會員工具。'},404);if(pathname.startsWith('/api/'))return handleApi(r,e);const res=await e.ASSETS.fetch(r);const h=new Headers(res.headers);h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');h.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");return new Response(res.body,{status:res.status,headers:h});}};
