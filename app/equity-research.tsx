@@ -40,7 +40,7 @@ export function EquityResearch({locale='en',plan='free',workspace=false,initialQ
   if(!picker)return;const [kind,symbol]=picker.split(':');if(!symbol)return;
   if(kind==='stock'){if(!chart.selected.includes(symbol)&&scopeFull){setNotice(t('Compare up to eight instruments. Remove one before adding another.','最多同時比較八個標的，請先移除一個。'));return;}if(!chart.selected.includes(symbol))setChart({...chart,selected:[...chart.selected,symbol]});}
   if(kind==='etf'){if(!selectedFunds.includes(symbol)&&scopeFull){setNotice(t('Compare up to eight instruments. Remove one before adding another.','最多同時比較八個標的，請先移除一個。'));return;}if(!selectedFunds.includes(symbol))setSelectedFunds(v=>[...v,symbol]);}
-  setPicker('');setNotice('');
+  setPicker('');setQuery('');setNotice('');
  }
  function removeStock(symbol:string){setChart({...chart,selected:chart.selected.filter((s:string)=>s!==symbol)});}
  function removeFund(symbol:string){setSelectedFunds(v=>v.filter(s=>s!==symbol));}
