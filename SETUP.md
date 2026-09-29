@@ -127,3 +127,22 @@ The Stocks & ETF research page now uses one shared comparison scope instead of a
 - Benchmark research accepts any covered ETF, but the performance chart only uses market observations marked both verified and rights-approved. Missing or differently denominated series fail closed rather than generating synthetic returns.
 - Economic context now includes automatically refreshed BLS CPI year-over-year and unemployment-rate monthly histories plus existing Federal Reserve H.10 currency observations. Other macro dimensions remain dated snapshots until their historical series are connected.
 - Broad-market / sector performance data still requires an approved historical market-data source. The interface is ready, but empty approved market history is shown as a data gap rather than filled with unlicensed quotes.
+
+
+## Research workspace readability pass — 2026-09-29
+
+The stock / ETF research page now uses progressive disclosure and a stable research workspace layout:
+
+- Sticky section navigation: Overview → Financials → Charts → Market & macro → ETF → Sources → Saved.
+- Compact research-scope builder remains the single source of truth for selected instruments and fiscal range.
+- A new Quick Analysis Workspace adds:
+  - period-change analyzer (revenue CAGR, net-margin change and operating-cash-flow CAGR);
+  - six-field data-coverage checker;
+  - category presets for the covered AI-company universe;
+  - full selected-financial CSV export;
+  - direct links to guided research, news/events, macro research and Today's Actions.
+- Saved research is now a compact save/restore bar; saved items are collapsed until requested.
+- ETF research uses a comparison table first; detailed risk/source cards are expandable.
+- Evidence and AI-readiness records use progressive disclosure with a compact status summary.
+- Large comparison tables use sticky headers, a sticky first column and zebra rows for readability.
+- Mobile layouts collapse tool grids, save controls and navigation into single-column flows.
