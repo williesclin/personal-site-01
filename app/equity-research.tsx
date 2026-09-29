@@ -1,4 +1,4 @@
-import {defaultChart,layoutForSaved,validateLayout} from './research-layout.mjs';
+import {defaultChart,layoutForSaved,MAX_COMPARE} from './research-layout.mjs';
 import {instrumentHref,findInstrument} from './instrument-catalog.mjs';
 import {useMemberAccess} from './use-member-access';
 import {useEffect,useState} from 'react';
@@ -7,14 +7,18 @@ import {ETFS,ETF_REVIEWED} from './etf-catalog.mjs';
 import './equity-research.css';
 import {ResearchCharts} from './research-charts';
 import {ResearchEvidence} from './research-evidence';
+import {ResearchContextComparison} from './research-context';
 import {PLANS} from './membership.mjs';
 export function EquityResearch({locale='en',plan='free',workspace=false,initialQuery='',focused=false}:{locale?:string;plan?:string;workspace?:boolean;initialQuery?:string;focused?:boolean}){
  const full=plan==='research'||plan==='pro',focusedFund=focused&&findInstrument(initialQuery)?.type==='etf';
  const Title=workspace?'h1':'h2';
  const t=(en:string,zh:string)=>locale==='zh-hant'?zh:en;
- const [data,setData]=useState<any>(null),[error,setError]=useState(false),[attempt,setAttempt]=useState(0),[query,setQuery]=useState(()=>initialQuery||(typeof window!=='undefined'?new URLSearchParams(window.location.search).get('q')||'':'')),[year,setYear]=useState('latest'),[onlyWatch,setOnlyWatch]=useState(false),[watch,setWatch]=useState<string[]>([]),[notice,setNotice]=useState(''),[amount,setAmount]=useState('10000');
+ const initialSearch=initialQuery||(typeof window!=='undefined'?new URLSearchParams(window.location.search).get('q')||'':'');
+ const initialAsset=findInstrument(initialSearch.trim().toUpperCase());
+ const [data,setData]=useState<any>(null),[error,setError]=useState(false),[attempt,setAttempt]=useState(0),[query,setQuery]=useState(initialSearch),[picker,setPicker]=useState(''),[year,setYear]=useState('latest'),[yearFrom,setYearFrom]=useState('all'),[onlyWatch,setOnlyWatch]=useState(false),[watch,setWatch]=useState<string[]>([]),[notice,setNotice]=useState(''),[amount,setAmount]=useState('10000');
+ const [selectedFunds,setSelectedFunds]=useState<string[]>(()=>initialAsset?.type==='etf'?[initialAsset.symbol]:['IVV']),[benchmark,setBenchmark]=useState('VTI'),[macroIds,setMacroIds]=useState<string[]>(['us-cpi','us-rate']);
  const [saved,setSaved]=useState<any[]>([]),[saveName,setSaveName]=useState(''),[saving,setSaving]=useState(false),[stateReady,setStateReady]=useState(false);
- const [chart,setChart]=useState(()=>({...defaultChart(),selected:initialQuery&&findInstrument(initialQuery)?.type==='stock'?[initialQuery]:['NVDA']}));
+ const [chart,setChart]=useState(()=>({...defaultChart(),selected:initialAsset?.type==='stock'?[initialAsset.symbol]:['NVDA']}));
  const [metrics,setMetrics]=useState(['revenue','netIncome','operatingCashFlow']);
  const labels:Record<string,string>={revenue:t('Revenue','營收'),netIncome:t('Net income','淨利'),operatingCashFlow:t('Operating cash flow','營業現金流')};
  useEffect(()=>{let live=true;if(!full)return;fetch('/api/research-state').then(async r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{if(live){setWatch(d.state.watchlist);setSaved(d.state.saved);setStateReady(true)}}).catch(()=>{if(live)setNotice(t('Account research could not be loaded; saving is disabled. Reload to retry.','帳號研究資料無法載入，暫停儲存；請重新整理重試。'))});return()=>{live=false}},[full]);
