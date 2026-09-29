@@ -80,3 +80,36 @@ WebMCP 導覽工具已採功能偵測註冊；本次瀏覽器未提供 modelCont
 - 目前仍維持 Shadow mode。Fundamental scaffold 可由已驗證財報計算研究訊號；Valuation、Momentum、Event、Macro、Risk 的正式模型輸出尚未接線，因此系統刻意顯示 No released action，而不是捏造買賣訊號。
 - 真正的「每天學習」需先接入可回溯、含 corporate actions/total return 的行情資料，以及明確的 benchmark / transaction-cost 規則。接入前不得用未驗證結果自動調權重或宣稱模型優化。
 - 後續學習迴圈固定為：Signal → Shadow Action → Outcome → 7/30/90/180d Evaluation → Model comparison → versioned weight update → holdout verification → release gate。任何新版本皆可回到先前版本，不直接覆寫正式版本。
+
+
+### Daily outcome-learning operations
+
+The Cloudflare Worker now has a weekday cron at 23:20 UTC. Each run:
+1. snapshots the full 50-company research universe under the current action-model config;
+2. stores evidence and model scores before later outcomes are known;
+3. evaluates matured 7/30/90/180-day outcomes only from market observations marked both `quality_status=verified` and `rights_status=approved`;
+4. compares stock outcomes with the configured benchmark (initial US-stock benchmark: VTI);
+5. writes per-model evaluation summaries;
+6. may create a **pending** candidate weight configuration only after the benchmark-adjusted evidence gate is met.
+
+Candidate configs never auto-release. An administrator must review evidence and save a new model version. Released mode remains separately gated by validated model status.
+
+Admin market JSON import shape:
+
+```json
+{
+  "rightsStatus": "approved",
+  "qualityStatus": "verified",
+  "source": "licensed-or-approved-source-name",
+  "sourceUrl": "https://source.example/",
+  "retrievedAt": "2026-09-29T00:00:00Z",
+  "records": [
+    {"symbol":"NVDA","sessionDate":"2026-09-28","adjustedClose":123.45,"currency":"USD"},
+    {"symbol":"VTI","sessionDate":"2026-09-28","adjustedClose":321.00,"currency":"USD"}
+  ]
+}
+```
+
+If rights are not explicitly approved, imports default to `review_required` and are excluded from outcome learning. Do not mark a source approved until its intended storage and model-evaluation use is permitted.
+
+Build verification now runs tests plus the production build on main-branch code changes. A local container clone was not possible from this chat environment because outbound DNS to github.com is unavailable; therefore GitHub/Cloudflare CI remains the authoritative build check.
