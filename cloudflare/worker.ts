@@ -131,8 +131,9 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   if(symbols.length<1||symbols.length>9||new Set(symbols).size!==symbols.length||symbols.some(s=>!allowed.has(s)))throw new HttpError(400,'Invalid benchmark comparison scope / 大盤比較範圍無效。');
   if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)return json({connected:false,rows:[],reason:'approved_market_history_not_connected'});
   try{
-   const rows=await request(e,'/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,source_url,retrieved_at,quality_status,rights_status&quality_status=eq.verified&rights_status=eq.approved&order=session_date.asc&limit=5000',undefined,'GET',undefined,true);
-   return json({connected:true,rows:rows.filter((x:any)=>symbols.includes(x.symbol)),symbols});
+   const inFilter='('+symbols.map(s=>encodeURIComponent(s)).join(',')+')';
+   const rows=await request(e,`/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,source_url,retrieved_at,quality_status,rights_status&symbol=in.${inFilter}&quality_status=eq.verified&rights_status=eq.approved&order=session_date.asc&limit=5000`,undefined,'GET',undefined,true);
+   return json({connected:true,rows,symbols});
   }catch{return json({connected:false,rows:[],reason:'approved_market_history_unavailable'});}
  }
  if(path==='action-learning-status'&&r.method==='GET'){
