@@ -28,8 +28,8 @@ export function EquityResearch({locale='en',plan='free',workspace=false,initialQ
  async function saveState(nextWatch:string[],nextSaved:any[]){if(!full||!stateReady||saving)return;setSaving(true);try{const r=await fetch('/api/research-state',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({watchlist:nextWatch,saved:nextSaved})});if(!r.ok)throw Error();const d=await r.json();setWatch(d.state.watchlist);setSaved(d.state.saved);setNotice(t('Saved to your account. No notifications were sent.','已儲存到帳號，沒有發送通知。'));}catch{setNotice(t('Save outcome could not be confirmed. Reload your account records before retrying; check your plan limit and sign-in status.','無法確認儲存結果。請先重新載入帳號紀錄再重試，並確認方案上限及登入狀態。'))}finally{setSaving(false)}}
  function toggle(symbol:string){void saveState(watch.includes(symbol)?watch.filter(s=>s!==symbol):[...watch,symbol],saved);}
  const allCompanies:Array<any>=data?.companies||[],availableFunds=full?ETFS:ETFS.slice(0,1),search=query.trim().toLowerCase();
- const companyChoices=allCompanies.filter(c=>(!search||(c.symbol+' '+c.name).toLowerCase().includes(search))&&(!onlyWatch||watch.includes(c.symbol)));
- const fundChoices=availableFunds.filter(f=>(!search||(f.symbol+' '+f.name).toLowerCase().includes(search))&&(!onlyWatch||watch.includes(f.symbol)));
+ const companyChoices=allCompanies.filter(c=>(!search||(c.symbol+' '+c.name+' '+(findInstrument(c.symbol)?.aliases||'')).toLowerCase().includes(search))&&(!onlyWatch||watch.includes(c.symbol)));
+ const fundChoices=availableFunds.filter(f=>(!search||(f.symbol+' '+f.name+' '+(findInstrument(f.symbol)?.aliases||'')).toLowerCase().includes(search))&&(!onlyWatch||watch.includes(f.symbol)));
  const companies=allCompanies.filter(c=>chart.selected.includes(c.symbol)),funds=availableFunds.filter(f=>selectedFunds.includes(f.symbol));
  const years=[...new Set<string>(allCompanies.flatMap((c:any)=>c.years.map((r:any)=>r.end.slice(0,4))))].sort().reverse();
  const yearInRange=(end:string)=>{const y=end.slice(0,4);return (yearFrom==='all'||y>=yearFrom)&&(year==='latest'||y<=year)};
