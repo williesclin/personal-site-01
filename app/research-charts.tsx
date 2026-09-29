@@ -12,9 +12,9 @@ export function ResearchCharts({companies,locale,full,year='latest',yearFrom='al
  const scale=(v:number,k:string)=>DIMENSIONS[k].unit==='USD'?v/1e9:v;
  const fmt=(v:number|null,k:string)=>v==null?'—':new Intl.NumberFormat(zh?'zh-TW':'en-US',{maximumFractionDigits:2}).format(scale(v,k));
  const pointYear=yearTo==='latest'?year:yearTo;
- const inRange=(end:string)=>{const y=end.slice(0,4);return (yearFrom==='all'||y>=yearFrom)&&(yearTo==='latest'||y<=yearTo)};
+ const inRange=(end:string)=>{const y=end.slice(0,4);return (yearFrom==='all'||yearFrom==='latest'||y>=yearFrom)&&(yearTo==='latest'||y<=yearTo)};
  const rows=chartRows(chosen,metric,pointYear),ys=rows.filter(r=>r.value!==null).map(r=>scale(r.value,metric)),barStep=560/Math.max(1,rows.length),barWidth=Math.min(56,barStep*.65);
- const histories=chosen.map(c=>({symbol:c.symbol,rows:[...c.years].reverse().filter((r:any)=>inRange(r.end)).map((r:any)=>({end:r.end,start:r.start,value:dimensionValue(r,metric,c.years[c.years.indexOf(r)+1])}))}));
+ const histories=chosen.map(c=>{const annual=yearFrom==='latest'?c.years.slice(0,1):c.years.filter((r:any)=>inRange(r.end));return {symbol:c.symbol,rows:[...annual].reverse().map((r:any)=>({end:r.end,start:r.start,value:dimensionValue(r,metric,c.years[c.years.indexOf(r)+1])}))}});
  const scatter=scatterRows(chosen,metric,second,pointYear);
  const values=mode==='trend'?histories.flatMap(c=>c.rows.filter((r:any)=>r.value!==null).map((r:any)=>scale(r.value,metric))):mode==='scatter'?scatter.valid.map(r=>scale(r.value,metric)):ys;
  const lo=Math.min(0,...values),hi=Math.max(0,...values),span=hi-lo||1;
