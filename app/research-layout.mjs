@@ -29,7 +29,7 @@ export function validateLayout(layout){
  }
  if(layout.version!==2||typeof layout.onlyWatch!=='boolean'||!validAmount(layout.amount)||!validYear(layout.yearFrom)||!validYear(layout.yearTo)||!validChart(layout.chart))throw Error('Invalid research layout');
  const funds=layout.selectedFunds,macros=layout.macroIds;
- if(!Array.isArray(funds)||funds.length>MAX_COMPARE||new Set(funds).size!==funds.length||funds.some(s=>!ETFS.some(f=>f.symbol===s)))throw Error('Invalid fund selection');
+ if(!Array.isArray(funds)||funds.length>MAX_COMPARE||c.selected.length+funds.length>MAX_COMPARE||new Set(funds).size!==funds.length||funds.some(s=>!ETFS.some(f=>f.symbol===s)))throw Error('Invalid fund selection');
  if(!ETFS.some(f=>f.symbol===layout.benchmark))throw Error('Invalid benchmark');
  if(!Array.isArray(macros)||macros.length>6||new Set(macros).size!==macros.length||macros.some(id=>!macroIndicators.some(x=>x.id===id)))throw Error('Invalid macro selection');
  return {
