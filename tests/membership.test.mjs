@@ -19,7 +19,7 @@ test('Worker denies unauthenticated/private data, forged metadata, expired plan 
   assert.equal((await handleApi(req('/api/research-data',true),env)).status,403);
   assert.equal((await handleApi(req('/api/lottery/lotto649',true),env)).status,200);
   assert.equal((await handleApi(req('/api/checkout',true,'POST'),env)).status,503);
-  plan={...active,period_end:'2099-01-01T00:00:00Z'};assert.equal((await handleApi(req('/api/research-data',true),env)).status,200);assert.equal((await handleApi(req('/api/pro-tools',true),env)).status,403);
+  plan={...active,period_end:'2099-01-01T00:00:00Z'};assert.equal((await handleApi(req('/api/research-data',true),env)).status,200);const benchmark=await handleApi(req('/api/research-benchmark?symbols=NVDA,VTI',true),env);assert.equal(benchmark.status,200);assert.equal((await benchmark.json()).connected,false);assert.equal((await handleApi(req('/api/research-benchmark?symbols=NOTREAL',true),env)).status,400);assert.equal((await handleApi(req('/api/pro-tools',true),env)).status,403);
   plan={...plan,plan:'pro'};assert.equal((await handleApi(req('/api/pro-tools',true),env)).status,503);
   plan={...plan,period_end:'2020-01-01T00:00:00Z'};assert.equal((await handleApi(req('/api/research-data',true),env)).status,403);
  }finally{globalThis.fetch=original;}
