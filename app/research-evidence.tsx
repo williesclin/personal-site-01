@@ -3,7 +3,7 @@ export function ResearchEvidence({locale,full}:{locale:string;full:boolean}){
  const t=(a:string,b:string)=>locale==='zh-hant'?b:a;
  const [data,setData]=useState<any>(null),[failed,setFailed]=useState(false),[attempt,setAttempt]=useState(0);
  useEffect(()=>{if(!full)return;const ac=new AbortController();setFailed(false);fetch('/api/research-evidence',{signal:ac.signal}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(setData).catch(e=>{if(e.name!=='AbortError')setFailed(true)});return()=>ac.abort()},[full,attempt]);
- return <section className="eq-section"><h2>{t('News, attention & AI readiness','新聞、聲量與 AI 準備狀態')}</h2>
+ return <section id="evidence" className="eq-section"><h2>{t('News, attention & AI readiness','新聞、聲量與 AI 準備狀態')}</h2>
  <div className="eq-scroll" tabIndex={0}><table><thead><tr><th>{t('Plan','方案')}</th><th>{t('Research dimensions','研究維度')}</th><th>{t('Current status','目前狀態')}</th></tr></thead><tbody>
  <tr><th>Free</th><td>{t('NVIDIA: 3 annual periods, 3 metrics; IVV preview','NVIDIA 三年度、三指標；IVV 預覽')}</td><td>{t('Public preview; verified sign-in unlocks free lottery tools','公開預覽；驗證登入後免費使用樂透工具')}</td></tr>
  <tr><th>Research</th><td>{t('50 companies, 14 financial dimensions, line/bar/scatter charts, SEC filing observations, 30 watchlist symbols / 5 saved conditions','50 家公司、14 個財務維度、折線／長條／散佈圖、SEC 申報觀測、30 標的／5 組條件')}</td><td>{t('Requires an effective membership; subscriptions are not on sale','需有效會員資格；訂閱尚未銷售')}</td></tr>
