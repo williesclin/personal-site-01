@@ -32,8 +32,8 @@ export function EquityResearch({locale='en',plan='free',workspace=false,initialQ
  const fundChoices=availableFunds.filter(f=>(!search||(f.symbol+' '+f.name+' '+(findInstrument(f.symbol)?.aliases||'')).toLowerCase().includes(search))&&(!onlyWatch||watch.includes(f.symbol)));
  const companies=allCompanies.filter(c=>chart.selected.includes(c.symbol)),funds=availableFunds.filter(f=>selectedFunds.includes(f.symbol));
  const years=[...new Set<string>(allCompanies.flatMap((c:any)=>c.years.map((r:any)=>r.end.slice(0,4))))].sort().reverse();
- const yearInRange=(end:string)=>{const y=end.slice(0,4);return (yearFrom==='all'||y>=yearFrom)&&(year==='latest'||y<=year)};
- const comparisonRows=companies.flatMap((company:any)=>company.years.map((row:any,index:number)=>({company,row,index})).filter((x:any)=>yearInRange(x.row.end)));
+ const yearInRange=(end:string)=>{const y=end.slice(0,4);return (yearFrom==='all'||yearFrom==='latest'||y>=yearFrom)&&(year==='latest'||y<=year)};
+ const comparisonRows=companies.flatMap((company:any)=>company.years.map((row:any,index:number)=>({company,row,index})).filter((x:any)=>yearFrom==='latest'?x.index===0:yearInRange(x.row.end)));
  const selectedSymbols=[...chart.selected,...selectedFunds],scopeFull=selectedSymbols.length>=MAX_COMPARE;
  const autoSaveName=(selectedSymbols.join(' + ')+' · '+(yearFrom==='all'?t('all years','全部年度'):yearFrom)+'–'+(year==='latest'?t('latest','最新'):year)).slice(0,80);
  function addInstrument(){
@@ -46,7 +46,7 @@ export function EquityResearch({locale='en',plan='free',workspace=false,initialQ
  function removeFund(symbol:string){setSelectedFunds(v=>v.filter(s=>s!==symbol));}
  function changeYearFrom(value:string){setYearFrom(value);if(value!=='all'&&year!=='latest'&&year<value)setYear(value);}
  function changeYearTo(value:string){setYear(value);if(value!=='latest'&&yearFrom!=='all'&&yearFrom>value)setYearFrom(value);}
- function recentYears(count:number){if(!years.length)return;setYearFrom(years[Math.min(count-1,years.length-1)]||'all');setYear('latest');}
+ function recentYears(count:number){if(!years.length)return;if(count===1){setYearFrom('latest');setYear('latest');return;}setYearFrom(years[Math.min(count-1,years.length-1)]||'all');setYear('latest');}
  const val=(v:number|null|undefined)=>v==null?'—':new Intl.NumberFormat(locale==='zh-hant'?'zh-TW':'en-US',{maximumFractionDigits:1}).format(v/1e9);
  const percent=(v:number|null)=>v==null?'—':v.toFixed(1)+'%';
  const stale=data&&Date.now()-Date.parse(data.retrievedAt)>72*3600000;
@@ -62,7 +62,7 @@ export function EquityResearch({locale='en',plan='free',workspace=false,initialQ
    {full&&<label className="eq-check"><input type="checkbox" checked={onlyWatch} onChange={e=>setOnlyWatch(e.target.checked)}/>{t('Limit dropdown to watchlist','下拉只顯示觀察清單')} ({watch.length})</label>}
   </div>
   <div className="eq-scope-chips"><span className="eq-chip-label">{t('Selected','已選')}</span>{chart.selected.map((s:string)=><button key={s} type="button" onClick={()=>removeStock(s)}>{s}<small>{t('Company','公司')}</small><b aria-hidden="true">×</b></button>)}{selectedFunds.map(s=><button key={s} type="button" onClick={()=>removeFund(s)}>{s}<small>ETF</small><b aria-hidden="true">×</b></button>)}{selectedSymbols.length===0&&<span>{t('Nothing selected yet.','尚未選擇標的。')}</span>}</div>
-  <div className="eq-year-range"><label>{t('From fiscal year','起始財報年度')}<select value={yearFrom} onChange={e=>changeYearFrom(e.target.value)}><option value="all">{t('Earliest available','最早可用年度')}</option>{[...years].reverse().map(y=><option key={y} value={y}>{y}</option>)}</select></label><span aria-hidden="true">→</span><label>{t('To fiscal year','結束財報年度')}<select value={year} onChange={e=>changeYearTo(e.target.value)}><option value="latest">{t('Latest available per company','各公司最新年度')}</option>{years.map(y=><option key={y} value={y}>{y}</option>)}</select></label><button className="btn" onClick={()=>{setQuery('');setPicker('');setOnlyWatch(false);setYearFrom('all');setYear('latest');setChart({...chart,selected:['NVDA'],sector:'all'});setSelectedFunds(['IVV']);setBenchmark('VTI');setMacroIds(['us-cpi','us-rate'])}}>{t('Reset scope','重設比較範圍')}</button></div>
+  <div className="eq-year-range"><label>{t('From fiscal year','起始財報年度')}<select value={yearFrom} onChange={e=>changeYearFrom(e.target.value)}><option value="all">{t('Earliest available','最早可用年度')}</option><option value="latest">{t('Latest period per company','各公司最新年度')}</option>{[...years].reverse().map(y=><option key={y} value={y}>{y}</option>)}</select></label><span aria-hidden="true">→</span><label>{t('To fiscal year','結束財報年度')}<select value={year} onChange={e=>changeYearTo(e.target.value)}><option value="latest">{t('Latest available per company','各公司最新年度')}</option>{years.map(y=><option key={y} value={y}>{y}</option>)}</select></label><button className="btn" onClick={()=>{setQuery('');setPicker('');setOnlyWatch(false);setYearFrom('all');setYear('latest');setChart({...chart,selected:['NVDA'],sector:'all'});setSelectedFunds(['IVV']);setBenchmark('VTI');setMacroIds(['us-cpi','us-rate'])}}>{t('Reset scope','重設比較範圍')}</button></div>
   <div className="eq-range-presets"><span>{t('Quick range','快速年度')}</span><button type="button" onClick={()=>recentYears(1)}>{t('Latest','最新')}</button><button type="button" onClick={()=>recentYears(3)}>3Y</button><button type="button" onClick={()=>recentYears(5)}>5Y</button><button type="button" onClick={()=>{setYearFrom('all');setYear('latest')}}>{t('All','全部')}</button></div>
   <p className="eq-meta">{t('Tip: search narrows the dropdown only; it no longer silently replaces your comparison. Remove a chip to take an instrument out.','提示：搜尋只會縮小下拉選單，不會偷偷改掉目前比較內容；要移除標的，直接點上方標籤的 ×。')}</p>
  </section>}
