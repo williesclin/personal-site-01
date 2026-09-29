@@ -26,9 +26,23 @@ export function EquityResearch({locale='en',plan='free',workspace=false,initialQ
  useEffect(()=>{if(focusedFund)return;const ac=new AbortController();setError(false);setData(null);fetch(full?'/api/research-data':'/api/research-preview',{signal:ac.signal}).then(r=>{if(!r.ok)throw Error('Unavailable');return r.json()}).then(d=>setData(validateEquities(d,{preview:!full}))).catch(e=>{if(e.name!=='AbortError')setError(true)});return()=>ac.abort()},[attempt,full,focusedFund]);
  async function saveState(nextWatch:string[],nextSaved:any[]){if(!full||!stateReady||saving)return;setSaving(true);try{const r=await fetch('/api/research-state',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({watchlist:nextWatch,saved:nextSaved})});if(!r.ok)throw Error();const d=await r.json();setWatch(d.state.watchlist);setSaved(d.state.saved);setNotice(t('Saved to your account. No notifications were sent.','已儲存到帳號，沒有發送通知。'));}catch{setNotice(t('Save outcome could not be confirmed. Reload your account records before retrying; check your plan limit and sign-in status.','無法確認儲存結果。請先重新載入帳號紀錄再重試，並確認方案上限及登入狀態。'))}finally{setSaving(false)}}
  function toggle(symbol:string){void saveState(watch.includes(symbol)?watch.filter(s=>s!==symbol):[...watch,symbol],saved);}
- const match=(c:any)=>(c.symbol+' '+c.name).toLowerCase().includes(query.trim().toLowerCase())&&(!onlyWatch||watch.includes(c.symbol));
- const companies=(data?.companies||[]).filter(match),funds=(full?ETFS:ETFS.slice(0,1)).filter(match);
- const years=[...new Set<string>((data?.companies||[]).flatMap((c:any)=>c.years.map((r:any)=>r.end.slice(0,4))))].sort().reverse();
+ const allCompanies:Array<any>=data?.companies||[],availableFunds=full?ETFS:ETFS.slice(0,1),search=query.trim().toLowerCase();
+ const companyChoices=allCompanies.filter(c=>(!search||(c.symbol+' '+c.name).toLowerCase().includes(search))&&(!onlyWatch||watch.includes(c.symbol)));
+ const fundChoices=availableFunds.filter(f=>(!search||(f.symbol+' '+f.name).toLowerCase().includes(search))&&(!onlyWatch||watch.includes(f.symbol)));
+ const companies=allCompanies.filter(c=>chart.selected.includes(c.symbol)),funds=availableFunds.filter(f=>selectedFunds.includes(f.symbol));
+ const years=[...new Set<string>(allCompanies.flatMap((c:any)=>c.years.map((r:any)=>r.end.slice(0,4))))].sort().reverse();
+ const yearInRange=(end:string)=>{const y=end.slice(0,4);return (yearFrom==='all'||y>=yearFrom)&&(year==='latest'||y<=year)};
+ const comparisonRows=companies.flatMap((company:any)=>company.years.map((row:any,index:number)=>({company,row,index})).filter((x:any)=>yearInRange(x.row.end)));
+ const selectedSymbols=[...chart.selected,...selectedFunds],scopeFull=selectedSymbols.length>=MAX_COMPARE;
+ const autoSaveName=(selectedSymbols.join(' + ')+' · '+(yearFrom==='all'?t('all years','全部年度'):yearFrom)+'–'+(year==='latest'?t('latest','最新'):year)).slice(0,80);
+ function addInstrument(){
+  if(!picker)return;const [kind,symbol]=picker.split(':');if(!symbol)return;
+  if(kind==='stock'){if(!chart.selected.includes(symbol)&&scopeFull){setNotice(t('Compare up to eight instruments. Remove one before adding another.','最多同時比較八個標的，請先移除一個。'));return;}if(!chart.selected.includes(symbol))setChart({...chart,selected:[...chart.selected,symbol]});}
+  if(kind==='etf'){if(!selectedFunds.includes(symbol)&&scopeFull){setNotice(t('Compare up to eight instruments. Remove one before adding another.','最多同時比較八個標的，請先移除一個。'));return;}if(!selectedFunds.includes(symbol))setSelectedFunds(v=>[...v,symbol]);}
+  setPicker('');setNotice('');
+ }
+ function removeStock(symbol:string){setChart({...chart,selected:chart.selected.filter((s:string)=>s!==symbol)});}
+ function removeFund(symbol:string){setSelectedFunds(v=>v.filter(s=>s!==symbol));}
  const val=(v:number|null|undefined)=>v==null?'—':new Intl.NumberFormat(locale==='zh-hant'?'zh-TW':'en-US',{maximumFractionDigits:1}).format(v/1e9);
  const percent=(v:number|null)=>v==null?'—':v.toFixed(1)+'%';
  const stale=data&&Date.now()-Date.parse(data.retrievedAt)>72*3600000;
