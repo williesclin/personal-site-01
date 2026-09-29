@@ -4,6 +4,7 @@ import {findInstrument,instrumentHref} from './instrument-catalog.mjs';
 import {PLANS} from './membership.mjs';
 import {useMemberAccess} from './use-member-access';
 import {workspaceText} from './workspace-i18n.mjs';
+import {ActionDecisionCenter} from './action-decision';
 
 type DashboardTemplate='overview'|'portfolio'|'research';
 const DASHBOARD_TEMPLATE_KEY='qpl-dashboard-template-v1';
@@ -94,6 +95,7 @@ export function WorkspaceOverview({locale,mode,go,budget,onBudget}:{locale:strin
    <div className="actions"><button className="btn primary" onClick={()=>go('equities')}>{copy('Manage investments','管理投資標的')} →</button><button className="btn" onClick={()=>go('account')}>{copy('Membership','會員權益')}</button></div>
   </div>
 
+  <ActionDecisionCenter locale={locale} go={go}/>
   <DashboardTemplatePicker locale={locale} value={template} onChange={setTemplate}/>
   {summary}
 
