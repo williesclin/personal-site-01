@@ -113,3 +113,17 @@ Admin market JSON import shape:
 If rights are not explicitly approved, imports default to `review_required` and are excluded from outcome learning. Do not mark a source approved until its intended storage and model-evaluation use is permitted.
 
 Build verification now runs tests plus the production build on main-branch code changes. A local container clone was not possible from this chat environment because outbound DNS to github.com is unavailable; therefore GitHub/Cloudflare CI remains the authoritative build check.
+
+
+## Research comparison workspace v2 — 2026-09-29
+
+The Stocks & ETF research page now uses one shared comparison scope instead of a search box that implicitly replaces the table.
+
+- Select up to eight covered companies / ETFs from the current QuantPath dataset; symbol, company name and Traditional Chinese aliases can narrow the dropdown.
+- Selected instruments remain visible as removable chips. Search affects discovery only.
+- Fiscal comparison supports a start and end year plus Latest / 3Y / 5Y / All shortcuts. Company tables can show multiple companies across multiple annual periods at once.
+- The same scope drives the financial table and chart. Trend charts respect the year range; selected-year bar/scatter views use the ending-year choice.
+- Saved research layout v2 stores companies, ETFs, fiscal range, dimensions, chart configuration, benchmark ETF, macro context, watchlist filter and hypothetical ETF amount. A research name is optional; an automatic name is generated when omitted. Legacy v1 layouts are upgraded when restored.
+- Benchmark research accepts any covered ETF, but the performance chart only uses market observations marked both verified and rights-approved. Missing or differently denominated series fail closed rather than generating synthetic returns.
+- Economic context now includes automatically refreshed BLS CPI year-over-year and unemployment-rate monthly histories plus existing Federal Reserve H.10 currency observations. Other macro dimensions remain dated snapshots until their historical series are connected.
+- Broad-market / sector performance data still requires an approved historical market-data source. The interface is ready, but empty approved market history is shown as a data gap rather than filled with unlicensed quotes.
