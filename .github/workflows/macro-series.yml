@@ -1,0 +1,40 @@
+name: Refresh official macro trend series
+on:
+  schedule:
+    - cron: '35 22 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sync-macro-series.mjs'
+      - '.github/workflows/macro-series.yml'
+permissions:
+  contents: write
+concurrency:
+  group: research-data
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/sync-macro-series.mjs
+      - name: Commit verified official macro series
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/macro-series.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Refresh official BLS macro trend series'
+          pushed=false
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then pushed=true; break; fi
+          done
+          test "$pushed" = true
