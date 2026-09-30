@@ -146,3 +146,16 @@ The stock / ETF research page now uses progressive disclosure and a stable resea
 - Evidence and AI-readiness records use progressive disclosure with a compact status summary.
 - Large comparison tables use sticky headers, a sticky first column and zebra rows for readability.
 - Mobile layouts collapse tool grids, save controls and navigation into single-column flows.
+
+
+## Digital-asset source separation — 2026-09-30
+
+The Digital Assets page now distinguishes three evidence layers instead of showing every missing field as a dash:
+
+1. Protocol / issuer sources: connected for Bitcoin, Ethereum, Circle and Tether.
+2. Issuer numeric facts: USDC circulation and reserves are shown from a dated Circle transparency snapshot; Tether remains source-linked until a machine-verifiable numeric snapshot is captured.
+3. Market price / 24-hour change / depeg: deliberately blocked until QuantPath has confirmed a market-data provider whose terms permit commercial redistribution to site users.
+
+This is not treated as a technical API outage. Public crypto exchange APIs can have separate commercial-use / redistribution terms. Do not populate member-facing price fields from such an endpoint until the relevant permission is documented.
+
+The official issuer refresh runs every six hours and retains the last verified facts when parsing fails.
