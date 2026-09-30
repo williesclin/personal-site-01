@@ -35,7 +35,7 @@ function factsFromRow(symbol,periodType,row,retrievedAt){
  return out;
 }
 
-export function buildResearchWarehouse({equities,quarterly,macro,context,digital,etfs,lotteries}){
+export function buildResearchWarehouse({equities,quarterly,macro,context,digital,etfs,lotteries,researchFeed=null,researchReadiness=null}){
  const sources=WAREHOUSE_SOURCE_ROWS.map(x=>({...x,notes:{}}));
  const instruments=[
   ...equities.companies.map(c=>({symbol:c.symbol,name:c.name,asset_class:'stock',market:c.market||'US-listed',currency:'USD',sector:c.sector||null,instrument_group:'ai-company',source_key:'sec_companyfacts',metadata:{cik:c.cik,aiRole:c.aiRole,reviewedAt:c.reviewedAt}})),
@@ -69,6 +69,15 @@ export function buildResearchWarehouse({equities,quarterly,macro,context,digital
  pushDigital('USDC',usdc.reserveAsOf,'reserves',usdc.reservesUsd,'USD','circle_transparency','verified');
  if(finite(usdc.reservesUsd)&&finite(usdc.circulationUsd)&&Number(usdc.circulationUsd)>0)pushDigital('USDC',usdc.reserveAsOf,'reserve_coverage_pct',Number(usdc.reservesUsd)/Number(usdc.circulationUsd)*100,'percent','circle_transparency','verified');
  pushDigital('USDT',digital.reviewedAt,'peg_target',usdt.pegTarget,'USD','tether_transparency','source_only');
+ const evidenceSourceMap={
+  'sec-edgar':{id:'sec-edgar',name:'SEC EDGAR',kind:'filing',url:'https://www.sec.gov/search-filings/edgar-application-programming-interfaces',status:'connected',rights_scope:'Public filing metadata and factual XBRL values; no full issuer-document republication'},
+  'nvidia-blog':{id:'nvidia-blog',name:'NVIDIA Blog',kind:'news',url:'https://blogs.nvidia.com/',status:'manual_verified',rights_scope:'Canonical link, bibliographic metadata and original short summary only; no full-text republication or automated feed authorization'}
+ };
+ const feedDocs=Array.isArray(researchFeed?.documents)?researchFeed.documents:[];
+ const evidenceSources=[...new Set(feedDocs.map(d=>d.sourceId))].map(id=>({...evidenceSourceMap[id],id,name:evidenceSourceMap[id]?.name||id,kind:evidenceSourceMap[id]?.kind||'news',url:evidenceSourceMap[id]?.url||'https://quantpathlabs.com/',status:evidenceSourceMap[id]?.status||'manual_verified',rights_scope:evidenceSourceMap[id]?.rights_scope||null,checked_at:researchFeed?.retrievedAt||new Date().toISOString(),coverage_note:{coverage:researchFeed?.coverage||null}}));
+ const evidenceDocuments=feedDocs.map(d=>({id:d.id,source_id:d.sourceId,canonical_url:d.url,title:d.title,summary:d.summary||{},kind:d.kind,published_on:d.publishedOn,published_at:d.publishedAt||null,event_on:d.eventOn||null,first_seen_at:d.firstObservedAt||d.retrievedAt,retrieved_at:d.retrievedAt,language:d.language||'en',content_hash:d.contentHash||d.id,rights_scope:d.rightsScope||null}));
+ const evidenceEntities=feedDocs.flatMap(d=>(d.symbols||[]).map(symbol=>({document_id:d.id,symbol,method:'issuer_cik'})));
+ const evidenceFilings=feedDocs.filter(d=>d.kind==='filing'&&d.form&&d.accession&&(d.symbols||[]).length).map(d=>({document_id:d.id,symbol:d.symbols[0],form:d.form,accession:d.accession,items:d.items||'',first_observed_at:d.firstObservedAt||d.retrievedAt,backfill:!!d.backfill,category:d.form.startsWith('10-K')?'annual_filing':d.form.startsWith('10-Q')?'quarterly_filing':'current_report',classifier:'sec-form-rule-v1'}));
  const lotteryGames=lotteries.map(d=>{const m=lotteryMeta[d.game];return {game_key:m.game_key,country:m.country,name:m.name,source_key:m.source_key,source_url:d.sourceUrl,coverage_start:d.coverageStart,coverage_end:d.coverageEnd,retrieved_at:d.retrievedAt,metadata:{officialGameUrl:d.officialGameUrl||null,sha256:d.sha256,count:d.count}}});
  const lotteryDraws=lotteries.flatMap(d=>{const m=lotteryMeta[d.game];return d.draws.map(x=>({game_key:m.game_key,draw_id:String(x.id),draw_date:x.date,numbers:x.numbers,special:x.special??null,multiplier:x.multiplier??null,prizes:x.prizes||[],retrieved_at:d.retrievedAt}))});
  const statuses=[
@@ -79,9 +88,11 @@ export function buildResearchWarehouse({equities,quarterly,macro,context,digital
   {dataset_key:'fundamental_ttm',domain:'fundamental',status:'ready',record_count:ttmFacts.length,coverage_start:null,coverage_end:quarterly.asOf,last_retrieved_at:quarterly.retrievedAt,rights_status:'approved',source_keys:['sec_companyfacts'],notes:{period_type:'ttm'}},
   {dataset_key:'macro_bls',domain:'macro',status:'ready',record_count:macroObservations.length,coverage_start:macroObservations[0]?.observation_date||null,coverage_end:macroObservations.at(-1)?.observation_date||null,last_retrieved_at:macro.retrievedAt,rights_status:'approved',source_keys:['bls_public_api'],notes:{}},
   {dataset_key:'fx_reference',domain:'fx',status:'ready',record_count:fxObservations.length,coverage_start:null,coverage_end:null,last_retrieved_at:context.attemptedAt,rights_status:'approved',source_keys:['fed_h10','ecb_fx'],notes:{}},
+  {dataset_key:'evidence_documents',domain:'model',status:'ready',record_count:evidenceDocuments.length,coverage_start:null,coverage_end:feedDocs.map(d=>d.publishedOn).filter(Boolean).sort().at(-1)||null,last_retrieved_at:researchFeed?.retrievedAt||null,rights_status:'approved',source_keys:['sec_companyfacts'],notes:{newsStatus:researchFeed?.newsStatus||'unknown',socialStatus:researchFeed?.socialStatus||'unknown'}},
+  {dataset_key:'model_readiness',domain:'model',status:researchReadiness?.releaseAllowed?'ready':'blocked',record_count:Number(researchReadiness?.observedDocuments)||0,coverage_start:null,coverage_end:null,last_retrieved_at:researchReadiness?.evaluatedAt||null,rights_status:'approved',source_keys:['sec_companyfacts'],notes:{task:researchReadiness?.task||null,reason:researchReadiness?.reason||null,requiredGates:researchReadiness?.requiredGates||{}}},
   {dataset_key:'digital_issuer_facts',domain:'digital',status:'partial',record_count:digitalFacts.length,coverage_start:null,coverage_end:digital.reviewedAt,last_retrieved_at:digital.reviewedAt+'T00:00:00Z',rights_status:'approved',source_keys:['circle_transparency','tether_transparency'],notes:{market_prices:'blocked_pending_rights'}},
   {dataset_key:'market_prices',domain:'market',status:'blocked',record_count:0,coverage_start:null,coverage_end:null,last_retrieved_at:null,rights_status:'review_required',source_keys:['market_price_provider'],notes:{reason:'No approved redistributable market-price provider is connected yet'}},
   ...lotteries.map(d=>{const m=lotteryMeta[d.game];return {dataset_key:'lottery_'+m.game_key,domain:'lottery',status:'ready',record_count:d.count,coverage_start:d.coverageStart,coverage_end:d.coverageEnd,last_retrieved_at:d.retrievedAt,rights_status:'approved',source_keys:[m.source_key],notes:{sha256:d.sha256}}})
  ];
- return {sources,instruments,fundProfiles,annualFacts,quarterFacts,ttmFacts,macroSeries,macroObservations,fxObservations,digitalFacts,lotteryGames,lotteryDraws,statuses};
+ return {sources,instruments,fundProfiles,annualFacts,quarterFacts,ttmFacts,macroSeries,macroObservations,fxObservations,digitalFacts,evidenceSources,evidenceDocuments,evidenceEntities,evidenceFilings,lotteryGames,lotteryDraws,statuses};
 }
