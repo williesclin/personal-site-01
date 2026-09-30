@@ -12,7 +12,10 @@
       "/data/*"
     ]
   },
-  "triggers": {\n    "crons": ["20 23 * * 1-5"]\n  },\n  "vars": {
+  "triggers": {
+    "crons": ["20 23 * * 1-5"]
+  },
+  "vars": {
     "SITE_URL": "https://quantpathlabs.com",
     "SUPABASE_URL": "https://ngmhqadvnjbhtlrrcxsb.supabase.co",
     "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5nbWhxYWR2bmpiaHRscnJjeHNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk5MDA0NzEsImV4cCI6MjEwNTQ3NjQ3MX0.pdiNcnIThVcWcN2glw-sOjsiz6CQIIBbil0Qkif8c9U"
