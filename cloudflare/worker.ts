@@ -12,7 +12,7 @@ import researchFeed from '../data/research-feed.json';
 import researchReadiness from '../data/research-model-readiness.json';
 import {researchPublicStatus} from '../app/research-public-status.mjs';
 import {buildActionReview,DEFAULT_ACTION_CONFIG,normalizeActionConfig} from '../app/action-engine.mjs';
-import {validateMarketImport,evaluateSnapshot,summarizeEvaluations,candidateReadiness} from '../app/action-outcome.mjs';
+import {validateMarketImport,evaluateSnapshot,summarizeEvaluations,candidateReadiness,releaseReadiness} from '../app/action-outcome.mjs';
 import {GAMES,validateReport,emptyWorkspace,type Game,type Workspace,type Plan,type RecordItem,type Article} from '../app/domain';
 type Env={ASSETS:{fetch:(r:Request)=>Promise<Response>};SUPABASE_URL?:string;SUPABASE_ANON_KEY?:string;LAB_SUPABASE_URL?:string;LAB_SUPABASE_SERVICE_KEY?:string;SITE_URL?:string};
 type User={id:string;email:string;email_confirmed_at?:string};
@@ -158,7 +158,13 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
    if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)throw new HttpError(503,'AI 模型研究資料庫尚未連接。');
    let config;try{config=normalizeActionConfig(await body(r));}catch(err){throw new HttpError(400,err instanceof Error?err.message:'Invalid model configuration');}
    const current=await request(e,'/rest/v1/action_model_configs?select=version&order=version.desc&limit=1',undefined,'GET',undefined,true);
-   const nextVersion=(Number(current[0]?.version)||0)+1;config={...config,version:nextVersion,updatedAt:new Date().toISOString()};
+   const baseVersion=Number(current[0]?.version)||0;
+   if(config.mode==='released'){
+    const evaluations=await request(e,`/rest/v1/action_model_evaluations?select=model_id,horizon_days,sample_count,hit_rate,avg_excess_return,details&config_version=eq.${baseVersion}&horizon_days=eq.90&limit=100`,undefined,'GET',undefined,true);
+    const gate=releaseReadiness(evaluations,config);
+    if(!gate.ready)throw new HttpError(409,'Released mode requires benchmark-adjusted 90-day evidence across enough dates, symbols and samples / 正式發布需具備足夠日期、標的與樣本的 90 天基準調整證據。');
+   }
+   const nextVersion=baseVersion+1;config={...config,version:nextVersion,updatedAt:new Date().toISOString()};
    await request(e,'/rest/v1/action_model_configs',undefined,'POST',{version:nextVersion,mode:config.mode,config,created_by:u.id},true);
    return json({config});
   }
