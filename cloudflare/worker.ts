@@ -1,6 +1,11 @@
 import quarterly from '../data/quarterly.json';
+import macroSeries from '../data/macro-series.json';
+import marketContext from '../data/market-context.json';
+import digitalAssets from '../data/digital-assets.json';
 import {newsQuery,safeSECLink} from '../app/news-engine.mjs';
 import {membershipView,validateResearchState} from '../app/membership.mjs';
+import {ETFS} from '../app/etf-catalog.mjs';
+import {buildResearchWarehouse,batchRows} from '../app/research-warehouse.mjs';
 import {ETFS} from '../app/etf-catalog.mjs';
 import equities from '../data/equities.json';
 import lotto from '../data/lotto649.json';
@@ -30,6 +35,39 @@ function getToken(r:Request){const val=r.headers.get('cookie')?.split(';').map(s
 async function user(e:Env,r:Request){const token=getToken(r);if(!token)throw new HttpError(401,'請先登入。');const u=await request(e,'/auth/v1/user',token) as User;if(!u.id||!u.email_confirmed_at)throw new HttpError(403,'請先完成 Email 驗證。');const profiles=await request(e,`/rest/v1/profiles?id=eq.${u.id}&select=id,email,role,monthly_budget`,token) as {role:string;monthly_budget:number}[];if(!profiles[0])throw new HttpError(403,'會員資料尚未建立。');return {u,token,profile:profiles[0]};}
 async function loadWorkspace(e:Env,token:string,uid:string,profile:{role:string;monthly_budget:number}):Promise<Workspace>{const [plans,records,articles]=await Promise.all([request(e,`/rest/v1/plans?user_id=eq.${uid}&select=payload&order=created_at.desc`,token),request(e,`/rest/v1/records?user_id=eq.${uid}&select=payload&order=created_at.desc`,token),request(e,'/rest/v1/articles?select=payload',token)]) as {payload:never}[][];let lab={runs:[],audit:[],activeRun:null,previousRun:null};if(profile.role==='admin'&&e.LAB_SUPABASE_URL&&e.LAB_SUPABASE_SERVICE_KEY){const result=await request(e,'/rest/v1/lab_state?id=eq.1&select=state',undefined,'GET',undefined,true) as {state:typeof lab}[];lab=result[0]?.state||lab;}return {...emptyWorkspace,plans:plans.map(p=>p.payload),records:records.map(p=>p.payload),articles:articles.map(p=>p.payload),monthlyBudget:profile.monthly_budget,...lab};}
 async function body(r:Request){if(Number(r.headers.get('content-length')||0)>1048576)throw new HttpError(413,'內容超過 1 MB。');const raw=await r.text();if(raw.length>1048576)throw new HttpError(413,'內容超過 1 MB。');try{return JSON.parse(raw) as Record<string,unknown>}catch{throw new HttpError(400,'無效的 JSON。')}}
+async function upsertWarehouse(e:Env,table:string,conflict:string,rows:any[],size=500){for(const batch of batchRows(rows,size)){if(!batch.length)continue;await request(e,`/rest/v1/${table}?on_conflict=${conflict}`,undefined,'POST',batch,true);}}
+export async function syncResearchWarehouse(e:Env){
+ if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)throw new HttpError(503,'Research warehouse database is not connected.');
+ const startedAt=new Date().toISOString(),warehouse=buildResearchWarehouse({equities,quarterly,macro:macroSeries,context:marketContext,digital:digitalAssets,etfs:ETFS,lotteries:[lotto,power,daily,usPowerball,usMegaMillions]});
+ let marketCount=0;
+ try{
+  await upsertWarehouse(e,'ref_sources','source_key',warehouse.sources,100);
+  await upsertWarehouse(e,'ref_instruments','symbol',warehouse.instruments,100);
+  await upsertWarehouse(e,'fund_profiles','symbol',warehouse.fundProfiles,100);
+  await upsertWarehouse(e,'fundamental_facts','symbol,period_type,period_end,metric',warehouse.annualFacts,500);
+  await upsertWarehouse(e,'fundamental_facts','symbol,period_type,period_end,metric',warehouse.quarterFacts,500);
+  await upsertWarehouse(e,'fundamental_facts','symbol,period_type,period_end,metric',warehouse.ttmFacts,500);
+  await upsertWarehouse(e,'macro_series','series_key',warehouse.macroSeries,100);
+  await upsertWarehouse(e,'macro_observations','series_key,observation_date',warehouse.macroObservations,500);
+  await upsertWarehouse(e,'fx_observations','source_key,observation_date,pair',warehouse.fxObservations,500);
+  await upsertWarehouse(e,'digital_facts','symbol,observation_date,metric,source_key',warehouse.digitalFacts,200);
+  await upsertWarehouse(e,'lottery_games','game_key',warehouse.lotteryGames,20);
+  await upsertWarehouse(e,'lottery_draws','game_key,draw_id',warehouse.lotteryDraws,400);
+  await upsertWarehouse(e,'ops_dataset_status','dataset_key',warehouse.statuses,100);
+  const approvedMarket=await request(e,'/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,source_url,retrieved_at,quality_status,rights_status&quality_status=eq.verified&rights_status=eq.approved&limit=10000',undefined,'GET',undefined,true);
+  if(Array.isArray(approvedMarket)&&approvedMarket.length){
+   const prices=approvedMarket.map((x:any)=>({symbol:x.symbol,session_date:x.session_date,price_type:'adjusted_close',value:x.adjusted_close,currency:x.currency,source_key:'market_price_provider',quality_status:x.quality_status,rights_status:x.rights_status,retrieved_at:x.retrieved_at,metadata:{provider:x.source,sourceUrl:x.source_url}}));
+   await upsertWarehouse(e,'market_prices','symbol,session_date,price_type,source_key',prices,500);marketCount=prices.length;
+   await upsertWarehouse(e,'ops_dataset_status','dataset_key',[{dataset_key:'market_prices',domain:'market',status:'partial',record_count:marketCount,coverage_start:prices.map((x:any)=>x.session_date).sort()[0],coverage_end:prices.map((x:any)=>x.session_date).sort().at(-1),last_retrieved_at:prices.map((x:any)=>x.retrieved_at).sort().at(-1),rights_status:'approved',source_keys:['market_price_provider'],notes:{mirroredFrom:'action_market_observations'}}],20);
+  }
+  const counts={sources:warehouse.sources.length,instruments:warehouse.instruments.length,funds:warehouse.fundProfiles.length,annualFacts:warehouse.annualFacts.length,quarterFacts:warehouse.quarterFacts.length,ttmFacts:warehouse.ttmFacts.length,macro:warehouse.macroObservations.length,fx:warehouse.fxObservations.length,digital:warehouse.digitalFacts.length,lottery:warehouse.lotteryDraws.length,market:marketCount};
+  await request(e,'/rest/v1/ops_ingestion_runs',undefined,'POST',{dataset_key:'research_warehouse_full',started_at:startedAt,completed_at:new Date().toISOString(),status:'success',record_count:Object.values(counts).reduce((a:any,b:any)=>a+b,0),details:counts},true);
+  return {ok:true,counts};
+ }catch(err){
+  try{await request(e,'/rest/v1/ops_ingestion_runs',undefined,'POST',{dataset_key:'research_warehouse_full',started_at:startedAt,completed_at:new Date().toISOString(),status:'failed',record_count:0,details:{error:err instanceof Error?err.message:'unknown'}},true);}catch{}
+  throw err;
+ }
+}
 async function actionConfig(e:Env){if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)return DEFAULT_ACTION_CONFIG;try{const rows=await request(e,'/rest/v1/action_model_configs?select=config&order=version.desc&limit=1',undefined,'GET',undefined,true);return normalizeActionConfig(rows[0]?.config||DEFAULT_ACTION_CONFIG);}catch{return DEFAULT_ACTION_CONFIG;}}
 function utcDate(d=new Date()){return d.toISOString().slice(0,10)}
 async function actionLearningStatus(e:Env){
@@ -136,6 +174,15 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
    return json({connected:true,rows,symbols});
   }catch{return json({connected:false,rows:[],reason:'approved_market_history_unavailable'});}
  }
+ if(path==='research-warehouse-status'&&r.method==='GET'){
+  if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
+  const [datasets,runs]=await Promise.all([request(e,'/rest/v1/ops_dataset_status?select=dataset_key,domain,status,record_count,coverage_start,coverage_end,last_retrieved_at,rights_status,source_keys,notes,updated_at&order=domain.asc,dataset_key.asc',undefined,'GET',undefined,true),request(e,'/rest/v1/ops_ingestion_runs?select=dataset_key,started_at,completed_at,status,record_count,details&dataset_key=eq.research_warehouse_full&order=started_at.desc&limit=5',undefined,'GET',undefined,true)]);
+  return json({datasets,runs});
+ }
+ if(path==='research-warehouse-sync'&&r.method==='POST'){
+  if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
+  return json(await syncResearchWarehouse(e));
+ }
  if(path==='action-learning-status'&&r.method==='GET'){
   if(profile.role!=='admin')throw new HttpError(403,'此操作限管理員。');
   return json(await actionLearningStatus(e));
@@ -213,4 +260,4 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
  }else throw new HttpError(404,'找不到此操作。');
  return json({workspace:await loadWorkspace(e,token,u.id,profile)});
  }catch(err){return json({error:err instanceof HttpError?err.message:'服務暫時無法完成操作。'},err instanceof HttpError?err.status:500);}}
-export default {async scheduled(_controller:any,e:Env,ctx:any){ctx.waitUntil(runDailyActionLearning(e).catch(()=>undefined));},async fetch(r:Request,e:Env){const pathname=new URL(r.url).pathname;if(pathname.startsWith('/data/'))return json({error:'Use the authenticated API / 請使用會員工具。'},404);if(pathname.startsWith('/api/'))return handleApi(r,e);const res=await e.ASSETS.fetch(r);const h=new Headers(res.headers);h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');h.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");return new Response(res.body,{status:res.status,headers:h});}};
+export default {async scheduled(_controller:any,e:Env,ctx:any){ctx.waitUntil((async()=>{try{await syncResearchWarehouse(e);}catch{}try{await runDailyActionLearning(e);}catch{}})());},async fetch(r:Request,e:Env){const pathname=new URL(r.url).pathname;if(pathname.startsWith('/data/'))return json({error:'Use the authenticated API / 請使用會員工具。'},404);if(pathname.startsWith('/api/'))return handleApi(r,e);const res=await e.ASSETS.fetch(r);const h=new Headers(res.headers);h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');h.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");return new Response(res.body,{status:res.status,headers:h});}};
