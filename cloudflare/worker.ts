@@ -38,7 +38,7 @@ async function body(r:Request){if(Number(r.headers.get('content-length')||0)>104
 async function upsertWarehouse(e:Env,table:string,conflict:string,rows:any[],size=500){for(const batch of batchRows(rows,size)){if(!batch.length)continue;await request(e,`/rest/v1/${table}?on_conflict=${conflict}`,undefined,'POST',batch,true);}}
 export async function syncResearchWarehouse(e:Env){
  if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)throw new HttpError(503,'Research warehouse database is not connected.');
- const startedAt=new Date().toISOString(),warehouse=buildResearchWarehouse({equities,quarterly,macro:macroSeries,context:marketContext,digital:digitalAssets,etfs:ETFS,lotteries:[lotto,power,daily,usPowerball,usMegaMillions]});
+ const startedAt=new Date().toISOString(),warehouse=buildResearchWarehouse({equities,quarterly,macro:macroSeries,context:marketContext,digital:digitalAssets,etfs:ETFS,lotteries:[lotto,power,daily,usPowerball,usMegaMillions],researchFeed,researchReadiness});
  let marketCount=0;
  try{
   await upsertWarehouse(e,'ref_sources','source_key',warehouse.sources,100);
@@ -51,6 +51,10 @@ export async function syncResearchWarehouse(e:Env){
   await upsertWarehouse(e,'macro_observations','series_key,observation_date',warehouse.macroObservations,500);
   await upsertWarehouse(e,'fx_observations','source_key,observation_date,pair',warehouse.fxObservations,500);
   await upsertWarehouse(e,'digital_facts','symbol,observation_date,metric,source_key',warehouse.digitalFacts,200);
+  await upsertWarehouse(e,'evidence_sources','id',warehouse.evidenceSources,50);
+  await upsertWarehouse(e,'evidence_documents','id',warehouse.evidenceDocuments,200);
+  await upsertWarehouse(e,'evidence_document_entities','document_id,symbol',warehouse.evidenceEntities,300);
+  await upsertWarehouse(e,'evidence_filing_observations','document_id',warehouse.evidenceFilings,200);
   await upsertWarehouse(e,'lottery_games','game_key',warehouse.lotteryGames,20);
   await upsertWarehouse(e,'lottery_draws','game_key,draw_id',warehouse.lotteryDraws,400);
   await upsertWarehouse(e,'ops_dataset_status','dataset_key',warehouse.statuses,100);
@@ -60,7 +64,7 @@ export async function syncResearchWarehouse(e:Env){
    await upsertWarehouse(e,'market_prices','symbol,session_date,price_type,source_key',prices,500);marketCount=prices.length;
    await upsertWarehouse(e,'ops_dataset_status','dataset_key',[{dataset_key:'market_prices',domain:'market',status:'partial',record_count:marketCount,coverage_start:prices.map((x:any)=>x.session_date).sort()[0],coverage_end:prices.map((x:any)=>x.session_date).sort().at(-1),last_retrieved_at:prices.map((x:any)=>x.retrieved_at).sort().at(-1),rights_status:'approved',source_keys:['market_price_provider'],notes:{mirroredFrom:'action_market_observations'}}],20);
   }
-  const counts={sources:warehouse.sources.length,instruments:warehouse.instruments.length,funds:warehouse.fundProfiles.length,annualFacts:warehouse.annualFacts.length,quarterFacts:warehouse.quarterFacts.length,ttmFacts:warehouse.ttmFacts.length,macro:warehouse.macroObservations.length,fx:warehouse.fxObservations.length,digital:warehouse.digitalFacts.length,lottery:warehouse.lotteryDraws.length,market:marketCount};
+  const counts={sources:warehouse.sources.length,instruments:warehouse.instruments.length,funds:warehouse.fundProfiles.length,annualFacts:warehouse.annualFacts.length,quarterFacts:warehouse.quarterFacts.length,ttmFacts:warehouse.ttmFacts.length,macro:warehouse.macroObservations.length,fx:warehouse.fxObservations.length,digital:warehouse.digitalFacts.length,evidenceDocuments:warehouse.evidenceDocuments.length,evidenceFilings:warehouse.evidenceFilings.length,lottery:warehouse.lotteryDraws.length,market:marketCount};
   await request(e,'/rest/v1/ops_ingestion_runs',undefined,'POST',{dataset_key:'research_warehouse_full',started_at:startedAt,completed_at:new Date().toISOString(),status:'success',record_count:Object.values(counts).reduce((a:any,b:any)=>a+b,0),details:counts},true);
   return {ok:true,counts};
  }catch(err){
