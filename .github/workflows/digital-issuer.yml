@@ -1,0 +1,40 @@
+name: Refresh official stablecoin issuer facts
+on:
+  schedule:
+    - cron: '20 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sync-digital-issuer.mjs'
+      - '.github/workflows/digital-issuer.yml'
+permissions:
+  contents: write
+concurrency:
+  group: research-data
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/sync-digital-issuer.mjs
+      - name: Commit verified issuer facts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/digital-assets.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Refresh official stablecoin issuer facts'
+          pushed=false
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then pushed=true; break; fi
+          done
+          test "$pushed" = true
