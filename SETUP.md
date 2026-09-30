@@ -159,3 +159,54 @@ The Digital Assets page now distinguishes three evidence layers instead of showi
 This is not treated as a technical API outage. Public crypto exchange APIs can have separate commercial-use / redistribution terms. Do not populate member-facing price fields from such an endpoint until the relevant permission is documented.
 
 The official issuer refresh runs every six hours and retains the last verified facts when parsing fails.
+
+## Database split and normalized research warehouse — 2026-09-30
+
+Two Supabase projects have distinct responsibilities:
+
+### quantpath-members
+Only user/account state should remain authoritative here:
+- auth users / profiles
+- memberships
+- watchlists and saved research (research_state)
+- personal lottery plans / records
+- member-owned editorial notes
+
+Legacy shared research_* tables remain temporarily for compatibility, but member-facing shared evidence APIs now read from quantpath-research. Do not add new shared market/fundamental/macro rows to the member database.
+
+### quantpath-research
+Shared research facts, evidence, models and ingestion monitoring live here. Tables are grouped by stable prefixes:
+
+- ref_*: source registry and instrument catalog
+- fundamental_*: stock annual / quarterly / TTM numeric facts
+- fund_*: ETF / trust issuer facts and expense ratios
+- macro_*: macro series metadata and observations
+- fx_*: official FX reference observations and explicitly derived cross rates
+- digital_*: issuer / protocol numeric facts for digital assets
+- market_*: licensed/approved price observations only
+- lottery_*: official game metadata and draw history
+- evidence_*: source-linked filings/news metadata and evidence relationships
+- research_model_*, action_*: model runs, classifications, actions and outcome-learning state
+- ops_*: ingestion runs and dataset coverage/status
+
+All shared warehouse tables are service-role only with RLS and explicit deny policies for anon/authenticated clients. Browser code does not query these tables directly.
+
+### Current bootstrap counts
+At the 2026-09-30 bootstrap:
+- instruments: 68
+- ETF profiles: 14
+- fundamental facts: 7,869 (2,495 annual + 5,060 quarterly + 314 TTM)
+- BLS macro observations: 218
+- FX observations: 153
+- digital issuer facts: 5
+- lottery draws: 4,210 across five games
+- evidence documents: 123
+- filing observations: 72
+- attention rows: 100
+
+market_prices intentionally remains empty while commercial display / redistribution rights are not approved. This is a rights gate, not a missing-schema issue.
+
+### Sync loop
+The Cloudflare Worker now runs a warehouse sync every day at 10:10 UTC. The weekday 23:20 UTC Action Intelligence job also performs a warehouse sync first, then runs action/outcome learning. Admins can inspect dataset status and trigger an immediate sync under Administration → Data.
+
+The sync is idempotent and upserts by stable natural keys; it records full-sync runs in ops_ingestion_runs and per-dataset readiness in ops_dataset_status.
