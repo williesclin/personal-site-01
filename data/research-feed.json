@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-09-30T05:47:11.772Z",
+  "retrievedAt": "2026-09-30T12:51:35.249Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "31190ad03842fb5c71b5ec352a91438f61e56b59351301b539dd29dddf6caec5",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000084/0001645590-26-000084-index.html",
+      "title": "Hewlett Packard Enterprise · 8-K · 2026-09-30",
+      "summary": {
+        "en": "SEC 8-K filing by Hewlett Packard Enterprise. Read the original filing before drawing conclusions.",
+        "zh-hant": "Hewlett Packard Enterprise 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-30",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-09-30T12:51:35.249Z",
+      "firstObservedAt": "2026-09-30T12:51:35.249Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "49892f7d1929a3950a67f1625c8d0b4ba30f84a2d95ae8a138e7c0123fa28536",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "HPE"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001645590-26-000084",
+      "acceptedAt": "2026-09-30T11:49:26.000Z"
+    },
     {
       "id": "69f78f5933ac9b65d396c3f6529614791e219139b22246f895d65e3eb59d8991",
       "sourceId": "sec-edgar",
@@ -1952,6 +1979,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-09-30T12:51:35.249Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-09-30T05:47:11.772Z",
       "succeeded": 50,
