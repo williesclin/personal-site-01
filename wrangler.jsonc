@@ -13,7 +13,7 @@
     ]
   },
   "triggers": {
-    "crons": ["20 23 * * 1-5"]
+    "crons": ["10 10 * * *", "20 23 * * 1-5"]
   },
   "vars": {
     "SITE_URL": "https://quantpathlabs.com",
