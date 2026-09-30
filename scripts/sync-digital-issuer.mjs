@@ -21,7 +21,7 @@ try{
 }catch(e){next.stablecoins.USDC.lastAttemptAt=now;next.stablecoins.USDC.refreshError=e.constructor?.name||'Error';}
 try{
  const tether=await page('https://tether.to/en/transparency/');
- if(!/pegged at 1-to-1/i.test(tether)||!/(typically refreshed daily|typically published daily)/i.test(tether))throw Error('Tether transparency markers unavailable');
+ if(!/pegged at 1-to-1/i.test(tether.text)||!/(typically refreshed daily|typically published daily)/i.test(tether.text))throw Error('Tether transparency markers unavailable');
  Object.assign(next.stablecoins.USDT,{reserveStatus:'issuer_source_connected',retrievedAt:now});
 }catch(e){next.stablecoins.USDT.lastAttemptAt=now;next.stablecoins.USDT.refreshError=e.constructor?.name||'Error';}
 await writeFile(tmp,JSON.stringify(next,null,2)+'\n');await rename(tmp,path);
