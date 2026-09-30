@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-09-30T12:51:35.249Z",
+  "retrievedAt": "2026-09-30T22:27:03.485Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -32,6 +32,33 @@
       "items": "7.01,9.01",
       "accession": "0001645590-26-000084",
       "acceptedAt": "2026-09-30T11:49:26.000Z"
+    },
+    {
+      "id": "6af2233d7ec048487dc005184420e418b96d1383757a1d4eb9f4540d2ad75e59",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/0000723125-26-000018-index.html",
+      "title": "Micron Technology · 8-K · 2026-09-30",
+      "summary": {
+        "en": "SEC 8-K filing by Micron Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Micron Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-09-30",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-09-30T22:27:03.485Z",
+      "firstObservedAt": "2026-09-30T22:27:03.485Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "6020d0652a4945483771a1bc5ec06bbcefd9222167214d46c51edecebe006025",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MU"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000723125-26-000018",
+      "acceptedAt": "2026-09-30T16:02:22.000Z"
     },
     {
       "id": "69f78f5933ac9b65d396c3f6529614791e219139b22246f895d65e3eb59d8991",
@@ -1979,6 +2006,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-09-30T22:27:03.485Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-09-30T12:51:35.249Z",
       "succeeded": 50,
