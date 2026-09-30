@@ -41,7 +41,9 @@
         "en": "Circle reports weekly reserve holdings and monthly third-party assurance.",
         "zh-hant": "Circle 公布每週儲備資訊，並提供每月第三方確信報告。"
       },
-      "termsUrl": "https://www.circle.com/legal/usdc-terms"
+      "termsUrl": "https://www.circle.com/legal/usdc-terms",
+      "lastAttemptAt": "2026-09-30T09:02:24.452Z",
+      "refreshError": "Error"
     },
     "USDT": {
       "issuer": "Tether",
@@ -59,7 +61,8 @@
         "en": "Tether states that circulation information is typically updated daily and reserve reports are published quarterly; numeric fields are not copied until a dated machine-verifiable snapshot is captured.",
         "zh-hant": "Tether 表示流通量資訊通常每日更新、儲備報告按季發布；在取得具日期且可機器驗證的快照前，不直接填入數值。"
       },
-      "termsUrl": "https://tether.to/en/legal/"
+      "termsUrl": "https://tether.to/en/legal/",
+      "retrievedAt": "2026-09-30T09:02:24.452Z"
     }
   }
 }
