@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-30",
+  "marketData": {
+    "status": "rights_review",
+    "reason": {
+      "en": "A redistributable commercial market-price feed has not been approved. Public exchange APIs can have separate commercial-use terms, so QuantPath does not republish a price until the usage right is verified.",
+      "zh-hant": "尚未核准可供商業網站再散布的市場行情來源。公開交易所 API 仍可能有商業使用條款，因此 QuantPath 在確認使用權前不直接重發價格。"
+    }
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "protocolUrl": "https://bitcoin.org/en/how-it-works",
+      "priceUsd": null,
+      "change24hPct": null,
+      "priceStatus": "rights_review"
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "protocolUrl": "https://ethereum.org/en/staking/",
+      "priceUsd": null,
+      "change24hPct": null,
+      "priceStatus": "rights_review"
+    }
+  },
+  "stablecoins": {
+    "USDC": {
+      "issuer": "Circle",
+      "pegCurrency": "USD",
+      "pegTarget": 1,
+      "marketPriceUsd": null,
+      "deviationPct": null,
+      "marketStatus": "rights_review",
+      "circulationUsd": 75200000000,
+      "reservesUsd": 75500000000,
+      "reserveAsOf": "2026-09-24",
+      "reserveSource": "https://www.circle.com/transparency",
+      "reserveStatus": "verified_issuer_snapshot",
+      "reserveNote": {
+        "en": "Circle reports weekly reserve holdings and monthly third-party assurance.",
+        "zh-hant": "Circle 公布每週儲備資訊，並提供每月第三方確信報告。"
+      },
+      "termsUrl": "https://www.circle.com/legal/usdc-terms"
+    },
+    "USDT": {
+      "issuer": "Tether",
+      "pegCurrency": "USD",
+      "pegTarget": 1,
+      "marketPriceUsd": null,
+      "deviationPct": null,
+      "marketStatus": "rights_review",
+      "circulationUsd": null,
+      "reservesUsd": null,
+      "reserveAsOf": null,
+      "reserveSource": "https://tether.to/en/transparency/",
+      "reserveStatus": "issuer_source_connected",
+      "reserveNote": {
+        "en": "Tether states that circulation information is typically updated daily and reserve reports are published quarterly; numeric fields are not copied until a dated machine-verifiable snapshot is captured.",
+        "zh-hant": "Tether 表示流通量資訊通常每日更新、儲備報告按季發布；在取得具日期且可機器驗證的快照前，不直接填入數值。"
+      },
+      "termsUrl": "https://tether.to/en/legal/"
+    }
+  }
+}
