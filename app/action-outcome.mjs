@@ -8,8 +8,9 @@ export function validDate(value){
 export function addDays(date,days){
  const d=new Date(date+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+days);return d.toISOString().slice(0,10);
 }
-export function validateMarketImport(value,{maxRecords=5000}={}){
+export function validateMarketImport(value,{maxRecords=5000,now=new Date()}={}){
  if(!value||typeof value!=='object'||!Array.isArray(value.records)||value.records.length<1||value.records.length>maxRecords)throw new Error('Market import requires 1–5000 records.');
+ const today=new Date(now).toISOString().slice(0,10);
  const rights=value.rightsStatus==='approved'?'approved':'review_required';
  const quality=value.qualityStatus==='pending'?'pending':'verified';
  const seen=new Set();
@@ -20,7 +21,7 @@ export function validateMarketImport(value,{maxRecords=5000}={}){
   const source=String(raw.source||value.source||'').trim().slice(0,120),sourceUrl=String(raw.sourceUrl||raw.source_url||value.sourceUrl||'').trim().slice(0,1000);
   const retrievedAt=String(raw.retrievedAt||raw.retrieved_at||value.retrievedAt||new Date().toISOString());
   if(!SYMBOL.test(symbol)||!validDate(sessionDate)||!Number.isFinite(adjustedClose)||adjustedClose<=0||!CURRENCY.test(currency)||!source||!Number.isFinite(Date.parse(retrievedAt)))throw new Error('Invalid market record '+(i+1));
-  if(sessionDate>new Date().toISOString().slice(0,10))throw new Error('Future market session is not allowed.');
+  if(sessionDate>today)throw new Error('Future market session is not allowed.');
   const key=symbol+'|'+sessionDate+'|'+source;if(seen.has(key))throw new Error('Duplicate market record '+key);seen.add(key);
   return {symbol,session_date:sessionDate,adjusted_close:adjustedClose,currency,source,source_url:sourceUrl||null,retrieved_at:new Date(retrievedAt).toISOString(),quality_status:quality,rights_status:rights};
  });
@@ -81,4 +82,20 @@ export function summarizeEvaluations(snapshots,modelIds,horizons){
 export function candidateReadiness(summaries,{minimumModels=4,minimumSamples=30,minimumDates=20,minimumSymbols=10,horizonDays=90}={}){
  const eligible=(summaries||[]).filter(s=>s.horizonDays===horizonDays&&s.sampleCount>=minimumSamples&&s.distinctDates>=minimumDates&&s.distinctSymbols>=minimumSymbols&&s.benchmarkReady===true);
  return {ready:new Set(eligible.map(x=>x.modelId)).size>=minimumModels,eligible,reason:eligible.length>=minimumModels?'Benchmark-adjusted evidence gate met.':'Candidate weights stay blocked until enough benchmark-adjusted, time-spread evidence exists.'};
+}
+export function releaseReadiness(rows,config){
+ const summaries=(rows||[]).map(row=>{
+  const details=row?.details&&typeof row.details==='object'?row.details:{};
+  return {
+   modelId:String(row?.model_id||details.modelId||''),
+   horizonDays:Number(row?.horizon_days??details.horizonDays),
+   sampleCount:Number(row?.sample_count??details.sampleCount),
+   hitRate:Number(row?.hit_rate??details.hitRate),
+   avgExcessReturn:Number(row?.avg_excess_return??details.avgExcessReturn),
+   distinctDates:Number(details.distinctDates),
+   distinctSymbols:Number(details.distinctSymbols),
+   benchmarkReady:details.benchmarkReady===true
+  };
+ });
+ return candidateReadiness(summaries,{minimumModels:Number(config?.thresholds?.minimumModels)||4,horizonDays:90});
 }

@@ -75,7 +75,7 @@ WebMCP 導覽工具已採功能偵測註冊；本次瀏覽器未提供 modelCont
 - Action 狀態採研究語意（Add review / Hold review / Trim review / Watch / No released action），不直接下交易指令。
 - 模型層已預留 Fundamental、Valuation、Momentum、Event、Macro、Risk 六個維度；每個模型都有 enabled、weight、draft/shadow/validated 狀態。
 - 管理員可在 AI Model Studio 修改模型權重、驗證狀態、最低模型數、最低信心門檻與 Shadow/Released 模式。每次儲存建立新版本，不覆寫舊版本。
-- 發布採 fail-closed：Released mode 只有在最低數量的 enabled models 全部標記 validated 後才允許；Action Review 也只有 validated model output 會進入 consensus。
+- 發布採 fail-closed：Released mode 除了要求最低數量的 enabled models 全部標記 validated，伺服器還會核對同一設定版本的 90 天基準調整評估；每個合格模型至少需 30 個樣本、20 個不同日期與 10 檔標的。Action Review 也只有 validated model output 會進入 consensus。人工狀態標籤本身不能繞過實證門檻。
 - RESEARCH Supabase 已建立 action_model_configs、action_outcomes、action_model_evaluations。這三張表只允許 service role，保留未來的 7/30/90/180 天 outcome tracking、模型比較與動態權重學習。
 - 目前仍維持 Shadow mode。Fundamental scaffold 可由已驗證財報計算研究訊號；Valuation、Momentum、Event、Macro、Risk 的正式模型輸出尚未接線，因此系統刻意顯示 No released action，而不是捏造買賣訊號。
 - 真正的「每天學習」需先接入可回溯、含 corporate actions/total return 的行情資料，以及明確的 benchmark / transaction-cost 規則。接入前不得用未驗證結果自動調權重或宣稱模型優化。
@@ -92,7 +92,7 @@ The Cloudflare Worker now has a weekday cron at 23:20 UTC. Each run:
 5. writes per-model evaluation summaries;
 6. may create a **pending** candidate weight configuration only after the benchmark-adjusted evidence gate is met.
 
-Candidate configs never auto-release. An administrator must review evidence and save a new model version. Released mode remains separately gated by validated model status.
+Candidate configs never auto-release. An administrator must review evidence and save a new model version. Released mode is separately gated by both validated model status and stored benchmark-adjusted 90-day evidence; a label-only change is rejected server-side.
 
 Admin market JSON import shape:
 

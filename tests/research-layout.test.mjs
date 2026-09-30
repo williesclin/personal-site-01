@@ -19,5 +19,6 @@ assert.equal(upgraded.benchmark,'VTI');
 
 assert.throws(()=>validateLayout({...base,benchmark:'NOTREAL'}));
 assert.throws(()=>validateLayout({...base,chart:{...base.chart,selected:Array.from({length:MAX_COMPARE+1},(_,i)=>'X'+i)}}));
+assert.throws(()=>validateLayout({...base,selectedFunds:['IVV','VTI','ITOT','IXUS','QQQ','SOXX'],chart:{...base.chart,selected:['NVDA','MSFT','AMD']}}),/fund selection/);
 assert.equal(layoutForSaved({}).version,2);
 console.log('PASS: research layouts preserve multi-select, year range, benchmark and legacy compatibility.');
