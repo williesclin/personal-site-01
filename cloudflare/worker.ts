@@ -6,7 +6,6 @@ import {newsQuery,safeSECLink} from '../app/news-engine.mjs';
 import {membershipView,validateResearchState} from '../app/membership.mjs';
 import {ETFS} from '../app/etf-catalog.mjs';
 import {buildResearchWarehouse,batchRows} from '../app/research-warehouse.mjs';
-import {ETFS} from '../app/etf-catalog.mjs';
 import equities from '../data/equities.json';
 import lotto from '../data/lotto649.json';
 import power from '../data/superlotto638.json';
