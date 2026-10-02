@@ -13,6 +13,7 @@ test('public status reports coverage and keeps unreleased AI blocked',()=>{
  assert.equal(status.socialStatus,'not_connected');
  assert.equal(status.newsStatus,'rights_review');
  assert.equal(status.ai.reviewedLabels,0);
+ assert.equal(status.ai.observedDocuments,feed.documents.length);
  assert.equal(status.ai.minimumReviewed,100);
  assert.equal(status.ai.releaseAllowed,false);
  assert.equal(status.ai.status,'blocked');
