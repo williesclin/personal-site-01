@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-02T05:57:03.243Z",
+  "retrievedAt": "2026-10-02T22:24:37.583Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "793197755e0a4e652f1b81a9a24962296bb1b8c7ba31d61801f651234a283c1e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000043/0001640147-26-000043-index.html",
+      "title": "Snowflake · 8-K · 2026-10-02",
+      "summary": {
+        "en": "SEC 8-K filing by Snowflake. Read the original filing before drawing conclusions.",
+        "zh-hant": "Snowflake 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-02",
+      "publishedAt": null,
+      "eventOn": "2026-09-28",
+      "retrievedAt": "2026-10-02T22:24:37.583Z",
+      "firstObservedAt": "2026-10-02T22:24:37.583Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "2029659576bb68e0cd1c3c574c91bed60b9677f20a023432ede66a492beb8cd0",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SNOW"
+      ],
+      "form": "8-K",
+      "items": "1.01,2.03,3.02,8.01,9.01",
+      "accession": "0001640147-26-000043",
+      "acceptedAt": "2026-10-02T20:06:31.000Z"
+    },
     {
       "id": "03a44c84c55e23f5a50cfb2e9341d1c6957a2aa7e226ca34b54c1b09ae0bd6a0",
       "sourceId": "sec-edgar",
@@ -2060,6 +2087,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-02T22:24:37.583Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-02T05:57:03.243Z",
       "succeeded": 50,
