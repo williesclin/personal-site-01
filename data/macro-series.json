@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "retrievedAt": "2026-10-02T01:47:44.938Z",
+  "retrievedAt": "2026-10-03T01:23:03.496Z",
   "source": "U.S. Bureau of Labor Statistics Public Data API",
   "sourceUrl": "https://api.bls.gov/publicAPI/v2/timeseries/data/",
   "coverage": {
@@ -1120,6 +1120,11 @@
         {
           "date": "2026-08",
           "value": 4.1,
+          "preliminary": false
+        },
+        {
+          "date": "2026-09",
+          "value": 4.2,
           "preliminary": false
         }
       ]
