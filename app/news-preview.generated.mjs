@@ -1,6 +1,6 @@
 // Generated public NVIDIA-only preview. Never import the full feed in client code.
 export const newsPreview={
-  "retrievedAt": "2026-10-01T22:48:49.094Z",
+  "retrievedAt": "2026-10-02T22:24:37.583Z",
   "documents": [
     {
       "id": "cda3abd51b3af92409c055b148244f3bb662ec483228e9bc72f16c2a829a8aa2",
