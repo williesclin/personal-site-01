@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewedAt": "2026-10-03",
+  "reviewedAt": "2026-10-04",
   "marketData": {
     "status": "rights_review",
     "reason": {
@@ -42,7 +42,7 @@
         "zh-hant": "Circle 公布每週儲備資訊，並提供每月第三方確信報告。"
       },
       "termsUrl": "https://www.circle.com/legal/usdc-terms",
-      "lastAttemptAt": "2026-10-03T21:14:53.840Z",
+      "lastAttemptAt": "2026-10-04T05:53:36.243Z",
       "refreshError": "Error"
     },
     "USDT": {
@@ -63,7 +63,7 @@
       },
       "termsUrl": "https://tether.to/en/legal/",
       "retrievedAt": "2026-09-30T09:02:24.452Z",
-      "lastAttemptAt": "2026-10-03T21:14:53.840Z",
+      "lastAttemptAt": "2026-10-04T05:53:36.243Z",
       "refreshError": "Error"
     }
   }
