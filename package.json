@@ -11,7 +11,7 @@
     "build:cloudflare": "node scripts/build-cloudflare.mjs",
     "deploy": "wrangler deploy --config wrangler.jsonc",
     "deploy:cloudflare": "wrangler deploy --config wrangler.jsonc",
-    "test": "node --experimental-strip-types tests/domain.test.mjs && node tests/action-engine.test.mjs && node tests/action-outcome.test.mjs && node tests/research-layout.test.mjs && node tests/macro-series.test.mjs && node tests/research-workspace-contract.test.mjs && node tests/digital-assets.test.mjs && node tests/research-warehouse.test.mjs && node tests/security.test.mjs"
+    "test": "node --experimental-strip-types tests/domain.test.mjs && node tests/action-engine.test.mjs && node tests/action-outcome.test.mjs && node tests/research-layout.test.mjs && node tests/macro-series.test.mjs && node tests/research-workspace-contract.test.mjs && node tests/digital-assets.test.mjs && node tests/research-warehouse.test.mjs && node tests/research-reconciliation.test.mjs && node tests/security.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
