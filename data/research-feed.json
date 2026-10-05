@@ -1,11 +1,92 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-05T05:59:38.359Z",
+  "retrievedAt": "2026-10-05T15:04:31.581Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "d2250531289e8f2ac06387c1aac0c360237de7cef2095d9e767d299b0183db1b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000114036126038523/0001140361-26-038523-index.html",
+      "title": "Eaton · 8-K · 2026-10-05",
+      "summary": {
+        "en": "SEC 8-K filing by Eaton. Read the original filing before drawing conclusions.",
+        "zh-hant": "Eaton 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-05",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-05T15:04:31.581Z",
+      "firstObservedAt": "2026-10-05T15:04:31.581Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "c6aee1629a8fffd97c4284250adc31f9bf74c19322f0c7c7b7941ea88835f63d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ETN"
+      ],
+      "form": "8-K",
+      "items": "5.02",
+      "accession": "0001140361-26-038523",
+      "acceptedAt": "2026-10-05T10:30:45.000Z"
+    },
+    {
+      "id": "fc63409bbb9279b2ceb99090b26a1669a5d90a41b0e21ab47ed56f798efb9f34",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/883241/000119312526413359/0001193125-26-413359-index.html",
+      "title": "Synopsys · 8-K · 2026-10-05",
+      "summary": {
+        "en": "SEC 8-K filing by Synopsys. Read the original filing before drawing conclusions.",
+        "zh-hant": "Synopsys 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-05",
+      "publishedAt": null,
+      "eventOn": "2026-10-05",
+      "retrievedAt": "2026-10-05T15:04:31.581Z",
+      "firstObservedAt": "2026-10-05T15:04:31.581Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "a8daa58bc121335e93d056d91f9fa375b231f3a8f918a4523d023f883dcd2d7f",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SNPS"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-413359",
+      "acceptedAt": "2026-10-05T13:21:53.000Z"
+    },
+    {
+      "id": "f059ef1c704bb5af993a6d0e59c84178d1647516c534d3bc9673b09f034a2d80",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/857005/000119312526413124/0001193125-26-413124-index.html",
+      "title": "PTC · 8-K · 2026-10-05",
+      "summary": {
+        "en": "SEC 8-K filing by PTC. Read the original filing before drawing conclusions.",
+        "zh-hant": "PTC 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-05",
+      "publishedAt": null,
+      "eventOn": "2026-10-04",
+      "retrievedAt": "2026-10-05T15:04:31.581Z",
+      "firstObservedAt": "2026-10-05T15:04:31.581Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "b7fada3eb5b3c1e5ae7b560fc01ef189864093a0287eecc540b59d5daa622a5c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PTC"
+      ],
+      "form": "8-K",
+      "items": "1.01,7.01,9.01",
+      "accession": "0001193125-26-413124",
+      "acceptedAt": "2026-10-05T11:22:43.000Z"
+    },
     {
       "id": "793197755e0a4e652f1b81a9a24962296bb1b8c7ba31d61801f651234a283c1e",
       "sourceId": "sec-edgar",
@@ -2087,6 +2168,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-05T15:04:31.581Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-05T05:59:38.359Z",
       "succeeded": 50,
