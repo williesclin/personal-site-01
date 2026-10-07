@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-06T18:31:02.808Z",
+  "retrievedAt": "2026-10-07T06:14:58.340Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -59,6 +59,60 @@
       "items": "8.01",
       "accession": "0001193125-26-414921",
       "acceptedAt": "2026-10-06T11:12:38.000Z"
+    },
+    {
+      "id": "172549b20136671de11175d2ca79846ee2245e872fc4bc3f9ad23e5c04ec6cd2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1297996/000119312526415815/0001193125-26-415815-index.html",
+      "title": "Digital Realty · 8-K · 2026-10-06",
+      "summary": {
+        "en": "SEC 8-K filing by Digital Realty. Read the original filing before drawing conclusions.",
+        "zh-hant": "Digital Realty 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-06",
+      "publishedAt": null,
+      "eventOn": "2026-10-06",
+      "retrievedAt": "2026-10-07T06:14:58.340Z",
+      "firstObservedAt": "2026-10-07T06:14:58.340Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "ac0b136fbe9d1ccac60281ae729a02b4d404b148dd77c628e07a115c4cd4b441",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DLR"
+      ],
+      "form": "8-K",
+      "items": "7.01,8.01,9.01",
+      "accession": "0001193125-26-415815",
+      "acceptedAt": "2026-10-07T01:19:48.000Z"
+    },
+    {
+      "id": "ba932909fdab5d9d4813e9387b976ff1ac7f4bda9880cdcea927f241820621a2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1297996/000119312526415814/0001193125-26-415814-index.html",
+      "title": "Digital Realty · 8-K · 2026-10-06",
+      "summary": {
+        "en": "SEC 8-K filing by Digital Realty. Read the original filing before drawing conclusions.",
+        "zh-hant": "Digital Realty 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-06",
+      "publishedAt": null,
+      "eventOn": "2026-10-06",
+      "retrievedAt": "2026-10-07T06:14:58.340Z",
+      "firstObservedAt": "2026-10-07T06:14:58.340Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "3ca23ac9c1611617a41bde3f16cca861d13f39b61eca63732614eca5434736a9",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DLR"
+      ],
+      "form": "8-K",
+      "items": "1.01,2.03,7.01,9.01",
+      "accession": "0001193125-26-415814",
+      "acceptedAt": "2026-10-07T01:18:39.000Z"
     },
     {
       "id": "d2250531289e8f2ac06387c1aac0c360237de7cef2095d9e767d299b0183db1b",
@@ -2222,6 +2276,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-07T06:14:58.340Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-06T18:31:02.808Z",
       "succeeded": 50,
