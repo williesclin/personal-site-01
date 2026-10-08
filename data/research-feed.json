@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-08T13:53:19.238Z",
+  "retrievedAt": "2026-10-08T23:29:05.847Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "770fed7ab41ec20645befe769ce6e62f6189c23a96ffa79161a94463d86e8bbe",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000023/0001375365-26-000023-index.html",
+      "title": "Super Micro Computer · 8-K · 2026-10-08",
+      "summary": {
+        "en": "SEC 8-K filing by Super Micro Computer. Read the original filing before drawing conclusions.",
+        "zh-hant": "Super Micro Computer 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-08",
+      "publishedAt": null,
+      "eventOn": "2026-10-07",
+      "retrievedAt": "2026-10-08T23:29:05.847Z",
+      "firstObservedAt": "2026-10-08T23:29:05.847Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "3291aa78ab1a5a7f7be93235f66792625cc3b1b5d6282b8f71176221f059fffd",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SMCI"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001375365-26-000023",
+      "acceptedAt": "2026-10-08T20:31:30.000Z"
+    },
     {
       "id": "d128a30c12c67480777c4bdc61afdb52eed3c16a03cf92433b2ebc9a0482b40f",
       "sourceId": "sec-edgar",
@@ -2276,6 +2303,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-08T23:29:05.847Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-08T13:53:19.238Z",
       "succeeded": 50,
