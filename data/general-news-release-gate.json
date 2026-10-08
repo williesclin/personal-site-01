@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "providerKey": "general_news_provider",
+  "reviewedOn": "2026-10-08",
+  "status": "blocked",
+  "rights": {
+    "collect": {
+      "status": "not_approved",
+      "evidenceUrl": "https://www.gdeltproject.org/data.html"
+    },
+    "store": {
+      "status": "not_approved",
+      "evidenceUrl": "https://www.gdeltproject.org/data.html"
+    },
+    "display": {
+      "status": "not_approved",
+      "evidenceUrl": "https://www.gdeltproject.org/data.html"
+    },
+    "model": {
+      "status": "not_approved",
+      "evidenceUrl": "https://www.gdeltproject.org/data.html"
+    },
+    "retention": {
+      "status": "not_approved",
+      "evidenceUrl": "https://www.gdeltproject.org/data.html"
+    },
+    "commercial": {
+      "status": "not_approved",
+      "evidenceUrl": "https://www.gdeltproject.org/data.html"
+    }
+  },
+  "coverage": {
+    "universe": null,
+    "querySetVersion": null,
+    "window": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "cutoffTime": null
+    },
+    "attemptedQueries": null,
+    "successfulQueries": null,
+    "failedQueries": null,
+    "retrievedDocuments": null,
+    "deduplicatedDocuments": null
+  },
+  "correctionPolicy": {
+    "url": null,
+    "slaHours": null
+  },
+  "deletionPolicy": {
+    "url": null,
+    "slaHours": null
+  },
+  "humanReview": {
+    "reviewedDocuments": 0,
+    "minimumReviewed": 100,
+    "doubleReviewedDocuments": 0,
+    "minimumDoubleReviewRate": 0.2,
+    "agreementRate": null,
+    "disagreementsResolved": false
+  }
+}

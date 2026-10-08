@@ -1,3 +1,6 @@
+import generalNewsGate from '../data/general-news-release-gate.json' with {type:'json'};
+import {evaluateGeneralNewsRelease} from './general-news-release.mjs';
+
 export const WAREHOUSE_SOURCE_ROWS=[
  {source_key:'sec_companyfacts',name:'SEC EDGAR Companyfacts',category:'regulator',base_url:'https://data.sec.gov/api/xbrl/companyfacts/',rights_status:'approved',refresh_cadence:'daily'},
  {source_key:'bls_public_api',name:'U.S. Bureau of Labor Statistics Public Data API',category:'government',base_url:'https://api.bls.gov/publicAPI/v2/timeseries/data/',rights_status:'approved',refresh_cadence:'daily'},
@@ -38,6 +41,7 @@ function factsFromRow(symbol,periodType,row,retrievedAt){
 }
 
 export function buildResearchWarehouse({equities,quarterly,macro,context,digital,etfs,lotteries,researchFeed=null,researchReadiness=null}){
+ const generalNewsRelease=evaluateGeneralNewsRelease(generalNewsGate);
  const sources=WAREHOUSE_SOURCE_ROWS.map(x=>({...x,notes:x.notes||{}}));
  const instruments=[
   ...equities.companies.map(c=>({symbol:c.symbol,name:c.name,asset_class:'stock',market:c.market||'US-listed',currency:'USD',sector:c.sector||null,instrument_group:'ai-company',source_key:'sec_companyfacts',metadata:{cik:c.cik,aiRole:c.aiRole,reviewedAt:c.reviewedAt}})),
@@ -93,7 +97,7 @@ export function buildResearchWarehouse({equities,quarterly,macro,context,digital
   {dataset_key:'macro_bls',domain:'macro',status:'ready',record_count:macroObservations.length,coverage_start:macroObservations[0]?.observation_date||null,coverage_end:macroObservations.at(-1)?.observation_date||null,last_retrieved_at:macro.retrievedAt,rights_status:'approved',source_keys:['bls_public_api'],notes:{}},
   {dataset_key:'fx_reference',domain:'fx',status:'ready',record_count:fxObservations.length,coverage_start:null,coverage_end:null,last_retrieved_at:context.attemptedAt,rights_status:'approved',source_keys:['fed_h10','ecb_fx'],notes:{}},
   {dataset_key:'evidence_documents',domain:'evidence',status:evidenceRightsApproved&&researchFeed?.newsStatus==='connected'?'ready':'partial',record_count:evidenceDocuments.length,coverage_start:null,coverage_end:feedDocs.map(d=>d.publishedOn).filter(Boolean).sort().at(-1)||null,last_retrieved_at:researchFeed?.retrievedAt||null,rights_status:evidenceRightsApproved?'approved':'review_required',source_keys:evidenceSourceKeys,notes:{newsStatus:researchFeed?.newsStatus||'unknown',socialStatus:researchFeed?.socialStatus||'unknown',coverage_denominator:'Only documents observed through named sources; missing source coverage is unavailable, never zero'}},
-  {dataset_key:'general_news',domain:'evidence',status:'blocked',record_count:0,coverage_start:null,coverage_end:null,last_retrieved_at:null,rights_status:'review_required',source_keys:['general_news_provider'],notes:{reason:'No provider has passed the commercial collection, storage, display, retention and model-use contract.'}},
+  {dataset_key:'general_news',domain:'evidence',status:'blocked',record_count:0,coverage_start:null,coverage_end:null,last_retrieved_at:null,rights_status:'review_required',source_keys:['general_news_provider'],notes:{reason:'No provider has passed the six-use rights, coverage, correction/deletion and independent review gate.',releaseAllowed:generalNewsRelease.releaseAllowed,rightsApproved:generalNewsRelease.rightsApproved,coverageComplete:generalNewsRelease.coverageComplete,policyComplete:generalNewsRelease.policyComplete,humanReviewReady:generalNewsRelease.humanReviewReady,missingGates:generalNewsRelease.missing}},
   {dataset_key:'model_readiness',domain:'model',status:researchReadiness?.releaseAllowed?'ready':'blocked',record_count:Number(researchReadiness?.observedDocuments)||0,coverage_start:null,coverage_end:null,last_retrieved_at:researchReadiness?.evaluatedAt||null,rights_status:evidenceRightsApproved?'approved':'review_required',source_keys:evidenceSourceKeys,notes:{task:researchReadiness?.task||null,reason:researchReadiness?.reason||null,requiredGates:researchReadiness?.requiredGates||{}}},
   {dataset_key:'digital_issuer_facts',domain:'digital',status:'partial',record_count:digitalFacts.length,coverage_start:null,coverage_end:digital.reviewedAt,last_retrieved_at:digital.reviewedAt+'T00:00:00Z',rights_status:'approved',source_keys:['circle_transparency','tether_transparency'],notes:{market_prices:'blocked_pending_rights'}},
   {dataset_key:'market_prices',domain:'market',status:'blocked',record_count:0,coverage_start:null,coverage_end:null,last_retrieved_at:null,rights_status:'review_required',source_keys:['market_price_provider'],notes:{reason:'No approved redistributable market-price provider is connected yet'}},
