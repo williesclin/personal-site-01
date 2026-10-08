@@ -42,7 +42,7 @@
         "zh-hant": "Circle 公布每週儲備資訊，並提供每月第三方確信報告。"
       },
       "termsUrl": "https://www.circle.com/legal/usdc-terms",
-      "lastAttemptAt": "2026-10-08T13:31:03.237Z",
+      "lastAttemptAt": "2026-10-08T23:21:25.126Z",
       "refreshError": "Error"
     },
     "USDT": {
@@ -63,7 +63,7 @@
       },
       "termsUrl": "https://tether.to/en/legal/",
       "retrievedAt": "2026-09-30T09:02:24.452Z",
-      "lastAttemptAt": "2026-10-08T13:31:03.237Z",
+      "lastAttemptAt": "2026-10-08T23:21:25.126Z",
       "refreshError": "Error"
     }
   }
