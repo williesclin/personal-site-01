@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "attemptedAt": "2026-10-09T13:45:08.853129Z",
+  "attemptedAt": "2026-10-09T22:53:24.548724Z",
   "sources": {
     "ecb": {
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
       "status": "available",
-      "retrievedAt": "2026-10-09T13:45:08.853129Z",
-      "lastAttemptAt": "2026-10-09T13:45:08.853129Z",
+      "retrievedAt": "2026-10-09T22:53:24.548724Z",
+      "lastAttemptAt": "2026-10-09T22:53:24.548724Z",
       "rows": [
         {
           "date": "2026-07-13",
@@ -327,14 +327,19 @@
           "date": "2026-10-08",
           "eurUsd": 1.1186,
           "usdJpy": 158.27820489898087
+        },
+        {
+          "date": "2026-10-09",
+          "eurUsd": 1.1206,
+          "usdJpy": 158.2545065143673
         }
       ]
     },
     "h10": {
       "url": "https://www.federalreserve.gov/releases/h10/current/",
       "status": "available",
-      "retrievedAt": "2026-10-09T13:45:08.853129Z",
-      "lastAttemptAt": "2026-10-09T13:45:08.853129Z",
+      "retrievedAt": "2026-10-09T22:53:24.548724Z",
+      "lastAttemptAt": "2026-10-09T22:53:24.548724Z",
       "rows": [
         {
           "date": "2026-09-28",
@@ -371,28 +376,39 @@
     "bls-news": {
       "url": "https://www.bls.gov/feed/bls_latest.rss",
       "status": "available",
-      "retrievedAt": "2026-10-09T13:45:08.853129Z",
-      "lastAttemptAt": "2026-10-09T13:45:08.853129Z",
+      "retrievedAt": "2026-10-09T22:53:24.548724Z",
+      "lastAttemptAt": "2026-10-09T22:53:24.548724Z",
       "rows": [
         {
-          "id": "6e2323a4161e0a88909b1b4e",
+          "id": "e2a165123a3faf3fed227f91",
           "source": "BLS",
           "url": "https://www.bls.gov/bls/",
           "title": "Major Economic Indicators Latest Numbers",
-          "publishedAt": "2026-10-02T12:32:11Z",
+          "publishedAt": "2026-10-09T14:00:29Z",
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         }
       ]
     },
     "fed-news": {
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "status": "available",
-      "retrievedAt": "2026-10-09T13:45:08.853129Z",
-      "lastAttemptAt": "2026-10-09T13:45:08.853129Z",
+      "retrievedAt": "2026-10-09T22:53:24.548724Z",
+      "lastAttemptAt": "2026-10-09T22:53:24.548724Z",
       "rows": [
+        {
+          "id": "9044eec8de2a5865c7f6e53e",
+          "source": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+          "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+          "publishedAt": "2026-10-09T14:00:00Z",
+          "topic": "policy-rates",
+          "symbols": [],
+          "association": "topic-only",
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
+        },
         {
           "id": "08859693f2f738a4d3760177",
           "source": "Federal Reserve",
@@ -402,7 +418,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "316625c241f2e4bc3543bed2",
@@ -413,7 +429,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "d8d8882f0598f966ff244ffa",
@@ -424,7 +440,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "ea5938d6b8721685a16edfbb",
@@ -435,7 +451,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "14146cd9529768b8de7ddb9a",
@@ -446,7 +462,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "5cb5d24eabc33a4d638c7085",
@@ -457,7 +473,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "9ccd303c792f0cbad6a44ee1",
@@ -468,7 +484,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "da5332a64195803b8d5f091d",
@@ -479,7 +495,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "421593941bcd210840f685fc",
@@ -490,7 +506,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "e3d0f340738d8b442d5164da",
@@ -501,7 +517,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "a3c66db57688cd99760d1973",
@@ -512,7 +528,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "c752665596824774fab7f006",
@@ -523,7 +539,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "1079b55bdcb2016893db67aa",
@@ -534,7 +550,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "dcf8db524f3733545fb22349",
@@ -545,7 +561,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "20ecc6299cf18d9212f091ee",
@@ -556,7 +572,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "17a452dae997f2ec73b88e31",
@@ -567,7 +583,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "4d1a9c6afdd362f13821625a",
@@ -578,7 +594,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "f2082212c894d2ae9bf8dcf9",
@@ -589,7 +605,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         },
         {
           "id": "dc6734c1308341f2a9fa712f",
@@ -600,18 +616,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
-        },
-        {
-          "id": "12dc0236b9ec88cbdc181823",
-          "source": "Federal Reserve",
-          "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260827a.htm",
-          "title": "Federal Reserve Board issues enforcement action with former employee of Banco Popular de Puerto Rico",
-          "publishedAt": "2026-08-27T15:00:00Z",
-          "topic": null,
-          "symbols": [],
-          "association": "topic-only",
-          "retrievedAt": "2026-10-09T13:45:08.853129Z"
+          "retrievedAt": "2026-10-09T22:53:24.548724Z"
         }
       ]
     }
