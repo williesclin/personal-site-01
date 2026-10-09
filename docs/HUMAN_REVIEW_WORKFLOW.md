@@ -8,11 +8,12 @@ The private `quantpath_ops.document_reviews` table stores human-reviewed source 
 私人審閱表保存人工判讀的來源版本，不是 AI 預測。未編造或匯入標籤；一般會員無讀寫權限，既有會員資格及個人研究資料不變。
 
 ## Operations / 操作
-1. `node scripts/prepare-human-review.mjs queue /private/path/queue.json` creates blank rows from the current real filing feed. Keep outside git.／依真實申報產生空白表，保存在公開 repo 外。
-2. A human opens each original link, records a pseudonymous reviewer code, topic, sentiment, UTC review time, and 20–2000 characters of original evidence notes. Do not copy full documents. `not_assessable` is valid when metadata cannot support sentiment.／真人回查原文，填代碼、分類、情緒、時間及自行撰寫的依據；無法判讀時保留不可判定。
-3. A different human independently reviews at least 20% without seeing the first labels. Register real reviewer ownership privately; a string claiming “human” proves nothing.／至少20%由另一真人盲審；代碼須由營運者私下確認。
-4. `node scripts/prepare-human-review.mjs sql /private/path/labels.json /private/path/reviews.sql` validates known source/hash/URL/time/taxonomy and duplicate reviewer records. A trusted operator reviews and executes the transaction through the existing private database connection. It never automatically submits.／檢查後產生交易SQL，經可信任營運者核對才寫入。
-5. Reviews are append-only. Preserve disagreements. Corrections require a versioned follow-up migration/process, never silently rewrite ground truth.／保留分歧，修訂須版本化，不直接覆蓋。
+1. `node scripts/prepare-human-review.mjs assignment /private/path/assignment.json` creates a deterministic assignment manifest from the current real filing feed. It deduplicates document IDs, keeps original source links and hashes, groups the same issuer/event date, balances two reviewer slots by event group, and assigns 20% independent double review. Reviewer ownership remains blank and unverified until the operator privately maps each slot to a real person. Keep the output outside git.／依真實申報建立可重現的指派清單：去重、保留原始連結與雜湊、按發行人與事件日分組、平衡兩個覆核席位，並安排20%獨立複核。營運者私下把席位對應到真人前，所有者仍為空白且未驗證；輸出不可提交公開 repo。
+2. `node scripts/prepare-human-review.mjs queue /private/path/queue.json` creates blank label rows from the current real filing feed. Keep outside git.／依真實申報產生空白標註表，保存在公開 repo 外。
+3. A human opens each original link, records a pseudonymous reviewer code, topic, sentiment, UTC review time, and 20–2000 characters of original evidence notes. Do not copy full documents. `not_assessable` is valid when metadata cannot support sentiment.／真人回查原文，填代碼、分類、情緒、時間及自行撰寫的依據；無法判讀時保留不可判定。
+4. A different human independently reviews at least 20% without seeing the first labels. Register real reviewer ownership privately; a string claiming “human” proves nothing.／至少20%由另一真人盲審；代碼須由營運者私下確認。
+5. `node scripts/prepare-human-review.mjs sql /private/path/labels.json /private/path/reviews.sql` validates known source/hash/URL/time/taxonomy and duplicate reviewer records. A trusted operator reviews and executes the transaction through the existing private database connection. It never automatically submits.／檢查後產生交易SQL，經可信任營運者核對才寫入。
+6. Reviews are append-only. Preserve disagreements. Corrections require a versioned follow-up migration/process, never silently rewrite ground truth.／保留分歧，修訂須版本化，不直接覆蓋。
 
 Taxonomy v1: financial_results 財務結果; financing 融資; governance 治理; business_update 業務更新; other 其他; uncertain 不確定. Sentiment: positive 正向; negative 負向; mixed 混合; neutral 中性; not_assessable 不可判定. Sentiment describes the source text, not expected stock returns.／情緒是文字判讀，不代表股價方向。
 
