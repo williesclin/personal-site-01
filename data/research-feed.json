@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-09T06:25:37.847Z",
+  "retrievedAt": "2026-10-09T18:26:54.499Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "83a58a0bccf13b67f0033f7ecae6ab2adebe8490f1d80c8782ead0b1effb4bfe",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/0000723125-26-000023-index.html",
+      "title": "Micron Technology · 10-K · 2026-10-09",
+      "summary": {
+        "en": "SEC 10-K filing by Micron Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Micron Technology 向 SEC 提交 10-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-09",
+      "publishedAt": null,
+      "eventOn": "2026-09-03",
+      "retrievedAt": "2026-10-09T18:26:54.499Z",
+      "firstObservedAt": "2026-10-09T18:26:54.499Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "9c650790cd9df4cc9c19bca51b891358f7865aea51d362e9da748fb4aef746f8",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MU"
+      ],
+      "form": "10-K",
+      "items": "",
+      "accession": "0000723125-26-000023",
+      "acceptedAt": "2026-10-09T12:21:00.000Z"
+    },
     {
       "id": "770fed7ab41ec20645befe769ce6e62f6189c23a96ffa79161a94463d86e8bbe",
       "sourceId": "sec-edgar",
@@ -2303,6 +2330,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-09T18:26:54.499Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-09T06:25:37.847Z",
       "succeeded": 50,
