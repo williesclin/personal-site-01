@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-10",
+  "gateSet": [
+    {
+      "id": "verified-coverage",
+      "status": "passed",
+      "blocking": true,
+      "label": {
+        "en": "Verified company and fund coverage",
+        "zh-hant": "已驗證的公司與基金範圍"
+      },
+      "detail": {
+        "en": "50 companies and 14 fund profiles exceed the 30-company / 10-fund minimum.",
+        "zh-hant": "50 家公司及 14 檔基金資料已超過 30 家公司／10 檔基金的最低門檻。"
+      },
+      "evidence": {
+        "companies": 50,
+        "requiredCompanies": 30,
+        "funds": 14,
+        "requiredFunds": 10
+      }
+    },
+    {
+      "id": "screening-export-acceptance",
+      "status": "acceptance_pending",
+      "blocking": true,
+      "label": {
+        "en": "Screening and export acceptance",
+        "zh-hant": "篩選與匯出驗收"
+      },
+      "detail": {
+        "en": "The code path and automated checks exist; a fresh production owner acceptance is still required.",
+        "zh-hant": "程式路徑與自動檢查已存在，仍須完成正式環境的擁有者驗收。"
+      }
+    },
+    {
+      "id": "account-save-restore",
+      "status": "acceptance_pending",
+      "blocking": true,
+      "label": {
+        "en": "Account save and restore",
+        "zh-hant": "帳號儲存與還原"
+      },
+      "detail": {
+        "en": "Ownership and quota enforcement are implemented; save, sign out, sign in and restore still need a fresh production browser check.",
+        "zh-hant": "帳號隔離與配額限制已建置；仍須在正式環境完成儲存、登出、登入及還原的瀏覽器驗收。"
+      }
+    },
+    {
+      "id": "payment-lifecycle",
+      "status": "not_started",
+      "blocking": true,
+      "label": {
+        "en": "Payment lifecycle acceptance",
+        "zh-hant": "付款生命週期驗收"
+      },
+      "detail": {
+        "en": "Checkout, failed payment, cancellation and refund acceptance have not started.",
+        "zh-hant": "結帳、付款失敗、取消及退款驗收尚未開始。"
+      }
+    },
+    {
+      "id": "terms-tax-retention",
+      "status": "review_pending",
+      "blocking": true,
+      "label": {
+        "en": "Tax, refund and retention terms",
+        "zh-hant": "稅費、退款與保存條款"
+      },
+      "detail": {
+        "en": "Final customer-facing billing, refund, retention and data-access terms are pending.",
+        "zh-hant": "面向會員的最終帳務、退款、保存與資料取回條款仍待完成。"
+      }
+    },
+    {
+      "id": "rights-legal-review",
+      "status": "review_pending",
+      "blocking": true,
+      "label": {
+        "en": "Source rights and applicable legal review",
+        "zh-hant": "來源權利與適用法規審查"
+      },
+      "detail": {
+        "en": "Source-use rights and jurisdiction-specific review are not yet complete.",
+        "zh-hant": "來源使用權及各適用司法管轄區的審查尚未完成。"
+      }
+    },
+    {
+      "id": "production-auth-hardening",
+      "status": "review_pending",
+      "blocking": true,
+      "label": {
+        "en": "Production authentication hardening",
+        "zh-hant": "正式環境身分驗證強化"
+      },
+      "detail": {
+        "en": "The production authentication security review remains open before paid launch.",
+        "zh-hant": "正式環境的身分驗證安全審查須在開始收費前完成。"
+      }
+    }
+  ],
+  "pro": {
+    "advancedToolsReleased": false,
+    "reviewedLabels": 0,
+    "requiredReviewedLabels": 100,
+    "outOfSampleEvidence": false
+  }
+}

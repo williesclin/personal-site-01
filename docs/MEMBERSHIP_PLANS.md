@@ -35,6 +35,10 @@ Live rolled-back transaction tests verified own-row read, no self-upgrade, activ
 ## Paid launch gates
 
 Research: at least 30 verified companies and 10 ETFs, usable multi-condition screening/export, source/period/unit/null checks, account saving, payment and cancellation/refund/failed-payment acceptance, finalized tax/retention terms, source use rights and jurisdiction-specific legal review.
+
+## Machine-readable release gate (2026-10-10)
+
+`data/membership-release-gate.json` is the versioned source for the paid-launch evidence shown on both pricing pages and in `/api/data-status`. `app/membership-release-gate.mjs` validates it and computes the result instead of trusting a manually entered “ready” flag. A gate counts only when its status is `passed`; code existence alone is insufficient. The current result is 1 of 7 blocking gates passed, so Research and Pro remain closed and checkout remains disabled. Coverage passes at 50 companies / 14 funds. Production acceptance for screening/export and account save/restore, payment lifecycle tests, customer terms, rights/legal review and production authentication hardening remain open. Pro additionally remains blocked by unreleased advanced tools and 0/100 reviewed model labels.
 Pro: all above plus actual advanced tools, versioned datasets/model assumptions, chronological holdouts, transaction costs where relevant and reproducible baseline comparisons. More expensive does not imply guaranteed accuracy or profit.
 Common lottery ingestion, filtering, presentation and validation infrastructure may be reused; lottery independence/frequency assumptions are not stock prediction models. Do not advertise precise predictions, investment recommendations or model performance without the applicable legal review and evidence.
 

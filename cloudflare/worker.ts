@@ -3,7 +3,9 @@ import macroSeries from '../data/macro-series.json';
 import marketContext from '../data/market-context.json';
 import digitalAssets from '../data/digital-assets.json';
 import {newsQuery,safeSECLink} from '../app/news-engine.mjs';
-import {membershipView,validateResearchState} from '../app/membership.mjs';
+import {BILLING_ENABLED,membershipView,validateResearchState} from '../app/membership.mjs';
+import membershipReleaseGate from '../data/membership-release-gate.json';
+import {publicMembershipReleaseStatus} from '../app/membership-release-gate.mjs';
 import {ETFS} from '../app/etf-catalog.mjs';
 import {buildResearchWarehouse,batchRows} from '../app/research-warehouse.mjs';
 import equities from '../data/equities.json';
@@ -139,7 +141,7 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   if(!getToken(r))return json({configured:true,user:null});
   try{const {u,token,profile}=await user(e,r);return json({configured:true,user:{email:u.email,role:profile.role},workspace:await loadWorkspace(e,token,u.id,profile)});}catch(err){if(err instanceof HttpError&&(err.status===401||err.status===403))return json({configured:true,user:null},200,{'Set-Cookie':cookie('',0)});throw err;}
  }
- if(path==='data-status'&&r.method==='GET')return json({quarterly:{retrievedAt:quarterly.retrievedAt,companies:quarterly.companies.length,periods:quarterly.companies.reduce((n,c)=>n+c.quarters.length,0)},equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
+ if(path==='data-status'&&r.method==='GET')return json({quarterly:{retrievedAt:quarterly.retrievedAt,companies:quarterly.companies.length,periods:quarterly.companies.reduce((n,c)=>n+c.quarters.length,0)},equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),membershipRelease:publicMembershipReleaseStatus(membershipReleaseGate,{billingEnabled:BILLING_ENABLED}),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
  if(path==='quarterly-preview'&&r.method==='GET')return json({...quarterly,preview:true,companies:quarterly.companies.filter(c=>c.symbol==='NVDA').map(c=>({...c,quarters:c.quarters.slice(0,4)}))});
  if(path==='research-preview'&&r.method==='GET')return json({...equities,preview:true,companies:equities.companies.slice(0,1).map(c=>({...c,years:c.years.slice(0,3)}))});
  if(path==='checkout'&&r.method==='POST')throw new HttpError(503,'Subscriptions are not open yet / 訂閱尚未開放，不會扣款。');
