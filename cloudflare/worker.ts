@@ -38,9 +38,26 @@ async function user(e:Env,r:Request){const token=getToken(r);if(!token)throw new
 async function loadWorkspace(e:Env,token:string,uid:string,profile:{role:string;monthly_budget:number}):Promise<Workspace>{const [plans,records,articles]=await Promise.all([request(e,`/rest/v1/plans?user_id=eq.${uid}&select=payload&order=created_at.desc`,token),request(e,`/rest/v1/records?user_id=eq.${uid}&select=payload&order=created_at.desc`,token),request(e,'/rest/v1/articles?select=payload',token)]) as {payload:never}[][];let lab={runs:[],audit:[],activeRun:null,previousRun:null};if(profile.role==='admin'&&e.LAB_SUPABASE_URL&&e.LAB_SUPABASE_SERVICE_KEY){const result=await request(e,'/rest/v1/lab_state?id=eq.1&select=state',undefined,'GET',undefined,true) as {state:typeof lab}[];lab=result[0]?.state||lab;}return {...emptyWorkspace,plans:plans.map(p=>p.payload),records:records.map(p=>p.payload),articles:articles.map(p=>p.payload),monthlyBudget:profile.monthly_budget,...lab};}
 async function body(r:Request){if(Number(r.headers.get('content-length')||0)>1048576)throw new HttpError(413,'內容超過 1 MB。');const raw=await r.text();if(raw.length>1048576)throw new HttpError(413,'內容超過 1 MB。');try{return JSON.parse(raw) as Record<string,unknown>}catch{throw new HttpError(400,'無效的 JSON。')}}
 async function upsertWarehouse(e:Env,table:string,conflict:string,rows:any[],size=500){for(const batch of batchRows(rows,size)){if(!batch.length)continue;await request(e,`/rest/v1/${table}?on_conflict=${conflict}`,undefined,'POST',batch,true);}}
+function warehouseSnapshot(){return buildResearchWarehouse({equities,quarterly,macro:macroSeries,context:marketContext,digital:digitalAssets,etfs:ETFS,lotteries:[lotto,power,daily,usPowerball,usMegaMillions],researchFeed,researchReadiness});}
+async function researchWarehousePublicStatus(e:Env){
+ const configuredStatus=researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed});
+ if(!configuredStatus.bindingsConfigured)return configuredStatus;
+ const expectedDatasetCount=warehouseSnapshot().statuses.length;
+ try{
+  const [runs,datasetRows]=await Promise.all([
+   request(e,'/rest/v1/ops_ingestion_runs?select=started_at,completed_at,status,details&dataset_key=eq.research_warehouse_full&order=started_at.desc&limit=20',undefined,'GET',undefined,true),
+   request(e,'/rest/v1/ops_dataset_status?select=dataset_key,updated_at&order=dataset_key.asc',undefined,'GET',undefined,true)
+  ]);
+  const success=runs.find((run:any)=>run.status==='success');
+  const syncedFilings=Number(success?.details?.evidenceFilings);
+  return researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed,verification:{readSucceeded:true,lastAttemptStatus:runs[0]?.status||null,lastSuccessfulAt:success?.completed_at||null,fullSyncStartedAt:success?.started_at||null,actualFilingObservations:Number.isInteger(syncedFilings)?syncedFilings:null,expectedDatasetCount,datasetRows}});
+ }catch{
+  return researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed,verification:{readSucceeded:false,lastAttemptStatus:'unavailable',expectedDatasetCount}});
+ }
+}
 export async function syncResearchWarehouse(e:Env){
  if(!e.LAB_SUPABASE_URL||!e.LAB_SUPABASE_SERVICE_KEY)throw new HttpError(503,'Research warehouse database is not connected.');
- const startedAt=new Date().toISOString(),warehouse=buildResearchWarehouse({equities,quarterly,macro:macroSeries,context:marketContext,digital:digitalAssets,etfs:ETFS,lotteries:[lotto,power,daily,usPowerball,usMegaMillions],researchFeed,researchReadiness});
+ const startedAt=new Date().toISOString(),warehouse=warehouseSnapshot();
  let marketCount=0;
  try{
   await upsertWarehouse(e,'ref_sources','source_key',warehouse.sources,100);
@@ -59,7 +76,7 @@ export async function syncResearchWarehouse(e:Env){
   await upsertWarehouse(e,'evidence_filing_observations','document_id',warehouse.evidenceFilings,200);
   await upsertWarehouse(e,'lottery_games','game_key',warehouse.lotteryGames,20);
   await upsertWarehouse(e,'lottery_draws','game_key,draw_id',warehouse.lotteryDraws,400);
-  await upsertWarehouse(e,'ops_dataset_status','dataset_key',warehouse.statuses,100);
+  await upsertWarehouse(e,'ops_dataset_status','dataset_key',warehouse.statuses.map((row:any)=>({...row,updated_at:startedAt})),100);
   const approvedMarket=await request(e,'/rest/v1/action_market_observations?select=symbol,session_date,adjusted_close,currency,source,source_url,retrieved_at,quality_status,rights_status&quality_status=eq.verified&rights_status=eq.approved&limit=10000',undefined,'GET',undefined,true);
   if(Array.isArray(approvedMarket)&&approvedMarket.length){
    const prices=approvedMarket.map((x:any)=>({symbol:x.symbol,session_date:x.session_date,price_type:'adjusted_close',value:x.adjusted_close,currency:x.currency,source_key:'market_price_provider',quality_status:x.quality_status,rights_status:x.rights_status,retrieved_at:x.retrieved_at,metadata:{provider:x.source,sourceUrl:x.source_url}}));
@@ -142,7 +159,7 @@ export async function handleApi(r:Request,e:Env):Promise<Response>{const url=new
   if(!getToken(r))return json({configured:true,user:null});
   try{const {u,token,profile}=await user(e,r);return json({configured:true,user:{email:u.email,role:profile.role},workspace:await loadWorkspace(e,token,u.id,profile)});}catch(err){if(err instanceof HttpError&&(err.status===401||err.status===403))return json({configured:true,user:null},200,{'Set-Cookie':cookie('',0)});throw err;}
  }
- if(path==='data-status'&&r.method==='GET')return json({quarterly:{retrievedAt:quarterly.retrievedAt,companies:quarterly.companies.length,periods:quarterly.companies.reduce((n,c)=>n+c.quarters.length,0)},equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),researchWarehouse:researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed}),membershipRelease:publicMembershipReleaseStatus(membershipReleaseGate,{billingEnabled:BILLING_ENABLED}),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
+ if(path==='data-status'&&r.method==='GET')return json({quarterly:{retrievedAt:quarterly.retrievedAt,companies:quarterly.companies.length,periods:quarterly.companies.reduce((n,c)=>n+c.quarters.length,0)},equities:{retrievedAt:equities.retrievedAt,hash:equities.hash,companies:equities.companies.length},research:researchPublicStatus(researchFeed,researchReadiness),researchWarehouse:await researchWarehousePublicStatus(e),membershipRelease:publicMembershipReleaseStatus(membershipReleaseGate,{billingEnabled:BILLING_ENABLED}),lottery:[lotto,power,daily].map(d=>({game:d.game,count:d.count,retrievedAt:d.retrievedAt,coverageEnd:d.coverageEnd}))});
  if(path==='quarterly-preview'&&r.method==='GET')return json({...quarterly,preview:true,companies:quarterly.companies.filter(c=>c.symbol==='NVDA').map(c=>({...c,quarters:c.quarters.slice(0,4)}))});
  if(path==='research-preview'&&r.method==='GET')return json({...equities,preview:true,companies:equities.companies.slice(0,1).map(c=>({...c,years:c.years.slice(0,3)}))});
  if(path==='checkout'&&r.method==='POST')throw new HttpError(503,'Subscriptions are not open yet / 訂閱尚未開放，不會扣款。');
