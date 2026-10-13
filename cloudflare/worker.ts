@@ -42,17 +42,19 @@ function warehouseSnapshot(){return buildResearchWarehouse({equities,quarterly,m
 async function researchWarehousePublicStatus(e:Env){
  const configuredStatus=researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed});
  if(!configuredStatus.bindingsConfigured)return configuredStatus;
- const expectedDatasetCount=warehouseSnapshot().statuses.length;
+ const expectedDatasetKeys=warehouseSnapshot().statuses.map((row:any)=>row.dataset_key).sort();
+ const datasetFilter=encodeURIComponent(`(${expectedDatasetKeys.join(',')})`);
  try{
-  const [runs,datasetRows]=await Promise.all([
+  const [runs,datasetRows,evidenceRows]=await Promise.all([
    request(e,'/rest/v1/ops_ingestion_runs?select=started_at,completed_at,status,details&dataset_key=eq.research_warehouse_full&order=started_at.desc&limit=20',undefined,'GET',undefined,true),
-   request(e,'/rest/v1/ops_dataset_status?select=dataset_key,updated_at&order=dataset_key.asc',undefined,'GET',undefined,true)
+   request(e,`/rest/v1/ops_dataset_status?select=dataset_key,updated_at&dataset_key=in.${datasetFilter}&order=dataset_key.asc`,undefined,'GET',undefined,true),
+   request(e,'/rest/v1/evidence_filing_observations?select=document_id&order=document_id.asc&limit=10000',undefined,'GET',undefined,true)
   ]);
   const success=runs.find((run:any)=>run.status==='success');
-  const syncedFilings=Number(success?.details?.evidenceFilings);
-  return researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed,verification:{readSucceeded:true,lastAttemptStatus:runs[0]?.status||null,lastSuccessfulAt:success?.completed_at||null,fullSyncStartedAt:success?.started_at||null,actualFilingObservations:Number.isInteger(syncedFilings)?syncedFilings:null,expectedDatasetCount,datasetRows}});
+  const actualFilingIds=Array.isArray(evidenceRows)?evidenceRows.map((row:any)=>row.document_id):null;
+  return researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed,verification:{readSucceeded:true,lastAttemptStatus:runs[0]?.status||null,lastSuccessfulAt:success?.completed_at||null,fullSyncStartedAt:success?.started_at||null,actualFilingIds,expectedDatasetKeys,datasetRows}});
  }catch{
-  return researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed,verification:{readSucceeded:false,lastAttemptStatus:'unavailable',expectedDatasetCount}});
+  return researchWarehouseConnectionStatus({labUrl:e.LAB_SUPABASE_URL,labServiceKey:e.LAB_SUPABASE_SERVICE_KEY,feed:researchFeed,verification:{readSucceeded:false,lastAttemptStatus:'unavailable',expectedDatasetKeys}});
  }
 }
 export async function syncResearchWarehouse(e:Env){
@@ -81,7 +83,7 @@ export async function syncResearchWarehouse(e:Env){
   if(Array.isArray(approvedMarket)&&approvedMarket.length){
    const prices=approvedMarket.map((x:any)=>({symbol:x.symbol,session_date:x.session_date,price_type:'adjusted_close',value:x.adjusted_close,currency:x.currency,source_key:'market_price_provider',quality_status:x.quality_status,rights_status:x.rights_status,retrieved_at:x.retrieved_at,metadata:{provider:x.source,sourceUrl:x.source_url}}));
    await upsertWarehouse(e,'market_prices','symbol,session_date,price_type,source_key',prices,500);marketCount=prices.length;
-   await upsertWarehouse(e,'ops_dataset_status','dataset_key',[{dataset_key:'market_prices',domain:'market',status:'partial',record_count:marketCount,coverage_start:prices.map((x:any)=>x.session_date).sort()[0],coverage_end:prices.map((x:any)=>x.session_date).sort().at(-1),last_retrieved_at:prices.map((x:any)=>x.retrieved_at).sort().at(-1),rights_status:'approved',source_keys:['market_price_provider'],notes:{mirroredFrom:'action_market_observations'}}],20);
+   await upsertWarehouse(e,'ops_dataset_status','dataset_key',[{dataset_key:'market_prices',domain:'market',status:'partial',record_count:marketCount,coverage_start:prices.map((x:any)=>x.session_date).sort()[0],coverage_end:prices.map((x:any)=>x.session_date).sort().at(-1),last_retrieved_at:prices.map((x:any)=>x.retrieved_at).sort().at(-1),rights_status:'approved',source_keys:['market_price_provider'],notes:{mirroredFrom:'action_market_observations'},updated_at:startedAt}],20);
   }
   const counts={sources:warehouse.sources.length,instruments:warehouse.instruments.length,funds:warehouse.fundProfiles.length,annualFacts:warehouse.annualFacts.length,quarterFacts:warehouse.quarterFacts.length,ttmFacts:warehouse.ttmFacts.length,macro:warehouse.macroObservations.length,fx:warehouse.fxObservations.length,digital:warehouse.digitalFacts.length,evidenceDocuments:warehouse.evidenceDocuments.length,evidenceFilings:warehouse.evidenceFilings.length,lottery:warehouse.lotteryDraws.length,market:marketCount};
   await request(e,'/rest/v1/ops_ingestion_runs',undefined,'POST',{dataset_key:'research_warehouse_full',started_at:startedAt,completed_at:new Date().toISOString(),status:'success',record_count:Object.values(counts).reduce((a:any,b:any)=>a+b,0),details:counts},true);
