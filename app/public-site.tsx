@@ -1,13 +1,15 @@
 import {MacroPage,StudyPage} from './research-path';
 import {MarketsPage,DigitalPage,LotteryDirectory} from './cross-assets';
-import {SiteHeader,ResearchHome,SearchPage,InstrumentDirectory,CoveragePage,AssetPage} from './research-navigation';
+import {SiteHeader,ResearchHome,SearchPage,InstrumentDirectory as BaseInstrumentDirectory,CoveragePage,AssetPage} from './research-navigation';
 import {PublicMemberAccess} from './use-member-access';
 import {NewsHub,NewsArticle} from './news-hub';
 import {publishedNews} from './news-articles.mjs';
 import {Pricing} from './pricing';
 import {ResearchEntry} from './equity-research';
+import {ResearchDataStatus} from './research-data-status';
 import React,{useState} from 'react';
 import {articles,categories,publicRoute} from './public-content.mjs';
+const InstrumentDirectory=({locale}:{locale:string})=><><ResearchDataStatus locale={locale}/><BaseInstrumentDirectory locale={locale}/></>;
 export function PublicSite({path='/'}:{path?:string}){
  const route=publicRoute(path),locale=route?.locale||'en',page=route?.page||'',zh=locale==='zh-hant';
  const t=(en:string,cn:string)=>zh?cn:en;
