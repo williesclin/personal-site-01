@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-15T11:50:25.325Z",
+  "retrievedAt": "2026-10-15T17:13:47.953Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -32,6 +32,33 @@
       "items": "5.02,9.01",
       "accession": "0001628280-26-065934",
       "acceptedAt": "2026-10-15T10:35:23.000Z"
+    },
+    {
+      "id": "718e0ed99654bef55544b1addf5599b0e546b5882c75241042b94cc199036635",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000024/0001375365-26-000024-index.html",
+      "title": "Super Micro Computer · 8-K · 2026-10-15",
+      "summary": {
+        "en": "SEC 8-K filing by Super Micro Computer. Read the original filing before drawing conclusions.",
+        "zh-hant": "Super Micro Computer 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-15",
+      "publishedAt": null,
+      "eventOn": "2026-10-14",
+      "retrievedAt": "2026-10-15T17:13:47.953Z",
+      "firstObservedAt": "2026-10-15T17:13:47.953Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "cd4612419d46a1bfcb29810c6df7446eb89d34e3c0ff39810eaf6e97163ca1cb",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SMCI"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001375365-26-000024",
+      "acceptedAt": "2026-10-15T13:08:20.000Z"
     },
     {
       "id": "83a58a0bccf13b67f0033f7ecae6ab2adebe8490f1d80c8782ead0b1effb4bfe",
@@ -2411,6 +2438,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-15T17:13:47.953Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-15T11:50:25.325Z",
       "succeeded": 50,
