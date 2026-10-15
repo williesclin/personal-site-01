@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-15T04:57:01.984Z",
+  "retrievedAt": "2026-10-15T11:50:25.325Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "0d15fd3c553cdcf80ecf48ed2631a38595c5c47a308dec28e83750ee9ef8b98d",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026065934/0001628280-26-065934-index.html",
+      "title": "MongoDB · 8-K · 2026-10-15",
+      "summary": {
+        "en": "SEC 8-K filing by MongoDB. Read the original filing before drawing conclusions.",
+        "zh-hant": "MongoDB 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-15",
+      "publishedAt": null,
+      "eventOn": "2026-10-12",
+      "retrievedAt": "2026-10-15T11:50:25.325Z",
+      "firstObservedAt": "2026-10-15T11:50:25.325Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "928f57c919353f9d7ba5cde92cc9ef942eb4b8a1278daa8ceb8a7efb07449ea3",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MDB"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001628280-26-065934",
+      "acceptedAt": "2026-10-15T10:35:23.000Z"
+    },
     {
       "id": "83a58a0bccf13b67f0033f7ecae6ab2adebe8490f1d80c8782ead0b1effb4bfe",
       "sourceId": "sec-edgar",
@@ -2384,6 +2411,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-15T11:50:25.325Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-15T04:57:01.984Z",
       "succeeded": 50,
