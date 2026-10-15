@@ -14,6 +14,8 @@ Sync validates schema, game rules, dates, prizes, duplicates, within-year period
 
 Workflow `.github/workflows/lottery-data.yml`: daily UTC 13:45/23:45 (Taipei 21:45/07:45), plus manual and ingestion-code changes. GitHub scheduling may delay. Check actual run success and production retrieval timestamps; >48h old displays a stale warning. A non-draw day is not a fetch failure. No member/analytics data may be committed.
 
+U.S. Powerball and Mega Millions snapshots are maintained independently by `.github/workflows/us-lottery-data.yml`. The public `/api/data-status` response exposes only safe aggregate health for both U.S. files under `usLottery` (`game`, `count`, `retrievedAt`, `coverageEnd`), alongside the existing Taiwan `lottery` array. Complete draw rows remain behind verified sign-in; health metadata is not a substitute for an actual workflow result or a successful production deployment.
+
 UI uses same-origin snapshots for demo and members. Default 100 draws, choices 30/60/100/300/500; archive searches all data. Game switches reset selections and archive filters. Loading/error states do not fabricate zero results.
 
 Dimensions: main frequency, trailing absence within selected sample (>=sample size if absent throughout), independent extra-area frequency, odd count, user-defined low/high split, sum in 20-wide bins, span, adjacent-number pair count, overlap between successive draws (N-1 comparisons), unit-digit totals, pair co-occurrence top15. All are descriptive, not predictive.
