@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-16T16:50:13.508Z",
+  "retrievedAt": "2026-10-16T21:27:38.171Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "d34222e68956f1488110f4c50bf9a53dd36a37271ee6fbd454c645a7c4024bfd",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000034/0001551182-26-000034-index.html",
+      "title": "Eaton · 8-K · 2026-10-16",
+      "summary": {
+        "en": "SEC 8-K filing by Eaton. Read the original filing before drawing conclusions.",
+        "zh-hant": "Eaton 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-16",
+      "publishedAt": null,
+      "eventOn": "2026-10-16",
+      "retrievedAt": "2026-10-16T21:27:38.171Z",
+      "firstObservedAt": "2026-10-16T21:27:38.171Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "f75430186c7c71b8525f6cc644f01721b7def9a827986242bf83bfb727e55c8e",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ETN"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001551182-26-000034",
+      "acceptedAt": "2026-10-16T20:51:43.000Z"
+    },
     {
       "id": "0d15fd3c553cdcf80ecf48ed2631a38595c5c47a308dec28e83750ee9ef8b98d",
       "sourceId": "sec-edgar",
@@ -2438,6 +2465,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-16T21:27:38.171Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-16T16:50:13.508Z",
       "succeeded": 50,
