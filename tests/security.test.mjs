@@ -10,6 +10,10 @@ r=await handleApi(new Request('https://quantpathlabs.com/api/data-status'),{});
 const status=await r.json();
 assert.deepEqual(status.usLottery.map(x=>x.game),['powerball','megamillions']);
 assert.ok(status.usLottery.every(x=>x.count>0&&/^\d{4}-\d{2}-\d{2}T/.test(x.retrievedAt)&&/^\d{4}-\d{2}-\d{2}$/.test(x.coverageEnd)));
+assert.equal(status.recoveryReadiness.ready,false);
+assert.equal(status.recoveryReadiness.passed,1);
+assert.equal(status.recoveryReadiness.total,6);
+assert.doesNotMatch(JSON.stringify(status.recoveryReadiness),/supabase\.co|service[_-]?key/i);
 r=await handleApi(new Request('https://quantpathlabs.com/api/workspace/record',{method:'POST',headers:{Origin:'https://evil.example'},body:'{}'}),env);assert.equal(r.status,403);
 for(const path of ['members','workspace/run','workspace/publish-run','workspace/record']){
  r=await handleApi(new Request('https://quantpathlabs.com/api/'+path,{method:path==='members'?'GET':'POST',headers:{Origin:'https://quantpathlabs.com'},...(path==='members'?{}:{body:'{}'})}),env);assert.equal(r.status,401);

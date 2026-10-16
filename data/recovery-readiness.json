@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-16",
+  "gates": [
+    {
+      "id": "source-snapshot-history",
+      "status": "passed",
+      "label": {
+        "en": "Versioned source snapshot history",
+        "zh-hant": "版本化來源快照歷史"
+      },
+      "detail": {
+        "en": "Public research snapshots are versioned in Git and validated before replacement. This is source history, not a database backup.",
+        "zh-hant": "公開研究快照已在 Git 中版本化，且替換前會驗證；這是來源歷史，不是資料庫備份。"
+      }
+    },
+    {
+      "id": "worker-rollback-drill",
+      "status": "not_tested",
+      "label": {
+        "en": "Production Worker rollback drill",
+        "zh-hant": "正式 Worker 回復演練"
+      },
+      "detail": {
+        "en": "Versioned deployments exist, but an isolated rollback and forward-recovery drill has not been recorded.",
+        "zh-hant": "已有版本化部署，但尚未記錄隔離環境的回復與向前恢復演練。"
+      }
+    },
+    {
+      "id": "membership-database-export",
+      "status": "blocked",
+      "label": {
+        "en": "Membership database export",
+        "zh-hant": "會員資料庫匯出"
+      },
+      "detail": {
+        "en": "No current logical export, checksum, retention record or recovery point has been verified.",
+        "zh-hant": "尚未驗證目前可用的邏輯匯出、雜湊、保存紀錄或復原點。"
+      }
+    },
+    {
+      "id": "research-database-export",
+      "status": "blocked",
+      "label": {
+        "en": "Research database export",
+        "zh-hant": "研究資料庫匯出"
+      },
+      "detail": {
+        "en": "No current logical export, checksum, retention record or recovery point has been verified.",
+        "zh-hant": "尚未驗證目前可用的邏輯匯出、雜湊、保存紀錄或復原點。"
+      }
+    },
+    {
+      "id": "isolated-database-restore",
+      "status": "not_tested",
+      "label": {
+        "en": "Isolated database restore test",
+        "zh-hant": "隔離資料庫還原測試"
+      },
+      "detail": {
+        "en": "No disposable target with a completed restore, row-count reconciliation and permission check has been recorded.",
+        "zh-hant": "尚未記錄可丟棄目標上的完整還原、筆數核對與權限檢查。"
+      }
+    },
+    {
+      "id": "approved-rpo-rto",
+      "status": "blocked",
+      "label": {
+        "en": "Approved RPO and RTO",
+        "zh-hant": "已核准的 RPO 與 RTO"
+      },
+      "detail": {
+        "en": "Recovery point and recovery time objectives remain undefined until exports and restore timing are verified.",
+        "zh-hant": "在匯出與還原時間完成驗證前，復原點與復原時間目標仍未定義。"
+      }
+    }
+  ]
+}
