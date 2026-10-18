@@ -1,6 +1,6 @@
 # Recovery readiness
 
-Reviewed: 2026-10-16
+Reviewed: 2026-10-18
 
 Recovery is fail-closed. A version history, successful build or healthy database does not prove that data can be restored. `data/recovery-readiness.json` is the public, non-secret record used by `/api/data-status`; `app/recovery-readiness.mjs` validates it and derives readiness instead of trusting a manually entered ready flag.
 
@@ -27,6 +27,8 @@ Do not restore over production for acceptance. Use a disposable target containin
 6. Destruction of the disposable target after evidence is retained.
 
 RPO and RTO stay `undefined` until export cadence and measured restore duration are available. A JSON manifest approval, successful query or branch existence is not a restore test.
+
+The executable [recovery export evidence runbook](./RECOVERY_EXPORT_RUNBOOK.md) now defines the separate schema, data and roles exports required for both databases, the managed-schema exclusions that must remain visible, and a fail-closed private evidence verifier. This is a preparation control only; no export or restore has been performed.
 
 ## Paid-release rule
 
