@@ -90,7 +90,6 @@ export function EquityResearch({locale='en',plan='free',workspace=false,initialQ
  </section>}
  {data&&!focusedFund&&<ResearchCharts companies={companies} locale={locale} full={full} year={year} yearFrom={yearFrom} yearTo={year} chart={chart} onChart={setChart}/>}
  {!focused&&<ResearchContextComparison locale={locale} full={full} symbols={selectedSymbols} benchmark={benchmark} onBenchmark={setBenchmark} macroIds={macroIds} onMacroIds={setMacroIds}/>}
- {!focused&&<ResearchEvidence locale={locale} full={full}/>}
  {(!focused||focusedFund)&&<section id="funds" className="eq-section"><h2>{t('ETF scope & annual cost','ETF 範圍與年度費用')}</h2><p>{t('Issuer facts checked','發行機構資料核對日')} {ETF_REVIEWED} · {t('A small comparison set, not an endorsement or ranking. Different exposures are not interchangeable.','小型比較清單，非推薦或排名。投資範圍不同，不能互相視為等價。')}</p>
  <label className="eq-amount">{t('Hypothetical constant holding value (fund currency)','假設全年固定持有市值（基金幣別）')}<input type="number" min="0" max="1000000000" value={amount} onChange={e=>setAmount(e.target.value)}/></label>
  {(amount.trim()===''||annualFee(Number(amount),0)===null)&&<p role="alert">{t('Enter an amount from 0 to 1,000,000,000.','請輸入 0 至 1,000,000,000 的金額。')}</p>}
