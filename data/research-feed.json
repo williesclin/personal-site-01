@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-20T11:54:51.964Z",
+  "retrievedAt": "2026-10-20T17:24:11.334Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "870cc619dc53578cf821816f522ddccbecd4f6da8710484b990b856c8debdc33",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000119312526425881/0001193125-26-425881-index.html",
+      "title": "Salesforce · 8-K · 2026-10-20",
+      "summary": {
+        "en": "SEC 8-K filing by Salesforce. Read the original filing before drawing conclusions.",
+        "zh-hant": "Salesforce 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-20",
+      "publishedAt": null,
+      "eventOn": "2026-10-20",
+      "retrievedAt": "2026-10-20T17:24:11.334Z",
+      "firstObservedAt": "2026-10-20T17:24:11.334Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "0e9d21d78bd291a2e3a2fc88d38805ed2b0f221fa9b4e5c7a4791c6e0878325f",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRM"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001193125-26-425881",
+      "acceptedAt": "2026-10-20T13:16:53.000Z"
+    },
     {
       "id": "d34222e68956f1488110f4c50bf9a53dd36a37271ee6fbd454c645a7c4024bfd",
       "sourceId": "sec-edgar",
@@ -2465,6 +2492,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-20T17:24:11.334Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-20T11:54:51.964Z",
       "succeeded": 50,
