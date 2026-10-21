@@ -1,11 +1,119 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-21T17:28:42.047Z",
+  "retrievedAt": "2026-10-21T21:52:12.724Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "fe4d0adcce4f972129a71a665bceff08ac7a1392764b7b5eb55f25c36b2fe3da",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000052/0000707549-26-000052-index.html",
+      "title": "Lam Research · 8-K · 2026-10-21",
+      "summary": {
+        "en": "SEC 8-K filing by Lam Research. Read the original filing before drawing conclusions.",
+        "zh-hant": "Lam Research 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-21",
+      "publishedAt": null,
+      "eventOn": "2026-10-21",
+      "retrievedAt": "2026-10-21T21:52:12.724Z",
+      "firstObservedAt": "2026-10-21T21:52:12.724Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "ebdeb0e092c960977576cfb84b2a2d48b343a36d3660bdb13244da5c748cd3f8",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "LRCX"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000707549-26-000052",
+      "acceptedAt": "2026-10-21T20:13:03.000Z"
+    },
+    {
+      "id": "d38637dcdba4925979183ffe2798c9ad0eed5c6060186720f7043f4e7ba4ec74",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.html",
+      "title": "Meta Platforms · 8-K · 2026-10-21",
+      "summary": {
+        "en": "SEC 8-K filing by Meta Platforms. Read the original filing before drawing conclusions.",
+        "zh-hant": "Meta Platforms 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-21",
+      "publishedAt": null,
+      "eventOn": "2026-10-19",
+      "retrievedAt": "2026-10-21T21:52:12.724Z",
+      "firstObservedAt": "2026-10-21T21:52:12.724Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "da975be57983b7c59a392c7042476eb496ece271de9588775d2fb98f58485dbb",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "META"
+      ],
+      "form": "8-K",
+      "items": "1.01,2.02,8.01,9.01",
+      "accession": "0001628280-26-066700",
+      "acceptedAt": "2026-10-21T20:03:35.000Z"
+    },
+    {
+      "id": "9cbf89a04cac2cae27b34a5163a68b44a06927b1da2209ac3324f296c915940e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000093/0000051143-26-000093-index.html",
+      "title": "IBM · 8-K · 2026-10-21",
+      "summary": {
+        "en": "SEC 8-K filing by IBM. Read the original filing before drawing conclusions.",
+        "zh-hant": "IBM 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-21",
+      "publishedAt": null,
+      "eventOn": "2026-10-21",
+      "retrievedAt": "2026-10-21T21:52:12.724Z",
+      "firstObservedAt": "2026-10-21T21:52:12.724Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "95f7aac8032d863d5cfe20011dc0e2ded24e43dde63f4ae03ba8f988d80c48a4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "IBM"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000051143-26-000093",
+      "acceptedAt": "2026-10-21T20:19:17.000Z"
+    },
+    {
+      "id": "af6e8b4c3a827707f8107f15125f2a02b7261729b4e8be00a05062f3d75c2e49",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000119312526427920/0001193125-26-427920-index.html",
+      "title": "Dell Technologies · 8-K · 2026-10-21",
+      "summary": {
+        "en": "SEC 8-K filing by Dell Technologies. Read the original filing before drawing conclusions.",
+        "zh-hant": "Dell Technologies 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-21",
+      "publishedAt": null,
+      "eventOn": "2026-10-19",
+      "retrievedAt": "2026-10-21T21:52:12.724Z",
+      "firstObservedAt": "2026-10-21T21:52:12.724Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "1a4904696eb9889e537fd60afc0f9534cf290fed2646d0c5bdb3adbca22e2f2f",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DELL"
+      ],
+      "form": "8-K",
+      "items": "5.02",
+      "accession": "0001193125-26-427920",
+      "acceptedAt": "2026-10-21T20:37:17.000Z"
+    },
     {
       "id": "870cc619dc53578cf821816f522ddccbecd4f6da8710484b990b856c8debdc33",
       "sourceId": "sec-edgar",
@@ -2519,6 +2627,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-21T21:52:12.724Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-21T17:28:42.047Z",
       "succeeded": 50,
