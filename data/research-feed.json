@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-22T17:26:03.656Z",
+  "retrievedAt": "2026-10-22T21:48:44.571Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -59,6 +59,33 @@
       "items": "",
       "accession": "0000051143-26-000095",
       "acceptedAt": "2026-10-21T22:15:58.000Z"
+    },
+    {
+      "id": "d4a149ee7fd82fe27b1cdd469ee8a864fe42f35b94572d3a1d215107884186c3",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000054/0000707549-26-000054-index.html",
+      "title": "Lam Research · 10-Q · 2026-10-22",
+      "summary": {
+        "en": "SEC 10-Q filing by Lam Research. Read the original filing before drawing conclusions.",
+        "zh-hant": "Lam Research 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-22",
+      "publishedAt": null,
+      "eventOn": "2026-09-27",
+      "retrievedAt": "2026-10-22T21:48:44.571Z",
+      "firstObservedAt": "2026-10-22T21:48:44.571Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "f1613ce588fc7cb8a2880635f661284907bebd07e14bb80f4737ec42c46496bf",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "LRCX"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000707549-26-000054",
+      "acceptedAt": "2026-10-22T20:07:28.000Z"
     },
     {
       "id": "fe4d0adcce4f972129a71a665bceff08ac7a1392764b7b5eb55f25c36b2fe3da",
@@ -2681,6 +2708,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-22T21:48:44.571Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-22T17:26:03.656Z",
       "succeeded": 50,
