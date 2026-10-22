@@ -1,9 +1,9 @@
 {
-  "evaluatedAt": "2026-10-22T05:08:37.165Z",
+  "evaluatedAt": "2026-10-22T12:12:41.364Z",
   "task": "filing_topic_and_sentiment",
   "status": "blocked",
   "releaseAllowed": false,
-  "observedDocuments": 97,
+  "observedDocuments": 99,
   "reviewedLabels": 0,
   "reviewCoverage": {
     "reviewCount": 0,

@@ -1,11 +1,65 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-22T05:07:39.940Z",
+  "retrievedAt": "2026-10-22T12:11:44.917Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "6befa4a5e0edf0ca901b3be7a045a7db392c74328fbd3f83030921a1ff749d45",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html",
+      "title": "Meta Platforms · 10-Q · 2026-10-22",
+      "summary": {
+        "en": "SEC 10-Q filing by Meta Platforms. Read the original filing before drawing conclusions.",
+        "zh-hant": "Meta Platforms 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-22",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-22T12:11:44.917Z",
+      "firstObservedAt": "2026-10-22T12:11:44.917Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "2362207f497a10c244d4598c5ed50e8b7191fba6cfd0c8b62ae35325a6a667f7",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "META"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001628280-26-066773",
+      "acceptedAt": "2026-10-22T00:00:08.000Z"
+    },
+    {
+      "id": "fda45182f67a95a8adbcfd9ffd3bcf2302c941ca57c16afd83b623f9ddc5c24e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000095/0000051143-26-000095-index.html",
+      "title": "IBM · 10-Q · 2026-10-22",
+      "summary": {
+        "en": "SEC 10-Q filing by IBM. Read the original filing before drawing conclusions.",
+        "zh-hant": "IBM 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-22",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-22T12:11:44.917Z",
+      "firstObservedAt": "2026-10-22T12:11:44.917Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "8ec233475854f3a285bf452f9933d9a21c4861632a77bc11771a98499b4c2f14",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "IBM"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000051143-26-000095",
+      "acceptedAt": "2026-10-21T22:15:58.000Z"
+    },
     {
       "id": "fe4d0adcce4f972129a71a665bceff08ac7a1392764b7b5eb55f25c36b2fe3da",
       "sourceId": "sec-edgar",
@@ -2627,6 +2681,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-22T12:11:44.917Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-22T05:07:39.940Z",
       "succeeded": 50,
