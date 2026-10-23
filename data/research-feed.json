@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-23T17:20:07.390Z",
+  "retrievedAt": "2026-10-23T21:33:17.259Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "661db49fc0c49c1702847795389d34a523dc56fc2e3ded53bdcece64b544a66d",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526430424/0001193125-26-430424-index.html",
+      "title": "Marvell Technology · 8-K · 2026-10-23",
+      "summary": {
+        "en": "SEC 8-K filing by Marvell Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Marvell Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-23",
+      "publishedAt": null,
+      "eventOn": "2026-10-22",
+      "retrievedAt": "2026-10-23T21:33:17.259Z",
+      "firstObservedAt": "2026-10-23T21:33:17.259Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "ce536e86936042b4be2e7a05a29e8b761db38cec401f01d63caf1205ee6372f5",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MRVL"
+      ],
+      "form": "8-K",
+      "items": "1.01,9.01",
+      "accession": "0001193125-26-430424",
+      "acceptedAt": "2026-10-23T20:05:52.000Z"
+    },
     {
       "id": "6befa4a5e0edf0ca901b3be7a045a7db392c74328fbd3f83030921a1ff749d45",
       "sourceId": "sec-edgar",
@@ -2708,6 +2735,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-23T21:33:17.259Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-23T17:20:07.390Z",
       "succeeded": 50,
