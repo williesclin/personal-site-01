@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-26T13:23:10.355Z",
+  "retrievedAt": "2026-10-26T22:48:24.584Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -32,6 +32,60 @@
       "items": "7.01,9.01",
       "accession": "0001628280-26-067127",
       "acceptedAt": "2026-10-26T10:40:00.000Z"
+    },
+    {
+      "id": "49b3065ee0db81841cd48f52eaa11548d10538f1b5c3572ac9145a15ef78ddf3",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026067303/0001628280-26-067303-index.html",
+      "title": "Applied Materials · 8-K · 2026-10-26",
+      "summary": {
+        "en": "SEC 8-K filing by Applied Materials. Read the original filing before drawing conclusions.",
+        "zh-hant": "Applied Materials 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-26",
+      "publishedAt": null,
+      "eventOn": "2026-10-26",
+      "retrievedAt": "2026-10-26T22:48:24.584Z",
+      "firstObservedAt": "2026-10-26T22:48:24.584Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "57e3d914c17eb1b399187ad1ed939005aa786d065a5f09f626349f6cf5bca750",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMAT"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001628280-26-067303",
+      "acceptedAt": "2026-10-26T20:34:29.000Z"
+    },
+    {
+      "id": "f3a46ac76dcd75ea8726b78bdcab0ff31fddd68f81c458d740858b27576b3251",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/0000813672-26-000116-index.html",
+      "title": "Cadence Design Systems · 8-K · 2026-10-26",
+      "summary": {
+        "en": "SEC 8-K filing by Cadence Design Systems. Read the original filing before drawing conclusions.",
+        "zh-hant": "Cadence Design Systems 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-26",
+      "publishedAt": null,
+      "eventOn": "2026-10-23",
+      "retrievedAt": "2026-10-26T22:48:24.584Z",
+      "firstObservedAt": "2026-10-26T22:48:24.584Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "e67214db107e0d35e3dd69d4216a2a7d4648cb59b85a0b3aeb28a436301cdf87",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CDNS"
+      ],
+      "form": "8-K",
+      "items": "2.02,8.01,9.01",
+      "accession": "0000813672-26-000116",
+      "acceptedAt": "2026-10-26T20:03:09.000Z"
     },
     {
       "id": "661db49fc0c49c1702847795389d34a523dc56fc2e3ded53bdcece64b544a66d",
@@ -2762,6 +2816,13 @@
     }
   ],
   "runs": [
+    {
+      "at": "2026-10-26T22:48:24.584Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
     {
       "at": "2026-10-26T13:23:10.355Z",
       "succeeded": 50,
