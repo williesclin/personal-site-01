@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-27T05:20:31.709Z",
+  "retrievedAt": "2026-10-27T12:30:52.205Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "1b1cbd73468f7e3ce3b9ddf5684011c7e2022bfd5746cab1aae7bab0ef58e5ce",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067393/0001628280-26-067393-index.html",
+      "title": "Vertiv · 8-K · 2026-10-27",
+      "summary": {
+        "en": "SEC 8-K filing by Vertiv. Read the original filing before drawing conclusions.",
+        "zh-hant": "Vertiv 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-27",
+      "publishedAt": null,
+      "eventOn": "2026-10-27",
+      "retrievedAt": "2026-10-27T12:30:52.205Z",
+      "firstObservedAt": "2026-10-27T12:30:52.205Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "09a95a576d8b23d7a8c4af8d84c503e9c3d5f71a4628e752218ff05de2c52dd6",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "VRT"
+      ],
+      "form": "8-K",
+      "items": "2.01,7.01,9.01",
+      "accession": "0001628280-26-067393",
+      "acceptedAt": "2026-10-27T10:34:09.000Z"
+    },
     {
       "id": "de254e9929d098fee995318427d18c4b0e1232c7e27757ee988c26997d63afd5",
       "sourceId": "sec-edgar",
@@ -2817,6 +2844,13 @@
   ],
   "runs": [
     {
+      "at": "2026-10-27T12:30:52.205Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-10-27T05:20:31.709Z",
       "succeeded": 50,
       "expected": 50,
@@ -3649,13 +3683,6 @@
     },
     {
       "at": "2026-09-22T21:43:48.288Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-22T21:21:27.278Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
