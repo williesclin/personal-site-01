@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-27T12:30:52.205Z",
+  "retrievedAt": "2026-10-27T22:27:32.965Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -32,6 +32,33 @@
       "items": "2.01,7.01,9.01",
       "accession": "0001628280-26-067393",
       "acceptedAt": "2026-10-27T10:34:09.000Z"
+    },
+    {
+      "id": "19ac5a2b86d556c17ebfb8d5488b1c140e25f766eda8ef13da7476444b0b1f43",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/0001193125-26-434271-index.html",
+      "title": "Broadcom · 8-K · 2026-10-27",
+      "summary": {
+        "en": "SEC 8-K filing by Broadcom. Read the original filing before drawing conclusions.",
+        "zh-hant": "Broadcom 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-27",
+      "publishedAt": null,
+      "eventOn": "2026-10-26",
+      "retrievedAt": "2026-10-27T22:27:32.965Z",
+      "firstObservedAt": "2026-10-27T22:27:32.965Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "32bc42d6e5f9d50df94d8c9197944e35c4403dc44596311d3f6a964dc92c1229",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AVGO"
+      ],
+      "form": "8-K",
+      "items": "2.03",
+      "accession": "0001193125-26-434271",
+      "acceptedAt": "2026-10-27T20:23:36.000Z"
     },
     {
       "id": "de254e9929d098fee995318427d18c4b0e1232c7e27757ee988c26997d63afd5",
@@ -2844,6 +2871,13 @@
   ],
   "runs": [
     {
+      "at": "2026-10-27T22:27:32.965Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-10-27T12:30:52.205Z",
       "succeeded": 50,
       "expected": 50,
@@ -3676,13 +3710,6 @@
     },
     {
       "at": "2026-09-23T04:56:47.930Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-22T21:43:48.288Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
