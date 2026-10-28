@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-28T13:18:49.605Z",
+  "retrievedAt": "2026-10-28T22:44:04.465Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -86,6 +86,357 @@
       "items": "",
       "accession": "0000813672-26-000121",
       "acceptedAt": "2026-10-27T22:00:12.000Z"
+    },
+    {
+      "id": "e571fc67525165d332ba506cdd1e179f0342bf94487557388aa4fdccd2858b9c",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/0001193125-26-436149-index.html",
+      "title": "Microsoft · 8-K · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K filing by Microsoft. Read the original filing before drawing conclusions.",
+        "zh-hant": "Microsoft 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "2f030f039c151968a82cd30b908213068147cbcf627df8451c619250bca7f3d5",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MSFT"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-436149",
+      "acceptedAt": "2026-10-28T20:11:03.000Z"
+    },
+    {
+      "id": "083a80508d947c01d13510e7f05dfcc2cd55110664bf7f4d4a3a9cf0f8ded428",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.html",
+      "title": "Microsoft · 10-Q · 2026-10-28",
+      "summary": {
+        "en": "SEC 10-Q filing by Microsoft. Read the original filing before drawing conclusions.",
+        "zh-hant": "Microsoft 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "295958853ad737e489c4a72ad26068e1be9d8057ad1226c693d5fd2bdd6c0e78",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MSFT"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001193125-26-436133",
+      "acceptedAt": "2026-10-28T20:07:39.000Z"
+    },
+    {
+      "id": "60a541d669a6b48f22b9cda6e63d288f7d60b7ec406e22caa9e1d82bfe295f39",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/0001193125-26-436122-index.html",
+      "title": "Microsoft · 8-K · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K filing by Microsoft. Read the original filing before drawing conclusions.",
+        "zh-hant": "Microsoft 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "0db5a071573b23eef65890099530f331a7c4b029870d7850e45db3f4d0a8aefe",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MSFT"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001193125-26-436122",
+      "acceptedAt": "2026-10-28T20:04:44.000Z"
+    },
+    {
+      "id": "2b39e2b810b36fe95191fb37d756748c4299c51e808f1d2197bc1787ccd448d0",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/0000319201-26-000032-index.html",
+      "title": "KLA · 8-K · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K filing by KLA. Read the original filing before drawing conclusions.",
+        "zh-hant": "KLA 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "b5bac5d35707c6710a2b8e6e6566cece0defd5f06ba9f121a14521dd655dcc52",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "KLAC"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000319201-26-000032",
+      "acceptedAt": "2026-10-28T20:07:50.000Z"
+    },
+    {
+      "id": "1a64c508087ef36458ecc719685c1c09b36e6a250845cd82920c709be273a2cc",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/0001652044-26-000080-index.html",
+      "title": "Alphabet · 8-K · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K filing by Alphabet. Read the original filing before drawing conclusions.",
+        "zh-hant": "Alphabet 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "1f61c9d5823b9593d45d3f5f6e6b770e7b9435482ef868a705a93af55d9b96be",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "GOOGL"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001652044-26-000080",
+      "acceptedAt": "2026-10-28T20:01:33.000Z"
+    },
+    {
+      "id": "a54d9666d619765617d7aa89fb317d0707499ecafdd7db37f93b576ed18523e9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526435853/0001193125-26-435853-index.html",
+      "title": "Oracle · 8-K · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K filing by Oracle. Read the original filing before drawing conclusions.",
+        "zh-hant": "Oracle 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "09a00cdbc37987f05d1c45ff98b60d46a956f53dcb2c0782229b0f7f57a62671",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ORCL"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001193125-26-435853",
+      "acceptedAt": "2026-10-28T18:24:44.000Z"
+    },
+    {
+      "id": "1099ca1fb04423b09b29ef398022bc0c99a050f282a85890e53b9d5c2e4b6a7d",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067893/0001628280-26-067893-index.html",
+      "title": "Vertiv · 10-Q · 2026-10-28",
+      "summary": {
+        "en": "SEC 10-Q filing by Vertiv. Read the original filing before drawing conclusions.",
+        "zh-hant": "Vertiv 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "3477cd6935b46e3b803908fa9553e7bdaee80d3e1887f8e2c928ba79e0ca56bb",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "VRT"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001628280-26-067893",
+      "acceptedAt": "2026-10-28T20:16:05.000Z"
+    },
+    {
+      "id": "1bd5fa46a8b24a38dca52ab18f9638afa425a3d79af41355b1e6befa12aa3600",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/0001373715-26-000096-index.html",
+      "title": "ServiceNow · 10-Q · 2026-10-28",
+      "summary": {
+        "en": "SEC 10-Q filing by ServiceNow. Read the original filing before drawing conclusions.",
+        "zh-hant": "ServiceNow 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "edc3cd5201ceb5f0b7c7729470a08c802ecaff2a200aa6811845531b61b30b6d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NOW"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001373715-26-000096",
+      "acceptedAt": "2026-10-28T21:12:31.000Z"
+    },
+    {
+      "id": "33da2e36444b56c98ab67da95be1d7757e5ce3f841fcd4bfe3e25c35503adea5",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000095/0001373715-26-000095-index.html",
+      "title": "ServiceNow · 8-K/A · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K/A filing by ServiceNow. Read the original filing before drawing conclusions.",
+        "zh-hant": "ServiceNow 向 SEC 提交 8-K/A 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "3e0abda2dd57120c8da9d99fb713d00a6cef85c8fff9a0e72ae6d80cd5add231",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NOW"
+      ],
+      "form": "8-K/A",
+      "items": "2.02,9.01",
+      "accession": "0001373715-26-000095",
+      "acceptedAt": "2026-10-28T21:10:49.000Z"
+    },
+    {
+      "id": "55febd53bf727b945fe33308adcbe04e9a8d240f443e15b83ce309938b6043fa",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000092/0001373715-26-000092-index.html",
+      "title": "ServiceNow · 8-K · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K filing by ServiceNow. Read the original filing before drawing conclusions.",
+        "zh-hant": "ServiceNow 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "725cbf7c594e52a445f76352c08171042047fdf1abaf3a078a8c82b0d5cfc353",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NOW"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001373715-26-000092",
+      "acceptedAt": "2026-10-28T20:14:14.000Z"
+    },
+    {
+      "id": "7e0efb4aab650c32335233c66fa494143709e467caa3ef97303f129368812bba",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1262039/000126203926000024/0001262039-26-000024-index.html",
+      "title": "Fortinet · 8-K · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K filing by Fortinet. Read the original filing before drawing conclusions.",
+        "zh-hant": "Fortinet 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "300156e89ea602fea39d6c07682d3e3a60ebb252f64e0a4be54d350b4240e2ab",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "FTNT"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001262039-26-000024",
+      "acceptedAt": "2026-10-28T20:09:06.000Z"
+    },
+    {
+      "id": "8572042bad538b80cadfb5466a564220d77e9d62d6e3a4ccbcf6cbdd3b7f7c13",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/0001101239-26-000180-index.html",
+      "title": "Equinix · 10-Q · 2026-10-28",
+      "summary": {
+        "en": "SEC 10-Q filing by Equinix. Read the original filing before drawing conclusions.",
+        "zh-hant": "Equinix 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "d8745a3fe151667f3af23e2c7d05cacf5a76c78472486f0ba9f684b4998d4e60",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "EQIX"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001101239-26-000180",
+      "acceptedAt": "2026-10-28T20:16:59.000Z"
+    },
+    {
+      "id": "d12514299ef68fcc6c5465e7226ddc5c03d14e8afd03fa19ae4e29eee46db6c2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000178/0001101239-26-000178-index.html",
+      "title": "Equinix · 8-K · 2026-10-28",
+      "summary": {
+        "en": "SEC 8-K filing by Equinix. Read the original filing before drawing conclusions.",
+        "zh-hant": "Equinix 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-28",
+      "publishedAt": null,
+      "eventOn": "2026-10-28",
+      "retrievedAt": "2026-10-28T22:44:04.465Z",
+      "firstObservedAt": "2026-10-28T22:44:04.465Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "859438c502ca86653fd5bf9448db5e6d9271572bb6023219af9ff14cc693e623",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "EQIX"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001101239-26-000178",
+      "acceptedAt": "2026-10-28T20:12:08.000Z"
     },
     {
       "id": "1b1cbd73468f7e3ce3b9ddf5684011c7e2022bfd5746cab1aae7bab0ef58e5ce",
@@ -2952,6 +3303,13 @@
   ],
   "runs": [
     {
+      "at": "2026-10-28T22:44:04.465Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-10-28T13:18:49.605Z",
       "succeeded": 50,
       "expected": 50,
@@ -3784,13 +4142,6 @@
     },
     {
       "at": "2026-09-23T21:37:55.373Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-23T17:20:03.274Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
