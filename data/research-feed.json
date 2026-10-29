@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-29T13:27:09.778Z",
+  "retrievedAt": "2026-10-29T22:53:09.373Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -32,6 +32,168 @@
       "items": "",
       "accession": "0001652044-26-000084",
       "acceptedAt": "2026-10-29T00:29:06.000Z"
+    },
+    {
+      "id": "48c40ce3db8efa9bba8805ae83ba12dd99df98254e209847dd907f9ba82657d5",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/0000050863-26-000188-index.html",
+      "title": "Intel · 8-K · 2026-10-29",
+      "summary": {
+        "en": "SEC 8-K filing by Intel. Read the original filing before drawing conclusions.",
+        "zh-hant": "Intel 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-29",
+      "publishedAt": null,
+      "eventOn": "2026-10-29",
+      "retrievedAt": "2026-10-29T22:53:09.373Z",
+      "firstObservedAt": "2026-10-29T22:53:09.373Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "e3280ebe6636a8e8cd34f8efdf99b207f0bfd9a711ff28413b69c657dc3f157f",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "INTC"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000050863-26-000188",
+      "acceptedAt": "2026-10-29T20:08:53.000Z"
+    },
+    {
+      "id": "bea6449e54e1d9f484c2bade403626af0dadce8527aa7ac92206ea6dde69ead2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000034/0000319201-26-000034-index.html",
+      "title": "KLA · 10-Q · 2026-10-29",
+      "summary": {
+        "en": "SEC 10-Q filing by KLA. Read the original filing before drawing conclusions.",
+        "zh-hant": "KLA 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-29",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-29T22:53:09.373Z",
+      "firstObservedAt": "2026-10-29T22:53:09.373Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "142fb90572bef9029722039cfb76965d42335ad617c398c066262eccb20c84f8",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "KLAC"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000319201-26-000034",
+      "acceptedAt": "2026-10-29T20:08:32.000Z"
+    },
+    {
+      "id": "0177f410a91382926d0aa319705808d19db07ef8bad890cb2fdea0298a5510db",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1280452/000162828026068202/0001628280-26-068202-index.html",
+      "title": "Monolithic Power Systems · 8-K · 2026-10-29",
+      "summary": {
+        "en": "SEC 8-K filing by Monolithic Power Systems. Read the original filing before drawing conclusions.",
+        "zh-hant": "Monolithic Power Systems 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-29",
+      "publishedAt": null,
+      "eventOn": "2026-10-27",
+      "retrievedAt": "2026-10-29T22:53:09.373Z",
+      "firstObservedAt": "2026-10-29T22:53:09.373Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "e29dbdbc99a7a87e5e4a9cd42bb3765f96032568e0e6e6b1a1be633bdaa4d993",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MPWR"
+      ],
+      "form": "8-K",
+      "items": "2.02,5.02,9.01",
+      "accession": "0001628280-26-068202",
+      "acceptedAt": "2026-10-29T20:01:11.000Z"
+    },
+    {
+      "id": "900952e39da78fe585305884af8bedcd1ebb3c74a0bbbc8d811d969e2d20493b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/0001018724-26-000038-index.html",
+      "title": "Amazon · 8-K · 2026-10-29",
+      "summary": {
+        "en": "SEC 8-K filing by Amazon. Read the original filing before drawing conclusions.",
+        "zh-hant": "Amazon 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-29",
+      "publishedAt": null,
+      "eventOn": "2026-10-29",
+      "retrievedAt": "2026-10-29T22:53:09.373Z",
+      "firstObservedAt": "2026-10-29T22:53:09.373Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "182447d3f650b9fe0b86b76cfb0f73840d53191fa2f95693d1a1248d1a4f2af6",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMZN"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001018724-26-000038",
+      "acceptedAt": "2026-10-29T20:05:27.000Z"
+    },
+    {
+      "id": "2f617281b7db9ac347c6e0b5106798c49e5ec2053dc9943fc4b13550242c0a4b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/0001193125-26-438017-index.html",
+      "title": "Meta Platforms · 8-K · 2026-10-29",
+      "summary": {
+        "en": "SEC 8-K filing by Meta Platforms. Read the original filing before drawing conclusions.",
+        "zh-hant": "Meta Platforms 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-29",
+      "publishedAt": null,
+      "eventOn": "2026-10-26",
+      "retrievedAt": "2026-10-29T22:53:09.373Z",
+      "firstObservedAt": "2026-10-29T22:53:09.373Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "cb16f709aed21cd66efbd1b0c86ef0f91a4647e8cb92999638467ad0b3dcc5b4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "META"
+      ],
+      "form": "8-K",
+      "items": "1.01,3.03,5.03,9.01",
+      "accession": "0001193125-26-438017",
+      "acceptedAt": "2026-10-29T21:08:00.000Z"
+    },
+    {
+      "id": "de4da72d93faa7187b5a22d191f4d7a6090b1b819fa70a4aecc51920f9c69a40",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926120212/0001104659-26-120212-index.html",
+      "title": "Digital Realty · 8-K · 2026-10-29",
+      "summary": {
+        "en": "SEC 8-K filing by Digital Realty. Read the original filing before drawing conclusions.",
+        "zh-hant": "Digital Realty 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-29",
+      "publishedAt": null,
+      "eventOn": "2026-10-29",
+      "retrievedAt": "2026-10-29T22:53:09.373Z",
+      "firstObservedAt": "2026-10-29T22:53:09.373Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "1927f8e5f578377dc864de14637dc40a736f65857fa6309478d9adc8ec96523d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DLR"
+      ],
+      "form": "8-K",
+      "items": "2.02,7.01,9.01",
+      "accession": "0001104659-26-120212",
+      "acceptedAt": "2026-10-29T20:17:20.000Z"
     },
     {
       "id": "4a2d6f852f2ba817dc9224876e0392bf10bfa3a611f425810c08ad3fc41e8446",
@@ -3330,6 +3492,13 @@
   ],
   "runs": [
     {
+      "at": "2026-10-29T22:53:09.373Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-10-29T13:27:09.778Z",
       "succeeded": 50,
       "expected": 50,
@@ -4162,13 +4331,6 @@
     },
     {
       "at": "2026-09-24T17:24:56.567Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-24T12:02:06.440Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
