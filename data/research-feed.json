@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-29T06:06:59.085Z",
+  "retrievedAt": "2026-10-29T13:27:09.778Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "44f78090ad66d3123d3a95d93df65ac1f53ae2db1a84752f2579212864add4c1",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.html",
+      "title": "Alphabet · 10-Q · 2026-10-29",
+      "summary": {
+        "en": "SEC 10-Q filing by Alphabet. Read the original filing before drawing conclusions.",
+        "zh-hant": "Alphabet 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-29",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-29T13:27:09.778Z",
+      "firstObservedAt": "2026-10-29T13:27:09.778Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "8c8990edcf8d8d0f18b3b73aab4eb08c6f3554a5b3f580ffa6596201dae1d6d7",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "GOOGL"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001652044-26-000084",
+      "acceptedAt": "2026-10-29T00:29:06.000Z"
+    },
     {
       "id": "4a2d6f852f2ba817dc9224876e0392bf10bfa3a611f425810c08ad3fc41e8446",
       "sourceId": "sec-edgar",
@@ -3303,6 +3330,13 @@
   ],
   "runs": [
     {
+      "at": "2026-10-29T13:27:09.778Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-10-29T06:06:59.085Z",
       "succeeded": 50,
       "expected": 50,
@@ -4135,13 +4169,6 @@
     },
     {
       "at": "2026-09-24T12:02:06.440Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-24T05:07:21.006Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
