@@ -1,11 +1,92 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-30T06:08:03.373Z",
+  "retrievedAt": "2026-10-30T13:15:56.877Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "8db3176e4b4fa98a82a2416dfe3064d3ce7ff88ff44cf814b59f0e55014f76d2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000191/0000050863-26-000191-index.html",
+      "title": "Intel · 10-Q · 2026-10-30",
+      "summary": {
+        "en": "SEC 10-Q filing by Intel. Read the original filing before drawing conclusions.",
+        "zh-hant": "Intel 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-30",
+      "publishedAt": null,
+      "eventOn": "2026-09-26",
+      "retrievedAt": "2026-10-30T13:15:56.877Z",
+      "firstObservedAt": "2026-10-30T13:15:56.877Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "318768851abe7af7d428d8d510463133aba9ecdf33d30c401b58888fcbae95f4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "INTC"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000050863-26-000191",
+      "acceptedAt": "2026-10-29T22:50:31.000Z"
+    },
+    {
+      "id": "4b2b06a37070fd8a894e48460d66d4732cb4a56980810228452e450ea3336c6d",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.html",
+      "title": "Amazon · 10-Q · 2026-10-30",
+      "summary": {
+        "en": "SEC 10-Q filing by Amazon. Read the original filing before drawing conclusions.",
+        "zh-hant": "Amazon 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-30",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-30T13:15:56.877Z",
+      "firstObservedAt": "2026-10-30T13:15:56.877Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "4b151fb471ef26dd4bd611c980b5f6ab8ba3128ede36106647e7c6c3a2e0f1ea",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMZN"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001018724-26-000040",
+      "acceptedAt": "2026-10-29T22:20:46.000Z"
+    },
+    {
+      "id": "b4677ae58e8330074cb7bdd1b1920c9d5902f9c64cef8272f2e630dd4581ddad",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1262039/000126203926000027/0001262039-26-000027-index.html",
+      "title": "Fortinet · 10-Q · 2026-10-30",
+      "summary": {
+        "en": "SEC 10-Q filing by Fortinet. Read the original filing before drawing conclusions.",
+        "zh-hant": "Fortinet 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-30",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-30T13:15:56.877Z",
+      "firstObservedAt": "2026-10-30T13:15:56.877Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "94a89374f604e9eb16c062be7021334b4b79629b13a407096cd3aa1d92f4b942",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "FTNT"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001262039-26-000027",
+      "acceptedAt": "2026-10-29T22:08:58.000Z"
+    },
     {
       "id": "44f78090ad66d3123d3a95d93df65ac1f53ae2db1a84752f2579212864add4c1",
       "sourceId": "sec-edgar",
@@ -3492,6 +3573,13 @@
   ],
   "runs": [
     {
+      "at": "2026-10-30T13:15:56.877Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-10-30T06:08:03.373Z",
       "succeeded": 50,
       "expected": 50,
@@ -4324,13 +4412,6 @@
     },
     {
       "at": "2026-09-25T05:09:07.941Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-24T21:39:11.014Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
