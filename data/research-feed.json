@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-10-30T13:15:56.877Z",
+  "retrievedAt": "2026-10-30T22:32:08.448Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -86,6 +86,114 @@
       "items": "",
       "accession": "0001262039-26-000027",
       "acceptedAt": "2026-10-29T22:08:58.000Z"
+    },
+    {
+      "id": "a1c64e17fe89a72b3f66791cbd1b784820b6be9769a8d16f34cd51695becaf75",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/97210/000119312526441091/0001193125-26-441091-index.html",
+      "title": "Teradyne · 10-Q · 2026-10-30",
+      "summary": {
+        "en": "SEC 10-Q filing by Teradyne. Read the original filing before drawing conclusions.",
+        "zh-hant": "Teradyne 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-30",
+      "publishedAt": null,
+      "eventOn": "2026-09-27",
+      "retrievedAt": "2026-10-30T22:32:08.448Z",
+      "firstObservedAt": "2026-10-30T22:32:08.448Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "81cafbe60cd8592315048b08d46f873f40c57fc1b7b62c9a7b69ee84441af23e",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "TER"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001193125-26-441091",
+      "acceptedAt": "2026-10-30T17:00:56.000Z"
+    },
+    {
+      "id": "94d9cd245c3db13d123b53ef6d7f41e47be2b4b7a60862d730eb4db18bd89080",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1577526/000157752626000179/0001577526-26-000179-index.html",
+      "title": "C3.ai · 8-K · 2026-10-30",
+      "summary": {
+        "en": "SEC 8-K filing by C3.ai. Read the original filing before drawing conclusions.",
+        "zh-hant": "C3.ai 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-30",
+      "publishedAt": null,
+      "eventOn": "2026-10-26",
+      "retrievedAt": "2026-10-30T22:32:08.448Z",
+      "firstObservedAt": "2026-10-30T22:32:08.448Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "fcd355875b2cf00b8e7eb5c702ab9ece372101d89e7c263dce1f745895186bf7",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AI"
+      ],
+      "form": "8-K",
+      "items": "5.07",
+      "accession": "0001577526-26-000179",
+      "acceptedAt": "2026-10-30T20:38:16.000Z"
+    },
+    {
+      "id": "c52cbd7ec2f763e41f756a8ab9d1e15f3cfd81bf944f02a4a4bd1b39a1689a61",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1297996/000119312526441892/0001193125-26-441892-index.html",
+      "title": "Digital Realty · 8-K · 2026-10-30",
+      "summary": {
+        "en": "SEC 8-K filing by Digital Realty. Read the original filing before drawing conclusions.",
+        "zh-hant": "Digital Realty 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-30",
+      "publishedAt": null,
+      "eventOn": "2026-10-30",
+      "retrievedAt": "2026-10-30T22:32:08.448Z",
+      "firstObservedAt": "2026-10-30T22:32:08.448Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "48b9fa746e20c2ad9f0cc85662e2cc2283ba71de6383deadf367478c73b99fda",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DLR"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-441892",
+      "acceptedAt": "2026-10-30T21:28:54.000Z"
+    },
+    {
+      "id": "8612ce217854786f240cdc6885342c9f534d5207b8ed6b8130c0a07d9da288f5",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926120710/0001104659-26-120710-index.html",
+      "title": "Digital Realty · 10-Q · 2026-10-30",
+      "summary": {
+        "en": "SEC 10-Q filing by Digital Realty. Read the original filing before drawing conclusions.",
+        "zh-hant": "Digital Realty 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-10-30",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-10-30T22:32:08.448Z",
+      "firstObservedAt": "2026-10-30T22:32:08.448Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "b186cb1a99310d3acf1b0048bc3af2ff92785364c1daf0cbf9aa9b7ec600188f",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DLR"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001104659-26-120710",
+      "acceptedAt": "2026-10-30T20:43:38.000Z"
     },
     {
       "id": "44f78090ad66d3123d3a95d93df65ac1f53ae2db1a84752f2579212864add4c1",
@@ -3573,6 +3681,13 @@
   ],
   "runs": [
     {
+      "at": "2026-10-30T22:32:08.448Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-10-30T13:15:56.877Z",
       "succeeded": 50,
       "expected": 50,
@@ -4405,13 +4520,6 @@
     },
     {
       "at": "2026-09-25T12:02:31.889Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-25T05:09:07.941Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
