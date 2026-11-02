@@ -1,11 +1,173 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-02T06:33:38.584Z",
+  "retrievedAt": "2026-11-02T21:50:23.334Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "16e151894bfbcac2dc5c811b6b268465efc3d920b85a511e50f5002777f50e5f",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442717/0001193125-26-442717-index.html",
+      "title": "Marvell Technology · 8-K · 2026-11-02",
+      "summary": {
+        "en": "SEC 8-K filing by Marvell Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Marvell Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-02",
+      "publishedAt": null,
+      "eventOn": "2026-11-01",
+      "retrievedAt": "2026-11-02T21:50:23.334Z",
+      "firstObservedAt": "2026-11-02T21:50:23.334Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "580a451e4d6bf7eed32c704c6f476bbfb64288e68774226e4e83802da15d8a1a",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MRVL"
+      ],
+      "form": "8-K",
+      "items": "1.01,9.01",
+      "accession": "0001193125-26-442717",
+      "acceptedAt": "2026-11-02T13:09:22.000Z"
+    },
+    {
+      "id": "a79e30836632fd3a026d735a54b2813db94cdcce92326c8cd4eddc055c1c69d0",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/0001193125-26-442714-index.html",
+      "title": "Marvell Technology · 8-K · 2026-11-02",
+      "summary": {
+        "en": "SEC 8-K filing by Marvell Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Marvell Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-02",
+      "publishedAt": null,
+      "eventOn": "2026-11-01",
+      "retrievedAt": "2026-11-02T21:50:23.334Z",
+      "firstObservedAt": "2026-11-02T21:50:23.334Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "23b0b34eaeeafa68e6e2ec04006837b80d3f4d8e15881c4e6950be3ce8d91cd6",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MRVL"
+      ],
+      "form": "8-K",
+      "items": "2.02,7.01,9.01",
+      "accession": "0001193125-26-442714",
+      "acceptedAt": "2026-11-02T13:06:04.000Z"
+    },
+    {
+      "id": "8ff60e88c49d29fa8bd555c7556dd7c7bd0115e8556faf881eeaf5d36ff8ba97",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/0001097864-26-000021-index.html",
+      "title": "onsemi · 10-Q · 2026-11-02",
+      "summary": {
+        "en": "SEC 10-Q filing by onsemi. Read the original filing before drawing conclusions.",
+        "zh-hant": "onsemi 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-02",
+      "publishedAt": null,
+      "eventOn": "2026-10-02",
+      "retrievedAt": "2026-11-02T21:50:23.334Z",
+      "firstObservedAt": "2026-11-02T21:50:23.334Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "a1ff61ce2b76031a2eb958339333f69afdb217bd2f4a790154a274de3c15f387",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ON"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001097864-26-000021",
+      "acceptedAt": "2026-11-02T21:18:56.000Z"
+    },
+    {
+      "id": "e98d883e48fbfdd435b3d10119d02ff647274b0d8288a39511283c12d59d0017",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126041580/0001140361-26-041580-index.html",
+      "title": "onsemi · 8-K · 2026-11-02",
+      "summary": {
+        "en": "SEC 8-K filing by onsemi. Read the original filing before drawing conclusions.",
+        "zh-hant": "onsemi 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-02",
+      "publishedAt": null,
+      "eventOn": "2026-11-02",
+      "retrievedAt": "2026-11-02T21:50:23.334Z",
+      "firstObservedAt": "2026-11-02T21:50:23.334Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "6f6b71d28064f7c4c7038653a67576365b2e1fb1f18d48ee0ebf3ec14ddc1060",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ON"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001140361-26-041580",
+      "acceptedAt": "2026-11-02T21:15:56.000Z"
+    },
+    {
+      "id": "6330a17beb071ce028a1ca9013a8418876da1e0a0d9ecb3759f4d0cdeaf5f237",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000119312526443681/0001193125-26-443681-index.html",
+      "title": "onsemi · 8-K · 2026-11-02",
+      "summary": {
+        "en": "SEC 8-K filing by onsemi. Read the original filing before drawing conclusions.",
+        "zh-hant": "onsemi 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-02",
+      "publishedAt": null,
+      "eventOn": "2026-11-02",
+      "retrievedAt": "2026-11-02T21:50:23.334Z",
+      "firstObservedAt": "2026-11-02T21:50:23.334Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "ee08eee950a38a69731853cec1ec2b2af85d96c51cd19972ad7a03a08711e801",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ON"
+      ],
+      "form": "8-K",
+      "items": "1.01,7.01,9.01",
+      "accession": "0001193125-26-443681",
+      "acceptedAt": "2026-11-02T21:15:52.000Z"
+    },
+    {
+      "id": "586ac166d7facb697b5b607fe990524ec20593ea3b16674b7bf17fcdeab6af3e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/0001321655-26-000045-index.html",
+      "title": "Palantir Technologies · 8-K · 2026-11-02",
+      "summary": {
+        "en": "SEC 8-K filing by Palantir Technologies. Read the original filing before drawing conclusions.",
+        "zh-hant": "Palantir Technologies 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-02",
+      "publishedAt": null,
+      "eventOn": "2026-11-02",
+      "retrievedAt": "2026-11-02T21:50:23.334Z",
+      "firstObservedAt": "2026-11-02T21:50:23.334Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "9701b1f69856315630d8a6571611594da184673e775856d2f3e259664743e43c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PLTR"
+      ],
+      "form": "8-K",
+      "items": "2.02,7.01,9.01",
+      "accession": "0001321655-26-000045",
+      "acceptedAt": "2026-11-02T21:06:48.000Z"
+    },
     {
       "id": "8db3176e4b4fa98a82a2416dfe3064d3ce7ff88ff44cf814b59f0e55014f76d2",
       "sourceId": "sec-edgar",
@@ -3681,6 +3843,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-02T21:50:23.334Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-02T06:33:38.584Z",
       "succeeded": 50,
       "expected": 50,
@@ -4513,13 +4682,6 @@
     },
     {
       "at": "2026-09-27T12:16:04.767Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-27T05:29:53.235Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
