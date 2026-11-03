@@ -1,11 +1,92 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-03T07:03:45.649Z",
+  "retrievedAt": "2026-11-03T19:41:00.093Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "28b31d50a56d58b4b3fdc106b5fa4141c94d718a3ca3d5c2b184d59f14b9f529",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/0001551182-26-000040-index.html",
+      "title": "Eaton · 10-Q · 2026-11-03",
+      "summary": {
+        "en": "SEC 10-Q filing by Eaton. Read the original filing before drawing conclusions.",
+        "zh-hant": "Eaton 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-03",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-11-03T19:41:00.093Z",
+      "firstObservedAt": "2026-11-03T19:41:00.093Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "c80c99d6bb17e9a095464dae0d823095b09a6cb9639d3a7d56aa18f3a05db863",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ETN"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001551182-26-000040",
+      "acceptedAt": "2026-11-03T17:07:52.000Z"
+    },
+    {
+      "id": "e484b69ea8ecc9dbba5ac32e76ed5a1eb15efee8d5d96e3b448e87a2c5943b7f",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000037/0001551182-26-000037-index.html",
+      "title": "Eaton · 8-K · 2026-11-03",
+      "summary": {
+        "en": "SEC 8-K filing by Eaton. Read the original filing before drawing conclusions.",
+        "zh-hant": "Eaton 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-03",
+      "publishedAt": null,
+      "eventOn": "2026-11-03",
+      "retrievedAt": "2026-11-03T19:41:00.093Z",
+      "firstObservedAt": "2026-11-03T19:41:00.093Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "434cfd446f3eb4d496a79eed9aa76ec656b83cdd76e6a4d43737b043b9a56be9",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ETN"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001551182-26-000037",
+      "acceptedAt": "2026-11-03T13:08:03.000Z"
+    },
+    {
+      "id": "8b891891c84aa2064592d340986bb0f55bf697c0bf19ad7c2627e2eef14733cf",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000048/0001321655-26-000048-index.html",
+      "title": "Palantir Technologies · 10-Q · 2026-11-03",
+      "summary": {
+        "en": "SEC 10-Q filing by Palantir Technologies. Read the original filing before drawing conclusions.",
+        "zh-hant": "Palantir Technologies 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-03",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-11-03T19:41:00.093Z",
+      "firstObservedAt": "2026-11-03T19:41:00.093Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "2ea8819a2a70501bc044564000649e6dd07f50f56113464f5b0105b02b751b02",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PLTR"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001321655-26-000048",
+      "acceptedAt": "2026-11-02T23:00:39.000Z"
+    },
     {
       "id": "16e151894bfbcac2dc5c811b6b268465efc3d920b85a511e50f5002777f50e5f",
       "sourceId": "sec-edgar",
@@ -3843,6 +3924,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-03T19:41:00.093Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-03T07:03:45.649Z",
       "succeeded": 50,
       "expected": 50,
@@ -4674,18 +4762,6 @@
       "expected": 50,
       "status": "success",
       "failures": []
-    },
-    {
-      "at": "2026-09-27T17:06:57.976Z",
-      "succeeded": 49,
-      "expected": 50,
-      "status": "partial",
-      "failures": [
-        {
-          "symbol": "NTAP",
-          "error": "The operation was aborted due to timeout"
-        }
-      ]
     }
   ]
 }
