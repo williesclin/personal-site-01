@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-03T19:41:00.093Z",
+  "retrievedAt": "2026-11-04T06:48:07.549Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -86,6 +86,114 @@
       "items": "",
       "accession": "0001321655-26-000048",
       "acceptedAt": "2026-11-02T23:00:39.000Z"
+    },
+    {
+      "id": "e468cf1b558f1523c27eae26ca61446ddcf9e7cbf46c549ce729a872f48b7b33",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/0000002488-26-000188-index.html",
+      "title": "Advanced Micro Devices · 8-K · 2026-11-03",
+      "summary": {
+        "en": "SEC 8-K filing by Advanced Micro Devices. Read the original filing before drawing conclusions.",
+        "zh-hant": "Advanced Micro Devices 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-03",
+      "publishedAt": null,
+      "eventOn": "2026-11-03",
+      "retrievedAt": "2026-11-04T06:48:07.549Z",
+      "firstObservedAt": "2026-11-04T06:48:07.549Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "94e1e48cef4e1d1d5fdae7e4fac8a5b23dd5aa78b0f8bfc382da07eff582e70b",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMD"
+      ],
+      "form": "8-K",
+      "items": "2.02,7.01,9.01",
+      "accession": "0000002488-26-000188",
+      "acceptedAt": "2026-11-03T21:16:27.000Z"
+    },
+    {
+      "id": "81d6fab5709c3c479cda5df421175c56fe38df7cea874e230f7783d7c6dbf919",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1280452/000162828026069440/0001628280-26-069440-index.html",
+      "title": "Monolithic Power Systems · 10-Q · 2026-11-03",
+      "summary": {
+        "en": "SEC 10-Q filing by Monolithic Power Systems. Read the original filing before drawing conclusions.",
+        "zh-hant": "Monolithic Power Systems 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-03",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-11-04T06:48:07.549Z",
+      "firstObservedAt": "2026-11-04T06:48:07.549Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "806a650d0136c5506265beca2a2f2cf39f729e9849bb508f51d65e6bc03d1779",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MPWR"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001628280-26-069440",
+      "acceptedAt": "2026-11-03T21:01:46.000Z"
+    },
+    {
+      "id": "f5d32292b8a4e74642e0d91790695f0c6b149be06286ba66cc630549cb575aaa",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/0001375365-26-000026-index.html",
+      "title": "Super Micro Computer · 8-K · 2026-11-03",
+      "summary": {
+        "en": "SEC 8-K filing by Super Micro Computer. Read the original filing before drawing conclusions.",
+        "zh-hant": "Super Micro Computer 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-03",
+      "publishedAt": null,
+      "eventOn": "2026-11-03",
+      "retrievedAt": "2026-11-04T06:48:07.549Z",
+      "firstObservedAt": "2026-11-04T06:48:07.549Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "bd079f6f92c5c81ccd75c8fe71ea5a8aacf7ad621c9d8332e36cb4e8dfbbb625",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SMCI"
+      ],
+      "form": "8-K",
+      "items": "2.02,8.01,9.01",
+      "accession": "0001375365-26-000026",
+      "acceptedAt": "2026-11-03T21:31:04.000Z"
+    },
+    {
+      "id": "bdb5963feb8fc00543454c9dfb5bc7bf22d25d3eaaf539ce93da12fb800a6997",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000252/0001596532-26-000252-index.html",
+      "title": "Arista Networks · 8-K · 2026-11-03",
+      "summary": {
+        "en": "SEC 8-K filing by Arista Networks. Read the original filing before drawing conclusions.",
+        "zh-hant": "Arista Networks 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-03",
+      "publishedAt": null,
+      "eventOn": "2026-11-03",
+      "retrievedAt": "2026-11-04T06:48:07.549Z",
+      "firstObservedAt": "2026-11-04T06:48:07.549Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "b52384cd6b12c00343b7f6f0e0da976d4b45f7f5e2b507cd6c05e6cdc75faffc",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ANET"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001596532-26-000252",
+      "acceptedAt": "2026-11-03T21:10:17.000Z"
     },
     {
       "id": "16e151894bfbcac2dc5c811b6b268465efc3d920b85a511e50f5002777f50e5f",
@@ -3924,6 +4032,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-04T06:48:07.549Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-03T19:41:00.093Z",
       "succeeded": 50,
       "expected": 50,
@@ -4751,13 +4866,6 @@
     },
     {
       "at": "2026-09-28T05:39:29.815Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-27T21:29:53.586Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
