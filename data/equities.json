@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-04",
-  "retrievedAt": "2026-11-04T02:16:01.319Z",
+  "asOf": "2026-11-05",
+  "retrievedAt": "2026-11-05T02:21:20.654Z",
   "method": "annual-us-gaap-v2",
   "companies": [
     {
@@ -3161,14 +3161,65 @@
       "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000804328.json",
       "years": [
         {
+          "start": "2025-09-29",
+          "end": "2026-09-27",
+          "revenue": {
+            "start": "2025-09-29",
+            "end": "2026-09-27",
+            "value": 43120000000,
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
+            "tag": "Revenues",
+            "form": "10-K"
+          },
+          "netIncome": {
+            "start": "2025-09-29",
+            "end": "2026-09-27",
+            "value": 13628000000,
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
+            "tag": "NetIncomeLoss",
+            "form": "10-K"
+          },
+          "operatingCashFlow": {
+            "start": "2025-09-29",
+            "end": "2026-09-27",
+            "value": 11145000000,
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-K"
+          },
+          "grossProfit": null,
+          "operatingIncome": {
+            "start": "2025-09-29",
+            "end": "2026-09-27",
+            "value": 8658000000,
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
+            "tag": "OperatingIncomeLoss",
+            "form": "10-K"
+          },
+          "researchDevelopment": {
+            "start": "2025-09-29",
+            "end": "2026-09-27",
+            "value": 10207000000,
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
+            "tag": "ResearchAndDevelopmentExpense",
+            "form": "10-K"
+          },
+          "capitalExpenditure": null
+        },
+        {
           "start": "2024-09-30",
           "end": "2025-09-28",
           "revenue": {
             "start": "2024-09-30",
             "end": "2025-09-28",
             "value": 44284000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "Revenues",
             "form": "10-K"
           },
@@ -3176,8 +3227,8 @@
             "start": "2024-09-30",
             "end": "2025-09-28",
             "value": 5541000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "NetIncomeLoss",
             "form": "10-K"
           },
@@ -3185,8 +3236,8 @@
             "start": "2024-09-30",
             "end": "2025-09-28",
             "value": 14012000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "NetCashProvidedByUsedInOperatingActivities",
             "form": "10-K"
           },
@@ -3195,8 +3246,8 @@
             "start": "2024-09-30",
             "end": "2025-09-28",
             "value": 12355000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "OperatingIncomeLoss",
             "form": "10-K"
           },
@@ -3204,8 +3255,8 @@
             "start": "2024-09-30",
             "end": "2025-09-28",
             "value": 9042000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "ResearchAndDevelopmentExpense",
             "form": "10-K"
           },
@@ -3218,8 +3269,8 @@
             "start": "2023-09-25",
             "end": "2024-09-29",
             "value": 38962000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "Revenues",
             "form": "10-K"
           },
@@ -3227,8 +3278,8 @@
             "start": "2023-09-25",
             "end": "2024-09-29",
             "value": 10142000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "NetIncomeLoss",
             "form": "10-K"
           },
@@ -3236,8 +3287,8 @@
             "start": "2023-09-25",
             "end": "2024-09-29",
             "value": 12202000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "NetCashProvidedByUsedInOperatingActivities",
             "form": "10-K"
           },
@@ -3246,8 +3297,8 @@
             "start": "2023-09-25",
             "end": "2024-09-29",
             "value": 10071000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "OperatingIncomeLoss",
             "form": "10-K"
           },
@@ -3255,8 +3306,8 @@
             "start": "2023-09-25",
             "end": "2024-09-29",
             "value": 8893000000,
-            "filed": "2025-11-05",
-            "accession": "0000804328-25-000085",
+            "filed": "2026-11-04",
+            "accession": "0000804328-26-000128",
             "tag": "ResearchAndDevelopmentExpense",
             "form": "10-K"
           },
@@ -3512,57 +3563,6 @@
             "value": 5398000000,
             "filed": "2021-11-03",
             "accession": "0001728949-21-000076",
-            "tag": "ResearchAndDevelopmentExpense",
-            "form": "10-K"
-          },
-          "capitalExpenditure": null
-        },
-        {
-          "start": "2017-09-25",
-          "end": "2018-09-30",
-          "revenue": {
-            "start": "2017-09-25",
-            "end": "2018-09-30",
-            "value": 22611000000,
-            "filed": "2020-11-04",
-            "accession": "0001728949-20-000067",
-            "tag": "Revenues",
-            "form": "10-K"
-          },
-          "netIncome": {
-            "start": "2017-09-25",
-            "end": "2018-09-30",
-            "value": -4964000000,
-            "filed": "2020-11-04",
-            "accession": "0001728949-20-000067",
-            "tag": "NetIncomeLoss",
-            "form": "10-K"
-          },
-          "operatingCashFlow": {
-            "start": "2017-09-25",
-            "end": "2018-09-30",
-            "value": 3908000000,
-            "filed": "2020-11-04",
-            "accession": "0001728949-20-000067",
-            "tag": "NetCashProvidedByUsedInOperatingActivities",
-            "form": "10-K"
-          },
-          "grossProfit": null,
-          "operatingIncome": {
-            "start": "2017-09-25",
-            "end": "2018-09-30",
-            "value": 621000000,
-            "filed": "2020-11-04",
-            "accession": "0001728949-20-000067",
-            "tag": "OperatingIncomeLoss",
-            "form": "10-K"
-          },
-          "researchDevelopment": {
-            "start": "2017-09-25",
-            "end": "2018-09-30",
-            "value": 5625000000,
-            "filed": "2020-11-04",
-            "accession": "0001728949-20-000067",
             "tag": "ResearchAndDevelopmentExpense",
             "form": "10-K"
           },
@@ -25060,5 +25060,5 @@
       ]
     }
   ],
-  "hash": "e8ce54ad6f4741322d2c85d47b7adde3792ee2cdd177ca8d200dc6b734e768a9"
+  "hash": "bfaba4f9e3d49c716ae188e4724f4c3ed4c49caf57e2540d851ab7753fbbf105"
 }
