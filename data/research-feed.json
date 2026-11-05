@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-05T07:07:32.187Z",
+  "retrievedAt": "2026-11-05T20:10:14.344Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "5ecb688ca5e00c70ef2fec30ef4754c2e8e34c75c68953b73391a96e0d0d7732",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526448357/0001193125-26-448357-index.html",
+      "title": "Microsoft · 8-K · 2026-11-05",
+      "summary": {
+        "en": "SEC 8-K filing by Microsoft. Read the original filing before drawing conclusions.",
+        "zh-hant": "Microsoft 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-05",
+      "publishedAt": null,
+      "eventOn": "2026-11-04",
+      "retrievedAt": "2026-11-05T20:10:14.344Z",
+      "firstObservedAt": "2026-11-05T20:10:14.344Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "206ef38765b63f3292d4400cda9d05fa4327446f91d85e39754cc6aad210e4e4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MSFT"
+      ],
+      "form": "8-K",
+      "items": "5.02",
+      "accession": "0001193125-26-448357",
+      "acceptedAt": "2026-11-05T11:01:52.000Z"
+    },
     {
       "id": "d25b5fd342d71d263aebc58aa31ade00cb1f909e9c2304dd8808b97d94b7195b",
       "sourceId": "sec-edgar",
@@ -4302,6 +4329,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-05T20:10:14.344Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-05T07:07:32.187Z",
       "succeeded": 50,
       "expected": 50,
@@ -5129,13 +5163,6 @@
     },
     {
       "at": "2026-09-29T05:57:00.487Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-28T23:24:45.336Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
