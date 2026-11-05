@@ -1,18 +1,13 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-05T07:22:47.108314Z",
+  "attemptedAt": "2026-11-05T20:15:38.068401Z",
   "sources": {
     "ecb": {
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
       "status": "available",
-      "retrievedAt": "2026-11-05T07:22:47.108314Z",
-      "lastAttemptAt": "2026-11-05T07:22:47.108314Z",
+      "retrievedAt": "2026-11-05T20:15:38.068401Z",
+      "lastAttemptAt": "2026-11-05T20:15:38.068401Z",
       "rows": [
-        {
-          "date": "2026-08-07",
-          "eurUsd": 1.1535,
-          "usdJpy": 158.33550065019506
-        },
         {
           "date": "2026-08-10",
           "eurUsd": 1.1555,
@@ -327,14 +322,19 @@
           "date": "2026-11-04",
           "eurUsd": 1.1267,
           "usdJpy": 158.24975592438093
+        },
+        {
+          "date": "2026-11-05",
+          "eurUsd": 1.1224,
+          "usdJpy": 158.4550962223806
         }
       ]
     },
     "h10": {
       "url": "https://www.federalreserve.gov/releases/h10/current/",
       "status": "available",
-      "retrievedAt": "2026-11-05T07:22:47.108314Z",
-      "lastAttemptAt": "2026-11-05T07:22:47.108314Z",
+      "retrievedAt": "2026-11-05T20:15:38.068401Z",
+      "lastAttemptAt": "2026-11-05T20:15:38.068401Z",
       "rows": [
         {
           "date": "2026-10-26",
@@ -371,27 +371,27 @@
     "bls-news": {
       "url": "https://www.bls.gov/feed/bls_latest.rss",
       "status": "available",
-      "retrievedAt": "2026-11-05T07:22:47.108314Z",
-      "lastAttemptAt": "2026-11-05T07:22:47.108314Z",
+      "retrievedAt": "2026-11-05T20:15:38.068401Z",
+      "lastAttemptAt": "2026-11-05T20:15:38.068401Z",
       "rows": [
         {
-          "id": "54493e72ef73cfcb2ff174ff",
+          "id": "990176530d2d3ed60c8b7a9e",
           "source": "BLS",
           "url": "https://www.bls.gov/bls/",
           "title": "Major Economic Indicators Latest Numbers",
-          "publishedAt": "2026-11-03T15:00:20Z",
+          "publishedAt": "2026-11-05T13:30:19Z",
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-05T07:22:47.108314Z"
+          "retrievedAt": "2026-11-05T20:15:38.068401Z"
         }
       ]
     },
     "fed-news": {
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
-      "status": "available",
+      "status": "stale",
       "retrievedAt": "2026-11-05T07:22:47.108314Z",
-      "lastAttemptAt": "2026-11-05T07:22:47.108314Z",
+      "lastAttemptAt": "2026-11-05T20:15:38.068401Z",
       "rows": [
         {
           "id": "0bc7322eb37d5671b3cabe49",
@@ -613,7 +613,8 @@
           "association": "topic-only",
           "retrievedAt": "2026-11-05T07:22:47.108314Z"
         }
-      ]
+      ],
+      "error": "HTTPError"
     }
   }
 }
