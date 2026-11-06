@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-05T20:10:14.344Z",
+  "retrievedAt": "2026-11-06T07:06:54.991Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -32,6 +32,195 @@
       "items": "5.02",
       "accession": "0001193125-26-448357",
       "acceptedAt": "2026-11-05T11:01:52.000Z"
+    },
+    {
+      "id": "2a2542d7fb789dacd8b43bcf91b0a586e93e4b128329de96bee4a41d7764b8a2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926123389/0001104659-26-123389-index.html",
+      "title": "Micron Technology · 8-K · 2026-11-05",
+      "summary": {
+        "en": "SEC 8-K filing by Micron Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Micron Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-05",
+      "publishedAt": null,
+      "eventOn": "2026-11-02",
+      "retrievedAt": "2026-11-06T07:06:54.991Z",
+      "firstObservedAt": "2026-11-06T07:06:54.991Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "23c1e4a3a3cb06ef3d4f9a4b97cd0c371ba677086426abf2df1562daa577e9d1",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MU"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001104659-26-123389",
+      "acceptedAt": "2026-11-05T21:33:48.000Z"
+    },
+    {
+      "id": "832a5c567e749cc0f10db4652daf5f627c851365d84cfc13c04dd064b8b26b0f",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000057/0000707549-26-000057-index.html",
+      "title": "Lam Research · 8-K · 2026-11-05",
+      "summary": {
+        "en": "SEC 8-K filing by Lam Research. Read the original filing before drawing conclusions.",
+        "zh-hant": "Lam Research 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-05",
+      "publishedAt": null,
+      "eventOn": "2026-11-03",
+      "retrievedAt": "2026-11-06T07:06:54.991Z",
+      "firstObservedAt": "2026-11-06T07:06:54.991Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "61c0825876ea7a0358d7e3d66369bd2a33d4bf2adbaf3702d2ffd6572d5c0041",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "LRCX"
+      ],
+      "form": "8-K",
+      "items": "5.07,8.01,9.01",
+      "accession": "0000707549-26-000057",
+      "acceptedAt": "2026-11-05T21:17:56.000Z"
+    },
+    {
+      "id": "77192d2f5b3a79d47d1b3c7083a10279c9e3b6fe687550c035596af9c3ece2c6",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/827054/000082705426000062/0000827054-26-000062-index.html",
+      "title": "Microchip Technology · 10-Q · 2026-11-05",
+      "summary": {
+        "en": "SEC 10-Q filing by Microchip Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Microchip Technology 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-05",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-11-06T07:06:54.991Z",
+      "firstObservedAt": "2026-11-06T07:06:54.991Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "d5495a695462e9e4a6e197676abbfbe30a5568f8b000015765d838070e903025",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MCHP"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000827054-26-000062",
+      "acceptedAt": "2026-11-05T21:22:16.000Z"
+    },
+    {
+      "id": "ac2345c20dbb3625d206019e48a74071ae42a5d286337c31f442e527826f9f79",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/827054/000082705426000061/0000827054-26-000061-index.html",
+      "title": "Microchip Technology · 8-K · 2026-11-05",
+      "summary": {
+        "en": "SEC 8-K filing by Microchip Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Microchip Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-05",
+      "publishedAt": null,
+      "eventOn": "2026-11-05",
+      "retrievedAt": "2026-11-06T07:06:54.991Z",
+      "firstObservedAt": "2026-11-06T07:06:54.991Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "10f956280083e50d8d0052e6aed65a7c0c3493c2d4964a6c7f455762e77a8a94",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MCHP"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000827054-26-000061",
+      "acceptedAt": "2026-11-05T21:18:06.000Z"
+    },
+    {
+      "id": "e7ea9db9dfd4b81d5158df942486a4ae9750c26c8f3a50c1bcb8685621b10920",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526449835/0001193125-26-449835-index.html",
+      "title": "Alphabet · 8-K · 2026-11-05",
+      "summary": {
+        "en": "SEC 8-K filing by Alphabet. Read the original filing before drawing conclusions.",
+        "zh-hant": "Alphabet 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-05",
+      "publishedAt": null,
+      "eventOn": "2026-11-05",
+      "retrievedAt": "2026-11-06T07:06:54.991Z",
+      "firstObservedAt": "2026-11-06T07:06:54.991Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "4a130f40ccbefb8be4cd3f71c765a67ee8ff6707859ae7e328ad8c3dc2588e46",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "GOOGL"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-449835",
+      "acceptedAt": "2026-11-05T21:10:44.000Z"
+    },
+    {
+      "id": "dddbd4f9c30e4621de845e43cff8cbadffc039beefd233f7a91064055ad9dbf2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/0001193125-26-450074-index.html",
+      "title": "Meta Platforms · 8-K · 2026-11-05",
+      "summary": {
+        "en": "SEC 8-K filing by Meta Platforms. Read the original filing before drawing conclusions.",
+        "zh-hant": "Meta Platforms 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-05",
+      "publishedAt": null,
+      "eventOn": "2026-11-03",
+      "retrievedAt": "2026-11-06T07:06:54.991Z",
+      "firstObservedAt": "2026-11-06T07:06:54.991Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "e039effd09986e638a3027e7f2abdcfbcaf34bec6428470560f64e0fa6d4bcd4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "META"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-450074",
+      "acceptedAt": "2026-11-05T21:58:46.000Z"
+    },
+    {
+      "id": "c7b6436281c66c15188a6f043ff7800c46c6eb6a91f0fa85edb3977e379beaf4",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840856/000184085626000025/0001840856-26-000025-index.html",
+      "title": "SoundHound AI · 8-K · 2026-11-05",
+      "summary": {
+        "en": "SEC 8-K filing by SoundHound AI. Read the original filing before drawing conclusions.",
+        "zh-hant": "SoundHound AI 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-05",
+      "publishedAt": null,
+      "eventOn": "2026-11-05",
+      "retrievedAt": "2026-11-06T07:06:54.991Z",
+      "firstObservedAt": "2026-11-06T07:06:54.991Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "add562ffb0a0e8debedf6ea25b56ec3065ea6b55466102c31324dfd87aab7b5e",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SOUN"
+      ],
+      "form": "8-K",
+      "items": "2.02,2.05,9.01",
+      "accession": "0001840856-26-000025",
+      "acceptedAt": "2026-11-05T21:04:36.000Z"
     },
     {
       "id": "d25b5fd342d71d263aebc58aa31ade00cb1f909e9c2304dd8808b97d94b7195b",
@@ -4329,6 +4518,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-06T07:06:54.991Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-05T20:10:14.344Z",
       "succeeded": 50,
       "expected": 50,
@@ -5156,13 +5352,6 @@
     },
     {
       "at": "2026-09-29T13:11:10.837Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-09-29T05:57:00.487Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
