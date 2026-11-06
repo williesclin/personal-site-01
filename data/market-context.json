@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-06T07:22:50.438316Z",
+  "attemptedAt": "2026-11-06T19:40:30.245958Z",
   "sources": {
     "ecb": {
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
       "status": "available",
-      "retrievedAt": "2026-11-06T07:22:50.438316Z",
-      "lastAttemptAt": "2026-11-06T07:22:50.438316Z",
+      "retrievedAt": "2026-11-06T19:40:30.245958Z",
+      "lastAttemptAt": "2026-11-06T19:40:30.245958Z",
       "rows": [
         {
           "date": "2026-08-10",
@@ -327,14 +327,19 @@
           "date": "2026-11-05",
           "eurUsd": 1.1224,
           "usdJpy": 158.4550962223806
+        },
+        {
+          "date": "2026-11-06",
+          "eurUsd": 1.1165,
+          "usdJpy": 158.32512315270935
         }
       ]
     },
     "h10": {
       "url": "https://www.federalreserve.gov/releases/h10/current/",
       "status": "available",
-      "retrievedAt": "2026-11-06T07:22:50.438316Z",
-      "lastAttemptAt": "2026-11-06T07:22:50.438316Z",
+      "retrievedAt": "2026-11-06T19:40:30.245958Z",
+      "lastAttemptAt": "2026-11-06T19:40:30.245958Z",
       "rows": [
         {
           "date": "2026-10-26",
@@ -371,27 +376,27 @@
     "bls-news": {
       "url": "https://www.bls.gov/feed/bls_latest.rss",
       "status": "available",
-      "retrievedAt": "2026-11-06T07:22:50.438316Z",
-      "lastAttemptAt": "2026-11-06T07:22:50.438316Z",
+      "retrievedAt": "2026-11-06T19:40:30.245958Z",
+      "lastAttemptAt": "2026-11-06T19:40:30.245958Z",
       "rows": [
         {
-          "id": "990176530d2d3ed60c8b7a9e",
+          "id": "b29e9d538e0552a9a5e25a99",
           "source": "BLS",
           "url": "https://www.bls.gov/bls/",
           "title": "Major Economic Indicators Latest Numbers",
-          "publishedAt": "2026-11-05T13:30:19Z",
+          "publishedAt": "2026-11-06T13:31:35Z",
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         }
       ]
     },
     "fed-news": {
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "status": "available",
-      "retrievedAt": "2026-11-06T07:22:50.438316Z",
-      "lastAttemptAt": "2026-11-06T07:22:50.438316Z",
+      "retrievedAt": "2026-11-06T19:40:30.245958Z",
+      "lastAttemptAt": "2026-11-06T19:40:30.245958Z",
       "rows": [
         {
           "id": "2c016c2d21373db016859823",
@@ -402,7 +407,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "0bc7322eb37d5671b3cabe49",
@@ -413,7 +418,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "461ea28f48b232d42ce01710",
@@ -424,7 +429,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "a8f1bb5f9c20f6b5ba3f85a2",
@@ -435,7 +440,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "f34f1b33146dde735e3bc09e",
@@ -446,7 +451,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "9044eec8de2a5865c7f6e53e",
@@ -457,7 +462,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "08859693f2f738a4d3760177",
@@ -468,7 +473,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "316625c241f2e4bc3543bed2",
@@ -479,7 +484,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "d8d8882f0598f966ff244ffa",
@@ -490,7 +495,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "ea5938d6b8721685a16edfbb",
@@ -501,7 +506,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "14146cd9529768b8de7ddb9a",
@@ -512,7 +517,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "5cb5d24eabc33a4d638c7085",
@@ -523,7 +528,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "9ccd303c792f0cbad6a44ee1",
@@ -534,7 +539,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "da5332a64195803b8d5f091d",
@@ -545,7 +550,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "421593941bcd210840f685fc",
@@ -556,7 +561,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "e3d0f340738d8b442d5164da",
@@ -567,7 +572,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "a3c66db57688cd99760d1973",
@@ -578,7 +583,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "c752665596824774fab7f006",
@@ -589,7 +594,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "dcf8db524f3733545fb22349",
@@ -600,7 +605,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         },
         {
           "id": "1079b55bdcb2016893db67aa",
@@ -611,7 +616,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-06T07:22:50.438316Z"
+          "retrievedAt": "2026-11-06T19:40:30.245958Z"
         }
       ]
     }
