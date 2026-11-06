@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "asOf": "2026-11-05",
-  "retrievedAt": "2026-11-05T02:21:20.654Z",
+  "asOf": "2026-11-06",
+  "retrievedAt": "2026-11-06T02:22:28.924Z",
   "method": "latest-reported-and-ytd-differences-v1",
   "companies": [
     {
@@ -36968,6 +36968,124 @@
       "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000827054.json",
       "quarters": [
         {
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "revenue": {
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "value": 1621500000,
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "form": "10-Q",
+            "method": "reported"
+          },
+          "netIncome": {
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "value": 401400000,
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
+            "tag": "NetIncomeLoss",
+            "form": "10-Q",
+            "method": "reported"
+          },
+          "operatingCashFlow": {
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "value": 419200000,
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "form": "10-Q",
+            "method": "difference",
+            "inputs": [
+              {
+                "start": "2026-04-01",
+                "end": "2026-09-30",
+                "value": 930700000,
+                "filed": "2026-11-05",
+                "accession": "0000827054-26-000062",
+                "tag": "NetCashProvidedByUsedInOperatingActivities",
+                "form": "10-Q",
+                "method": "reported"
+              },
+              {
+                "start": "2026-04-01",
+                "end": "2026-06-30",
+                "value": 511500000,
+                "filed": "2026-08-06",
+                "accession": "0000827054-26-000038",
+                "tag": "NetCashProvidedByUsedInOperatingActivities",
+                "form": "10-Q",
+                "method": "reported"
+              }
+            ]
+          },
+          "grossProfit": {
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "value": 1068000000,
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
+            "tag": "GrossProfit",
+            "form": "10-Q",
+            "method": "reported"
+          },
+          "operatingIncome": {
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "value": 464500000,
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
+            "tag": "OperatingIncomeLoss",
+            "form": "10-Q",
+            "method": "reported"
+          },
+          "researchDevelopment": {
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "value": 318500000,
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
+            "tag": "ResearchAndDevelopmentExpense",
+            "form": "10-Q",
+            "method": "reported"
+          },
+          "capitalExpenditure": {
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "value": 23100000,
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "form": "10-Q",
+            "method": "difference",
+            "inputs": [
+              {
+                "start": "2026-04-01",
+                "end": "2026-09-30",
+                "value": 37000000,
+                "filed": "2026-11-05",
+                "accession": "0000827054-26-000062",
+                "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+                "form": "10-Q",
+                "method": "reported"
+              },
+              {
+                "start": "2026-04-01",
+                "end": "2026-06-30",
+                "value": 13900000,
+                "filed": "2026-08-06",
+                "accession": "0000827054-26-000038",
+                "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+                "form": "10-Q",
+                "method": "reported"
+              }
+            ]
+          }
+        },
+        {
           "start": "2026-04-01",
           "end": "2026-06-30",
           "revenue": {
@@ -36984,8 +37102,8 @@
             "start": "2026-04-01",
             "end": "2026-06-30",
             "value": 229800000,
-            "filed": "2026-08-06",
-            "accession": "0000827054-26-000038",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "NetIncomeLoss",
             "form": "10-Q",
             "method": "reported"
@@ -37394,8 +37512,8 @@
             "start": "2025-07-01",
             "end": "2025-09-30",
             "value": 1140400000,
-            "filed": "2025-11-06",
-            "accession": "0000827054-25-000183",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
             "form": "10-Q",
             "method": "reported"
@@ -37404,8 +37522,8 @@
             "start": "2025-07-01",
             "end": "2025-09-30",
             "value": 41700000,
-            "filed": "2026-02-05",
-            "accession": "0000827054-26-000009",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "NetIncomeLoss",
             "form": "10-Q",
             "method": "reported"
@@ -37414,8 +37532,8 @@
             "start": "2025-07-01",
             "end": "2025-09-30",
             "value": 88100000,
-            "filed": "2025-11-06",
-            "accession": "0000827054-25-000183",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "NetCashProvidedByUsedInOperatingActivities",
             "form": "10-Q",
             "method": "difference",
@@ -37424,8 +37542,8 @@
                 "start": "2025-04-01",
                 "end": "2025-09-30",
                 "value": 363700000,
-                "filed": "2025-11-06",
-                "accession": "0000827054-25-000183",
+                "filed": "2026-11-05",
+                "accession": "0000827054-26-000062",
                 "tag": "NetCashProvidedByUsedInOperatingActivities",
                 "form": "10-Q",
                 "method": "reported"
@@ -37434,8 +37552,8 @@
                 "start": "2025-04-01",
                 "end": "2025-06-30",
                 "value": 275600000,
-                "filed": "2025-08-07",
-                "accession": "0000827054-25-000133",
+                "filed": "2026-08-06",
+                "accession": "0000827054-26-000038",
                 "tag": "NetCashProvidedByUsedInOperatingActivities",
                 "form": "10-Q",
                 "method": "reported"
@@ -37446,8 +37564,8 @@
             "start": "2025-07-01",
             "end": "2025-09-30",
             "value": 637900000,
-            "filed": "2025-11-06",
-            "accession": "0000827054-25-000183",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "GrossProfit",
             "form": "10-Q",
             "method": "reported"
@@ -37456,8 +37574,8 @@
             "start": "2025-07-01",
             "end": "2025-09-30",
             "value": 88900000,
-            "filed": "2025-11-06",
-            "accession": "0000827054-25-000183",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "OperatingIncomeLoss",
             "form": "10-Q",
             "method": "reported"
@@ -37466,8 +37584,8 @@
             "start": "2025-07-01",
             "end": "2025-09-30",
             "value": 262300000,
-            "filed": "2025-11-06",
-            "accession": "0000827054-25-000183",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "ResearchAndDevelopmentExpense",
             "form": "10-Q",
             "method": "reported"
@@ -37476,8 +37594,8 @@
             "start": "2025-07-01",
             "end": "2025-09-30",
             "value": 36500000,
-            "filed": "2025-11-06",
-            "accession": "0000827054-25-000183",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
             "form": "10-Q",
             "method": "difference",
@@ -37486,8 +37604,8 @@
                 "start": "2025-04-01",
                 "end": "2025-09-30",
                 "value": 54400000,
-                "filed": "2025-11-06",
-                "accession": "0000827054-25-000183",
+                "filed": "2026-11-05",
+                "accession": "0000827054-26-000062",
                 "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
                 "form": "10-Q",
                 "method": "reported"
@@ -37496,8 +37614,8 @@
                 "start": "2025-04-01",
                 "end": "2025-06-30",
                 "value": 17900000,
-                "filed": "2025-08-07",
-                "accession": "0000827054-25-000133",
+                "filed": "2026-08-06",
+                "accession": "0000827054-26-000038",
                 "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
                 "form": "10-Q",
                 "method": "reported"
@@ -37522,8 +37640,8 @@
             "start": "2025-04-01",
             "end": "2025-06-30",
             "value": -18600000,
-            "filed": "2026-08-06",
-            "accession": "0000827054-26-000038",
+            "filed": "2026-11-05",
+            "accession": "0000827054-26-000062",
             "tag": "NetIncomeLoss",
             "form": "10-Q",
             "method": "reported"
@@ -39000,133 +39118,25 @@
               }
             ]
           }
-        },
-        {
-          "start": "2022-07-01",
-          "end": "2022-09-30",
-          "revenue": {
-            "start": "2022-07-01",
-            "end": "2022-09-30",
-            "value": 2073200000,
-            "filed": "2023-11-02",
-            "accession": "0000827054-23-000185",
-            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-            "form": "10-Q",
-            "method": "reported"
-          },
-          "netIncome": {
-            "start": "2022-07-01",
-            "end": "2022-09-30",
-            "value": 546200000,
-            "filed": "2024-02-01",
-            "accession": "0000827054-24-000024",
-            "tag": "NetIncomeLoss",
-            "form": "10-Q",
-            "method": "reported"
-          },
-          "operatingCashFlow": {
-            "start": "2022-07-01",
-            "end": "2022-09-30",
-            "value": 793200000,
-            "filed": "2023-11-02",
-            "accession": "0000827054-23-000185",
-            "tag": "NetCashProvidedByUsedInOperatingActivities",
-            "form": "10-Q",
-            "method": "difference",
-            "inputs": [
-              {
-                "start": "2022-04-01",
-                "end": "2022-09-30",
-                "value": 1633600000,
-                "filed": "2023-11-02",
-                "accession": "0000827054-23-000185",
-                "tag": "NetCashProvidedByUsedInOperatingActivities",
-                "form": "10-Q",
-                "method": "reported"
-              },
-              {
-                "start": "2022-04-01",
-                "end": "2022-06-30",
-                "value": 840400000,
-                "filed": "2023-08-03",
-                "accession": "0000827054-23-000132",
-                "tag": "NetCashProvidedByUsedInOperatingActivities",
-                "form": "10-Q",
-                "method": "reported"
-              }
-            ]
-          },
-          "grossProfit": {
-            "start": "2022-07-01",
-            "end": "2022-09-30",
-            "value": 1397900000,
-            "filed": "2023-11-02",
-            "accession": "0000827054-23-000185",
-            "tag": "GrossProfit",
-            "form": "10-Q",
-            "method": "reported"
-          },
-          "operatingIncome": {
-            "start": "2022-07-01",
-            "end": "2022-09-30",
-            "value": 755100000,
-            "filed": "2023-11-02",
-            "accession": "0000827054-23-000185",
-            "tag": "OperatingIncomeLoss",
-            "form": "10-Q",
-            "method": "reported"
-          },
-          "researchDevelopment": {
-            "start": "2022-07-01",
-            "end": "2022-09-30",
-            "value": 268600000,
-            "filed": "2023-11-02",
-            "accession": "0000827054-23-000185",
-            "tag": "ResearchAndDevelopmentExpense",
-            "form": "10-Q",
-            "method": "reported"
-          },
-          "capitalExpenditure": {
-            "start": "2022-07-01",
-            "end": "2022-09-30",
-            "value": 110300000,
-            "filed": "2023-11-02",
-            "accession": "0000827054-23-000185",
-            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-            "form": "10-Q",
-            "method": "difference",
-            "inputs": [
-              {
-                "start": "2022-04-01",
-                "end": "2022-09-30",
-                "value": 232200000,
-                "filed": "2023-11-02",
-                "accession": "0000827054-23-000185",
-                "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-                "form": "10-Q",
-                "method": "reported"
-              },
-              {
-                "start": "2022-04-01",
-                "end": "2022-06-30",
-                "value": 121900000,
-                "filed": "2023-08-03",
-                "accession": "0000827054-23-000132",
-                "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-                "form": "10-Q",
-                "method": "reported"
-              }
-            ]
-          }
         }
       ],
       "ttm": {
-        "start": "2025-07-01",
-        "end": "2026-06-30",
+        "start": "2025-10-01",
+        "end": "2026-09-30",
         "revenue": {
-          "value": 5122300000,
+          "value": 5603400000,
           "method": "sum-four-quarters",
           "inputs": [
+            {
+              "start": "2026-07-01",
+              "end": "2026-09-30",
+              "value": 1621500000,
+              "filed": "2026-11-05",
+              "accession": "0000827054-26-000062",
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "form": "10-Q",
+              "method": "reported"
+            },
             {
               "start": "2026-04-01",
               "end": "2026-06-30",
@@ -39178,29 +39188,29 @@
               "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
               "form": "10-Q",
               "method": "reported"
-            },
-            {
-              "start": "2025-07-01",
-              "end": "2025-09-30",
-              "value": 1140400000,
-              "filed": "2025-11-06",
-              "accession": "0000827054-25-000183",
-              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-              "form": "10-Q",
-              "method": "reported"
             }
           ]
         },
         "netIncome": {
-          "value": 478400000,
+          "value": 838100000,
           "method": "sum-four-quarters",
           "inputs": [
+            {
+              "start": "2026-07-01",
+              "end": "2026-09-30",
+              "value": 401400000,
+              "filed": "2026-11-05",
+              "accession": "0000827054-26-000062",
+              "tag": "NetIncomeLoss",
+              "form": "10-Q",
+              "method": "reported"
+            },
             {
               "start": "2026-04-01",
               "end": "2026-06-30",
               "value": 229800000,
-              "filed": "2026-08-06",
-              "accession": "0000827054-26-000038",
+              "filed": "2026-11-05",
+              "accession": "0000827054-26-000062",
               "tag": "NetIncomeLoss",
               "form": "10-Q",
               "method": "reported"
@@ -39246,23 +39256,45 @@
               "tag": "NetIncomeLoss",
               "form": "10-Q",
               "method": "reported"
-            },
-            {
-              "start": "2025-07-01",
-              "end": "2025-09-30",
-              "value": 41700000,
-              "filed": "2026-02-05",
-              "accession": "0000827054-26-000009",
-              "tag": "NetIncomeLoss",
-              "form": "10-Q",
-              "method": "reported"
             }
           ]
         },
         "operatingCashFlow": {
-          "value": 1198000000,
+          "value": 1529100000,
           "method": "sum-four-quarters",
           "inputs": [
+            {
+              "start": "2026-07-01",
+              "end": "2026-09-30",
+              "value": 419200000,
+              "filed": "2026-11-05",
+              "accession": "0000827054-26-000062",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "form": "10-Q",
+              "method": "difference",
+              "inputs": [
+                {
+                  "start": "2026-04-01",
+                  "end": "2026-09-30",
+                  "value": 930700000,
+                  "filed": "2026-11-05",
+                  "accession": "0000827054-26-000062",
+                  "tag": "NetCashProvidedByUsedInOperatingActivities",
+                  "form": "10-Q",
+                  "method": "reported"
+                },
+                {
+                  "start": "2026-04-01",
+                  "end": "2026-06-30",
+                  "value": 511500000,
+                  "filed": "2026-08-06",
+                  "accession": "0000827054-26-000038",
+                  "tag": "NetCashProvidedByUsedInOperatingActivities",
+                  "form": "10-Q",
+                  "method": "reported"
+                }
+              ]
+            },
             {
               "start": "2026-04-01",
               "end": "2026-06-30",
@@ -39336,45 +39368,23 @@
                   "method": "reported"
                 }
               ]
-            },
-            {
-              "start": "2025-07-01",
-              "end": "2025-09-30",
-              "value": 88100000,
-              "filed": "2025-11-06",
-              "accession": "0000827054-25-000183",
-              "tag": "NetCashProvidedByUsedInOperatingActivities",
-              "form": "10-Q",
-              "method": "difference",
-              "inputs": [
-                {
-                  "start": "2025-04-01",
-                  "end": "2025-09-30",
-                  "value": 363700000,
-                  "filed": "2025-11-06",
-                  "accession": "0000827054-25-000183",
-                  "tag": "NetCashProvidedByUsedInOperatingActivities",
-                  "form": "10-Q",
-                  "method": "reported"
-                },
-                {
-                  "start": "2025-04-01",
-                  "end": "2025-06-30",
-                  "value": 275600000,
-                  "filed": "2025-08-07",
-                  "accession": "0000827054-25-000133",
-                  "tag": "NetCashProvidedByUsedInOperatingActivities",
-                  "form": "10-Q",
-                  "method": "reported"
-                }
-              ]
             }
           ]
         },
         "grossProfit": {
-          "value": 3083300000,
+          "value": 3513400000,
           "method": "sum-four-quarters",
           "inputs": [
+            {
+              "start": "2026-07-01",
+              "end": "2026-09-30",
+              "value": 1068000000,
+              "filed": "2026-11-05",
+              "accession": "0000827054-26-000062",
+              "tag": "GrossProfit",
+              "form": "10-Q",
+              "method": "reported"
+            },
             {
               "start": "2026-04-01",
               "end": "2026-06-30",
@@ -39426,23 +39436,23 @@
               "tag": "GrossProfit",
               "form": "10-Q",
               "method": "reported"
-            },
-            {
-              "start": "2025-07-01",
-              "end": "2025-09-30",
-              "value": 637900000,
-              "filed": "2025-11-06",
-              "accession": "0000827054-25-000183",
-              "tag": "GrossProfit",
-              "form": "10-Q",
-              "method": "reported"
             }
           ]
         },
         "operatingIncome": {
-          "value": 794800000,
+          "value": 1170400000,
           "method": "sum-four-quarters",
           "inputs": [
+            {
+              "start": "2026-07-01",
+              "end": "2026-09-30",
+              "value": 464500000,
+              "filed": "2026-11-05",
+              "accession": "0000827054-26-000062",
+              "tag": "OperatingIncomeLoss",
+              "form": "10-Q",
+              "method": "reported"
+            },
             {
               "start": "2026-04-01",
               "end": "2026-06-30",
@@ -39494,23 +39504,23 @@
               "tag": "OperatingIncomeLoss",
               "form": "10-Q",
               "method": "reported"
-            },
-            {
-              "start": "2025-07-01",
-              "end": "2025-09-30",
-              "value": 88900000,
-              "filed": "2025-11-06",
-              "accession": "0000827054-25-000183",
-              "tag": "OperatingIncomeLoss",
-              "form": "10-Q",
-              "method": "reported"
             }
           ]
         },
         "researchDevelopment": {
-          "value": 1139300000,
+          "value": 1195500000,
           "method": "sum-four-quarters",
           "inputs": [
+            {
+              "start": "2026-07-01",
+              "end": "2026-09-30",
+              "value": 318500000,
+              "filed": "2026-11-05",
+              "accession": "0000827054-26-000062",
+              "tag": "ResearchAndDevelopmentExpense",
+              "form": "10-Q",
+              "method": "reported"
+            },
             {
               "start": "2026-04-01",
               "end": "2026-06-30",
@@ -39562,23 +39572,45 @@
               "tag": "ResearchAndDevelopmentExpense",
               "form": "10-Q",
               "method": "reported"
-            },
-            {
-              "start": "2025-07-01",
-              "end": "2025-09-30",
-              "value": 262300000,
-              "filed": "2025-11-06",
-              "accession": "0000827054-25-000183",
-              "tag": "ResearchAndDevelopmentExpense",
-              "form": "10-Q",
-              "method": "reported"
             }
           ]
         },
         "capitalExpenditure": {
-          "value": 87100000,
+          "value": 73700000,
           "method": "sum-four-quarters",
           "inputs": [
+            {
+              "start": "2026-07-01",
+              "end": "2026-09-30",
+              "value": 23100000,
+              "filed": "2026-11-05",
+              "accession": "0000827054-26-000062",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "form": "10-Q",
+              "method": "difference",
+              "inputs": [
+                {
+                  "start": "2026-04-01",
+                  "end": "2026-09-30",
+                  "value": 37000000,
+                  "filed": "2026-11-05",
+                  "accession": "0000827054-26-000062",
+                  "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+                  "form": "10-Q",
+                  "method": "reported"
+                },
+                {
+                  "start": "2026-04-01",
+                  "end": "2026-06-30",
+                  "value": 13900000,
+                  "filed": "2026-08-06",
+                  "accession": "0000827054-26-000038",
+                  "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+                  "form": "10-Q",
+                  "method": "reported"
+                }
+              ]
+            },
             {
               "start": "2026-04-01",
               "end": "2026-06-30",
@@ -39647,38 +39679,6 @@
                   "value": 54400000,
                   "filed": "2025-11-06",
                   "accession": "0000827054-25-000183",
-                  "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-                  "form": "10-Q",
-                  "method": "reported"
-                }
-              ]
-            },
-            {
-              "start": "2025-07-01",
-              "end": "2025-09-30",
-              "value": 36500000,
-              "filed": "2025-11-06",
-              "accession": "0000827054-25-000183",
-              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-              "form": "10-Q",
-              "method": "difference",
-              "inputs": [
-                {
-                  "start": "2025-04-01",
-                  "end": "2025-09-30",
-                  "value": 54400000,
-                  "filed": "2025-11-06",
-                  "accession": "0000827054-25-000183",
-                  "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-                  "form": "10-Q",
-                  "method": "reported"
-                },
-                {
-                  "start": "2025-04-01",
-                  "end": "2025-06-30",
-                  "value": 17900000,
-                  "filed": "2025-08-07",
-                  "accession": "0000827054-25-000133",
                   "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
                   "form": "10-Q",
                   "method": "reported"
