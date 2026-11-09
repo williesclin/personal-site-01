@@ -1,23 +1,13 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-09T07:10:11.313328Z",
+  "attemptedAt": "2026-11-09T22:41:14.081275Z",
   "sources": {
     "ecb": {
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
       "status": "available",
-      "retrievedAt": "2026-11-09T07:10:11.313328Z",
-      "lastAttemptAt": "2026-11-09T07:10:11.313328Z",
+      "retrievedAt": "2026-11-09T22:41:14.081275Z",
+      "lastAttemptAt": "2026-11-09T22:41:14.081275Z",
       "rows": [
-        {
-          "date": "2026-08-10",
-          "eurUsd": 1.1555,
-          "usdJpy": 158.64128083080917
-        },
-        {
-          "date": "2026-08-11",
-          "eurUsd": 1.154,
-          "usdJpy": 159.20277296360487
-        },
         {
           "date": "2026-08-12",
           "eurUsd": 1.1545,
@@ -332,52 +322,57 @@
           "date": "2026-11-06",
           "eurUsd": 1.1165,
           "usdJpy": 158.32512315270935
+        },
+        {
+          "date": "2026-11-09",
+          "eurUsd": 1.1193,
+          "usdJpy": 157.9469311176628
         }
       ]
     },
     "h10": {
       "url": "https://www.federalreserve.gov/releases/h10/current/",
       "status": "available",
-      "retrievedAt": "2026-11-09T07:10:11.313328Z",
-      "lastAttemptAt": "2026-11-09T07:10:11.313328Z",
+      "retrievedAt": "2026-11-09T22:41:14.081275Z",
+      "lastAttemptAt": "2026-11-09T22:41:14.081275Z",
       "rows": [
         {
-          "date": "2026-10-26",
-          "usdTwd": 32.54,
-          "usdJpy": 157.58,
-          "eurUsd": 1.1178
+          "date": "2026-11-02",
+          "usdTwd": 32.58,
+          "usdJpy": 157.81,
+          "eurUsd": 1.1204
         },
         {
-          "date": "2026-10-27",
-          "usdTwd": 32.48,
-          "usdJpy": 157.86,
-          "eurUsd": 1.1144
+          "date": "2026-11-03",
+          "usdTwd": 32.79,
+          "usdJpy": 158.5,
+          "eurUsd": 1.1192
         },
         {
-          "date": "2026-10-28",
-          "usdTwd": 32.42,
-          "usdJpy": 158.24,
-          "eurUsd": 1.114
+          "date": "2026-11-04",
+          "usdTwd": 32.82,
+          "usdJpy": 158.44,
+          "eurUsd": 1.1217
         },
         {
-          "date": "2026-10-29",
-          "usdTwd": 32.53,
-          "usdJpy": 157.83,
-          "eurUsd": 1.1165
+          "date": "2026-11-05",
+          "usdTwd": 32.94,
+          "usdJpy": 157.76,
+          "eurUsd": 1.1235
         },
         {
-          "date": "2026-10-30",
-          "usdTwd": 32.59,
-          "usdJpy": 157.47,
-          "eurUsd": 1.1163
+          "date": "2026-11-06",
+          "usdTwd": 32.85,
+          "usdJpy": 158.23,
+          "eurUsd": 1.1154
         }
       ]
     },
     "bls-news": {
       "url": "https://www.bls.gov/feed/bls_latest.rss",
       "status": "available",
-      "retrievedAt": "2026-11-09T07:10:11.313328Z",
-      "lastAttemptAt": "2026-11-09T07:10:11.313328Z",
+      "retrievedAt": "2026-11-09T22:41:14.081275Z",
+      "lastAttemptAt": "2026-11-09T22:41:14.081275Z",
       "rows": [
         {
           "id": "b29e9d538e0552a9a5e25a99",
@@ -388,16 +383,27 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         }
       ]
     },
     "fed-news": {
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "status": "available",
-      "retrievedAt": "2026-11-09T07:10:11.313328Z",
-      "lastAttemptAt": "2026-11-09T07:10:11.313328Z",
+      "retrievedAt": "2026-11-09T22:41:14.081275Z",
+      "lastAttemptAt": "2026-11-09T22:41:14.081275Z",
       "rows": [
+        {
+          "id": "f523399d5b80798936e8f313",
+          "source": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
+          "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
+          "publishedAt": "2026-11-09T21:00:00Z",
+          "topic": null,
+          "symbols": [],
+          "association": "topic-only",
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
+        },
         {
           "id": "2c016c2d21373db016859823",
           "source": "Federal Reserve",
@@ -407,7 +413,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "0bc7322eb37d5671b3cabe49",
@@ -418,7 +424,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "461ea28f48b232d42ce01710",
@@ -429,7 +435,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "a8f1bb5f9c20f6b5ba3f85a2",
@@ -440,7 +446,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "f34f1b33146dde735e3bc09e",
@@ -451,7 +457,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "9044eec8de2a5865c7f6e53e",
@@ -462,7 +468,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "08859693f2f738a4d3760177",
@@ -473,7 +479,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "316625c241f2e4bc3543bed2",
@@ -484,7 +490,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "d8d8882f0598f966ff244ffa",
@@ -495,7 +501,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "ea5938d6b8721685a16edfbb",
@@ -506,7 +512,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "14146cd9529768b8de7ddb9a",
@@ -517,7 +523,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "5cb5d24eabc33a4d638c7085",
@@ -528,7 +534,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "9ccd303c792f0cbad6a44ee1",
@@ -539,7 +545,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "da5332a64195803b8d5f091d",
@@ -550,7 +556,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "421593941bcd210840f685fc",
@@ -561,7 +567,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "e3d0f340738d8b442d5164da",
@@ -572,7 +578,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "a3c66db57688cd99760d1973",
@@ -583,7 +589,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "c752665596824774fab7f006",
@@ -594,7 +600,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         },
         {
           "id": "dcf8db524f3733545fb22349",
@@ -605,18 +611,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
-        },
-        {
-          "id": "1079b55bdcb2016893db67aa",
-          "source": "Federal Reserve",
-          "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260918b.htm",
-          "title": "Federal Reserve Board announces termination of enforcement action with SNB Bancshares and Bank of Eufaula",
-          "publishedAt": "2026-09-18T15:00:00Z",
-          "topic": null,
-          "symbols": [],
-          "association": "topic-only",
-          "retrievedAt": "2026-11-09T07:10:11.313328Z"
+          "retrievedAt": "2026-11-09T22:41:14.081275Z"
         }
       ]
     }
