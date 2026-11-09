@@ -1,11 +1,65 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-09T06:58:01.006Z",
+  "retrievedAt": "2026-11-09T22:35:45.120Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "b89414a6b5dc253d67114f9e8ffed251b36cb736bc847b14beebd409b8a7b77f",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840856/000184085626000028/0001840856-26-000028-index.html",
+      "title": "SoundHound AI · 10-Q · 2026-11-09",
+      "summary": {
+        "en": "SEC 10-Q filing by SoundHound AI. Read the original filing before drawing conclusions.",
+        "zh-hant": "SoundHound AI 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-09",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-11-09T22:35:45.120Z",
+      "firstObservedAt": "2026-11-09T22:35:45.120Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "88288f2baa7908879b29c8baa3321a8ceefab43d008b101b49140736e2dea95d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SOUN"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001840856-26-000028",
+      "acceptedAt": "2026-11-09T22:24:33.000Z"
+    },
+    {
+      "id": "f3c25429a6949ad6c724caf31d3e51d464ef1165c13f34dc518a501c4b7baa37",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110465926124509/0001104659-26-124509-index.html",
+      "title": "Equinix · 8-K · 2026-11-09",
+      "summary": {
+        "en": "SEC 8-K filing by Equinix. Read the original filing before drawing conclusions.",
+        "zh-hant": "Equinix 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-09",
+      "publishedAt": null,
+      "eventOn": "2026-11-09",
+      "retrievedAt": "2026-11-09T22:35:45.120Z",
+      "firstObservedAt": "2026-11-09T22:35:45.120Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "6fe186d934806143abf20c818dec829dee77b0400bf52ac5a0029e8175b3a11c",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "EQIX"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001104659-26-124509",
+      "acceptedAt": "2026-11-09T21:19:49.000Z"
+    },
     {
       "id": "490ce696b698f7e148e614f1cb3fbef36e7fbe229c9af86b86361e92e4045d27",
       "sourceId": "sec-edgar",
@@ -4572,6 +4626,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-09T22:35:45.120Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-09T06:58:01.006Z",
       "succeeded": 50,
       "expected": 50,
@@ -5399,13 +5460,6 @@
     },
     {
       "at": "2026-10-02T05:57:03.243Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-02T00:25:09.161Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
