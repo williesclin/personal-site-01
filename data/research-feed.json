@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-09T22:35:45.120Z",
+  "retrievedAt": "2026-11-10T07:34:49.379Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -4626,6 +4626,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-10T07:34:49.379Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-09T22:35:45.120Z",
       "succeeded": 50,
       "expected": 50,
@@ -5453,13 +5460,6 @@
     },
     {
       "at": "2026-10-02T22:24:37.583Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-02T05:57:03.243Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
