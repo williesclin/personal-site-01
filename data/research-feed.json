@@ -1,11 +1,65 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-12T07:29:05.160Z",
+  "retrievedAt": "2026-11-12T20:13:35.349Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "09f00786fecff5bf41eb0433edb5007cc6ffe6362670f4bf4cc1a1c0b6a3354a",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/0001045810-26-000082-index.html",
+      "title": "NVIDIA · 8-K · 2026-11-12",
+      "summary": {
+        "en": "SEC 8-K filing by NVIDIA. Read the original filing before drawing conclusions.",
+        "zh-hant": "NVIDIA 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-12",
+      "publishedAt": null,
+      "eventOn": "2026-11-11",
+      "retrievedAt": "2026-11-12T20:13:35.349Z",
+      "firstObservedAt": "2026-11-12T20:13:35.349Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "7b06546080264f2cebed648b97545a84a023be6e6cf876efbf93d39932a49ff4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NVDA"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001045810-26-000082",
+      "acceptedAt": "2026-11-12T13:52:41.000Z"
+    },
+    {
+      "id": "cd75074601fd98dbf4c6d1cf61ae8bf5b43ca961ae7141460bf5cafb1cb82d9b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000026/0001835632-26-000026-index.html",
+      "title": "Marvell Technology · 8-K · 2026-11-12",
+      "summary": {
+        "en": "SEC 8-K filing by Marvell Technology. Read the original filing before drawing conclusions.",
+        "zh-hant": "Marvell Technology 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-12",
+      "publishedAt": null,
+      "eventOn": "2026-11-11",
+      "retrievedAt": "2026-11-12T20:13:35.349Z",
+      "firstObservedAt": "2026-11-12T20:13:35.349Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "95e4cf5f0d763a28fecd8c76f8744ca20652bf38aff24fd905fe8530cd119658",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MRVL"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001835632-26-000026",
+      "acceptedAt": "2026-11-12T14:11:22.000Z"
+    },
     {
       "id": "b89414a6b5dc253d67114f9e8ffed251b36cb736bc847b14beebd409b8a7b77f",
       "sourceId": "sec-edgar",
@@ -4626,6 +4680,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-12T20:13:35.349Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-12T07:29:05.160Z",
       "succeeded": 50,
       "expected": 50,
@@ -5453,13 +5514,6 @@
     },
     {
       "at": "2026-10-04T06:08:12.905Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-03T21:37:13.184Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
