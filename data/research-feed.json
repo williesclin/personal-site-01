@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-12T20:13:35.349Z",
+  "retrievedAt": "2026-11-13T07:00:08.429Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -59,6 +59,114 @@
       "items": "5.02,9.01",
       "accession": "0001835632-26-000026",
       "acceptedAt": "2026-11-12T14:11:22.000Z"
+    },
+    {
+      "id": "e311114c8bb8b46fc6ca80488426c5f9c17206567b44fe3a83fb14b40d300e14",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/0001628280-26-073360-index.html",
+      "title": "Applied Materials · 8-K · 2026-11-12",
+      "summary": {
+        "en": "SEC 8-K filing by Applied Materials. Read the original filing before drawing conclusions.",
+        "zh-hant": "Applied Materials 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-12",
+      "publishedAt": null,
+      "eventOn": "2026-11-12",
+      "retrievedAt": "2026-11-13T07:00:08.429Z",
+      "firstObservedAt": "2026-11-13T07:00:08.429Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "f29b46e441e77c3f44ee88dda9fa632617ec33206fbf0f3441df8816ec074166",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMAT"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001628280-26-073360",
+      "acceptedAt": "2026-11-12T21:02:46.000Z"
+    },
+    {
+      "id": "5481198fc5e326a23a52263614f59837ee31262e4065ddcf0d8386cf41ea65a2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126043431/0001140361-26-043431-index.html",
+      "title": "onsemi · 8-K · 2026-11-12",
+      "summary": {
+        "en": "SEC 8-K filing by onsemi. Read the original filing before drawing conclusions.",
+        "zh-hant": "onsemi 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-12",
+      "publishedAt": null,
+      "eventOn": "2026-11-12",
+      "retrievedAt": "2026-11-13T07:00:08.429Z",
+      "firstObservedAt": "2026-11-13T07:00:08.429Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "28b748eedd8a2887cd5402d3a556661f890f486d8d4a37ab8039a64077aa57fd",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ON"
+      ],
+      "form": "8-K",
+      "items": "1.01,2.03,9.01",
+      "accession": "0001140361-26-043431",
+      "acceptedAt": "2026-11-12T21:10:55.000Z"
+    },
+    {
+      "id": "4eaf09f504a46cc62ccf4b95e96ea943637e4dcf67ef18ee18bff0821da7dff8",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/0001193125-26-458525-index.html",
+      "title": "Meta Platforms · 8-K · 2026-11-12",
+      "summary": {
+        "en": "SEC 8-K filing by Meta Platforms. Read the original filing before drawing conclusions.",
+        "zh-hant": "Meta Platforms 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-12",
+      "publishedAt": null,
+      "eventOn": "2026-11-12",
+      "retrievedAt": "2026-11-13T07:00:08.429Z",
+      "firstObservedAt": "2026-11-13T07:00:08.429Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "da573b8a9d8f1ba5bd67cc2bfb3953032e6a0a138d03698478e1006a8ceda43f",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "META"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-458525",
+      "acceptedAt": "2026-11-12T21:27:49.000Z"
+    },
+    {
+      "id": "1bc4ea1babf3f6b284f48f6aa7bc81ec0c11cbeacc2b3b2ddd13df5c3c94d627",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/0000858877-26-000170-index.html",
+      "title": "Cisco Systems · 8-K · 2026-11-12",
+      "summary": {
+        "en": "SEC 8-K filing by Cisco Systems. Read the original filing before drawing conclusions.",
+        "zh-hant": "Cisco Systems 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-12",
+      "publishedAt": null,
+      "eventOn": "2026-11-12",
+      "retrievedAt": "2026-11-13T07:00:08.429Z",
+      "firstObservedAt": "2026-11-13T07:00:08.429Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "c805ffed4b0a1e1ebbf13852f40b62847a5324969a11e47bbef77dda84056192",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CSCO"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000858877-26-000170",
+      "acceptedAt": "2026-11-12T21:06:24.000Z"
     },
     {
       "id": "b89414a6b5dc253d67114f9e8ffed251b36cb736bc847b14beebd409b8a7b77f",
@@ -4680,6 +4788,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-13T07:00:08.429Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-12T20:13:35.349Z",
       "succeeded": 50,
       "expected": 50,
@@ -5507,13 +5622,6 @@
     },
     {
       "at": "2026-10-04T12:39:52.721Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-04T06:08:12.905Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
