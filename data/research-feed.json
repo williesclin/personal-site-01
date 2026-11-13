@@ -1,11 +1,65 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-13T07:00:08.429Z",
+  "retrievedAt": "2026-11-13T19:55:07.203Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "6b36602c8587559f649efb3d3cfe2773f4a08e28568ec2cd6476b115d1959230",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026073564/0001628280-26-073564-index.html",
+      "title": "Vertiv · 8-K · 2026-11-13",
+      "summary": {
+        "en": "SEC 8-K filing by Vertiv. Read the original filing before drawing conclusions.",
+        "zh-hant": "Vertiv 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-13",
+      "publishedAt": null,
+      "eventOn": "2026-11-13",
+      "retrievedAt": "2026-11-13T19:55:07.203Z",
+      "firstObservedAt": "2026-11-13T19:55:07.203Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "7c985cb9af210fda7f2f97ddd5ae24be188e7bbb212add24e0bccc9822973d62",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "VRT"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001628280-26-073564",
+      "acceptedAt": "2026-11-13T11:35:50.000Z"
+    },
+    {
+      "id": "c3328f2c49cceb399dfec350118176b3f60214913b1610eafef054d54147ea8b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840856/000121390026119127/0001213900-26-119127-index.html",
+      "title": "SoundHound AI · 8-K/A · 2026-11-13",
+      "summary": {
+        "en": "SEC 8-K/A filing by SoundHound AI. Read the original filing before drawing conclusions.",
+        "zh-hant": "SoundHound AI 向 SEC 提交 8-K/A 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-13",
+      "publishedAt": null,
+      "eventOn": "2026-11-12",
+      "retrievedAt": "2026-11-13T19:55:07.203Z",
+      "firstObservedAt": "2026-11-13T19:55:07.203Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "883a413d716564e0e6049bee88b2cb0df7dd18bee2d938fa9050ac79a1b3e605",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SOUN"
+      ],
+      "form": "8-K/A",
+      "items": "2.01,9.01",
+      "accession": "0001213900-26-119127",
+      "acceptedAt": "2026-11-13T01:12:18.000Z"
+    },
     {
       "id": "09f00786fecff5bf41eb0433edb5007cc6ffe6362670f4bf4cc1a1c0b6a3354a",
       "sourceId": "sec-edgar",
@@ -4788,6 +4842,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-13T19:55:07.203Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-13T07:00:08.429Z",
       "succeeded": 50,
       "expected": 50,
@@ -5615,13 +5676,6 @@
     },
     {
       "at": "2026-10-04T21:43:26.934Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-04T12:39:52.721Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
