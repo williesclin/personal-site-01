@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-13T19:55:07.203Z",
+  "retrievedAt": "2026-11-14T06:49:37.928Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -59,6 +59,60 @@
       "items": "2.01,9.01",
       "accession": "0001213900-26-119127",
       "acceptedAt": "2026-11-13T01:12:18.000Z"
+    },
+    {
+      "id": "d7e2b91a35565b2ea15135e59e56045d36a414b170b164e74f07a59fea635f78",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/804328/000110465926127163/0001104659-26-127163-index.html",
+      "title": "Qualcomm · 8-K · 2026-11-13",
+      "summary": {
+        "en": "SEC 8-K filing by Qualcomm. Read the original filing before drawing conclusions.",
+        "zh-hant": "Qualcomm 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-13",
+      "publishedAt": null,
+      "eventOn": "2026-11-09",
+      "retrievedAt": "2026-11-14T06:49:37.928Z",
+      "firstObservedAt": "2026-11-14T06:49:37.928Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "2bb34bdf1abf7e4cb9f58e5781fd43083457673e308bd140075c75a83eccdbc5",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "QCOM"
+      ],
+      "form": "8-K",
+      "items": "1.01,8.01,9.01",
+      "accession": "0001104659-26-127163",
+      "acceptedAt": "2026-11-13T21:48:24.000Z"
+    },
+    {
+      "id": "1379ad706f4da006c4628b297a6a858ba1a0a3cba5a106f57a2043b852e698f9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840856/000121390026119843/0001213900-26-119843-index.html",
+      "title": "SoundHound AI · 8-K · 2026-11-13",
+      "summary": {
+        "en": "SEC 8-K filing by SoundHound AI. Read the original filing before drawing conclusions.",
+        "zh-hant": "SoundHound AI 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-13",
+      "publishedAt": null,
+      "eventOn": "2026-11-09",
+      "retrievedAt": "2026-11-14T06:49:37.928Z",
+      "firstObservedAt": "2026-11-14T06:49:37.928Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "567db9f3a1a67a6aa17e55e25943c9f6a77a674fa941ba83d4a8cef2d0987f4e",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "SOUN"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001213900-26-119843",
+      "acceptedAt": "2026-11-13T22:00:22.000Z"
     },
     {
       "id": "09f00786fecff5bf41eb0433edb5007cc6ffe6362670f4bf4cc1a1c0b6a3354a",
@@ -4842,6 +4896,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-14T06:49:37.928Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-13T19:55:07.203Z",
       "succeeded": 50,
       "expected": 50,
@@ -5669,13 +5730,6 @@
     },
     {
       "at": "2026-10-05T00:51:40.786Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-04T21:43:26.934Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
