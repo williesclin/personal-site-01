@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-16T06:58:13.364Z",
+  "retrievedAt": "2026-11-16T22:23:59.100Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "6cf29a7af0572a1a0a119de3023b13256339dd9e29cf656f24ef04f2a19fe288",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/2488/000119312526462340/0001193125-26-462340-index.html",
+      "title": "Advanced Micro Devices · 8-K/A · 2026-11-16",
+      "summary": {
+        "en": "SEC 8-K/A filing by Advanced Micro Devices. Read the original filing before drawing conclusions.",
+        "zh-hant": "Advanced Micro Devices 向 SEC 提交 8-K/A 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-16",
+      "publishedAt": null,
+      "eventOn": "2026-09-26",
+      "retrievedAt": "2026-11-16T22:23:59.100Z",
+      "firstObservedAt": "2026-11-16T22:23:59.100Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "4e33c8fac1849aeab78a20dffc62ab8c1ec8f660f7f9c06786289ced7588ef4d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMD"
+      ],
+      "form": "8-K/A",
+      "items": "3.02",
+      "accession": "0001193125-26-462340",
+      "acceptedAt": "2026-11-16T14:12:55.000Z"
+    },
     {
       "id": "6b36602c8587559f649efb3d3cfe2773f4a08e28568ec2cd6476b115d1959230",
       "sourceId": "sec-edgar",
@@ -4896,6 +4923,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-16T22:23:59.100Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-16T06:58:13.364Z",
       "succeeded": 50,
       "expected": 50,
@@ -5723,13 +5757,6 @@
     },
     {
       "at": "2026-10-07T06:14:58.340Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-06T18:31:02.808Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
