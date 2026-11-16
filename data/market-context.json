@@ -1,23 +1,13 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-16T07:15:11.855067Z",
+  "attemptedAt": "2026-11-16T22:29:39.453200Z",
   "sources": {
     "ecb": {
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
       "status": "available",
-      "retrievedAt": "2026-11-16T07:15:11.855067Z",
-      "lastAttemptAt": "2026-11-16T07:15:11.855067Z",
+      "retrievedAt": "2026-11-16T22:29:39.453200Z",
+      "lastAttemptAt": "2026-11-16T22:29:39.453200Z",
       "rows": [
-        {
-          "date": "2026-08-17",
-          "eurUsd": 1.1593,
-          "usdJpy": 159.22539463469334
-        },
-        {
-          "date": "2026-08-18",
-          "eurUsd": 1.1576,
-          "usdJpy": 159.70110573600553
-        },
         {
           "date": "2026-08-19",
           "eurUsd": 1.1605,
@@ -332,52 +322,51 @@
           "date": "2026-11-13",
           "eurUsd": 1.1052,
           "usdJpy": 159.99819037278323
+        },
+        {
+          "date": "2026-11-16",
+          "eurUsd": 1.1014,
+          "usdJpy": 159.5968767023788
         }
       ]
     },
     "h10": {
       "url": "https://www.federalreserve.gov/releases/h10/current/",
       "status": "available",
-      "retrievedAt": "2026-11-16T07:15:11.855067Z",
-      "lastAttemptAt": "2026-11-16T07:15:11.855067Z",
+      "retrievedAt": "2026-11-16T22:29:39.453200Z",
+      "lastAttemptAt": "2026-11-16T22:29:39.453200Z",
       "rows": [
         {
-          "date": "2026-11-02",
-          "usdTwd": 32.58,
-          "usdJpy": 157.81,
+          "date": "2026-11-09",
+          "usdTwd": 32.82,
+          "usdJpy": 157.99,
           "eurUsd": 1.1204
         },
         {
-          "date": "2026-11-03",
-          "usdTwd": 32.79,
-          "usdJpy": 158.5,
-          "eurUsd": 1.1192
+          "date": "2026-11-10",
+          "usdTwd": 32.86,
+          "usdJpy": 158.76,
+          "eurUsd": 1.1153
         },
         {
-          "date": "2026-11-04",
-          "usdTwd": 32.82,
-          "usdJpy": 158.44,
-          "eurUsd": 1.1217
+          "date": "2026-11-12",
+          "usdTwd": 32.93,
+          "usdJpy": 159.6,
+          "eurUsd": 1.1056
         },
         {
-          "date": "2026-11-05",
-          "usdTwd": 32.94,
-          "usdJpy": 157.76,
-          "eurUsd": 1.1235
-        },
-        {
-          "date": "2026-11-06",
-          "usdTwd": 32.85,
-          "usdJpy": 158.23,
-          "eurUsd": 1.1154
+          "date": "2026-11-13",
+          "usdTwd": 32.87,
+          "usdJpy": 159.93,
+          "eurUsd": 1.1034
         }
       ]
     },
     "bls-news": {
       "url": "https://www.bls.gov/feed/bls_latest.rss",
       "status": "available",
-      "retrievedAt": "2026-11-16T07:15:11.855067Z",
-      "lastAttemptAt": "2026-11-16T07:15:11.855067Z",
+      "retrievedAt": "2026-11-16T22:29:39.453200Z",
+      "lastAttemptAt": "2026-11-16T22:29:39.453200Z",
       "rows": [
         {
           "id": "d01ab30f35b7d0b9d1c97aca",
@@ -388,15 +377,15 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-16T07:15:11.855067Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         }
       ]
     },
     "fed-news": {
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
-      "status": "stale",
-      "retrievedAt": "2026-11-15T19:05:37.251202Z",
-      "lastAttemptAt": "2026-11-16T07:15:11.855067Z",
+      "status": "available",
+      "retrievedAt": "2026-11-16T22:29:39.453200Z",
+      "lastAttemptAt": "2026-11-16T22:29:39.453200Z",
       "rows": [
         {
           "id": "66f47331d52249b1152ade73",
@@ -407,7 +396,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "dce14e36c5763cd20432d045",
@@ -418,7 +407,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "df9198cf73c708f2e749670c",
@@ -429,7 +418,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "1277f4f10d9ad93e78447cb2",
@@ -440,7 +429,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "f523399d5b80798936e8f313",
@@ -451,7 +440,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "2c016c2d21373db016859823",
@@ -462,7 +451,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "0bc7322eb37d5671b3cabe49",
@@ -473,7 +462,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "461ea28f48b232d42ce01710",
@@ -484,7 +473,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "a8f1bb5f9c20f6b5ba3f85a2",
@@ -495,7 +484,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "f34f1b33146dde735e3bc09e",
@@ -506,7 +495,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "9044eec8de2a5865c7f6e53e",
@@ -517,7 +506,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "08859693f2f738a4d3760177",
@@ -528,7 +517,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "316625c241f2e4bc3543bed2",
@@ -539,7 +528,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "d8d8882f0598f966ff244ffa",
@@ -550,7 +539,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "ea5938d6b8721685a16edfbb",
@@ -561,7 +550,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "14146cd9529768b8de7ddb9a",
@@ -572,7 +561,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "5cb5d24eabc33a4d638c7085",
@@ -583,7 +572,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "9ccd303c792f0cbad6a44ee1",
@@ -594,7 +583,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "da5332a64195803b8d5f091d",
@@ -605,7 +594,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         },
         {
           "id": "421593941bcd210840f685fc",
@@ -616,10 +605,9 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-15T19:05:37.251202Z"
+          "retrievedAt": "2026-11-16T22:29:39.453200Z"
         }
-      ],
-      "error": "HTTPError"
+      ]
     }
   }
 }
