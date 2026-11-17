@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-17T08:14:17.648Z",
+  "retrievedAt": "2026-11-17T21:09:54.113Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "3d3a58d785f248d30a24d09e12ae3f026e5ded06832c21d9f0314964908f6b57",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026074373/0001628280-26-074373-index.html",
+      "title": "MongoDB · 8-K · 2026-11-17",
+      "summary": {
+        "en": "SEC 8-K filing by MongoDB. Read the original filing before drawing conclusions.",
+        "zh-hant": "MongoDB 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-17",
+      "publishedAt": null,
+      "eventOn": "2026-11-17",
+      "retrievedAt": "2026-11-17T21:09:54.113Z",
+      "firstObservedAt": "2026-11-17T21:09:54.113Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "440af28522b9361c5f1a7b3d87e47e0673006fedbd40f8124134250ebbce7a34",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "MDB"
+      ],
+      "form": "8-K",
+      "items": "7.01,9.01",
+      "accession": "0001628280-26-074373",
+      "acceptedAt": "2026-11-17T13:45:49.000Z"
+    },
     {
       "id": "6cf29a7af0572a1a0a119de3023b13256339dd9e29cf656f24ef04f2a19fe288",
       "sourceId": "sec-edgar",
@@ -4923,6 +4950,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-17T21:09:54.113Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-17T08:14:17.648Z",
       "succeeded": 50,
       "expected": 50,
@@ -5750,13 +5784,6 @@
     },
     {
       "at": "2026-10-07T23:13:31.248Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-07T13:40:35.584Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
