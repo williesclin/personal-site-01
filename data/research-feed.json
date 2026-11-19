@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-19T07:42:39.257Z",
+  "retrievedAt": "2026-11-19T20:51:49.495Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "dcb078ed8ae0cb7b68721d9cadf97a9c6ccf145fda4ac780c2835a702d171980",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000033/0001327567-26-000033-index.html",
+      "title": "Palo Alto Networks · 10-Q · 2026-11-19",
+      "summary": {
+        "en": "SEC 10-Q filing by Palo Alto Networks. Read the original filing before drawing conclusions.",
+        "zh-hant": "Palo Alto Networks 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-19",
+      "publishedAt": null,
+      "eventOn": "2026-10-31",
+      "retrievedAt": "2026-11-19T20:51:49.495Z",
+      "firstObservedAt": "2026-11-19T20:51:49.495Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "f12b3bec07cad7f1f210357961f15d67db5d7bfd62843bf9453fd2d9313c0009",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PANW"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001327567-26-000033",
+      "acceptedAt": "2026-11-18T23:33:35.000Z"
+    },
     {
       "id": "8b04dd5b2c7123077827971219107abd4f26aec2c2762c5c1cfa6dd6994278fe",
       "sourceId": "sec-edgar",
@@ -5085,6 +5112,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-19T20:51:49.495Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-19T07:42:39.257Z",
       "succeeded": 50,
       "expected": 50,
@@ -5912,13 +5946,6 @@
     },
     {
       "at": "2026-10-09T06:25:37.847Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-08T23:29:05.847Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
