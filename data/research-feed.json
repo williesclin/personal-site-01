@@ -1,11 +1,92 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-18T20:46:29.948Z",
+  "retrievedAt": "2026-11-19T07:42:39.257Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "8b04dd5b2c7123077827971219107abd4f26aec2c2762c5c1cfa6dd6994278fe",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000092/0001645590-26-000092-index.html",
+      "title": "Hewlett Packard Enterprise · 8-K · 2026-11-18",
+      "summary": {
+        "en": "SEC 8-K filing by Hewlett Packard Enterprise. Read the original filing before drawing conclusions.",
+        "zh-hant": "Hewlett Packard Enterprise 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-18",
+      "publishedAt": null,
+      "eventOn": "2026-11-18",
+      "retrievedAt": "2026-11-19T07:42:39.257Z",
+      "firstObservedAt": "2026-11-19T07:42:39.257Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "c547564eb5f7fec89cf0c5426d65dcc69ebf4f1e6d84c7ebf92611e4920d562b",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "HPE"
+      ],
+      "form": "8-K",
+      "items": "1.01,5.02,7.01,9.01",
+      "accession": "0001645590-26-000092",
+      "acceptedAt": "2026-11-18T21:08:26.000Z"
+    },
+    {
+      "id": "43443ada5dd9ba7193d22234566f4555573dcf26050f1b1e123d918c67a40278",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000030/0001327567-26-000030-index.html",
+      "title": "Palo Alto Networks · 8-K · 2026-11-18",
+      "summary": {
+        "en": "SEC 8-K filing by Palo Alto Networks. Read the original filing before drawing conclusions.",
+        "zh-hant": "Palo Alto Networks 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-18",
+      "publishedAt": null,
+      "eventOn": "2026-11-17",
+      "retrievedAt": "2026-11-19T07:42:39.257Z",
+      "firstObservedAt": "2026-11-19T07:42:39.257Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "b46ff9bf121b1414ceae69237228f3fdbca922c534567a6e4b7d1387ff904c11",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PANW"
+      ],
+      "form": "8-K",
+      "items": "2.02,3.02,7.01,8.01,9.01",
+      "accession": "0001327567-26-000030",
+      "acceptedAt": "2026-11-18T21:37:04.000Z"
+    },
+    {
+      "id": "4d29b8fb74794d67deb85be4b2fd35c06e328a0f32737a57ecf4ba7b403b59a6",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000110/0001474432-26-000110-index.html",
+      "title": "Everpure · 8-K · 2026-11-18",
+      "summary": {
+        "en": "SEC 8-K filing by Everpure. Read the original filing before drawing conclusions.",
+        "zh-hant": "Everpure 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-18",
+      "publishedAt": null,
+      "eventOn": "2026-11-18",
+      "retrievedAt": "2026-11-19T07:42:39.257Z",
+      "firstObservedAt": "2026-11-19T07:42:39.257Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "448b9d2ec95cc7049e5621dac8017041984a4a1de2bdd9ba83af0168590851c4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "P"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001474432-26-000110",
+      "acceptedAt": "2026-11-18T21:06:52.000Z"
+    },
     {
       "id": "3d3a58d785f248d30a24d09e12ae3f026e5ded06832c21d9f0314964908f6b57",
       "sourceId": "sec-edgar",
@@ -5004,6 +5085,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-19T07:42:39.257Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-18T20:46:29.948Z",
       "succeeded": 50,
       "expected": 50,
@@ -5831,13 +5919,6 @@
     },
     {
       "at": "2026-10-08T23:29:05.847Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-08T13:53:19.238Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
