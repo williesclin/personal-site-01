@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-19T20:51:49.495Z",
+  "retrievedAt": "2026-11-20T07:34:54.085Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
@@ -32,6 +32,33 @@
       "items": "",
       "accession": "0001327567-26-000033",
       "acceptedAt": "2026-11-18T23:33:35.000Z"
+    },
+    {
+      "id": "48b0d03aa506ddba20df1ea297a034de7d3f95ff336cbee49fc29f2e22b6f203",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000110465926130189/0001104659-26-130189-index.html",
+      "title": "IBM · 8-K · 2026-11-19",
+      "summary": {
+        "en": "SEC 8-K filing by IBM. Read the original filing before drawing conclusions.",
+        "zh-hant": "IBM 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-19",
+      "publishedAt": null,
+      "eventOn": "2026-11-13",
+      "retrievedAt": "2026-11-20T07:34:54.085Z",
+      "firstObservedAt": "2026-11-20T07:34:54.085Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "bbb2520b76da47165e9e5d05b3c0d051c163f77e179a73a5cc8aaee7be4ae41f",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "IBM"
+      ],
+      "form": "8-K",
+      "items": "9.01",
+      "accession": "0001104659-26-130189",
+      "acceptedAt": "2026-11-19T21:46:26.000Z"
     },
     {
       "id": "8b04dd5b2c7123077827971219107abd4f26aec2c2762c5c1cfa6dd6994278fe",
@@ -5112,6 +5139,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-20T07:34:54.085Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-19T20:51:49.495Z",
       "succeeded": 50,
       "expected": 50,
@@ -5939,13 +5973,6 @@
     },
     {
       "at": "2026-10-09T18:26:54.499Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-09T06:25:37.847Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
