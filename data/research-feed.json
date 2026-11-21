@@ -1,11 +1,92 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-20T20:36:39.326Z",
+  "retrievedAt": "2026-11-21T07:30:17.791Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "23de49522d9503b95189d935aeb1144069b4083a1454e610365e6f7f9820c4bf",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000218/0000002488-26-000218-index.html",
+      "title": "Advanced Micro Devices · 8-K · 2026-11-20",
+      "summary": {
+        "en": "SEC 8-K filing by Advanced Micro Devices. Read the original filing before drawing conclusions.",
+        "zh-hant": "Advanced Micro Devices 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-20",
+      "publishedAt": null,
+      "eventOn": "2026-11-18",
+      "retrievedAt": "2026-11-21T07:30:17.791Z",
+      "firstObservedAt": "2026-11-21T07:30:17.791Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "3bad91b1f5a8adb0cdad5cff221aae58c44c68b9f2017c6aad455c026f843cee",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "AMD"
+      ],
+      "form": "8-K",
+      "items": "5.03,9.01",
+      "accession": "0000002488-26-000218",
+      "acceptedAt": "2026-11-20T21:19:32.000Z"
+    },
+    {
+      "id": "a27c009845323e8214a679eb95c603ee260dec3aea9c35dbacc96637a58a152e",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526470351/0001193125-26-470351-index.html",
+      "title": "Oracle · 8-K · 2026-11-20",
+      "summary": {
+        "en": "SEC 8-K filing by Oracle. Read the original filing before drawing conclusions.",
+        "zh-hant": "Oracle 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-20",
+      "publishedAt": null,
+      "eventOn": "2026-11-18",
+      "retrievedAt": "2026-11-21T07:30:17.791Z",
+      "firstObservedAt": "2026-11-21T07:30:17.791Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "14374a3a34535764ce08f76a88f496460f50ed0b54678897ba344f57bac158d2",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ORCL"
+      ],
+      "form": "8-K",
+      "items": "5.07",
+      "accession": "0001193125-26-470351",
+      "acceptedAt": "2026-11-20T21:30:15.000Z"
+    },
+    {
+      "id": "66948a622270a53009e1ea6e2754435efd2638f51985305b39fdb9d18328a9c9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/857005/000119312526470217/0001193125-26-470217-index.html",
+      "title": "PTC · 10-K · 2026-11-20",
+      "summary": {
+        "en": "SEC 10-K filing by PTC. Read the original filing before drawing conclusions.",
+        "zh-hant": "PTC 向 SEC 提交 10-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-20",
+      "publishedAt": null,
+      "eventOn": "2026-09-30",
+      "retrievedAt": "2026-11-21T07:30:17.791Z",
+      "firstObservedAt": "2026-11-21T07:30:17.791Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "6c0a1595adfac82f61313b80959e737f4205c649b0c1f086a8c59a04a12bd62e",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "PTC"
+      ],
+      "form": "10-K",
+      "items": "",
+      "accession": "0001193125-26-470217",
+      "acceptedAt": "2026-11-20T21:02:25.000Z"
+    },
     {
       "id": "dcb078ed8ae0cb7b68721d9cadf97a9c6ccf145fda4ac780c2835a702d171980",
       "sourceId": "sec-edgar",
@@ -5139,6 +5220,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-21T07:30:17.791Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-20T20:36:39.326Z",
       "succeeded": 50,
       "expected": 50,
@@ -5966,13 +6054,6 @@
     },
     {
       "at": "2026-10-10T12:48:43.544Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-10T06:08:19.829Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
