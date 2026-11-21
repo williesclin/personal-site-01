@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-20T20:42:26.125583Z",
+  "attemptedAt": "2026-11-21T07:41:07.247454Z",
   "sources": {
     "ecb": {
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
       "status": "available",
-      "retrievedAt": "2026-11-20T20:42:26.125583Z",
-      "lastAttemptAt": "2026-11-20T20:42:26.125583Z",
+      "retrievedAt": "2026-11-21T07:41:07.247454Z",
+      "lastAttemptAt": "2026-11-21T07:41:07.247454Z",
       "rows": [
         {
           "date": "2026-08-24",
@@ -338,8 +338,8 @@
     "h10": {
       "url": "https://www.federalreserve.gov/releases/h10/current/",
       "status": "available",
-      "retrievedAt": "2026-11-20T20:42:26.125583Z",
-      "lastAttemptAt": "2026-11-20T20:42:26.125583Z",
+      "retrievedAt": "2026-11-21T07:41:07.247454Z",
+      "lastAttemptAt": "2026-11-21T07:41:07.247454Z",
       "rows": [
         {
           "date": "2026-11-09",
@@ -370,8 +370,8 @@
     "bls-news": {
       "url": "https://www.bls.gov/feed/bls_latest.rss",
       "status": "available",
-      "retrievedAt": "2026-11-20T20:42:26.125583Z",
-      "lastAttemptAt": "2026-11-20T20:42:26.125583Z",
+      "retrievedAt": "2026-11-21T07:41:07.247454Z",
+      "lastAttemptAt": "2026-11-21T07:41:07.247454Z",
       "rows": [
         {
           "id": "9524a494a79418329bc62678",
@@ -382,16 +382,27 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         }
       ]
     },
     "fed-news": {
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "status": "available",
-      "retrievedAt": "2026-11-20T20:42:26.125583Z",
-      "lastAttemptAt": "2026-11-20T20:42:26.125583Z",
+      "retrievedAt": "2026-11-21T07:41:07.247454Z",
+      "lastAttemptAt": "2026-11-21T07:41:07.247454Z",
       "rows": [
+        {
+          "id": "166a6c9261ecd2852cca3cec",
+          "source": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+          "title": "Federal Reserve announces College Fed Challenge winners",
+          "publishedAt": "2026-11-20T21:15:00Z",
+          "topic": null,
+          "symbols": [],
+          "association": "topic-only",
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
+        },
         {
           "id": "d9c5507f05f963449cd29175",
           "source": "Federal Reserve",
@@ -401,7 +412,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "5272fdf2e8b2868fb1952205",
@@ -412,7 +423,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "3fc6265765bfce414aea8259",
@@ -423,7 +434,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "66f47331d52249b1152ade73",
@@ -434,7 +445,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "dce14e36c5763cd20432d045",
@@ -445,7 +456,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "df9198cf73c708f2e749670c",
@@ -456,7 +467,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "1277f4f10d9ad93e78447cb2",
@@ -467,7 +478,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "f523399d5b80798936e8f313",
@@ -478,7 +489,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "2c016c2d21373db016859823",
@@ -489,7 +500,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "0bc7322eb37d5671b3cabe49",
@@ -500,7 +511,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "461ea28f48b232d42ce01710",
@@ -511,7 +522,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "a8f1bb5f9c20f6b5ba3f85a2",
@@ -522,7 +533,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "f34f1b33146dde735e3bc09e",
@@ -533,7 +544,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "9044eec8de2a5865c7f6e53e",
@@ -544,7 +555,7 @@
           "topic": "policy-rates",
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "08859693f2f738a4d3760177",
@@ -555,7 +566,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "316625c241f2e4bc3543bed2",
@@ -566,7 +577,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "d8d8882f0598f966ff244ffa",
@@ -577,7 +588,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "ea5938d6b8721685a16edfbb",
@@ -588,7 +599,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         },
         {
           "id": "14146cd9529768b8de7ddb9a",
@@ -599,18 +610,7 @@
           "topic": null,
           "symbols": [],
           "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
-        },
-        {
-          "id": "5cb5d24eabc33a4d638c7085",
-          "source": "Federal Reserve",
-          "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261002a.htm",
-          "title": "Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.",
-          "publishedAt": "2026-10-02T15:00:00Z",
-          "topic": null,
-          "symbols": [],
-          "association": "topic-only",
-          "retrievedAt": "2026-11-20T20:42:26.125583Z"
+          "retrievedAt": "2026-11-21T07:41:07.247454Z"
         }
       ]
     }
