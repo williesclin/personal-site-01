@@ -1,11 +1,173 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-24T10:11:39.242Z",
+  "retrievedAt": "2026-11-24T22:39:27.379Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "031e1879009e1a41e1b38c949d26c45888e3cc787ad6210524b5fcf9a1c9698b",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432826000138/0000804328-26-000138-index.html",
+      "title": "Qualcomm · 8-K · 2026-11-24",
+      "summary": {
+        "en": "SEC 8-K filing by Qualcomm. Read the original filing before drawing conclusions.",
+        "zh-hant": "Qualcomm 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-24",
+      "publishedAt": null,
+      "eventOn": "2026-11-20",
+      "retrievedAt": "2026-11-24T22:39:27.379Z",
+      "firstObservedAt": "2026-11-24T22:39:27.379Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "d737d188171902217c605ea732b9b7fa1361d6ec5eebdb20808db6c6a415346d",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "QCOM"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0000804328-26-000138",
+      "acceptedAt": "2026-11-24T21:32:06.000Z"
+    },
+    {
+      "id": "74e329f25e00e81d96e03528e3094ff3857b976772c0d782b7a041a07ab917f2",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000089/0000006281-26-000089-index.html",
+      "title": "Analog Devices · 10-K · 2026-11-24",
+      "summary": {
+        "en": "SEC 10-K filing by Analog Devices. Read the original filing before drawing conclusions.",
+        "zh-hant": "Analog Devices 向 SEC 提交 10-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-24",
+      "publishedAt": null,
+      "eventOn": "2026-10-31",
+      "retrievedAt": "2026-11-24T22:39:27.379Z",
+      "firstObservedAt": "2026-11-24T22:39:27.379Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "9dacb44878552e65e539308fc42e637bbafd14622862543a77b63a7b6ace5712",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADI"
+      ],
+      "form": "10-K",
+      "items": "",
+      "accession": "0000006281-26-000089",
+      "acceptedAt": "2026-11-24T21:05:47.000Z"
+    },
+    {
+      "id": "0853bb125cbb6f8ce4d9b37cc6bc8a786995708b9b504d3a944ed188ddcab3b0",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/0000006281-26-000087-index.html",
+      "title": "Analog Devices · 8-K · 2026-11-24",
+      "summary": {
+        "en": "SEC 8-K filing by Analog Devices. Read the original filing before drawing conclusions.",
+        "zh-hant": "Analog Devices 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-24",
+      "publishedAt": null,
+      "eventOn": "2026-11-24",
+      "retrievedAt": "2026-11-24T22:39:27.379Z",
+      "firstObservedAt": "2026-11-24T22:39:27.379Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "3f08e0972b644cb6daf79735fbe9b6881b8a1391a4638672bd92bd552fe77e6b",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADI"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0000006281-26-000087",
+      "acceptedAt": "2026-11-24T12:03:22.000Z"
+    },
+    {
+      "id": "03afd8422db623753697bec6271beae2f483ccaf7d9df2d2e23cd510cc947cf3",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526475973/0001193125-26-475973-index.html",
+      "title": "Alphabet · 8-K · 2026-11-24",
+      "summary": {
+        "en": "SEC 8-K filing by Alphabet. Read the original filing before drawing conclusions.",
+        "zh-hant": "Alphabet 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-24",
+      "publishedAt": null,
+      "eventOn": "2026-11-24",
+      "retrievedAt": "2026-11-24T22:39:27.379Z",
+      "firstObservedAt": "2026-11-24T22:39:27.379Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "d5e52bc94698726c136f8cb9b0e181dd04debbfc6813cfb0a29319423877ddd4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "GOOGL"
+      ],
+      "form": "8-K",
+      "items": "8.01,9.01",
+      "accession": "0001193125-26-475973",
+      "acceptedAt": "2026-11-24T21:49:44.000Z"
+    },
+    {
+      "id": "1d2a51c2dcec1f536174bbd392811fffa2f45c79ba0d3a433a16a7fcfab11d41",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/0001571996-26-000050-index.html",
+      "title": "Dell Technologies · 8-K · 2026-11-24",
+      "summary": {
+        "en": "SEC 8-K filing by Dell Technologies. Read the original filing before drawing conclusions.",
+        "zh-hant": "Dell Technologies 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-24",
+      "publishedAt": null,
+      "eventOn": "2026-11-24",
+      "retrievedAt": "2026-11-24T22:39:27.379Z",
+      "firstObservedAt": "2026-11-24T22:39:27.379Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "aaf64abf79daeae9e9957daae298ecd1e38be2c9c44c0de142c7c627c127b9e4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "DELL"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001571996-26-000050",
+      "acceptedAt": "2026-11-24T21:09:13.000Z"
+    },
+    {
+      "id": "5ff4d9a5eb2e379c8c3f61c37780ad5601b63fd137474975ccc2ea5e46febac9",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/769397/000076939726000069/0000769397-26-000069-index.html",
+      "title": "Autodesk · 8-K · 2026-11-24",
+      "summary": {
+        "en": "SEC 8-K filing by Autodesk. Read the original filing before drawing conclusions.",
+        "zh-hant": "Autodesk 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-24",
+      "publishedAt": null,
+      "eventOn": "2026-11-24",
+      "retrievedAt": "2026-11-24T22:39:27.379Z",
+      "firstObservedAt": "2026-11-24T22:39:27.379Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "572a59c4c47f8781ffe2c481d6bafd1a0129133a320911bfd2f9745970f461d4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADSK"
+      ],
+      "form": "8-K",
+      "items": "2.02,7.01,9.01",
+      "accession": "0000769397-26-000069",
+      "acceptedAt": "2026-11-24T21:05:29.000Z"
+    },
     {
       "id": "ba36d183a1b2719156a1e6100718885d96832df3aa492f643efe74ff18363a71",
       "sourceId": "sec-edgar",
@@ -5436,6 +5598,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-24T22:39:27.379Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-24T10:11:39.242Z",
       "succeeded": 50,
       "expected": 50,
@@ -6263,13 +6432,6 @@
     },
     {
       "at": "2026-10-13T00:52:57.400Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-12T15:50:21.620Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
