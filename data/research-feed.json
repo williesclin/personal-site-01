@@ -1,11 +1,227 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-23T07:57:35.348Z",
+  "retrievedAt": "2026-11-24T00:09:09.209Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "ba36d183a1b2719156a1e6100718885d96832df3aa492f643efe74ff18363a71",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/0001045810-26-000090-index.html",
+      "title": "NVIDIA · 8-K · 2026-11-23",
+      "summary": {
+        "en": "SEC 8-K filing by NVIDIA. Read the original filing before drawing conclusions.",
+        "zh-hant": "NVIDIA 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-23",
+      "publishedAt": null,
+      "eventOn": "2026-11-22",
+      "retrievedAt": "2026-11-24T00:09:09.209Z",
+      "firstObservedAt": "2026-11-24T00:09:09.209Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "5ae1204cd68da5b463deb615db23df595f50e087499a7a74e14edbb82a4e7cb0",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "NVDA"
+      ],
+      "form": "8-K",
+      "items": "5.02,9.01",
+      "accession": "0001045810-26-000090",
+      "acceptedAt": "2026-11-23T13:57:54.000Z"
+    },
+    {
+      "id": "aa2339e807126c803d6237fd87e835209e348722eb3b1de587bc05d002825f41",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026075541/0001628280-26-075541-index.html",
+      "title": "Meta Platforms · 8-K · 2026-11-23",
+      "summary": {
+        "en": "SEC 8-K filing by Meta Platforms. Read the original filing before drawing conclusions.",
+        "zh-hant": "Meta Platforms 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-23",
+      "publishedAt": null,
+      "eventOn": "2026-11-18",
+      "retrievedAt": "2026-11-24T00:09:09.209Z",
+      "firstObservedAt": "2026-11-24T00:09:09.209Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "7726975da0f81cc66de48bd1599bd17c3873582ddb0c1ab32f04290b70777b55",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "META"
+      ],
+      "form": "8-K",
+      "items": "8.01",
+      "accession": "0001628280-26-075541",
+      "acceptedAt": "2026-11-23T21:54:12.000Z"
+    },
+    {
+      "id": "c47d865c78ff5f4bd1a255e958d0cda69d3a4f985722d4f4b0c7e3c3cebd55ec",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/0001645590-26-000097-index.html",
+      "title": "Hewlett Packard Enterprise · 8-K · 2026-11-23",
+      "summary": {
+        "en": "SEC 8-K filing by Hewlett Packard Enterprise. Read the original filing before drawing conclusions.",
+        "zh-hant": "Hewlett Packard Enterprise 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-23",
+      "publishedAt": null,
+      "eventOn": "2026-11-23",
+      "retrievedAt": "2026-11-24T00:09:09.209Z",
+      "firstObservedAt": "2026-11-24T00:09:09.209Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "3a5b63ea48541dfd9fb0da0aac175f1e56d466c9348b3822d1d244bfb032dbd4",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "HPE"
+      ],
+      "form": "8-K",
+      "items": "2.02,7.01,9.01",
+      "accession": "0001645590-26-000097",
+      "acceptedAt": "2026-11-23T21:12:08.000Z"
+    },
+    {
+      "id": "8ba5709eb0418828915080f7f358edd6b7c99fb36e44a37d8eab5d3d6f3c54ca",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000038/0001535527-26-000038-index.html",
+      "title": "CrowdStrike · 10-Q · 2026-11-23",
+      "summary": {
+        "en": "SEC 10-Q filing by CrowdStrike. Read the original filing before drawing conclusions.",
+        "zh-hant": "CrowdStrike 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-23",
+      "publishedAt": null,
+      "eventOn": "2026-10-31",
+      "retrievedAt": "2026-11-24T00:09:09.209Z",
+      "firstObservedAt": "2026-11-24T00:09:09.209Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "fa3e8a0ab2b8311a4888367bff186c9f4819ad35c77ac98994a74d0dfed995ca",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRWD"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0001535527-26-000038",
+      "acceptedAt": "2026-11-23T21:33:04.000Z"
+    },
+    {
+      "id": "23b3a5f6d6356aa62ef84b506d5cb071e7a9259e162dde350d814218ab9fb9db",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000110465926130785/0001104659-26-130785-index.html",
+      "title": "CrowdStrike · 8-K · 2026-11-23",
+      "summary": {
+        "en": "SEC 8-K filing by CrowdStrike. Read the original filing before drawing conclusions.",
+        "zh-hant": "CrowdStrike 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-23",
+      "publishedAt": null,
+      "eventOn": "2026-11-22",
+      "retrievedAt": "2026-11-24T00:09:09.209Z",
+      "firstObservedAt": "2026-11-24T00:09:09.209Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "2a6ca6c6419c1b665b52046361b0298f5aaf6e8ad80cc2dc7eaae7455dca4cdb",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRWD"
+      ],
+      "form": "8-K",
+      "items": "1.01,7.01,9.01",
+      "accession": "0001104659-26-130785",
+      "acceptedAt": "2026-11-23T11:15:28.000Z"
+    },
+    {
+      "id": "790b3be655157c55ee41dab84ef3b3051805b6ef6891a8d4d0a6b0dd72a50a13",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000035/0001535527-26-000035-index.html",
+      "title": "CrowdStrike · 8-K · 2026-11-23",
+      "summary": {
+        "en": "SEC 8-K filing by CrowdStrike. Read the original filing before drawing conclusions.",
+        "zh-hant": "CrowdStrike 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-23",
+      "publishedAt": null,
+      "eventOn": "2026-11-23",
+      "retrievedAt": "2026-11-24T00:09:09.209Z",
+      "firstObservedAt": "2026-11-24T00:09:09.209Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "8f76007b43c8a61fa12a8e4bafa2fed04d6659a5f471419b127e8027e53f22db",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "CRWD"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001535527-26-000035",
+      "acceptedAt": "2026-11-23T11:04:51.000Z"
+    },
+    {
+      "id": "a4c4245d1c21181817118c3ed29ccb8537a725f979df1ab7bfa24aad38c7a038",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1713683/000119312526471211/0001193125-26-471211-index.html",
+      "title": "Zscaler · 8-K · 2026-11-23",
+      "summary": {
+        "en": "SEC 8-K filing by Zscaler. Read the original filing before drawing conclusions.",
+        "zh-hant": "Zscaler 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-23",
+      "publishedAt": null,
+      "eventOn": "2026-11-22",
+      "retrievedAt": "2026-11-24T00:09:09.209Z",
+      "firstObservedAt": "2026-11-24T00:09:09.209Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "4132a22b53e6e89784692380a1d78265954c2752b5b93c3df127271c590e21fa",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ZS"
+      ],
+      "form": "8-K",
+      "items": "1.01,7.01,9.01",
+      "accession": "0001193125-26-471211",
+      "acceptedAt": "2026-11-23T15:01:16.000Z"
+    },
+    {
+      "id": "e0dbd110e1df3079dfb936de7e4dce6cd2f5e9c65653c629c98ce7188640daf1",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/1713683/000119312526470942/0001193125-26-470942-index.html",
+      "title": "Zscaler · 8-K · 2026-11-23",
+      "summary": {
+        "en": "SEC 8-K filing by Zscaler. Read the original filing before drawing conclusions.",
+        "zh-hant": "Zscaler 向 SEC 提交 8-K 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-23",
+      "publishedAt": null,
+      "eventOn": "2026-11-23",
+      "retrievedAt": "2026-11-24T00:09:09.209Z",
+      "firstObservedAt": "2026-11-24T00:09:09.209Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "e18c3c2bf5e651d7341e4a33a7fe34715ff8ec4f5ff3f46a5f8fa71dd5a0376b",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ZS"
+      ],
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "accession": "0001193125-26-470942",
+      "acceptedAt": "2026-11-23T12:33:34.000Z"
+    },
     {
       "id": "23de49522d9503b95189d935aeb1144069b4083a1454e610365e6f7f9820c4bf",
       "sourceId": "sec-edgar",
@@ -5220,6 +5436,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-24T00:09:09.209Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-23T07:57:35.348Z",
       "succeeded": 50,
       "expected": 50,
@@ -6047,13 +6270,6 @@
     },
     {
       "at": "2026-10-12T06:15:31.274Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-11T22:12:21.014Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
