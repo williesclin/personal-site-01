@@ -1,11 +1,38 @@
 {
   "version": 1,
   "startedAt": "2026-09-22T21:21:27.278Z",
-  "retrievedAt": "2026-11-25T08:56:38.337Z",
+  "retrievedAt": "2026-11-25T21:52:33.925Z",
   "coverage": "SEC filing metadata for 50 US-listed issuers; rolling 30-day discovery, retained observations; not global news or social attention",
   "socialStatus": "not_connected",
   "newsStatus": "rights_review",
   "documents": [
+    {
+      "id": "1f6e49359a4cc8d71a9391c88f9f8e9a56dab44ff980e2d0a5f49135e44791e1",
+      "sourceId": "sec-edgar",
+      "url": "https://www.sec.gov/Archives/edgar/data/769397/000076939726000071/0000769397-26-000071-index.html",
+      "title": "Autodesk · 10-Q · 2026-11-25",
+      "summary": {
+        "en": "SEC 10-Q filing by Autodesk. Read the original filing before drawing conclusions.",
+        "zh-hant": "Autodesk 向 SEC 提交 10-Q 申報。請回查原始文件後再作判斷。"
+      },
+      "kind": "filing",
+      "publishedOn": "2026-11-25",
+      "publishedAt": null,
+      "eventOn": "2026-10-31",
+      "retrievedAt": "2026-11-25T21:52:33.925Z",
+      "firstObservedAt": "2026-11-25T21:52:33.925Z",
+      "backfill": false,
+      "language": "en",
+      "contentHash": "8dcfd11fd1554d694d1a21f6c5639fed44afa8500b01181ff1c81869155b3012",
+      "rightsScope": "SEC public filing metadata and original links only; no filing body redistribution",
+      "symbols": [
+        "ADSK"
+      ],
+      "form": "10-Q",
+      "items": "",
+      "accession": "0000769397-26-000071",
+      "acceptedAt": "2026-11-25T21:03:57.000Z"
+    },
     {
       "id": "031e1879009e1a41e1b38c949d26c45888e3cc787ad6210524b5fcf9a1c9698b",
       "sourceId": "sec-edgar",
@@ -5598,6 +5625,13 @@
   ],
   "runs": [
     {
+      "at": "2026-11-25T21:52:33.925Z",
+      "succeeded": 50,
+      "expected": 50,
+      "status": "success",
+      "failures": []
+    },
+    {
       "at": "2026-11-25T08:56:38.337Z",
       "succeeded": 50,
       "expected": 50,
@@ -6425,13 +6459,6 @@
     },
     {
       "at": "2026-10-13T22:58:34.328Z",
-      "succeeded": 50,
-      "expected": 50,
-      "status": "success",
-      "failures": []
-    },
-    {
-      "at": "2026-10-13T14:26:53.566Z",
       "succeeded": 50,
       "expected": 50,
       "status": "success",
